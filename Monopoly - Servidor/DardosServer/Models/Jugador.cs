@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DardosServer.Models
+namespace PolyFlamaServer.Models
 {
     public class Jugador
     {

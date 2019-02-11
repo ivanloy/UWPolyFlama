@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DardosServer.Models.Enums
+namespace PolyFlamaServer.Models.Enums
 {
     public enum ColorPropiedad
     {

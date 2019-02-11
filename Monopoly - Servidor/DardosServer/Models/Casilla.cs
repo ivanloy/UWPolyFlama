@@ -1,10 +1,10 @@
-﻿using DardosServer.Models.Enums;
+﻿using PolyFlamaServer.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DardosServer.Models
+namespace PolyFlamaServer.Models
 {
     public class Casilla
     {

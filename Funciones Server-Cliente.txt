@@ -1,0 +1,8 @@
+Funciones EN EL SERVIDOR:
+ - crearNuevoLobby(Lobby lobby)
+ - comprobarContrasena(string nombreLobby, string contrasena)
+ - unirALobby(string nombreLobby, Jugador jugador)
+
+Funciones EN EL CLIENTE:
+ - crearLobby(bool creadoConExito)
+ - contrasena(bool contrasenaCorrecta, Lobby? lobby) //Si es true, se ha unido correctamente, si es false, la contraseña era incorrecta

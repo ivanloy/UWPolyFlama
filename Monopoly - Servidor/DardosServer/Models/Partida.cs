@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DardosServer.Models
+namespace PolyFlamaServer.Models
 {
     public class Partida
     {
