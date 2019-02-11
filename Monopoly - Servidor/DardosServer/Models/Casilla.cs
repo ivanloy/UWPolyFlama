@@ -1,0 +1,25 @@
+﻿using DardosServer.Models.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace DardosServer.Models
+{
+    public class Casilla
+    {
+        public TipoCasilla tipo { get; set; }
+        public List<Jugador> listadoJugadores { get; set; }
+
+        public Casilla(TipoCasilla tipo, List<Jugador> listadoJugadores)
+        {
+            this.tipo = tipo;
+            this.listadoJugadores = listadoJugadores;
+        }
+
+        public Casilla()
+        {
+
+        }
+    }
+}
