@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyFlamaServer", "DardosServer\PolyFlamaServer.csproj", "{03BA0025-D05E-4EC0-8D54-F53599660EE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyFlamaServer", "PolyFlamaServer\PolyFlamaServer.csproj", "{03BA0025-D05E-4EC0-8D54-F53599660EE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

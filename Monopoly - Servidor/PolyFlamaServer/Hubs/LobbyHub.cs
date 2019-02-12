@@ -24,18 +24,19 @@ namespace PolyFlamaServer.Hubs
             Groups.Add(Context.ConnectionId, lobby.nombre);
             Jugador jugadorCreador = lobby.listadoJugadores[0];
             GameInfo.listadoLobbies.AddOrUpdate(lobby.nombre, lobby, (key, value) => value);
+            GameInfo.listadoLobbiesNumeroJugadores.AddOrUpdate(lobby.nombre, 1, (key, value) => value);
             Clients.Caller.crearLobby(true);
+            Clients.Others.actualizarListadoLobbies(GameInfo.listadoLobbies);
         }
 
         public void comprobarContrasena(string nombreLobby, string contrasena)
         {
             if (GameInfo.listadoLobbies[nombreLobby].contrasena == contrasena)
             {
-                Clients.Caller.contrasena(true, GameInfo.listadoLobbies[nombreLobby]);
                 //Si la contraseña es correcta, añadimos el jugador al grupo
                 Groups.Add(Context.ConnectionId, nombreLobby);
+                Clients.Caller.contrasena(true);
             }
-                
             else
                 Clients.Caller.unirALobby(false);
         }
