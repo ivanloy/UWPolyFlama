@@ -1,8 +1,17 @@
-Funciones EN EL SERVIDOR:
- - crearNuevoLobby(Lobby lobby)
+Funciones EN EL SERVIDOR (LobbyHub):
+ - crearNuevoLobby(Lobby lobby) //Crea un nuevo lobby, el cual ya tiene el jugador dentro
  - comprobarContrasena(string nombreLobby, string contrasena)
  - unirALobby(string nombreLobby, Jugador jugador)
+ - salirDeLobby(string nombreLobby, Jugador jugador)
+
+Funciones EN EL SERVIDOR (GameHub):
+ - tirarDadoInicial(string nombreLobby, string nombreJugador)
 
 Funciones EN EL CLIENTE:
  - crearLobby(bool creadoConExito)
- - contrasena(bool contrasenaCorrecta, Lobby? lobby) //Si es true, se ha unido correctamente, si es false, la contraseña era incorrecta
+ - contrasena(bool contrasenaCorrecta) //Si es true, se ha unido correctamente, si es false, la contraseña era incorrecta
+ - actualizarLobby(Lobby lobby)
+ - actualizarListadoLobbies(List<Lobby> listado)
+ - lobbyCompleto()
+ - empezarPartida()
+ - tiradaInicial(int tiradaInicial)

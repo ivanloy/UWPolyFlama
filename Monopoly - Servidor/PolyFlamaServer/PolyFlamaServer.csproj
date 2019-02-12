@@ -120,9 +120,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Gestora\GestoraPartida.cs" />
-    <Compile Include="Hubs\LobbyHub.cs" />
     <Compile Include="Gestora\GameInfo.cs" />
+    <Compile Include="Gestora\GestoraPartida.cs" />
+    <Compile Include="Hubs\GameHub.cs" />
+    <Compile Include="Hubs\LobbyHub.cs" />
+    <Compile Include="Gestora\LobbyInfo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -23,32 +23,53 @@ namespace PolyFlamaServer.Hubs
             */
             Groups.Add(Context.ConnectionId, lobby.nombre);
             Jugador jugadorCreador = lobby.listadoJugadores[0];
-            GameInfo.listadoLobbies.AddOrUpdate(lobby.nombre, lobby, (key, value) => value);
-            GameInfo.listadoLobbiesNumeroJugadores.AddOrUpdate(lobby.nombre, 1, (key, value) => value);
+            LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, lobby, (key, value) => value);
+            LobbyInfo.listadoLobbiesNumeroJugadores.AddOrUpdate(lobby.nombre, 1, (key, value) => value);
             Clients.Caller.crearLobby(true);
-            Clients.Others.actualizarListadoLobbies(GameInfo.listadoLobbies);
+            Clients.Others.actualizarListadoLobbies(LobbyInfo.listadoLobbies);
         }
 
         public void comprobarContrasena(string nombreLobby, string contrasena)
         {
-            if (GameInfo.listadoLobbies[nombreLobby].contrasena == contrasena)
+            if (LobbyInfo.listadoLobbies[nombreLobby].maxJugadores < LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby])
             {
-                //Si la contraseña es correcta, añadimos el jugador al grupo
-                Groups.Add(Context.ConnectionId, nombreLobby);
-                Clients.Caller.contrasena(true);
+                if (LobbyInfo.listadoLobbies[nombreLobby].contrasena == contrasena)
+                {
+                    //Si la contraseña es correcta, añadimos el jugador al grupo
+                    Groups.Add(Context.ConnectionId, nombreLobby);
+                    LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby]++;
+                    Clients.Caller.contrasena(true);
+                }
+                else
+                    Clients.Caller.contrasena(false);
             }
             else
-                Clients.Caller.unirALobby(false);
+                Clients.Caller.lobbyCompleto();
+            
         }
 
         public void unirALobby(string nombreLobby, Jugador jugador)
         {
             //Añadimos el jugador al listado de jugadores del lobby
-            GameInfo.listadoLobbies[nombreLobby].listadoJugadores.Add(jugador);
+            LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores.Add(jugador);
             //Avisamos a los otros jugadores de que se ha unido
-            Clients.OthersInGroup(nombreLobby).actualizarListadoJugadores(GameInfo.listadoLobbies[nombreLobby]);
-            //Unimos 
-            Clients.Caller.unirALobby(true, GameInfo.listadoLobbies[nombreLobby]);
+            Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+
+            if (LobbyInfo.listadoLobbies[nombreLobby].maxJugadores == LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby])
+                Clients.Group(nombreLobby).empezarPartida();
+        }
+
+        public void salirDeLobby(string nombreLobby, Jugador jugador)
+        {
+            LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby]--;
+            Groups.Remove(Context.ConnectionId, nombreLobby);
+            if(jugador != null)
+            {
+                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores.Remove(jugador);
+                //Avisamos a los otros jugadores de que se ha desconectado
+                Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+            }
+                
         }
 
 
