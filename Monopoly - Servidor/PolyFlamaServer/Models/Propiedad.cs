@@ -6,21 +6,23 @@ using System.Web;
 
 namespace PolyFlamaServer.Models
 {
-    public class Propiedad
+    public class Propiedad : Casilla
     {
         public int precio { get; set; }
         public int nCasas { get; set; }
         public bool tieneHotel { get; set; }
-        public Jugador comprador { get; set; }
+        public bool estaComprado { get; set; }
         public ColorPropiedad color { get; set; }
+        public int dineroAPagar { get; set; }
 
-        public Propiedad(int precio, int nCasas, bool tieneHotel, Jugador comprador, ColorPropiedad color)
+        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar)
         {
             this.precio = precio;
             this.nCasas = nCasas;
             this.tieneHotel = tieneHotel;
-            this.comprador = comprador;
+            this.estaComprado = estaComprado;
             this.color = color;
+            this.dineroAPagar = dineroAPagar;
         }
 
         /*
@@ -31,8 +33,9 @@ namespace PolyFlamaServer.Models
             this.precio = precio;
             this.nCasas = 0;
             this.tieneHotel = false;
-            this.comprador = null;
+            this.estaComprado = false;
             this.color = color;
+            this.dineroAPagar = 0;
         }
     }
 }

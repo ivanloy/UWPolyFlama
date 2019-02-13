@@ -37,9 +37,9 @@ namespace PolyFlamaServer.Gestora
             return new List<Propiedad>();
         }
 
-        private static List<Casilla> generarCasillas()
+        private static List<Object> generarCasillas()
         {
-            return new List<Casilla>();
+            return new List<Object>();
         }
 
 		public static int calcularNuevaPosicion(int posicionActual, int movimiento)
@@ -50,5 +50,14 @@ namespace PolyFlamaServer.Gestora
 
 			return posicionNueva;
 		}
+
+        public static int calcularNuevoTurno(int turnoActual, int maxJugadores)
+        {
+            int turnoNuevo = turnoActual + 1;
+            if (turnoNuevo == maxJugadores)
+                turnoNuevo = 0;
+
+            return turnoNuevo;
+        }
     }
 }

@@ -8,6 +8,6 @@ namespace PolyFlamaServer.Gestora
 {
     public static class GameInfo
     {
-        public static ConcurrentDictionary<string, ConcurrentDictionary<string, int>> listadoTiradasIniciales;
+        public static ConcurrentDictionary<string, ConcurrentDictionary<string, int>> listadoTiradasIniciales = new ConcurrentDictionary<string, ConcurrentDictionary<string, int>>();
     }
 }

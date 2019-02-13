@@ -15,7 +15,6 @@ namespace PolyFlamaServer
         public void Configuration(IAppBuilder app)
         {
             app.MapSignalR();
-            GameInfo.listadoJugadoresConectados = new Dictionary<string, Jugador>();
             //Marcar un usuario como desconectado tras 5 segundos
             GlobalHost.Configuration.DisconnectTimeout = TimeSpan.FromSeconds(6);
         }

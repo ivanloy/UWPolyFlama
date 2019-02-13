@@ -15,3 +15,7 @@ Funciones EN EL CLIENTE:
  - lobbyCompleto()
  - empezarPartida()
  - tiradaInicial(int tiradaInicial)
+ - moverCasillas() //No necesita nada porque Lobby tiene el array de dados y el jugador que debe moverse
+ - comprarPropiedad() //No necesita nada porque Lobby tiene el jugador y la posición en la que está
+ - terminarTurno() //Método que llama al jugador que esté en ese turno, y le mostrará en un dialog lo que haya pasado
+ - siguienteTurno() //Avisa a los demás de que el turno ha terminado y ha pasado al siguiente

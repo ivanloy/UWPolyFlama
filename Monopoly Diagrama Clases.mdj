@@ -48,7 +48,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -112,
-											"top": -16,
+											"top": -32,
 											"height": 13
 										},
 										{
@@ -59,8 +59,8 @@
 											},
 											"font": "Arial;13;1",
 											"left": 45,
-											"top": 175,
-											"width": 105.87890625,
+											"top": 167,
+											"width": 152.115234375,
 											"height": 13,
 											"text": "Casilla"
 										},
@@ -73,7 +73,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -112,
-											"top": -16,
+											"top": -32,
 											"width": 80.9072265625,
 											"height": 13,
 											"text": "(from Model1)"
@@ -87,15 +87,15 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -112,
-											"top": -16,
+											"top": -32,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 40,
-									"top": 168,
-									"width": 115.87890625,
+									"top": 160,
+									"width": 162.115234375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFoeoqFSVA5GtQ="
@@ -122,6 +122,23 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFo5oiO9bVLwMg=",
+											"_parent": {
+												"$ref": "AAAAAAFoeoqFSlA9ihE="
+											},
+											"model": {
+												"$ref": "AAAAAAFo5oiOp7VIMAk="
+											},
+											"font": "Arial;13;0",
+											"left": 45,
+											"top": 190,
+											"width": 152.115234375,
+											"height": 13,
+											"text": "+imagen",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
 											"_id": "AAAAAAFoeoqx8VBp328=",
 											"_parent": {
 												"$ref": "AAAAAAFoeoqFSlA9ihE="
@@ -131,8 +148,8 @@
 											},
 											"font": "Arial;13;0",
 											"left": 45,
-											"top": 198,
-											"width": 105.87890625,
+											"top": 205,
+											"width": 152.115234375,
 											"height": 13,
 											"text": "+TipoCasilla: tipo",
 											"horizontalAlignment": 0
@@ -148,8 +165,8 @@
 											},
 											"font": "Arial;13;0",
 											"left": 45,
-											"top": 213,
-											"width": 105.87890625,
+											"top": 220,
+											"width": 152.115234375,
 											"height": 13,
 											"text": "+listadoJugadores",
 											"horizontalAlignment": 0
@@ -157,9 +174,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 40,
-									"top": 193,
-									"width": 115.87890625,
-									"height": 38
+									"top": 185,
+									"width": 162.115234375,
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -172,8 +189,8 @@
 									},
 									"font": "Arial;13;0",
 									"left": 40,
-									"top": 231,
-									"width": 115.87890625,
+									"top": 238,
+									"width": 162.115234375,
 									"height": 10
 								},
 								{
@@ -188,7 +205,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -56,
-									"top": -8,
+									"top": -16,
 									"width": 10,
 									"height": 10
 								},
@@ -204,7 +221,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -56,
-									"top": -8,
+									"top": -16,
 									"width": 10,
 									"height": 10
 								}
@@ -212,9 +229,9 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 40,
-							"top": 168,
-							"width": 115.87890625,
-							"height": 73,
+							"top": 160,
+							"width": 162.115234375,
+							"height": 88,
 							"nameCompartment": {
 								"$ref": "AAAAAAFoeoqFSVA4e7k="
 							},
@@ -260,7 +277,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -112,
-											"top": -16,
+											"top": -32,
 											"height": 13
 										},
 										{
@@ -271,7 +288,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 229,
-											"top": 191,
+											"top": 183,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "Jugador"
@@ -285,7 +302,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -112,
-											"top": -16,
+											"top": -32,
 											"width": 80.9072265625,
 											"height": 13,
 											"text": "(from Model1)"
@@ -299,14 +316,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -112,
-											"top": -16,
+											"top": -32,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 224,
-									"top": 184,
+									"top": 176,
 									"width": 153.42529296875,
 									"height": 25,
 									"stereotypeLabel": {
@@ -343,7 +360,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 214,
+											"top": 206,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+nombre",
@@ -360,7 +377,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 229,
+											"top": 221,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+ficha",
@@ -377,7 +394,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 244,
+											"top": 236,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+dinero",
@@ -394,7 +411,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 259,
+											"top": 251,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+listadoPropiedades",
@@ -411,7 +428,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 274,
+											"top": 266,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+posicion",
@@ -428,7 +445,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 289,
+											"top": 281,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+carcelGratisSuerte",
@@ -445,7 +462,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 304,
+											"top": 296,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+carcelGratisComunidad",
@@ -462,18 +479,35 @@
 											},
 											"font": "Arial;13;0",
 											"left": 229,
-											"top": 319,
+											"top": 311,
 											"width": 143.42529296875,
 											"height": 13,
 											"text": "+estaEnCarcel",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFo5sKrurVyeAs=",
+											"_parent": {
+												"$ref": "AAAAAAFoeosOG1CRmZQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFo5sKrb7VvjVA="
+											},
+											"font": "Arial;13;0",
+											"left": 229,
+											"top": 326,
+											"width": 143.42529296875,
+											"height": 13,
+											"text": "+turnosEnCarcel",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 224,
-									"top": 209,
+									"top": 201,
 									"width": 153.42529296875,
-									"height": 128
+									"height": 143
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -486,7 +520,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 224,
-									"top": 337,
+									"top": 344,
 									"width": 153.42529296875,
 									"height": 10
 								},
@@ -502,7 +536,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -56,
-									"top": -8,
+									"top": -16,
 									"width": 10,
 									"height": 10
 								},
@@ -518,7 +552,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -56,
-									"top": -8,
+									"top": -16,
 									"width": 10,
 									"height": 10
 								}
@@ -526,9 +560,9 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 224,
-							"top": 184,
+							"top": 176,
 							"width": 153.42529296875,
-							"height": 163,
+							"height": 178,
 							"nameCompartment": {
 								"$ref": "AAAAAAFoeosOGlCMKLk="
 							},
@@ -1165,7 +1199,7 @@
 											"top": 31,
 											"width": 133.326171875,
 											"height": 13,
-											"text": "Propiedad"
+											"text": "Propiedad - Casilla"
 										},
 										{
 											"_type": "LabelView",
@@ -1288,7 +1322,7 @@
 											"top": 99,
 											"width": 133.326171875,
 											"height": 13,
-											"text": "+comprador: Jugador",
+											"text": "+estaComprado",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1307,13 +1341,30 @@
 											"height": 13,
 											"text": "+ColorPropiedad: color",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFo5qdsfLVmesg=",
+											"_parent": {
+												"$ref": "AAAAAAFoettGlfxNTnM="
+											},
+											"model": {
+												"$ref": "AAAAAAFo5qdsLLVj1NI="
+											},
+											"font": "Arial;13;0",
+											"left": 45,
+											"top": 129,
+											"width": 133.326171875,
+											"height": 13,
+											"text": "+dineroAPagar",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 40,
 									"top": 49,
 									"width": 143.326171875,
-									"height": 83
+									"height": 98
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1326,7 +1377,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 40,
-									"top": 132,
+									"top": 147,
 									"width": 143.326171875,
 									"height": 10
 								},
@@ -1368,7 +1419,7 @@
 							"left": 40,
 							"top": 24,
 							"width": 143.326171875,
-							"height": 118,
+							"height": 133,
 							"nameCompartment": {
 								"$ref": "AAAAAAFoettGlfxI1NE="
 							},
@@ -2257,23 +2308,6 @@
 										},
 										{
 											"_type": "UMLEnumerationLiteralView",
-											"_id": "AAAAAAFo3HHJb7M3rQk=",
-											"_parent": {
-												"$ref": "AAAAAAFo3HGhcrMKNqM="
-											},
-											"model": {
-												"$ref": "AAAAAAFo3HHJQrM0MOM="
-											},
-											"font": "Arial;13;0",
-											"left": 157,
-											"top": 434,
-											"width": 91,
-											"height": 13,
-											"text": "PROPIEDAD",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLEnumerationLiteralView",
 											"_id": "AAAAAAFo3HHSY7M+uL8=",
 											"_parent": {
 												"$ref": "AAAAAAFo3HGhcrMKNqM="
@@ -2283,7 +2317,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 157,
-											"top": 449,
+											"top": 434,
 											"width": 91,
 											"height": 13,
 											"text": "SUERTE",
@@ -2300,7 +2334,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 157,
-											"top": 464,
+											"top": 449,
 											"width": 91,
 											"height": 13,
 											"text": "COMUNIDAD",
@@ -2317,7 +2351,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 157,
-											"top": 479,
+											"top": 464,
 											"width": 91,
 											"height": 13,
 											"text": "IRALACARCEL",
@@ -2334,7 +2368,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 157,
-											"top": 494,
+											"top": 479,
 											"width": 91,
 											"height": 13,
 											"text": "CARCEL",
@@ -2351,7 +2385,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 157,
-											"top": 509,
+											"top": 494,
 											"width": 91,
 											"height": 13,
 											"text": "IMPUESTO",
@@ -2368,7 +2402,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 157,
-											"top": 524,
+											"top": 509,
 											"width": 91,
 											"height": 13,
 											"text": "DESCANSO",
@@ -2379,7 +2413,7 @@
 									"left": 152,
 									"top": 414,
 									"width": 101,
-									"height": 128
+									"height": 113
 								}
 							],
 							"font": "Arial;13;0",
@@ -2792,6 +2826,14 @@
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
+							"_id": "AAAAAAFo5oiOp7VIMAk=",
+							"_parent": {
+								"$ref": "AAAAAAFoeoqFSFA1n8Q="
+							},
+							"name": "imagen"
+						},
+						{
+							"_type": "UMLAttribute",
 							"_id": "AAAAAAFoeoqxy1BmAC0=",
 							"_parent": {
 								"$ref": "AAAAAAFoeoqFSFA1n8Q="
@@ -2889,6 +2931,14 @@
 							},
 							"name": "estaEnCarcel",
 							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFo5sKrb7VvjVA=",
+							"_parent": {
+								"$ref": "AAAAAAFoeosOGlCJQnE="
+							},
+							"name": "turnosEnCarcel"
 						}
 					]
 				},
@@ -3035,7 +3085,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFoeoo6rFAsMio="
 					},
-					"name": "Propiedad",
+					"name": "Propiedad - Casilla",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -3070,10 +3120,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFoettGlfxFZ+s="
 							},
-							"name": "comprador",
-							"type": {
-								"$ref": "AAAAAAFoeosOGlCJQnE="
-							}
+							"name": "estaComprado"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3083,6 +3130,14 @@
 							},
 							"name": "ColorPropiedad",
 							"type": "color"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFo5qdsLLVj1NI=",
+							"_parent": {
+								"$ref": "AAAAAAFoettGlfxFZ+s="
+							},
+							"name": "dineroAPagar"
 						}
 					]
 				},
@@ -3201,14 +3256,6 @@
 								"$ref": "AAAAAAFo3HGhcbL+26U="
 							},
 							"name": "SALIDA"
-						},
-						{
-							"_type": "UMLEnumerationLiteral",
-							"_id": "AAAAAAFo3HHJQrM0MOM=",
-							"_parent": {
-								"$ref": "AAAAAAFo3HGhcbL+26U="
-							},
-							"name": "PROPIEDAD"
 						},
 						{
 							"_type": "UMLEnumerationLiteral",

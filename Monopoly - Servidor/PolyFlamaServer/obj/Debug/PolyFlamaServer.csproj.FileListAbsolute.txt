@@ -1,0 +1,4 @@
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csprojAssemblyReference.cache
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csproj.CoreCompileInputs.cache
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\DardosServer.dll
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\DardosServer.pdb

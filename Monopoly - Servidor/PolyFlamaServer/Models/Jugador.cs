@@ -12,8 +12,9 @@ namespace PolyFlamaServer.Models
         public bool carcelGratisSuerte { get; set; }
         public bool carcelGratisComunidad { get; set; }
         public bool estaEnCarcel { get; set; }
+        public int turnosEnCarcel { get; set; }
 
-        public Jugador(string nombre, Ficha ficha, double dinero, List<Propiedad> listadoPropiedades, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel)
+        public Jugador(string nombre, Ficha ficha, double dinero, List<Propiedad> listadoPropiedades, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel, int turnosEnCarcel)
         {
             this.nombre = nombre;
             this.ficha = ficha;
@@ -23,6 +24,7 @@ namespace PolyFlamaServer.Models
             this.carcelGratisSuerte = carcelGratisSuerte;
             this.carcelGratisComunidad = carcelGratisComunidad;
             this.estaEnCarcel = estaEnCarcel;
+            this.turnosEnCarcel = turnosEnCarcel;
         }
 
         /*
@@ -38,6 +40,7 @@ namespace PolyFlamaServer.Models
             this.carcelGratisSuerte = false;
             this.carcelGratisComunidad = false;
             this.estaEnCarcel = false;
+            this.turnosEnCarcel = 0;
         }
 
         public Jugador()
