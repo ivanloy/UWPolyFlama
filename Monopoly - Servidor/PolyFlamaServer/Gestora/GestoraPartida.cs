@@ -41,5 +41,14 @@ namespace PolyFlamaServer.Gestora
         {
             return new List<Casilla>();
         }
+
+		public static int calcularNuevaPosicion(int posicionActual, int movimiento)
+		{
+			int posicionNueva = posicionActual + movimiento;
+			if (posicionNueva / 35 >= 1)
+				posicionNueva -= 35;
+
+			return posicionNueva;
+		}
     }
 }

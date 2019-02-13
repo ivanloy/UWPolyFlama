@@ -56,7 +56,17 @@ namespace PolyFlamaServer.Hubs
             Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
 
             if (LobbyInfo.listadoLobbies[nombreLobby].maxJugadores == LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby])
-                Clients.Group(nombreLobby).empezarPartida();
+            {
+                //Crear una partida nueva
+                Partida partida = GestoraPartida.generarPartidaNueva();
+                Random random = new Random();
+                //Generar el índice del jugador que va a salir primero
+                partida.turnoActual = random.Next(0, LobbyInfo.listadoLobbies[nombreLobby].maxJugadores);
+                //Asignar la partida al lobby
+                LobbyInfo.listadoLobbies[nombreLobby].partida = partida;
+                Clients.Group(nombreLobby).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby]);
+            }
+                
         }
 
         public void salirDeLobby(string nombreLobby, Jugador jugador)
@@ -71,8 +81,6 @@ namespace PolyFlamaServer.Hubs
             }
                 
         }
-
-
 
         //Cuando un jugador se desconecte
         public override Task OnDisconnected(bool stopCalled)

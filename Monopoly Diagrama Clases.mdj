@@ -730,13 +730,30 @@
 											"height": 13,
 											"text": "+partidaEmpezada",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFo5jCoMAla8n0=",
+											"_parent": {
+												"$ref": "AAAAAAFoep0bRvrzbZU="
+											},
+											"model": {
+												"$ref": "AAAAAAFo5jCoEglXR2s="
+											},
+											"font": "Arial;13;0",
+											"left": 421,
+											"top": 281,
+											"width": 109.49072265625,
+											"height": 13,
+											"text": "+Partida: partida",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 416,
 									"top": 201,
 									"width": 119.49072265625,
-									"height": 83
+									"height": 98
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -749,7 +766,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 416,
-									"top": 284,
+									"top": 299,
 									"width": 119.49072265625,
 									"height": 10
 								},
@@ -791,7 +808,7 @@
 							"left": 416,
 							"top": 176,
 							"width": 119.49072265625,
-							"height": 118,
+							"height": 133,
 							"nameCompartment": {
 								"$ref": "AAAAAAFoep0bRPrux0I="
 							},
@@ -2084,7 +2101,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 381,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "«enumeration»"
 										},
@@ -2097,7 +2114,7 @@
 											"font": "Arial;13;1",
 											"left": 157,
 											"top": 396,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "TipoCasilla"
 										},
@@ -2132,7 +2149,7 @@
 									"font": "Arial;13;0",
 									"left": 152,
 									"top": 376,
-									"width": 100.30810546875,
+									"width": 101,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFo3HGhcrMCXVo="
@@ -2233,7 +2250,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 419,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "SALIDA",
 											"horizontalAlignment": 0
@@ -2250,7 +2267,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 434,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "PROPIEDAD",
 											"horizontalAlignment": 0
@@ -2267,7 +2284,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 449,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "SUERTE",
 											"horizontalAlignment": 0
@@ -2284,7 +2301,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 464,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "COMUNIDAD",
 											"horizontalAlignment": 0
@@ -2301,7 +2318,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 479,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "IRALACARCEL",
 											"horizontalAlignment": 0
@@ -2318,7 +2335,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 494,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "CARCEL",
 											"horizontalAlignment": 0
@@ -2335,7 +2352,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 509,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "IMPUESTO",
 											"horizontalAlignment": 0
@@ -2352,7 +2369,7 @@
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 524,
-											"width": 90.30810546875,
+											"width": 91,
 											"height": 13,
 											"text": "DESCANSO",
 											"horizontalAlignment": 0
@@ -2361,7 +2378,7 @@
 									"font": "Arial;13;0",
 									"left": 152,
 									"top": 414,
-									"width": 100.30810546875,
+									"width": 101,
 									"height": 128
 								}
 							],
@@ -2369,7 +2386,7 @@
 							"containerChangeable": true,
 							"left": 152,
 							"top": 376,
-							"width": 100.30810546875,
+							"width": 101,
 							"height": 166,
 							"nameCompartment": {
 								"$ref": "AAAAAAFo3HGhcrMBAWE="
@@ -2834,7 +2851,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFoeosOGlCJQnE="
 							},
-							"name": "listadoPropiedades"
+							"name": "listadoPropiedades",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2924,7 +2942,17 @@
 							"_parent": {
 								"$ref": "AAAAAAFoep0bQ/rr56Q="
 							},
-							"name": "partidaEmpezada"
+							"name": "partidaEmpezada",
+							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFo5jCoEglXR2s=",
+							"_parent": {
+								"$ref": "AAAAAAFoep0bQ/rr56Q="
+							},
+							"name": "Partida",
+							"type": "partida"
 						}
 					]
 				},
@@ -3090,7 +3118,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFoetwW0fyj9mU="
 							},
-							"name": "static imagenDetras"
+							"name": "static imagenDetras",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3117,7 +3146,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFo3D1ewrIYOjw="
 							},
-							"name": "nombre"
+							"name": "nombre",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",

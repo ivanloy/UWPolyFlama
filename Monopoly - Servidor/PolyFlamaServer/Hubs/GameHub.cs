@@ -12,25 +12,19 @@ namespace PolyFlamaServer.Hubs
 {
     public class GameHub : Hub
     {
-        public void tirarDadoInicial(string nombreLobby, string nombreJugador)
+        public void tirarDados(string nombreLobby)
         {
-            if (!GameInfo.listadoTiradasIniciales.ContainsKey(nombreLobby))
-                GameInfo.listadoTiradasIniciales.AddOrUpdate(nombreLobby, new ConcurrentDictionary<string, int>(), (key, value) => value);
-
             Random random = new Random();
-            int dado1 = random.Next(1, 7); //Upper bound es exclusive
-            int dado2 = random.Next(1, 7); //Upper bound es exclusive
-            int suma = dado1 + dado2;
+            int dado1 = random.Next(1, 7);
+            int dado2 = random.Next(1, 7);
 
-            GameInfo.listadoTiradasIniciales[nombreLobby].AddOrUpdate(nombreJugador, suma, (key, value) => value);
+			int posicionActual = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].partida.turnoActual].posicion;
 
-            if (GameInfo.listadoTiradasIniciales[nombreLobby].Count == LobbyInfo.listadoLobbies[nombreLobby].maxJugadores)
-            {
-                GameInfo.listadoTiradasIniciales[nombreLobby].OrderBy(x => x.Value);
-                bool hayTiradasIguales = false;
-            }
-            else
-                Clients.Caller.tiradaInicial(suma);
+			//Actualizamos el lobby con los dados y lo pasamos a todos
+			LobbyInfo.listadoLobbies[nombreLobby].partida.arrayDados = new int[] { dado1, dado2 };
+			LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].partida.turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
+            Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+            Clients.Group(nombreLobby).moverCasillas();
         }
 
         //Cuando un jugador se desconecte
