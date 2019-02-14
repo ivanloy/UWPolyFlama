@@ -17,16 +17,32 @@ namespace PolyFlamaServer.Hubs
          */ 
         public void crearNuevoLobby(Lobby lobby)
         {
-            /* 
-             * Se crea el grupo, que lo gestiona SignalR
-             * (Si se desconecta la última persona, se borra, y si se añade alguien a un grupo que no existe, se crea)
-            */
-            Groups.Add(Context.ConnectionId, lobby.nombre);
-            Jugador jugadorCreador = lobby.listadoJugadores[0];
-            LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, lobby, (key, value) => value);
-            LobbyInfo.listadoLobbiesNumeroJugadores.AddOrUpdate(lobby.nombre, 1, (key, value) => value);
-            Clients.Caller.crearLobby(true);
-            Clients.Others.actualizarListadoLobbies(LobbyInfo.listadoLobbies);
+            bool lobbyExists = false;
+            foreach(KeyValuePair<string, Lobby> lobbyEntry in LobbyInfo.listadoLobbies)
+            {
+                if(lobbyEntry.Value.nombre == lobby.nombre)
+                {
+                    lobbyExists = true;
+                    break;
+                }
+            }
+            if(!lobbyExists)
+            {
+                /* 
+                 * Se crea el grupo, que lo gestiona SignalR
+                 * (Si se desconecta la última persona, se borra, y si se añade alguien a un grupo que no existe, se crea)
+                */
+                Groups.Add(Context.ConnectionId, lobby.nombre);
+                Jugador jugadorCreador = lobby.listadoJugadores[0];
+                LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, lobby, (key, value) => value);
+                LobbyInfo.listadoLobbiesNumeroJugadores.AddOrUpdate(lobby.nombre, 1, (key, value) => value);
+
+                Clients.Caller.crearLobby(true);
+                Clients.Others.actualizarListadoLobbies(LobbyInfo.listadoLobbies);
+            }
+            else
+                Clients.Caller.crearLobby(false);
+
         }
 
         public void comprobarContrasena(string nombreLobby, string contrasena)
@@ -80,6 +96,11 @@ namespace PolyFlamaServer.Hubs
                 Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
             }
                 
+        }
+
+        public void obtenerListadoLobbies()
+        {
+            Clients.Caller.actualizarListadoLobbies(LobbyInfo.listadoLobbies.Values);
         }
 
         //Cuando un jugador se desconecte

@@ -3,6 +3,7 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - comprobarContrasena(string nombreLobby, string contrasena)
  - unirALobby(string nombreLobby, Jugador jugador)
  - salirDeLobby(string nombreLobby, Jugador jugador)
+ - obtenerListadoLobbies()
 
 Funciones EN EL SERVIDOR (GameHub):
  - tirarDadoInicial(string nombreLobby, string nombreJugador)
