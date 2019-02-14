@@ -1,0 +1,116 @@
+﻿<Page
+    x:Class="PantallasMonopoly.SearchMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PantallasMonopoly"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:PantallasMonopoly.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.Background>
+        <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
+    </Page.Background>
+
+    <Page.DataContext>
+        <vm:searchVM></vm:searchVM>
+    </Page.DataContext>
+
+    <RelativePanel>
+     
+
+            <RelativePanel
+                     Name="Header"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       Background="#8BC34A"
+                       VerticalAlignment="Stretch">
+                
+            <!--<FontIcon 
+                       Name="icon"
+                       Glyph="&#xE72B;" 
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="40"
+                       Foreground="White"
+                       Margin="20,0,0,0"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"/>-->
+
+            <AppBarButton 
+                       Name="icon"
+                       Icon="Back"
+                       Foreground="White"
+                       RelativePanel.AlignTopWithPanel="True"
+                       HorizontalContentAlignment="Stretch"
+                       RelativePanel.AlignBottomWithPanel="True"            
+                       VerticalAlignment="Stretch"
+                       Margin="0,0,0,30"
+                       VerticalContentAlignment="Center"
+                       Click="Back_Click"
+                >
+
+                <AppBarButton.RenderTransform>
+                    <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                </AppBarButton.RenderTransform>
+
+            </AppBarButton>
+
+
+
+
+
+            <TextBlock  
+                       Name="Title"
+                       RelativePanel.RightOf="icon"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       Text="SEARCH" 
+                       FontSize="60" 
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Foreground="White"
+                       FontWeight="Medium" Margin="0,0,0,0"/>
+
+        </RelativePanel>
+
+
+        <Border 
+            Name="Content" 
+            RelativePanel.Below="Header"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            HorizontalAlignment="Center"
+            CornerRadius="8"
+            Background="White"
+            VerticalAlignment="Center">
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox PlaceholderText="Search a lobby" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="8"></TextBox>
+                    <AppBarButton Icon="Refresh" Label="Refresh"></AppBarButton>
+                </StackPanel>
+
+                <ListView Padding="100,50,100,50" ItemsSource="{Binding listadoLobby}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Path=nombre}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+                
+            </StackPanel>
+
+
+        </Border>
+
+
+    </RelativePanel>
+
+
+
+</Page>

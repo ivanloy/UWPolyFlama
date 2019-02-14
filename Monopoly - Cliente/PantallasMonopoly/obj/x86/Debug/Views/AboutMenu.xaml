@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="PantallasMonopoly.AboutMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PantallasMonopoly"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Background>
+        <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
+    </Page.Background>
+
+    <RelativePanel>
+        
+     
+
+            <RelativePanel x:ConnectionId='2'
+                    Name="Header"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       Background="#FFEB3B"
+                       VerticalAlignment="Stretch">
+                
+            <!--<FontIcon 
+                       Name="icon"
+                       Glyph="&#xE72B;" 
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="40"
+                       Foreground="White"
+                       Margin="20,0,0,0"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"/>-->
+
+            <AppBarButton x:ConnectionId='4' 
+                       Name="icon"
+                       Icon="Back"
+                       Foreground="White"
+                       RelativePanel.AlignTopWithPanel="True"
+                       HorizontalContentAlignment="Stretch"
+                       RelativePanel.AlignBottomWithPanel="True"            
+                       VerticalAlignment="Stretch"
+                       Margin="0,0,0,30"
+                       VerticalContentAlignment="Center"
+                                         
+                >
+
+                <AppBarButton.RenderTransform>
+                    <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                </AppBarButton.RenderTransform>
+
+            </AppBarButton>
+
+
+
+
+        
+            <TextBlock x:ConnectionId='5'  
+                       Name="Title"
+                       RelativePanel.RightOf="icon"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       Text="ABOUT" 
+                       FontSize="60" 
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Foreground="White"
+                       FontWeight="Medium" Margin="0,0,0,0"/>
+           
+        </RelativePanel>
+
+
+        <Border x:ConnectionId='3' 
+            Name="Content" 
+            RelativePanel.Below="Header"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            CornerRadius="8"
+            Background="White">
+
+            <StackPanel >
+                <TextBlock FontSize="50" 
+                           TextAlignment="Center" 
+                           Foreground="#707070"
+                           Padding="0,0,0,50">CREATORS</TextBlock>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" FontSize="40" Foreground="#707070">Óscar Funes Trigo</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="40" Foreground="#707070">Nacho Van Loy Estero</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="40" Foreground="#707070">Samuel García Preciado</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="40" Foreground="#707070">Jorge Obando López</TextBlock>
+                </StackPanel>
+                <TextBlock FontSize="40" 
+                           TextAlignment="Center" 
+                           Padding="100,50,100,50"
+                           Foreground="#707070">Students from I.E.S. Nervión , Spain (Seville)</TextBlock>
+            </StackPanel>
+                
+
+        </Border>
+
+
+
+    </RelativePanel>
+
+
+
+</Page>
+
