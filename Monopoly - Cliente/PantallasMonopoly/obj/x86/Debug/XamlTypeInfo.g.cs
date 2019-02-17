@@ -470,6 +470,8 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             case 17:   //  PantallasMonopoly.ViewModels.searchVM
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("PantallasMonopoly.ViewModels.clsVMBase"));
                 userType.Activator = Activate_17_searchVM;
+                userType.AddMemberName("conn");
+                userType.AddMemberName("proxy");
                 userType.AddMemberName("listadoLobby");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -690,192 +692,212 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             var that = (global::PantallasMonopoly.ViewModels.createVM)instance;
             return that.crearCommand;
         }
-        private object get_7_searchVM_listadoLobby(object instance)
+        private object get_7_searchVM_conn(object instance)
+        {
+            var that = (global::PantallasMonopoly.ViewModels.searchVM)instance;
+            return that.conn;
+        }
+        private void set_7_searchVM_conn(object instance, object Value)
+        {
+            var that = (global::PantallasMonopoly.ViewModels.searchVM)instance;
+            that.conn = (global::Microsoft.AspNet.SignalR.Client.HubConnection)Value;
+        }
+        private object get_8_searchVM_proxy(object instance)
+        {
+            var that = (global::PantallasMonopoly.ViewModels.searchVM)instance;
+            return that.proxy;
+        }
+        private void set_8_searchVM_proxy(object instance, object Value)
+        {
+            var that = (global::PantallasMonopoly.ViewModels.searchVM)instance;
+            that.proxy = (global::Microsoft.AspNet.SignalR.Client.IHubProxy)Value;
+        }
+        private object get_9_searchVM_listadoLobby(object instance)
         {
             var that = (global::PantallasMonopoly.ViewModels.searchVM)instance;
             return that.listadoLobby;
         }
-        private void set_7_searchVM_listadoLobby(object instance, object Value)
+        private void set_9_searchVM_listadoLobby(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.ViewModels.searchVM)instance;
             that.listadoLobby = (global::System.Collections.Generic.List<global::PantallasMonopoly.Models.Lobby>)Value;
         }
-        private object get_8_Lobby_nombre(object instance)
+        private object get_10_Lobby_nombre(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             return that.nombre;
         }
-        private void set_8_Lobby_nombre(object instance, object Value)
+        private void set_10_Lobby_nombre(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             that.nombre = (global::System.String)Value;
         }
-        private object get_9_Lobby_contrasena(object instance)
+        private object get_11_Lobby_contrasena(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             return that.contrasena;
         }
-        private void set_9_Lobby_contrasena(object instance, object Value)
+        private void set_11_Lobby_contrasena(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             that.contrasena = (global::System.String)Value;
         }
-        private object get_10_Lobby_maxJugadores(object instance)
+        private object get_12_Lobby_maxJugadores(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             return that.maxJugadores;
         }
-        private void set_10_Lobby_maxJugadores(object instance, object Value)
+        private void set_12_Lobby_maxJugadores(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             that.maxJugadores = (global::System.Int32)Value;
         }
-        private object get_11_Lobby_listadoJugadores(object instance)
+        private object get_13_Lobby_listadoJugadores(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             return that.listadoJugadores;
         }
-        private void set_11_Lobby_listadoJugadores(object instance, object Value)
+        private void set_13_Lobby_listadoJugadores(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             that.listadoJugadores = (global::System.Collections.Generic.List<global::PantallasMonopoly.Models.Jugador>)Value;
         }
-        private object get_12_Jugador_nombre(object instance)
+        private object get_14_Jugador_nombre(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.nombre;
         }
-        private void set_12_Jugador_nombre(object instance, object Value)
+        private void set_14_Jugador_nombre(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.nombre = (global::System.String)Value;
         }
-        private object get_13_Jugador_ficha(object instance)
+        private object get_15_Jugador_ficha(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.ficha;
         }
-        private void set_13_Jugador_ficha(object instance, object Value)
+        private void set_15_Jugador_ficha(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.ficha = (global::PantallasMonopoly.Models.Ficha)Value;
         }
-        private object get_14_Jugador_dinero(object instance)
+        private object get_16_Jugador_dinero(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.dinero;
         }
-        private void set_14_Jugador_dinero(object instance, object Value)
+        private void set_16_Jugador_dinero(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.dinero = (global::System.Double)Value;
         }
-        private object get_15_Jugador_listadoPropiedades(object instance)
+        private object get_17_Jugador_listadoPropiedades(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.listadoPropiedades;
         }
-        private void set_15_Jugador_listadoPropiedades(object instance, object Value)
+        private void set_17_Jugador_listadoPropiedades(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.listadoPropiedades = (global::System.Collections.Generic.List<global::PantallasMonopoly.Models.Propiedad>)Value;
         }
-        private object get_16_Propiedad_precio(object instance)
+        private object get_18_Propiedad_precio(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             return that.precio;
         }
-        private void set_16_Propiedad_precio(object instance, object Value)
+        private void set_18_Propiedad_precio(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             that.precio = (global::System.Int32)Value;
         }
-        private object get_17_Propiedad_nCasas(object instance)
+        private object get_19_Propiedad_nCasas(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             return that.nCasas;
         }
-        private void set_17_Propiedad_nCasas(object instance, object Value)
+        private void set_19_Propiedad_nCasas(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             that.nCasas = (global::System.Int32)Value;
         }
-        private object get_18_Propiedad_tieneHotel(object instance)
+        private object get_20_Propiedad_tieneHotel(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             return that.tieneHotel;
         }
-        private void set_18_Propiedad_tieneHotel(object instance, object Value)
+        private void set_20_Propiedad_tieneHotel(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             that.tieneHotel = (global::System.Boolean)Value;
         }
-        private object get_19_Propiedad_comprador(object instance)
+        private object get_21_Propiedad_comprador(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             return that.comprador;
         }
-        private void set_19_Propiedad_comprador(object instance, object Value)
+        private void set_21_Propiedad_comprador(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             that.comprador = (global::PantallasMonopoly.Models.Jugador)Value;
         }
-        private object get_20_Propiedad_color(object instance)
+        private object get_22_Propiedad_color(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             return that.color;
         }
-        private void set_20_Propiedad_color(object instance, object Value)
+        private void set_22_Propiedad_color(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Propiedad)instance;
             that.color = (global::PantallasMonopoly.Models.Enums.ColorPropiedad)Value;
         }
-        private object get_21_Jugador_posicion(object instance)
+        private object get_23_Jugador_posicion(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.posicion;
         }
-        private void set_21_Jugador_posicion(object instance, object Value)
+        private void set_23_Jugador_posicion(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.posicion = (global::System.Int32)Value;
         }
-        private object get_22_Jugador_carcelGratisSuerte(object instance)
+        private object get_24_Jugador_carcelGratisSuerte(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.carcelGratisSuerte;
         }
-        private void set_22_Jugador_carcelGratisSuerte(object instance, object Value)
+        private void set_24_Jugador_carcelGratisSuerte(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.carcelGratisSuerte = (global::System.Boolean)Value;
         }
-        private object get_23_Jugador_carcelGratisComunidad(object instance)
+        private object get_25_Jugador_carcelGratisComunidad(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.carcelGratisComunidad;
         }
-        private void set_23_Jugador_carcelGratisComunidad(object instance, object Value)
+        private void set_25_Jugador_carcelGratisComunidad(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.carcelGratisComunidad = (global::System.Boolean)Value;
         }
-        private object get_24_Jugador_estaEnCarcel(object instance)
+        private object get_26_Jugador_estaEnCarcel(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             return that.estaEnCarcel;
         }
-        private void set_24_Jugador_estaEnCarcel(object instance, object Value)
+        private void set_26_Jugador_estaEnCarcel(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Jugador)instance;
             that.estaEnCarcel = (global::System.Boolean)Value;
         }
-        private object get_25_Lobby_partidaEmpezada(object instance)
+        private object get_27_Lobby_partidaEmpezada(object instance)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             return that.partidaEmpezada;
         }
-        private void set_25_Lobby_partidaEmpezada(object instance, object Value)
+        private void set_27_Lobby_partidaEmpezada(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.Models.Lobby)instance;
             that.partidaEmpezada = (global::System.Boolean)Value;
@@ -930,119 +952,131 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 xamlMember.Getter = get_6_createVM_crearCommand;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "PantallasMonopoly.ViewModels.searchVM.conn":
+                userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.searchVM");
+                xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "conn", "Microsoft.AspNet.SignalR.Client.HubConnection");
+                xamlMember.Getter = get_7_searchVM_conn;
+                xamlMember.Setter = set_7_searchVM_conn;
+                break;
+            case "PantallasMonopoly.ViewModels.searchVM.proxy":
+                userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.searchVM");
+                xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "proxy", "Microsoft.AspNet.SignalR.Client.IHubProxy");
+                xamlMember.Getter = get_8_searchVM_proxy;
+                xamlMember.Setter = set_8_searchVM_proxy;
+                break;
             case "PantallasMonopoly.ViewModels.searchVM.listadoLobby":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.searchVM");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "listadoLobby", "System.Collections.Generic.List`1<PantallasMonopoly.Models.Lobby>");
-                xamlMember.Getter = get_7_searchVM_listadoLobby;
-                xamlMember.Setter = set_7_searchVM_listadoLobby;
+                xamlMember.Getter = get_9_searchVM_listadoLobby;
+                xamlMember.Setter = set_9_searchVM_listadoLobby;
                 break;
             case "PantallasMonopoly.Models.Lobby.nombre":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Lobby");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "nombre", "String");
-                xamlMember.Getter = get_8_Lobby_nombre;
-                xamlMember.Setter = set_8_Lobby_nombre;
+                xamlMember.Getter = get_10_Lobby_nombre;
+                xamlMember.Setter = set_10_Lobby_nombre;
                 break;
             case "PantallasMonopoly.Models.Lobby.contrasena":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Lobby");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "contrasena", "String");
-                xamlMember.Getter = get_9_Lobby_contrasena;
-                xamlMember.Setter = set_9_Lobby_contrasena;
+                xamlMember.Getter = get_11_Lobby_contrasena;
+                xamlMember.Setter = set_11_Lobby_contrasena;
                 break;
             case "PantallasMonopoly.Models.Lobby.maxJugadores":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Lobby");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "maxJugadores", "Int32");
-                xamlMember.Getter = get_10_Lobby_maxJugadores;
-                xamlMember.Setter = set_10_Lobby_maxJugadores;
+                xamlMember.Getter = get_12_Lobby_maxJugadores;
+                xamlMember.Setter = set_12_Lobby_maxJugadores;
                 break;
             case "PantallasMonopoly.Models.Lobby.listadoJugadores":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Lobby");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "listadoJugadores", "System.Collections.Generic.List`1<PantallasMonopoly.Models.Jugador>");
-                xamlMember.Getter = get_11_Lobby_listadoJugadores;
-                xamlMember.Setter = set_11_Lobby_listadoJugadores;
+                xamlMember.Getter = get_13_Lobby_listadoJugadores;
+                xamlMember.Setter = set_13_Lobby_listadoJugadores;
                 break;
             case "PantallasMonopoly.Models.Jugador.nombre":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "nombre", "String");
-                xamlMember.Getter = get_12_Jugador_nombre;
-                xamlMember.Setter = set_12_Jugador_nombre;
+                xamlMember.Getter = get_14_Jugador_nombre;
+                xamlMember.Setter = set_14_Jugador_nombre;
                 break;
             case "PantallasMonopoly.Models.Jugador.ficha":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "ficha", "PantallasMonopoly.Models.Ficha");
-                xamlMember.Getter = get_13_Jugador_ficha;
-                xamlMember.Setter = set_13_Jugador_ficha;
+                xamlMember.Getter = get_15_Jugador_ficha;
+                xamlMember.Setter = set_15_Jugador_ficha;
                 break;
             case "PantallasMonopoly.Models.Jugador.dinero":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "dinero", "Double");
-                xamlMember.Getter = get_14_Jugador_dinero;
-                xamlMember.Setter = set_14_Jugador_dinero;
+                xamlMember.Getter = get_16_Jugador_dinero;
+                xamlMember.Setter = set_16_Jugador_dinero;
                 break;
             case "PantallasMonopoly.Models.Jugador.listadoPropiedades":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "listadoPropiedades", "System.Collections.Generic.List`1<PantallasMonopoly.Models.Propiedad>");
-                xamlMember.Getter = get_15_Jugador_listadoPropiedades;
-                xamlMember.Setter = set_15_Jugador_listadoPropiedades;
+                xamlMember.Getter = get_17_Jugador_listadoPropiedades;
+                xamlMember.Setter = set_17_Jugador_listadoPropiedades;
                 break;
             case "PantallasMonopoly.Models.Propiedad.precio":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Propiedad");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "precio", "Int32");
-                xamlMember.Getter = get_16_Propiedad_precio;
-                xamlMember.Setter = set_16_Propiedad_precio;
+                xamlMember.Getter = get_18_Propiedad_precio;
+                xamlMember.Setter = set_18_Propiedad_precio;
                 break;
             case "PantallasMonopoly.Models.Propiedad.nCasas":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Propiedad");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "nCasas", "Int32");
-                xamlMember.Getter = get_17_Propiedad_nCasas;
-                xamlMember.Setter = set_17_Propiedad_nCasas;
+                xamlMember.Getter = get_19_Propiedad_nCasas;
+                xamlMember.Setter = set_19_Propiedad_nCasas;
                 break;
             case "PantallasMonopoly.Models.Propiedad.tieneHotel":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Propiedad");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "tieneHotel", "Boolean");
-                xamlMember.Getter = get_18_Propiedad_tieneHotel;
-                xamlMember.Setter = set_18_Propiedad_tieneHotel;
+                xamlMember.Getter = get_20_Propiedad_tieneHotel;
+                xamlMember.Setter = set_20_Propiedad_tieneHotel;
                 break;
             case "PantallasMonopoly.Models.Propiedad.comprador":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Propiedad");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "comprador", "PantallasMonopoly.Models.Jugador");
-                xamlMember.Getter = get_19_Propiedad_comprador;
-                xamlMember.Setter = set_19_Propiedad_comprador;
+                xamlMember.Getter = get_21_Propiedad_comprador;
+                xamlMember.Setter = set_21_Propiedad_comprador;
                 break;
             case "PantallasMonopoly.Models.Propiedad.color":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Propiedad");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "color", "PantallasMonopoly.Models.Enums.ColorPropiedad");
-                xamlMember.Getter = get_20_Propiedad_color;
-                xamlMember.Setter = set_20_Propiedad_color;
+                xamlMember.Getter = get_22_Propiedad_color;
+                xamlMember.Setter = set_22_Propiedad_color;
                 break;
             case "PantallasMonopoly.Models.Jugador.posicion":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "posicion", "Int32");
-                xamlMember.Getter = get_21_Jugador_posicion;
-                xamlMember.Setter = set_21_Jugador_posicion;
+                xamlMember.Getter = get_23_Jugador_posicion;
+                xamlMember.Setter = set_23_Jugador_posicion;
                 break;
             case "PantallasMonopoly.Models.Jugador.carcelGratisSuerte":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "carcelGratisSuerte", "Boolean");
-                xamlMember.Getter = get_22_Jugador_carcelGratisSuerte;
-                xamlMember.Setter = set_22_Jugador_carcelGratisSuerte;
+                xamlMember.Getter = get_24_Jugador_carcelGratisSuerte;
+                xamlMember.Setter = set_24_Jugador_carcelGratisSuerte;
                 break;
             case "PantallasMonopoly.Models.Jugador.carcelGratisComunidad":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "carcelGratisComunidad", "Boolean");
-                xamlMember.Getter = get_23_Jugador_carcelGratisComunidad;
-                xamlMember.Setter = set_23_Jugador_carcelGratisComunidad;
+                xamlMember.Getter = get_25_Jugador_carcelGratisComunidad;
+                xamlMember.Setter = set_25_Jugador_carcelGratisComunidad;
                 break;
             case "PantallasMonopoly.Models.Jugador.estaEnCarcel":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Jugador");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "estaEnCarcel", "Boolean");
-                xamlMember.Getter = get_24_Jugador_estaEnCarcel;
-                xamlMember.Setter = set_24_Jugador_estaEnCarcel;
+                xamlMember.Getter = get_26_Jugador_estaEnCarcel;
+                xamlMember.Setter = set_26_Jugador_estaEnCarcel;
                 break;
             case "PantallasMonopoly.Models.Lobby.partidaEmpezada":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.Models.Lobby");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "partidaEmpezada", "Boolean");
-                xamlMember.Getter = get_25_Lobby_partidaEmpezada;
-                xamlMember.Setter = set_25_Lobby_partidaEmpezada;
+                xamlMember.Getter = get_27_Lobby_partidaEmpezada;
+                xamlMember.Setter = set_27_Lobby_partidaEmpezada;
                 break;
             }
             return xamlMember;

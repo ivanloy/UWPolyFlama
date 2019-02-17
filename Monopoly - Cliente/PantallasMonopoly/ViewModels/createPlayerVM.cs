@@ -79,13 +79,7 @@ namespace PantallasMonopoly.ViewModels
         {
             _navigationService = navigationService;
             _nickname = "";
-            Ficha f = new Ficha("Prueba", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/erp.png"));
-            Ficha f2 = new Ficha("Pruebo", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/erp.png"));
-            _listadoFichas = new List<Ficha>();
-            _listadoFichas.Add(f);
-            _listadoFichas.Add(f2);
-            _listadoFichas.Add(f2);
-            _listadoFichas.Add(f2);
+            _listadoFichas = generadorFichas.listadoFichas();         
             _fichaSeleccionada = new Ficha();
 
         }

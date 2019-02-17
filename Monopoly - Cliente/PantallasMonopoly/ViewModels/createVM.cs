@@ -154,7 +154,6 @@ namespace PantallasMonopoly.ViewModels
         private void crearLobby(bool entra)
         {
 
-
             Debug.WriteLine(entra);
 
         }

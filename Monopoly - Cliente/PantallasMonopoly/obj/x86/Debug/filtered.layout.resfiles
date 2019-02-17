@@ -16,5 +16,9 @@ Views\MainMenu.xbf
 Views\SearchMenu.xbf
 CustomAssets\backArrow.png
 CustomAssets\dbk.png
-CustomAssets\Fichas\erp.png
+CustomAssets\Fichas\Bread.png
+CustomAssets\Fichas\Hat.png
+CustomAssets\Fichas\Nacho.png
+CustomAssets\Fichas\Penny.png
+CustomAssets\Fichas\Thermo.png
 Properties\Default.rd.xml

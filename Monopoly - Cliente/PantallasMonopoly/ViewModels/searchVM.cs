@@ -1,4 +1,5 @@
-﻿using PantallasMonopoly.Models;
+﻿using Microsoft.AspNet.SignalR.Client;
+using PantallasMonopoly.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,30 @@ namespace PantallasMonopoly.ViewModels
 
         private List<Lobby> _listadoLobby;
 
+
+        private DelegateCommand _actualizarCommand;
+
+        public HubConnection conn { get; set; }
+        public IHubProxy proxy { get; set; }
+
+        #endregion
+
+        #region Constructores
+
+        public searchVM()
+        {
+
+            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            proxy = conn.CreateHubProxy("LobbyHub");
+            conn.Start().Wait();
+
+            proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
+
+            proxy.Invoke("obtenerListadoLobbies").Wait();
+        }
+
+        
+   
         #endregion
 
 
@@ -30,6 +55,18 @@ namespace PantallasMonopoly.ViewModels
             {
                 _listadoLobby = value;
             }
+        }
+
+        #endregion
+
+
+        #region Metodos SignalR
+
+        private void actualizarListadoLobbies(List<Lobby> listado)
+        {
+
+            _listadoLobby = listado;
+
         }
 
         #endregion
