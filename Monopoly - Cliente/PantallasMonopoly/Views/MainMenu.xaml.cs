@@ -43,7 +43,7 @@ namespace PantallasMonopoly.Views
 
         private void About_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AboutMenu));
+            this.Frame.Navigate(typeof(Game));
         }
 
         private void Exit_Tapped(object sender, TappedRoutedEventArgs e)

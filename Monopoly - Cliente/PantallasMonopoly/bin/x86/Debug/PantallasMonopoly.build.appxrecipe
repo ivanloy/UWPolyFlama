@@ -481,6 +481,9 @@
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
       <PackagePath>Views\CreatePlayer.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\Game.xbf">
+      <PackagePath>Views\Game.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
     </AppxPackagedFile>

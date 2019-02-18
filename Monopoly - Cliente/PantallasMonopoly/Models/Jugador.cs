@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PantallasMonopoly.Util;
+using System.Collections.Generic;
 
 namespace PantallasMonopoly.Models
 {
@@ -12,13 +13,14 @@ namespace PantallasMonopoly.Models
         public bool carcelGratisSuerte { get; set; }
         public bool carcelGratisComunidad { get; set; }
         public bool estaEnCarcel { get; set; }
+        public string dineroConSimboloDolar { get { return "$ " + this.dinero; } }
 
-        public Jugador(string nombre, Ficha ficha, double dinero, List<Propiedad> listadoPropiedades, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel)
+        public Jugador(string nombre, Ficha ficha, double dinero, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel)
         {
             this.nombre = nombre;
             this.ficha = ficha;
             this.dinero = dinero;
-            this.listadoPropiedades = listadoPropiedades;
+            this.listadoPropiedades = UtilPropiedades.generarListaPropiedadesInicial();
             this.posicion = posicion;
             this.carcelGratisSuerte = carcelGratisSuerte;
             this.carcelGratisComunidad = carcelGratisComunidad;
@@ -33,7 +35,7 @@ namespace PantallasMonopoly.Models
             this.nombre = nombre;
             this.ficha = ficha;
             this.dinero = 0;
-            this.listadoPropiedades = new List<Propiedad>();
+            this.listadoPropiedades = UtilPropiedades.generarListaPropiedadesInicial();
             this.posicion = 0;
             this.carcelGratisSuerte = false;
             this.carcelGratisComunidad = false;
@@ -42,7 +44,7 @@ namespace PantallasMonopoly.Models
 
         public Jugador()
         {
-
+            this.listadoPropiedades = UtilPropiedades.generarListaPropiedadesInicial();
         }
     }
 }

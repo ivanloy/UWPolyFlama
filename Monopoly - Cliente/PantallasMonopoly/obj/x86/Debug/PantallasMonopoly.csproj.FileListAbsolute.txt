@@ -552,3 +552,8 @@ C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x8
 C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636063200760000000.json
 C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\.winmd_cache\$Robmikh.CompositionSurfaceFactory.winmd_636221869820000000.json
+C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\Views\Game.g.i.cs
+C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\Views\Game.g.cs
+C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\Views\Game.xaml
+C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\Views\Game.xbf
+C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\Game.xbf

@@ -12,6 +12,7 @@ PantallasMonopoly.xr.xml
 Views\AboutMenu.xbf
 Views\CreateMenu.xbf
 Views\CreatePlayer.xbf
+Views\Game.xbf
 Views\MainMenu.xbf
 Views\SearchMenu.xbf
 CustomAssets\backArrow.png

@@ -15,7 +15,10 @@ namespace PantallasMonopoly.ViewModels
 
         public GameViewModel()
         {
-
+            _jugadores = new Jugador[1];
+            _jugadores[0] = new Jugador();
+            _jugadores[0].dinero = 123;
+            _jugadores[0].nombre = "Penisless guy";
         }
 
     }

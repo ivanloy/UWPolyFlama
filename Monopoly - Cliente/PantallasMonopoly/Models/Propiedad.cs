@@ -59,12 +59,12 @@ namespace PantallasMonopoly.Models
             }
         }
 
-        public Propiedad(int precio, int nCasas, bool tieneHotel, Jugador comprador, ColorPropiedad color)
+        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprada, ColorPropiedad color)
         {
             this.precio = precio;
             this.nCasas = nCasas;
             this.tieneHotel = tieneHotel;
-            this.comprador = comprador;
+            this.estaComprada = estaComprada;
             this.color = color;
         }
 
@@ -76,8 +76,18 @@ namespace PantallasMonopoly.Models
             this.precio = precio;
             this.nCasas = 0;
             this.tieneHotel = false;
-            this.comprador = null;
+            this.estaComprada = false;
             this.color = color;
         }
+
+        public Propiedad(ColorPropiedad color)
+        {
+            this.precio = 0;
+            this.nCasas = 0;
+            this.tieneHotel = false;
+            this.estaComprada = false;
+            this.color = color;
+        }
+
     }
 }
