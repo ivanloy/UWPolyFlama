@@ -1,1 +1,1 @@
-C:\Users\jolsensei\Desktop\Git\Interfaces\PantallasMonopoly\PantallasMonopoly\PantallasMonopoly.csproj;x86
+C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\PantallasMonopoly.csproj;x86
