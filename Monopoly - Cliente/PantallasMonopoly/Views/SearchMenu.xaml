@@ -124,11 +124,11 @@
             Background="White"
             CornerRadius="8">
             <StackPanel>
-                <PasswordBox PlaceholderText="Password" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="0,20,0,20"></PasswordBox>
+                <PasswordBox PlaceholderText="Password" Password="{Binding password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="0,20,0,20"></PasswordBox>
                 <Button HorizontalAlignment="Center" 
                             FontSize="36"
                             BorderThickness="0"
-                            Command="{Binding Path=crearCommand}" 
+                            Command="{Binding Path=confirmarPassCommand}" 
                             Margin="0,0,0,20"
                             Background="#2196F3"
                             Foreground="White">GO</Button>

@@ -149,7 +149,7 @@ namespace PantallasMonopoly.ViewModels
                 _passwordLobby = "";
             }
 
-            Lobby lobby = new Lobby(_nombreLobby, _nombreLobby, _numeroJugadoresLobby, _creadorSala, new Partida());
+            Lobby lobby = new Lobby(_nombreLobby, _passwordLobby, _numeroJugadoresLobby, _creadorSala, new Partida());
       
             //Aqui hay una llamada al server
             await proxy.Invoke("crearNuevoLobby", lobby);

@@ -19,8 +19,11 @@ namespace PantallasMonopoly.ViewModels
         private Lobby _lobbySeleccionado;
 
         private DelegateCommand _actualizarCommand;
+        private DelegateCommand _confirmarPassCommand;
 
         private String _visibilidad;
+        private String _password;
+        private bool _puedeEntrar;
 
         private INavigationService _navigationService;
 
@@ -37,17 +40,19 @@ namespace PantallasMonopoly.ViewModels
 
             _visibilidad = "Collapsed";
 
+            _password = "";
+
             conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("LobbyHub");
             conn.Start().Wait();
           
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
+            proxy.On<bool>("contrasena", contrasena);
 
             proxy.Invoke("obtenerListadoLobbies").Wait();
         }
 
-        
-   
+      
         #endregion
 
 
@@ -106,6 +111,23 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+        public String password
+        {
+            get
+            {
+                return _password;
+            }
+
+            set
+            {
+                _password = value;
+                NotifyPropertyChanged("password");
+                _confirmarPassCommand.RaiseCanExecuteChanged();
+
+
+            }
+        }
+
 
         #endregion
 
@@ -129,6 +151,42 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
+        #endregion
+
+
+        #region Confirmar command
+
+        public DelegateCommand confirmarPassCommand
+        {
+            get
+            {
+                _confirmarPassCommand = new DelegateCommand(confirmarPassCommand_Executed, confirmarPassCommand_CanExecute);
+                return _confirmarPassCommand;
+            }
+        }
+
+        private bool confirmarPassCommand_CanExecute()
+        {
+            bool puedeComprobar = false;
+
+
+            if (!_password.Equals("")) {
+
+
+                puedeComprobar = true;
+
+            }
+
+            return puedeComprobar;
+        }
+
+        private void confirmarPassCommand_Executed()
+        {
+
+            proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
+              
+        }
+
 
         #endregion
 
@@ -139,6 +197,18 @@ namespace PantallasMonopoly.ViewModels
         {
 
             _listadoLobby = listado;
+
+        }
+
+
+        private void contrasena(bool entra)
+        {
+            if(entra){
+
+                _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado.nombre);
+
+            }
+           
 
         }
 

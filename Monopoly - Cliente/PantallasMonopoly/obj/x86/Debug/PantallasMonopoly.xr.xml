@@ -15,9 +15,12 @@
     <RootPropertyPathName Name="fichaSeleccionada" />
     <RootPropertyPathName Name="nickname" />
     <RootPropertyPathName Name="IsChecked" />
+    <RootPropertyPathName Name="passwordLobby" />
     <RootPropertyPathName Name="numeroJugadoresLobby" />
     <RootPropertyPathName Name="nombreLobby" />
     <RootPropertyPathName Name="visibilidad" />
+    <RootPropertyPathName Name="confirmarPassCommand" />
+    <RootPropertyPathName Name="password" />
     <RootPropertyPathName Name="listadoLobby" />
     <RootPropertyPathName Name="lobbySeleccionado" />
     <RootPropertyPathName Name="maxJugadores" />
@@ -172,6 +175,7 @@
     <RootType FullName="PantallasMonopoly.Models.ComboBoxConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Password" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="VerticalAlignment" />
