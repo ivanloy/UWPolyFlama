@@ -29,7 +29,7 @@ namespace PolyFlamaServer.Models
          * Solo hará falta el nombre, la contraseña, el máximo de jugadores, y el jugador
          * que ha creado el lobby, que se añadirá a la lista.
          */ 
-        public Lobby(string nombre, string contrasena, int maxJugadores, Jugador jugadorCreador, Partida partida)
+        public Lobby(string nombre, string contrasena, int maxJugadores, Jugador jugadorCreador)
         {
             this.nombre = nombre;
             this.contrasena = contrasena;
@@ -37,7 +37,7 @@ namespace PolyFlamaServer.Models
             this.listadoJugadores = new List<Jugador>();
             this.listadoJugadores.Add(jugadorCreador);
             this.partidaEmpezada = false;
-            this.partida = partida;
+            this.partida = new Partida();
         }
 
         public Lobby()

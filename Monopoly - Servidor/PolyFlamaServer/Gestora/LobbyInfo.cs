@@ -8,7 +8,7 @@ namespace PolyFlamaServer.Gestora
 {
     public static class LobbyInfo
     {
-        public static ConcurrentDictionary<string, Lobby> listadoLobbies = new ConcurrentDictionary<string, Lobby>();
-        public static ConcurrentDictionary<string, int> listadoLobbiesNumeroJugadores = new ConcurrentDictionary<string, int>();
+        //Dictionario de <nombreLobby, Lobby>
+        public static ConcurrentDictionary<string, DatosLobby> listadoLobbies = new ConcurrentDictionary<string, DatosLobby>();
     }
 }

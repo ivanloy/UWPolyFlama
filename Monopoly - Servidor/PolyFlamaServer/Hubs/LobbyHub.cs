@@ -6,6 +6,8 @@ using Microsoft.AspNet.SignalR;
 using PolyFlamaServer.Gestora;
 using System.Threading.Tasks;
 using PolyFlamaServer.Models;
+using System.Collections.Concurrent;
+using System.Collections;
 
 namespace PolyFlamaServer.Hubs
 {
@@ -18,9 +20,9 @@ namespace PolyFlamaServer.Hubs
         public void crearNuevoLobby(Lobby lobby)
         {
             bool lobbyExists = false;
-            foreach(KeyValuePair<string, Lobby> lobbyEntry in LobbyInfo.listadoLobbies)
+            foreach(KeyValuePair<string, DatosLobby> datoLobby in LobbyInfo.listadoLobbies)
             {
-                if(lobbyEntry.Value.nombre == lobby.nombre)
+                if(datoLobby.Value.lobby.nombre == lobby.nombre)
                 {
                     lobbyExists = true;
                     break;
@@ -34,9 +36,17 @@ namespace PolyFlamaServer.Hubs
                 */
                 Groups.Add(Context.ConnectionId, lobby.nombre);
                 Jugador jugadorCreador = lobby.listadoJugadores[0];
-                LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, lobby, (key, value) => value);
-                LobbyInfo.listadoLobbiesNumeroJugadores.AddOrUpdate(lobby.nombre, 1, (key, value) => value);
 
+                //Creación y adición de datos del lobby
+                DatosLobby datosLobby = new DatosLobby();
+                datosLobby.lobby = lobby;
+                datosLobby.numeroJugadores = 1;
+                datosLobby.listadoJugadoresConnection.AddOrUpdate(jugadorCreador.nombre, Context.ConnectionId, (key, value) => value);
+
+                //Creamos la entrada del diccionario de ese lobby
+                LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, datosLobby, (key, value) => value);
+
+                //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
                 Clients.Caller.crearLobby(true);
                 Clients.Others.actualizarListadoLobbies(LobbyInfo.listadoLobbies);
             }
@@ -47,13 +57,13 @@ namespace PolyFlamaServer.Hubs
 
         public void comprobarContrasena(string nombreLobby, string contrasena)
         {
-            if (LobbyInfo.listadoLobbies[nombreLobby].maxJugadores < LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby])
+            if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores < LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores)
             {
-                if (LobbyInfo.listadoLobbies[nombreLobby].contrasena == contrasena)
+                if (LobbyInfo.listadoLobbies[nombreLobby].lobby.contrasena == contrasena)
                 {
                     //Si la contraseña es correcta, añadimos el jugador al grupo
                     Groups.Add(Context.ConnectionId, nombreLobby);
-                    LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby]++;
+                    LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores++;
                     Clients.Caller.contrasena(true);
                 }
                 else
@@ -67,48 +77,97 @@ namespace PolyFlamaServer.Hubs
         public void unirALobby(string nombreLobby, Jugador jugador)
         {
             //Añadimos el jugador al listado de jugadores del lobby
-            LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores.Add(jugador);
+            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
             //Avisamos a los otros jugadores de que se ha unido
-            Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+            Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
            
         }
 
         public void empezarPartida(string nombreLobby)
         {
-            if (LobbyInfo.listadoLobbies[nombreLobby].maxJugadores == LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby])
+            if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores)
             {
                 //Crear una partida nueva
                 Partida partida = GestoraPartida.generarPartidaNueva();
                 Random random = new Random();
                 //Generar el índice del jugador que va a salir primero
-                partida.turnoActual = random.Next(0, LobbyInfo.listadoLobbies[nombreLobby].maxJugadores);
+                partida.turnoActual = random.Next(0, LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores);
                 //Asignar la partida al lobby
-                LobbyInfo.listadoLobbies[nombreLobby].partida = partida;
-                Clients.Group(nombreLobby).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby]);
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.partida = partida;
+                Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby].lobby);
             }
         }
 
         public void salirDeLobby(string nombreLobby, Jugador jugador)
         {
-            LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby]--;
-            Groups.Remove(Context.ConnectionId, nombreLobby);
+            LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores--;
+            Groups.Remove(Context.ConnectionId, LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value);
             if(jugador != null)
             {
-                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores.Remove(jugador);
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Remove(jugador);
                 //Avisamos a los otros jugadores de que se ha desconectado
-                Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+                Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                
+                if (LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores == 0)
+                {
+                    DatosLobby lobbyRemoved;
+                    LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out lobbyRemoved);
+                }
+
+                Clients.Caller.salirDeLobby();
             }
                 
         }
 
+        //Actualizar el listado completo de lobbies
         public void obtenerListadoLobbies()
         {
-            Clients.Caller.actualizarListadoLobbies(LobbyInfo.listadoLobbies.Values);
+            List<Lobby> listadoLobbies = new List<Lobby>();
+
+            foreach(DatosLobby datosLobby in LobbyInfo.listadoLobbies.Values)
+            {
+                listadoLobbies.Add(datosLobby.lobby);
+            }
+
+            Clients.Caller.actualizarListadoLobbies(listadoLobbies);
         }
 
         //Cuando un jugador se desconecte
         public override Task OnDisconnected(bool stopCalled)
         {
+            bool esJugadorCreador = false;
+            string nombreLobby = "";
+            foreach(DatosLobby datosLobby in LobbyInfo.listadoLobbies.Values)
+            {
+                if (datosLobby.listadoJugadoresConnection.ContainsKey(datosLobby.lobby.listadoJugadores.First().nombre))
+                {
+                    esJugadorCreador = true;
+                    nombreLobby = datosLobby.lobby.nombre;
+                    break;
+                }
+                else if (datosLobby.listadoJugadoresConnection.Values.ToList().Exists(x => x == Context.ConnectionId))
+                {
+                    nombreLobby = datosLobby.lobby.nombre;
+                    break;
+                }
+            }
+
+            if(esJugadorCreador)
+            {
+                DatosLobby datosLobby;
+                LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out datosLobby);
+                foreach (string connectionId in datosLobby.listadoJugadoresConnection.Values)
+                {
+                    Clients.Client(connectionId).salirDeLobby();
+                    Groups.Remove(connectionId, nombreLobby);
+                }
+
+            }
+            else
+            {
+                Groups.Remove(Context.ConnectionId, nombreLobby);
+            }
+
             return base.OnDisconnected(stopCalled);
         }
 
