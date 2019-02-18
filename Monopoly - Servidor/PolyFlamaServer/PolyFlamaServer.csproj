@@ -131,6 +131,7 @@
     </Compile>
     <Compile Include="Models\Carta.cs" />
     <Compile Include="Models\Casilla.cs" />
+    <Compile Include="Models\Enums\EfectosEnum.cs" />
     <Compile Include="Models\Ficha.cs" />
     <Compile Include="Models\Jugador.cs" />
     <Compile Include="Models\Lobby.cs" />

@@ -70,7 +70,11 @@ namespace PolyFlamaServer.Hubs
             LobbyInfo.listadoLobbies[nombreLobby].listadoJugadores.Add(jugador);
             //Avisamos a los otros jugadores de que se ha unido
             Clients.Group(nombreLobby).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+           
+        }
 
+        public void empezarPartida(string nombreLobby)
+        {
             if (LobbyInfo.listadoLobbies[nombreLobby].maxJugadores == LobbyInfo.listadoLobbiesNumeroJugadores[nombreLobby])
             {
                 //Crear una partida nueva
@@ -82,7 +86,6 @@ namespace PolyFlamaServer.Hubs
                 LobbyInfo.listadoLobbies[nombreLobby].partida = partida;
                 Clients.Group(nombreLobby).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby]);
             }
-                
         }
 
         public void salirDeLobby(string nombreLobby, Jugador jugador)

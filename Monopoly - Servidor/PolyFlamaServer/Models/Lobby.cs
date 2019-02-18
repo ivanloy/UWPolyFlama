@@ -44,5 +44,15 @@ namespace PolyFlamaServer.Models
         {
 
         }
+
+        public bool tieneContrasena()
+        {
+            return this.contrasena == "";
+        }
+
+        public void quitarContrasena()
+        {
+            this.contrasena = "";
+        }
     }
 }

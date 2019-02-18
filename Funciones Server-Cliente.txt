@@ -6,7 +6,7 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - obtenerListadoLobbies()
 
 Funciones EN EL SERVIDOR (GameHub):
- - tirarDadoInicial(string nombreLobby, string nombreJugador)
+ - tirarDados(string nombreLobby)
 
 Funciones EN EL CLIENTE:
  - crearLobby(bool creadoConExito)
