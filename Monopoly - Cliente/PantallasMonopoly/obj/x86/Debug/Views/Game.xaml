@@ -6,15 +6,234 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:vm="using:PantallasMonopoly.ViewModels"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    xmlns:vm="using:PantallasMonopoly.ViewModels">
 
     <Page.DataContext>
         <vm:GameViewModel></vm:GameViewModel>
     </Page.DataContext>
-
+    
+    <Page.Background>
+        <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
+    </Page.Background>
+    
     <RelativePanel>
 
+
+        <Grid
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            Margin="50">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+
+            <Rectangle Fill="Wheat" Grid.Row="1" Grid.Column="1" Grid.RowSpan="8" Grid.ColumnSpan="8"/>
+
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="0"/>
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[18].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[18].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[18].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[18].fichas[1].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[18].fichas[2].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[18].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="1"/>
+            <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[19].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[19].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[19].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[19].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[19].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[19].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="2"/>
+            <Grid Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[20].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[20].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[20].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[20].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[20].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[20].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="3"/>
+            <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[21].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[21].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[21].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[21].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[21].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[21].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="4"/>
+            <Grid Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[22].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[22].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[22].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[22].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[22].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[22].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="5"/>
+            <Grid Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[23].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[23].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[23].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[23].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[23].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[23].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="6"/>
+            <Grid Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[24].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[24].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[24].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[24].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[24].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[24].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="7"/>
+            <Grid Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[25].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[25].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[25].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[25].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[25].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[25].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="8"/>
+            <Grid Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[26].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[26].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[26].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[26].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[26].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[26].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="9"/>
+            <Grid Grid.Row="0" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding Casillas[27].bigImage}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Casillas[27].bigImage}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Casillas[27].fichas[0].imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[27].fichas[2].imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding Casillas[27].fichas[1].imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding Casillas[27].fichas[3].imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="0"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="1"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="2"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="3"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="4"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="5"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="6"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="7"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="8"/>
+            <Rectangle Fill="Black" Stroke="Black" Grid.Row="9" Grid.Column="9"/>
+
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="1" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="2" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="3" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="4" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="5" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="6" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="7" Grid.Column="0"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="8" Grid.Column="0"/>
+
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="1" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="2" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="3" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="4" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="5" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="6" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="7" Grid.Column="9"/>
+            <Rectangle Fill="White" Stroke="Black" Grid.Row="8" Grid.Column="9"/>
+
+        </Grid>
+        
+        
         <StackPanel
             Orientation="Horizontal"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -65,7 +284,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox"
                         RelativePanel.AlignRightWith="rct_money"
-                        Margin="0,0,7,50">
+                        Margin="0,0,7,60">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -130,7 +349,7 @@
             </Border>
 
             <Border
-                Height="200"
+                Height="180"
                 Width="300"
                 BorderThickness="4"
                 BorderBrush="Black"
@@ -142,19 +361,19 @@
                     <Rectangle x:ConnectionId='6'
                         Name="rct_playerBox2"
                         Width="300"
-                        Height="200"
+                        Height="180"
                         Fill="Blue"/>
 
                     <Rectangle x:ConnectionId='7'
                         Name="rct_money2"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
-                        Height="130"
+                        Height="120"
                         Fill="DarkBlue"/>
 
                     <TextBlock
-                        Text="{Binding Jugadores[0].nombre}"
-                        FontSize="35"
+                        Text="{Binding Jugadores[1].nombre}"
+                        FontSize="30"
                         Foreground="White"
                         FontStyle="Italic"
                         FontWeight="Bold"
@@ -162,8 +381,8 @@
                         RelativePanel.AlignTopWith="rct_playerBox2"/>
 
                     <TextBlock
-                        Text="{Binding Jugadores[0].dineroConSimboloDolar}"
-                        FontSize="50"
+                        Text="{Binding Jugadores[1].dineroConSimboloDolar}"
+                        FontSize="40"
                         Foreground="White"
                         FontStyle="Italic"
                         FontWeight="ExtraBold"
@@ -176,7 +395,7 @@
             </Border>
 
             <Border
-                Height="200"
+                Height="180"
                 Width="300"
                 BorderThickness="4"
                 BorderBrush="Black"
@@ -188,19 +407,19 @@
                     <Rectangle x:ConnectionId='4'
                         Name="rct_playerBox3"
                         Width="300"
-                        Height="200"
+                        Height="180"
                         Fill="Green"/>
 
                     <Rectangle x:ConnectionId='5'
                         Name="rct_money3"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
-                        Height="130"
+                        Height="120"
                         Fill="DarkGreen"/>
 
                     <TextBlock
-                        Text="{Binding Jugadores[0].nombre}"
-                        FontSize="35"
+                        Text="{Binding Jugadores[2].nombre}"
+                        FontSize="30"
                         Foreground="White"
                         FontStyle="Italic"
                         FontWeight="Bold"
@@ -208,8 +427,8 @@
                         RelativePanel.AlignTopWith="rct_playerBox3"/>
 
                     <TextBlock
-                        Text="{Binding Jugadores[0].dineroConSimboloDolar}"
-                        FontSize="50"
+                        Text="{Binding Jugadores[2].dineroConSimboloDolar}"
+                        FontSize="40"
                         Foreground="White"
                         FontStyle="Italic"
                         FontWeight="ExtraBold"
@@ -217,14 +436,12 @@
                         RelativePanel.AlignLeftWith="rct_playerBox3"
                         RelativePanel.AlignTopWith="rct_money3"/>
 
-                    
-                    
                 </RelativePanel>
 
             </Border>
 
             <Border
-                Height="200"
+                Height="180"
                 Width="300"
                 BorderThickness="4"
                 BorderBrush="Black"
@@ -236,19 +453,20 @@
                     <Rectangle x:ConnectionId='2'
                         Name="rct_playerBox4"
                         Width="300"
-                        Height="200"
+                        Height="180"
                         Fill="MediumPurple"/>
 
                     <Rectangle x:ConnectionId='3'
                         Name="rct_money4"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
-                        Height="130"
+                        Height="120"
                         Fill="Purple"/>
 
+
                     <TextBlock
-                        Text="{Binding Jugadores[0].nombre}"
-                        FontSize="35"
+                        Text="{Binding Jugadores[3].nombre}"
+                        FontSize="30"
                         Foreground="White"
                         FontStyle="Italic"
                         FontWeight="Bold"
@@ -256,8 +474,8 @@
                         RelativePanel.AlignTopWith="rct_playerBox4"/>
  
                     <TextBlock
-                        Text="{Binding Jugadores[0].dineroConSimboloDolar}"
-                        FontSize="50"
+                        Text="{Binding Jugadores[3].dineroConSimboloDolar}"
+                        FontSize="40"
                         Foreground="White"
                         FontStyle="Italic"
                         FontWeight="ExtraBold"

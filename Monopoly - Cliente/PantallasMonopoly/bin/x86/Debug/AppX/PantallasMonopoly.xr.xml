@@ -14,6 +14,9 @@
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="listadoPropiedades" />
     <RootPropertyPathName Name="brushColor" />
+    <RootPropertyPathName Name="Casillas" />
+    <RootPropertyPathName Name="bigImage" />
+    <RootPropertyPathName Name="fichas" />
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="numeroJugadoresLobby" />
     <RootPropertyPathName Name="nombreLobby" />
@@ -159,25 +162,31 @@
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="PantallasMonopoly.CreatePlayer" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="PantallasMonopoly.ViewModels.GameViewModel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Name" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Name" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
+      <RootProperty Name="Stroke" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
