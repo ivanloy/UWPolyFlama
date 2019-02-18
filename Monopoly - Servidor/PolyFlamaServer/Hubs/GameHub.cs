@@ -16,15 +16,18 @@ namespace PolyFlamaServer.Hubs
     {
         public void tirarDados(string nombreLobby)
         {
-            //Si el jugador no está en la carcel o si está en la carcel pero ya ha hecho 2 tiradas
-            if (!LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].estaEnCarcel || LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].estaEnCarcel && LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].turnosEnCarcel == 2)
-            {
-                int posicionActual = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].posicion;
-                Random random = new Random();
+            int turnoActual = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual;
+            string connectionIDCreator = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value;
 
-                //Le quitamos el estado de estar en la carcel, independiente de si está o no, why not? 🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷🤷
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].estaEnCarcel = false;
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].turnosEnCarcel = 0;
+            //Si el jugador no está en la carcel o si está en la carcel pero ya ha hecho 2 tiradas
+            if (!LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].estaEnCarcel || LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].estaEnCarcel && LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].turnosEnCarcel == 2)
+            {
+                Random random = new Random();
+                int posicionActual = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].posicion;
+
+                //Le quitamos el estado de estar en la carcel, independiente de si está o no, why not? 🤷🤷🤷🤷🤷🤷🤷🤷
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].estaEnCarcel = false;
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].turnosEnCarcel = 0;
 
                 //Tirar los dados
                 int dado1 = random.Next(1, 7);
@@ -32,11 +35,12 @@ namespace PolyFlamaServer.Hubs
 
                 //Actualizamos el lobby con los dados y lo pasamos a todos
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.arrayDados = new int[] { dado1, dado2 };
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
-                Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
-                Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).moverCasillas();
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
+                Clients.Group(connectionIDCreator).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
+                Clients.Group(connectionIDCreator).moverCasillas();
                 Object casilla = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[posicionActual];
 
+                //Esperamos un poquisho
                 Thread.Sleep(1000);
 
                 //Comprobar de que tipo es la casilla actual
@@ -47,7 +51,7 @@ namespace PolyFlamaServer.Hubs
                         Clients.Caller.comprarPropiedad();
                     else
                     {
-                        LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].dinero -= propiedad.dineroAPagar;
+                        LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].dinero -= propiedad.dineroAPagar;
                     }
                 }
                 else
@@ -70,27 +74,46 @@ namespace PolyFlamaServer.Hubs
                             break;
 
                         case TipoCasilla.IRALACARCEL:
-                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].posicion = 9;
-                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].estaEnCarcel = true;
+                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].posicion = 9;
+                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
                             break;
 
                         case TipoCasilla.IMPUESTOAPPLE:
-                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].dinero -= 200;
+                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].dinero -= 200;
                             break;
 
                         case TipoCasilla.IMPUESTOAZURE:
-                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].dinero -= 100;
+                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].dinero -= 100;
                             break;
                     }
                 }
             }
             else
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual].turnosEnCarcel++;
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
 
-            LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual = GestoraPartida.calcularNuevoTurno(LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual, LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores);
-            Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+            LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual = GestoraPartida.calcularNuevoTurno(turnoActual, LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores);
+            Clients.Group(connectionIDCreator).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
             Clients.Caller.terminarTurno();
-            Clients.OthersInGroup(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).siguienteTurno();
+            Clients.OthersInGroup(connectionIDCreator).siguienteTurno();
+        }
+
+        public void comprarPropiedad(string nombreLobby, bool quiereComprar)
+        {
+            //Buscamos la información de 💩💩💩
+            Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual];
+            Propiedad propiedad = (Propiedad)LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[jugador.posicion];
+
+            //Cambiamos la información en el jugador
+            jugador.listadoPropiedades.Single(x => x.posicionCasilla == jugador.posicion).estaComprado = true;
+            jugador.listadoPropiedades.Single(x => x.posicionCasilla == jugador.posicion).comprador = jugador;
+
+            //Cambiamos la información en la propiedad de la partida
+            propiedad.comprador = jugador;
+            propiedad.estaComprado = true;
+
+            //Llamamos a todo el grupo y les actualizamos el lobby
+            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre];
+            Clients.Group(connectionIDCreador).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
         }
 
         //Cuando un jugador se desconecte

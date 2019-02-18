@@ -55,7 +55,7 @@ namespace PantallasMonopoly.ViewModels
         {          
           
 
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            conn = new HubConnection("http://localhost:51144/");
             proxy = conn.CreateHubProxy("LobbyHub");
             conn.Start();        
 

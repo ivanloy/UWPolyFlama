@@ -13,7 +13,6 @@ namespace PolyFlamaServer.Gestora
             Partida partida = new Partida();
             partida.listadoCartasSuerte = generarCartasSuerte();
             partida.listadoCartasComunidad = generarCartasComunidad();
-            partida.listadoPropiedades = generarPropiedades();
             partida.listadoCasillas = generarCasillas();
             partida.turnoActual = 0;
             partida.arrayDados = new int[] {1, 1};

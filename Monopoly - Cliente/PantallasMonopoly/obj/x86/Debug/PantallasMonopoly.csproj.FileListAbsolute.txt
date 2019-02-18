@@ -1681,3 +1681,4 @@ C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Cliente\PantallasMonop
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636063200760000000.json
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\.winmd_cache\$Robmikh.CompositionSurfaceFactory.winmd_636221869820000000.json
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\PantallasMonopoly.csprojAssemblyReference.cache
