@@ -1,22 +1,22 @@
 Funciones EN EL SERVIDOR (LobbyHub):
  - crearNuevoLobby(Lobby lobby) //Crea un nuevo lobby, el cual ya tiene el jugador dentro
- - comprobarContrasena(string nombreLobby, string contrasena)
- - unirALobby(string nombreLobby, Jugador jugador)
- - salirDeLobby(string nombreLobby, Jugador jugador)
- - obtenerListadoLobbies()
+ - comprobarContrasena(string nombreLobby, string contrasena) //Hay que llamarlo siempre antes de uunirALobby
+ - unirALobby(string nombreLobby, Jugador jugador) //Hay que llamarlo siempre después de comprobarContrasena y solo en caso de ser true
+ - salirDeLobby(string nombreLobby, Jugador jugador) //Te saca del lobby
+ - obtenerListadoLobbies() //Llama a actualizarListadoLobbies en el cliente
 
 Funciones EN EL SERVIDOR (GameHub):
- - tirarDados(string nombreLobby)
+ - tirarDados(string nombreLobby) //Hay que llamarlo cada vez que le toque a alguien
 
 Funciones EN EL CLIENTE:
- - crearLobby(bool creadoConExito)
+ - crearLobby(bool creadoConExito) //Te avisa de si el lobby se ha podido crear correctamente o no. Si no se ha podido crear, es porque el nombre ya estaba elegido
  - contrasena(bool contrasenaCorrecta) //Si es true, se ha unido correctamente, si es false, la contraseña era incorrecta
- - actualizarLobby(Lobby lobby)
- - actualizarListadoLobbies(List<Lobby> listado)
- - lobbyCompleto()
- - empezarPartida()
- - tiradaInicial(int tiradaInicial)
+ - actualizarLobby(Lobby lobby) //Actualiza el lobby en el que esté un jugador
+ - actualizarListadoLobbies(List<Lobby> listado) //Actualiza el listado de lobbies de JOIN
+ - lobbyCompleto() //Se llama cuando, al llamar comprobarContrasena en el Servidor, el lobby está lleno
+ - empezarPartida() //Se llama cuando la partida ha empezado
  - moverCasillas() //No necesita nada porque Lobby tiene el array de dados y el jugador que debe moverse
  - comprarPropiedad() //No necesita nada porque Lobby tiene el jugador y la posición en la que está
  - terminarTurno() //Método que llama al jugador que esté en ese turno, y le mostrará en un dialog lo que haya pasado
  - siguienteTurno() //Avisa a los demás de que el turno ha terminado y ha pasado al siguiente
+ - salirDeLobby() //Método que te saca de la pantalla de lobby
