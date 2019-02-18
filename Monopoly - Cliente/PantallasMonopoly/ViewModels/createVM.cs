@@ -73,6 +73,7 @@ namespace PantallasMonopoly.ViewModels
             set
             {
                 _passwordLobby = value;
+                NotifyPropertyChanged("passwordLobby");
             }
         }
 
@@ -143,8 +144,12 @@ namespace PantallasMonopoly.ViewModels
 
         private async void crearCommand_Executed()
         {
+            if (_passwordLobby == null)
+            {
+                _passwordLobby = "";
+            }
 
-            Lobby lobby = new Lobby(_nombreLobby, "", _numeroJugadoresLobby, _creadorSala, new Partida());
+            Lobby lobby = new Lobby(_nombreLobby, _nombreLobby, _numeroJugadoresLobby, _creadorSala, new Partida());
       
             //Aqui hay una llamada al server
             await proxy.Invoke("crearNuevoLobby", lobby);

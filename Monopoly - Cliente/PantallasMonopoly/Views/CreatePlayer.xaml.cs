@@ -7,6 +7,7 @@ using Windows.UI.Xaml.Navigation;
 using PantallasMonopoly.Views;
 using PantallasMonopoly.ViewModels;
 using PantallasMonopoly.Util;
+using System;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -30,7 +31,19 @@ namespace PantallasMonopoly
             this.Frame.Navigate(typeof(MainMenu));
 
         }
-    
-     
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+            createPlayerVM viewModel;
+            viewModel = (createPlayerVM)this.DataContext;
+
+            if (e.Parameter is String)
+            {
+                viewModel.nombreSalaAEntrar = (String)e.Parameter;
+            }
+        }
+
+
     }
 }

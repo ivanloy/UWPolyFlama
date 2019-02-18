@@ -108,7 +108,7 @@
                         <CheckBox Name="checkPass" Margin="150,0,0,0">Password</CheckBox>
                     </StackPanel>
 
-                    <PasswordBox Visibility="{Binding ElementName=checkPass, Path=IsChecked}" PlaceholderText="Password" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="0,0,0,20"></PasswordBox>
+                    <PasswordBox Visibility="{Binding ElementName=checkPass, Path=IsChecked}" Password="{Binding passwordLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PlaceholderText="Password" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="0,0,0,20"></PasswordBox>
                     <Button HorizontalAlignment="Center" 
                             FontSize="36"
                             BorderThickness="0"

@@ -1,4 +1,5 @@
-﻿using PantallasMonopoly.Models;
+﻿using Microsoft.AspNet.SignalR.Client;
+using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,20 @@ namespace PantallasMonopoly.ViewModels
         private List<Ficha> _listadoFichas;
         private Ficha _fichaSeleccionada;
 
+        private String _nombreSalaAEntrar;
+
         private DelegateCommand _crearCommand;
         private INavigationService _navigationService;
+
+
 
         #endregion
 
 
         #region Propiedades publicas
+
+        public HubConnection conn { get; set; }
+        public IHubProxy proxy { get; set; }
 
         public String nickname
         {
@@ -70,6 +78,19 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+        public String nombreSalaAEntrar
+        {
+            get
+            {
+                return _nombreSalaAEntrar;
+            }
+
+            set
+            {
+                _nombreSalaAEntrar = value;
+            }
+        }
+
         #endregion
 
 
@@ -77,6 +98,10 @@ namespace PantallasMonopoly.ViewModels
 
         public createPlayerVM(INavigationService navigationService)
         {
+            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            proxy = conn.CreateHubProxy("LobbyHub");
+            conn.Start();
+
             _navigationService = navigationService;
             _nickname = "";
             _listadoFichas = generadorFichas.listadoFichas();         
@@ -114,8 +139,19 @@ namespace PantallasMonopoly.ViewModels
 
         private void crearCommand_Executed()
         {
+            if (_nombreSalaAEntrar == null) {
+
+                _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
+
+            }
+            else
+            {
+
+                
+
+            }
       
-            _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
+            
 
         }
 

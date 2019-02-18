@@ -17,7 +17,11 @@
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="numeroJugadoresLobby" />
     <RootPropertyPathName Name="nombreLobby" />
+    <RootPropertyPathName Name="visibilidad" />
     <RootPropertyPathName Name="listadoLobby" />
+    <RootPropertyPathName Name="lobbySeleccionado" />
+    <RootPropertyPathName Name="maxJugadores" />
+    <RootPropertyPathName Name="Count" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -29,7 +33,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="Resources" />
-      <RootProperty Name="DataContext" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -64,11 +67,14 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
@@ -188,7 +194,6 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="PantallasMonopoly.CreateMenu" />
-    <RootType FullName="PantallasMonopoly.ViewModels.searchVM" />
     <RootType FullName="PantallasMonopoly.SearchMenu" />
   </Roots.RootTypes>
 </Roots>

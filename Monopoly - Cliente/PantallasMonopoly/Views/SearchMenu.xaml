@@ -12,10 +12,6 @@
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
     </Page.Background>
 
-    <Page.DataContext>
-        <vm:searchVM></vm:searchVM>
-    </Page.DataContext>
-
     <RelativePanel>
      
 
@@ -92,11 +88,19 @@
                     <AppBarButton Icon="Refresh" Label="Refresh"></AppBarButton>
                 </StackPanel>
 
-                <ListView Padding="100,50,100,50" ItemsSource="{Binding listadoLobby}">
+                <ListView Padding="100,50,100,50" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Path=nombre}"></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel HorizontalAlignment="Left" > 
+                                    <TextBlock Text="{Binding Path=nombre}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="300,0,0,0">
+                                    <TextBlock Text="Jugadores: "></TextBlock>
+                                    <TextBlock Text="{Binding Path=listadoJugadores.Count}"></TextBlock>
+                                    <TextBlock Text="/"></TextBlock>
+                                    <TextBlock Text="{Binding Path=maxJugadores}"></TextBlock>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -106,6 +110,29 @@
             </StackPanel>
 
 
+        </Border>
+
+
+        <Border
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            Visibility="{Binding visibilidad}"
+            Background="White"
+            CornerRadius="8">
+            <StackPanel>
+                <PasswordBox PlaceholderText="Password" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="0,20,0,20"></PasswordBox>
+                <Button HorizontalAlignment="Center" 
+                            FontSize="36"
+                            BorderThickness="0"
+                            Command="{Binding Path=crearCommand}" 
+                            Margin="0,0,0,20"
+                            Background="#2196F3"
+                            Foreground="White">GO</Button>
+            </StackPanel>
         </Border>
 
 

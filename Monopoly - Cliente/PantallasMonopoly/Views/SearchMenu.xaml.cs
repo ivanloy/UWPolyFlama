@@ -5,6 +5,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using PantallasMonopoly.Views;
+using PantallasMonopoly.ViewModels;
+using PantallasMonopoly.Util;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -18,7 +20,9 @@ namespace PantallasMonopoly
         public SearchMenu()
         {
             this.InitializeComponent();
-            
+            var vm = new searchVM(new NavigationService());
+            this.DataContext = vm;
+
         }
       
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -26,5 +30,7 @@ namespace PantallasMonopoly
             this.Frame.Navigate(typeof(MainMenu));
 
         }
+
+
     }
 }
