@@ -15,7 +15,9 @@ namespace PolyFlamaServer.Models
 
         public DatosLobby()
         {
-            
+            this.lobby = new Lobby();
+            this.numeroJugadores = 0;
+            this.listadoJugadoresConnection = new ConcurrentDictionary<string, string>();
         }
 
         public DatosLobby(Lobby lobby, int numeroJugadores, ConcurrentDictionary<string, string> listadoJugadoresConnection)

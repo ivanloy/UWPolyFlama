@@ -104,7 +104,7 @@ namespace PantallasMonopoly.ViewModels
 
             _navigation = navigationService;
 
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            conn = new HubConnection("http://polyflama.azurewebsites.net");
             proxy = conn.CreateHubProxy("LobbyHub");
             conn.Start();
 
