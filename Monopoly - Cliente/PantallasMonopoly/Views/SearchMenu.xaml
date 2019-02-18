@@ -46,7 +46,7 @@
                        VerticalAlignment="Stretch"
                        Margin="0,0,0,30"
                        VerticalContentAlignment="Center"
-                       Click="Back_Click"
+                       Click="Back_Click"             
                 >
 
                 <AppBarButton.RenderTransform>

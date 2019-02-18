@@ -13,9 +13,7 @@
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
     </Page.Background>
 
-    <Page.DataContext>
-        <vm:createVM></vm:createVM>
-    </Page.DataContext>
+   
 
     <Page.Resources>
         <convert:ComboBoxConverter x:Key="ComboConverter" />

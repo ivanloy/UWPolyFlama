@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
 using PantallasMonopoly.Models;
+using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,6 +22,8 @@ namespace PantallasMonopoly.ViewModels
         private String _passwordLobby;
 
         private DelegateCommand _crearCommand;
+
+        private INavigationService _navigation;
 
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
@@ -93,11 +96,13 @@ namespace PantallasMonopoly.ViewModels
 
         #region Constructores
 
-        public createVM()
+        public createVM(INavigationService navigationService)
         {
             _nombreLobby = "";
             _numeroJugadoresLobby = 0;
             _passwordLobby = "";
+
+            _navigation = navigationService;
 
             conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("LobbyHub");
@@ -139,9 +144,12 @@ namespace PantallasMonopoly.ViewModels
         private async void crearCommand_Executed()
         {
 
+            Lobby lobby = new Lobby(_nombreLobby, "", _numeroJugadoresLobby, _creadorSala, new Partida());
+      
             //Aqui hay una llamada al server
-            await proxy.Invoke("crearNuevoLobby", new Lobby(_nombreLobby," ", _numeroJugadoresLobby,_creadorSala));
+            await proxy.Invoke("crearNuevoLobby", lobby);
 
+            _navigation.Navigate(typeof(LobbyMenu), lobby);
            
         }
 

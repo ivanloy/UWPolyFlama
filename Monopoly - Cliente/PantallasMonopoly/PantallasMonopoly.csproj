@@ -123,6 +123,7 @@
     <Compile Include="Models\Casilla.cs" />
     <Compile Include="Models\ComboBoxConverter.cs" />
     <Compile Include="Models\Enums\ColorPropiedad.cs" />
+    <Compile Include="Models\Enums\EfectosEnum.cs" />
     <Compile Include="Models\Enums\TipoCarta.cs" />
     <Compile Include="Models\Enums\TipoCasilla.cs" />
     <Compile Include="Models\Ficha.cs" />
@@ -135,11 +136,15 @@
     <Compile Include="Util\NavigationService.cs" />
     <Compile Include="ViewModels\clsVMBase.cs" />
     <Compile Include="ViewModels\createPlayerVM.cs" />
+    <Compile Include="ViewModels\lobbyVM.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\createVM.cs" />
     <Compile Include="ViewModels\searchVM.cs" />
     <Compile Include="Views\AboutMenu.xaml.cs">
       <DependentUpon>AboutMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LobbyMenu.xaml.cs">
+      <DependentUpon>LobbyMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CreatePlayer.xaml.cs">
       <DependentUpon>CreatePlayer.xaml</DependentUpon>
@@ -188,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AboutMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LobbyMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

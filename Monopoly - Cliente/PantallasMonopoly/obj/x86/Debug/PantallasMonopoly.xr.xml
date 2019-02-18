@@ -4,16 +4,20 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="jugarCommand" />
+    <RootPropertyPathName Name="lobby" />
+    <RootPropertyPathName Name="listadoJugadores" />
+    <RootPropertyPathName Name="nombre" />
+    <RootPropertyPathName Name="ficha" />
+    <RootPropertyPathName Name="imagen" />
     <RootPropertyPathName Name="crearCommand" />
     <RootPropertyPathName Name="listadoFichas" />
     <RootPropertyPathName Name="fichaSeleccionada" />
-    <RootPropertyPathName Name="imagen" />
     <RootPropertyPathName Name="nickname" />
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="numeroJugadoresLobby" />
     <RootPropertyPathName Name="nombreLobby" />
     <RootPropertyPathName Name="listadoLobby" />
-    <RootPropertyPathName Name="nombre" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -24,8 +28,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Resources" />
+      <RootProperty Name="DataContext" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -96,23 +100,14 @@
       <RootProperty Name="ScaleY" />
     </RootType>
     <RootType FullName="PantallasMonopoly.AboutMenu" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="MinWidth" />
-      <RootProperty Name="MaxWidth" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Padding" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
       <RootProperty Name="MaxHeight" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectedItem" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="HorizontalAlignment" />
@@ -136,9 +131,19 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
-      <RootProperty Name="MaxWidth" />
       <RootProperty Name="MaxHeight" />
+      <RootProperty Name="MaxWidth" />
       <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="PantallasMonopoly.LobbyMenu" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="PantallasMonopoly.CreatePlayer" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -158,7 +163,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="PantallasMonopoly.Views.MainMenu" />
-    <RootType FullName="PantallasMonopoly.ViewModels.createVM" />
     <RootType FullName="PantallasMonopoly.Models.ComboBoxConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Visibility" />

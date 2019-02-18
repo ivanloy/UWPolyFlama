@@ -31033,24 +31033,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivanloy\\.nuget\\packages\\": {},
+    "C:\\Users\\jobando\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivanloy\\Desktop\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "projectUniqueName": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
       "projectName": "PantallasMonopoly",
-      "projectPath": "C:\\Users\\ivanloy\\Desktop\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
-      "packagesPath": "C:\\Users\\ivanloy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivanloy\\Desktop\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\obj\\",
+      "projectPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "packagesPath": "C:\\Users\\jobando\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ivanloy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jobando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
