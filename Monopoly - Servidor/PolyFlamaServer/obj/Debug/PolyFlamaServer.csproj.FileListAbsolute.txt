@@ -82,13 +82,9 @@ C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\b
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\System.Web.Mvc.xml
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csproj.CopyComplete
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csprojAssemblyReference.cache
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csproj.CoreCompileInputs.cache
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\DardosServer.dll
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\DardosServer.pdb
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\DardosServer.dll.config
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\DardosServer.dll
-C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\DardosServer.pdb
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.dll.config
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.dll
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.pdb
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\roslyn\csc.exe
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\roslyn\csc.exe.config
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\roslyn\csc.rsp
@@ -165,4 +161,7 @@ C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServ
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\System.Web.Helpers.xml
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\System.Web.Mvc.xml
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csproj.CoreCompileInputs.cache
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csproj.CopyComplete
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.dll
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.pdb

@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DardosServer</RootNamespace>
-    <AssemblyName>DardosServer</AssemblyName>
+    <RootNamespace>PolyFlamaServer</RootNamespace>
+    <AssemblyName>PolyFlamaServer</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -112,6 +112,10 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\polyflama - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\polyflama - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\polyflama - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\polyflama - Web Deploy3.pubxml" />
+    <None Include="Properties\PublishProfiles\polyflama - Web Deploy4.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
