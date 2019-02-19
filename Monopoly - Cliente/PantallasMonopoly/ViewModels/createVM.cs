@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
+using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
 using System;
@@ -105,9 +106,9 @@ namespace PantallasMonopoly.ViewModels
 
             _navigation = navigationService;
 
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
-            proxy = conn.CreateHubProxy("LobbyHub");
-            conn.Start();
+            conn = conexionPadre.conn;
+            proxy = conexionPadre.proxy;
+
 
             proxy.On<bool>("crearLobby", crearLobby);
 

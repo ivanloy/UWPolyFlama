@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Connection\conexionPadre.cs" />
     <Compile Include="Models\Carta.cs" />
     <Compile Include="Models\Casilla.cs" />
     <Compile Include="Models\ComboBoxConverter.cs" />

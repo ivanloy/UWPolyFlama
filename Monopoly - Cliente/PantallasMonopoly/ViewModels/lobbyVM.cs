@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
+using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
 using System;
@@ -55,9 +56,8 @@ namespace PantallasMonopoly.ViewModels
         {
 
 
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
-            proxy = conn.CreateHubProxy("LobbyHub");
-            conn.Start();        
+            conn = conexionPadre.conn;
+            proxy = conexionPadre.proxy;
 
         }
 
@@ -90,7 +90,7 @@ namespace PantallasMonopoly.ViewModels
             return sePuedeJugar;
         }
 
-        private async void jugarCommand_Executed()
+        private void jugarCommand_Executed()
         {
 
             //Aqui hay una llamada al server

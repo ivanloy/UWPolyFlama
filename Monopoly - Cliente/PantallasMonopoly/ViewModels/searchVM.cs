@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
+using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
 using System;
@@ -45,9 +46,8 @@ namespace PantallasMonopoly.ViewModels
 
             _password = "";
 
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
-            proxy = conn.CreateHubProxy("LobbyHub");
-            conn.Start().Wait();
+            conn = conexionPadre.conn;
+            proxy = conexionPadre.proxy;
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<bool>("contrasena", contrasena);
