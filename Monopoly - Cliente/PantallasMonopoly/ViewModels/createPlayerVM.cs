@@ -98,7 +98,7 @@ namespace PantallasMonopoly.ViewModels
 
         public createPlayerVM(INavigationService navigationService)
         {
-            conn = new HubConnection("http://localhost:51144/");
+            conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("LobbyHub");
             conn.Start();
 

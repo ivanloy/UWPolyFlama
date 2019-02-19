@@ -26236,12 +26236,11 @@
       ]
     },
     "System.Collections.Immutable/1.2.0": {
-      "sha512": "2KnDB5xOmdERBZDniirmMPmY4AIUM7AbAIn+faLNShDc3mk0pe8iiPzBuJc5vMhTmMwEZbV2QbRAcaY+y2zwkw==",
+      "sha512": "Cma8cBW6di16ZLibL8LYQ+cLjGzoKxpOTu/faZfDcx94ZjAGq6Nv5RO7+T1YZXqEXTZP9rt1wLVEONVpURtUqw==",
       "type": "package",
       "path": "system.collections.immutable/1.2.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Collections.Immutable.dll",
@@ -31035,24 +31034,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Oscar\\.nuget\\packages\\": {},
+    "C:\\Users\\jobando\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oscar\\Desktop\\Segundo DAM\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "projectUniqueName": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
       "projectName": "PantallasMonopoly",
-      "projectPath": "C:\\Users\\Oscar\\Desktop\\Segundo DAM\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
-      "packagesPath": "C:\\Users\\Oscar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oscar\\Desktop\\Segundo DAM\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\obj\\",
+      "projectPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "packagesPath": "C:\\Users\\jobando\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jobando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

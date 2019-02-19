@@ -52,10 +52,10 @@ namespace PantallasMonopoly.ViewModels
         #region Constructores
 
         public lobbyVM(INavigationService navigationService)
-        {          
-          
+        {
 
-            conn = new HubConnection("http://localhost:51144/");
+
+            conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("LobbyHub");
             conn.Start();        
 
