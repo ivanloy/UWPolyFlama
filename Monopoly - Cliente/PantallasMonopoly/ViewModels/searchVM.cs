@@ -94,7 +94,8 @@ namespace PantallasMonopoly.ViewModels
                 }
                 else
                 {
-                    _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
+                    proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir);
+                    _navigationService.Navigate(typeof(LobbyMenu));
                 }
 
             }
@@ -238,7 +239,7 @@ namespace PantallasMonopoly.ViewModels
                     if (entra)
                     {
 
-                        _navigationService.Navigate(typeof(lobbyVM));
+                        _navigationService.Navigate(typeof(LobbyMenu));
 
                     }
                 }
