@@ -8,6 +8,8 @@ using PantallasMonopoly.Views;
 using PantallasMonopoly.ViewModels;
 using PantallasMonopoly.Util;
 using System;
+using PantallasMonopoly.Models;
+using PantallasMonopoly.Models.Enums;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -38,9 +40,9 @@ namespace PantallasMonopoly
             createPlayerVM viewModel;
             viewModel = (createPlayerVM)this.DataContext;
 
-            if (e.Parameter is String)
+            if (e.Parameter is TipoEntrada)
             {
-                viewModel.nombreSalaAEntrar = (String)e.Parameter;
+                viewModel.tipoEntrada = (TipoEntrada)e.Parameter;
             }
         }
 

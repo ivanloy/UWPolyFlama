@@ -1,4 +1,5 @@
 ﻿using Microsoft.Toolkit.Uwp.UI.Extensions;
+using PantallasMonopoly.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,12 +34,12 @@ namespace PantallasMonopoly.Views
 
         private void Search_Tapped(object sender, TappedRoutedEventArgs e)
         {      
-            this.Frame.Navigate(typeof(SearchMenu));
+            this.Frame.Navigate(typeof(CreatePlayer), TipoEntrada.SEARCH);
         }
 
         private void Create_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CreatePlayer));
+            this.Frame.Navigate(typeof(CreatePlayer), TipoEntrada.CREATE);
         }
 
         private void About_Tapped(object sender, TappedRoutedEventArgs e)

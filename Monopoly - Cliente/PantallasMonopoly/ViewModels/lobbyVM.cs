@@ -102,17 +102,7 @@ namespace PantallasMonopoly.ViewModels
 
         #endregion
 
-
-        #region Metodos SignalR
-
-        private void crearLobby(bool entra)
-        {
-
-            Debug.WriteLine(entra);
-
-        }
-
-        #endregion
+     
 
 
 

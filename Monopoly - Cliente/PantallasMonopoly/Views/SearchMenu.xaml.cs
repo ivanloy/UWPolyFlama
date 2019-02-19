@@ -7,6 +7,7 @@ using Windows.UI.Xaml.Navigation;
 using PantallasMonopoly.Views;
 using PantallasMonopoly.ViewModels;
 using PantallasMonopoly.Util;
+using PantallasMonopoly.Models;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -29,6 +30,19 @@ namespace PantallasMonopoly
         {
             this.Frame.Navigate(typeof(MainMenu));
 
+        }
+
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+            searchVM viewModel;
+            viewModel = (searchVM)this.DataContext;
+
+            if (e.Parameter is Jugador)
+            {
+                viewModel.jugadorAIntroducir = (Jugador)e.Parameter;
+            }
         }
 
 

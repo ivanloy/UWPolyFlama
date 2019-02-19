@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
 using PantallasMonopoly.Models;
+using PantallasMonopoly.Models.Enums;
 using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace PantallasMonopoly.ViewModels
         private List<Ficha> _listadoFichas;
         private Ficha _fichaSeleccionada;
 
-        private String _nombreSalaAEntrar;
+        private TipoEntrada _tipoEntrada;
 
         private DelegateCommand _crearCommand;
         private INavigationService _navigationService;
@@ -78,16 +79,16 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
-        public String nombreSalaAEntrar
+        public TipoEntrada tipoEntrada
         {
             get
             {
-                return _nombreSalaAEntrar;
+                return _tipoEntrada;
             }
 
             set
             {
-                _nombreSalaAEntrar = value;
+                _tipoEntrada = value;
             }
         }
 
@@ -139,7 +140,7 @@ namespace PantallasMonopoly.ViewModels
 
         private void crearCommand_Executed()
         {
-            if (_nombreSalaAEntrar == null) {
+            if (_tipoEntrada == TipoEntrada.CREATE) {
 
                 _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
 
@@ -147,7 +148,8 @@ namespace PantallasMonopoly.ViewModels
             else
             {
 
-                
+
+                _navigationService.Navigate(typeof(SearchMenu), new Jugador(_nickname, _fichaSeleccionada));
 
             }
       

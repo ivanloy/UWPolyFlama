@@ -122,6 +122,7 @@
     <Compile Include="Models\Carta.cs" />
     <Compile Include="Models\Casilla.cs" />
     <Compile Include="Models\ComboBoxConverter.cs" />
+    <Compile Include="Models\Enums\TipoEntrada.cs" />
     <Compile Include="Models\Enums\ColorPropiedad.cs" />
     <Compile Include="Models\Enums\EfectosEnum.cs" />
     <Compile Include="Models\Enums\TipoCarta.cs" />

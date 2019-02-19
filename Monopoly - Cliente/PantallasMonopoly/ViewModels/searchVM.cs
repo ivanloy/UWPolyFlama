@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Core;
 
 namespace PantallasMonopoly.ViewModels
 {
@@ -17,6 +18,8 @@ namespace PantallasMonopoly.ViewModels
         private List<Lobby> _listadoLobby;
 
         private Lobby _lobbySeleccionado;
+
+        private Jugador _jugadorAIntroducir;
 
         private DelegateCommand _actualizarCommand;
         private DelegateCommand _confirmarPassCommand;
@@ -45,14 +48,14 @@ namespace PantallasMonopoly.ViewModels
             conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("LobbyHub");
             conn.Start().Wait();
-          
+
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<bool>("contrasena", contrasena);
 
             proxy.Invoke("obtenerListadoLobbies").Wait();
         }
 
-      
+
         #endregion
 
 
@@ -76,6 +79,7 @@ namespace PantallasMonopoly.ViewModels
             get
             {
                 return _lobbySeleccionado;
+
             }
 
             set
@@ -90,9 +94,9 @@ namespace PantallasMonopoly.ViewModels
                 }
                 else
                 {
-                    _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado.nombre);
+                    _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
                 }
-                
+
             }
         }
 
@@ -129,6 +133,25 @@ namespace PantallasMonopoly.ViewModels
         }
 
 
+        public Jugador jugadorAIntroducir
+        {
+            get
+            {
+                return _jugadorAIntroducir;
+            }
+
+            set
+            {
+                _jugadorAIntroducir = value;
+
+
+            }
+        }
+
+
+
+
+
         #endregion
 
 
@@ -143,7 +166,7 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
-         
+
         private void actualizarCommand_Executed()
         {
 
@@ -170,7 +193,8 @@ namespace PantallasMonopoly.ViewModels
             bool puedeComprobar = false;
 
 
-            if (!_password.Equals("")) {
+            if (!_password.Equals(""))
+            {
 
 
                 puedeComprobar = true;
@@ -184,7 +208,7 @@ namespace PantallasMonopoly.ViewModels
         {
 
             proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
-              
+
         }
 
 
@@ -201,14 +225,26 @@ namespace PantallasMonopoly.ViewModels
         }
 
 
-        private void contrasena(bool entra)
+        private async void contrasena(bool entra)
         {
-            if(entra){
-
-                _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado.nombre);
-
+            if (entra)
+            {
+                await proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir);
             }
-           
+
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                () =>
+                {
+                    if (entra)
+                    {
+
+                        _navigationService.Navigate(typeof(lobbyVM));
+
+                    }
+                }
+                );
+
+
 
         }
 
