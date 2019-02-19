@@ -25,6 +25,7 @@
     <RootPropertyPathName Name="lobbySeleccionado" />
     <RootPropertyPathName Name="maxJugadores" />
     <RootPropertyPathName Name="Count" />
+    <RootPropertyPathName Name="actualizarCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -102,6 +103,7 @@
       <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="RenderTransform" />
       <RootProperty Name="Label" />
+      <RootProperty Name="Command" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">

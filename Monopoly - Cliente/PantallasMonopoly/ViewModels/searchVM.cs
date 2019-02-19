@@ -46,13 +46,13 @@ namespace PantallasMonopoly.ViewModels
 
             _password = "";
 
-            conn = conexionPadre.conn;
+            //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<bool>("contrasena", contrasena);
 
-            proxy.Invoke("obtenerListadoLobbies").Wait();
+            proxy.Invoke("obtenerListadoLobbies");
         }
 
 
@@ -171,7 +171,7 @@ namespace PantallasMonopoly.ViewModels
         private void actualizarCommand_Executed()
         {
 
-            proxy.Invoke("obtenerListadoLobbies").Wait();
+            proxy.Invoke("obtenerListadoLobbies");
 
         }
 
@@ -222,23 +222,20 @@ namespace PantallasMonopoly.ViewModels
         {
 
             _listadoLobby = listado;
+            NotifyPropertyChanged("listadoLobby");  //Esto peta por alguna razon
 
         }
 
 
         private async void contrasena(bool entra)
         {
-            if (entra)
-            {
-                await proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir);
-            }
-
+                             
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                 () =>
                 {
                     if (entra)
                     {
-
+                        proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir).Wait();
                         _navigationService.Navigate(typeof(LobbyMenu));
 
                     }

@@ -85,7 +85,7 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBox PlaceholderText="Search a lobby" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="8"></TextBox>
-                    <AppBarButton Icon="Refresh" Label="Refresh"></AppBarButton>
+                    <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding actualizarCommand}"></AppBarButton>
                 </StackPanel>
 
                 <ListView Padding="100,50,100,50" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">

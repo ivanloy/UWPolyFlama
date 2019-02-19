@@ -56,7 +56,7 @@ namespace PantallasMonopoly.ViewModels
         {
 
 
-            conn = conexionPadre.conn;
+            //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
         }
