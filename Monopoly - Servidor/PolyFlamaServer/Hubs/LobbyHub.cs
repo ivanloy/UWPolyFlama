@@ -77,12 +77,12 @@ namespace PolyFlamaServer.Hubs
         public void unirALobby(string nombreLobby, Jugador jugador)
         {
             //Añadimos el jugador al listado de jugadores del lobby
-            Thread.Sleep(new Random().Next(50, 200)); //Tiempo random para evitar colapsos
+            Thread.Sleep(new Random().Next(100, 2000)); //Tiempo random para evitar colapsos
             LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
             LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
 
-            //ConnectionID del creador para comprobar si el cliente al que se está llamando es el creador o no
-            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value;
+            //Obtenemos la connectionID del jugador creador
+            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Key == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre).Value;
 
             //Avisamos a los otros jugadores de que se ha unido
             foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
@@ -121,7 +121,7 @@ namespace PolyFlamaServer.Hubs
             Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
 
             //Para evitar colapsos
-            Thread.Sleep(new Random().Next(50, 200));
+            Thread.Sleep(new Random().Next(100, 2000));
 
             //Quitamos en 1 el número de jugadores
             LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores--;
