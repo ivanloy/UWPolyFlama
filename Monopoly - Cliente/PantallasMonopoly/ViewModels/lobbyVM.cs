@@ -120,15 +120,18 @@ namespace PantallasMonopoly.ViewModels
                     {
                         _lobby = obj;
                         NotifyPropertyChanged("lobby");
-                        
+
+                        if (esCreador != null && (bool)esCreador)
+                        {
+
+                            _jugarCommand.RaiseCanExecuteChanged();
+
+                        }
+
                     }
                     );
 
-            if (esCreador != null &&  (bool) esCreador) {
-
-                _jugarCommand.RaiseCanExecuteChanged();
-
-            }
+            
 
            
 

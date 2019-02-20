@@ -1,4 +1,6 @@
-﻿using Microsoft.Toolkit.Uwp.UI.Extensions;
+﻿using Microsoft.AspNet.SignalR.Client;
+using Microsoft.Toolkit.Uwp.UI.Extensions;
+using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models.Enums;
 using System;
 using System.Collections.Generic;
@@ -30,6 +32,9 @@ namespace PantallasMonopoly.Views
             this.InitializeComponent();
 
             Windows.UI.ViewManagement.ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+
+            //Esto es para crear la conexion nada mas iniciar el videojoc
+            IHubProxy prox = conexionPadre.proxy;
         }
 
         private void Search_Tapped(object sender, TappedRoutedEventArgs e)
