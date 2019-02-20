@@ -169,7 +169,7 @@ namespace PolyFlamaServer.Hubs
                     }
 
                 }
-                else
+                else if(nombreLobby != "")
                 {
                     Groups.Remove(Context.ConnectionId, nombreLobby);
                 }

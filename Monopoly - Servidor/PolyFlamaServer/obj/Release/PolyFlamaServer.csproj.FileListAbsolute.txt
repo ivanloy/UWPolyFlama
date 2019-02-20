@@ -1,6 +1,3 @@
-C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\DardosServer.dll.config
-C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\DardosServer.dll
-C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\DardosServer.pdb
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\roslyn\csc.exe
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\roslyn\csc.exe.config
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\roslyn\csc.rsp
@@ -80,8 +77,6 @@ C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\b
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.csprojAssemblyReference.cache
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.csproj.CoreCompileInputs.cache
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.csproj.CopyComplete
-C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\DardosServer.dll
-C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\DardosServer.pdb
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.dll.config
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.dll
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.pdb
@@ -166,3 +161,8 @@ C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServ
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.csproj.CopyComplete
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.dll
 C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.pdb
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.dll.config
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.dll
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\bin\PolyFlamaServer.pdb
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.dll
+C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Release\PolyFlamaServer.pdb
