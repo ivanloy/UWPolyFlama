@@ -156,7 +156,7 @@ namespace PantallasMonopoly.ViewModels
             set
             {
                 _jugadorAIntroducir = value;
-
+                NotifyPropertyChanged("jugadorAIntroducir");
 
             }
         }

@@ -56,6 +56,7 @@ namespace PantallasMonopoly.ViewModels
 
         public lobbyVM(INavigationService navigationService)
         {
+            _navigationService = navigationService;
 
             //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
