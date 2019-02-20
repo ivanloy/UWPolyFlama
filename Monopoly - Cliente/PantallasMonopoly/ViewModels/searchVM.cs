@@ -256,9 +256,12 @@ namespace PantallasMonopoly.ViewModels
                     () =>
                     {
                         proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir).Wait();
-                        _navigationService.Navigate(typeof(LobbyMenu));
+                        _lobbySeleccionado.listadoJugadores.Add(_jugadorAIntroducir);
+                        _navigationService.Navigate(typeof(LobbyMenu), _lobbySeleccionado);
                     }
                     );
+
+                
 
             }
 
