@@ -165,3 +165,4 @@ C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\o
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csproj.CopyComplete
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.dll
 C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.pdb
+C:\Users\Oscar\Desktop\Segundo DAM\UWPolyFlama\Monopoly - Servidor\PolyFlamaServer\obj\Debug\PolyFlamaServer.csprojAssemblyReference.cache
