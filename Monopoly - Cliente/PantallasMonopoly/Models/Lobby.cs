@@ -1,15 +1,18 @@
-﻿using System;
+﻿using PantallasMonopoly.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace PantallasMonopoly.Models
 {
-    public class Lobby
+    public class Lobby : clsVMBase
     {
         public string nombre { get; set; }
         public string contrasena { get; set; }
         public int maxJugadores { get; set; }
-        public List<Jugador> listadoJugadores { get; set; }
+
+        public List<Jugador> _listadoJugadores;
+
         public bool partidaEmpezada { get; set; }
         public Partida partida { get; set; }
 
@@ -52,6 +55,23 @@ namespace PantallasMonopoly.Models
         public void quitarContrasena()
         {
             this.contrasena = "";
+        }
+
+
+        public List<Jugador> listadoJugadores
+        {
+
+            get
+            {
+
+                return _listadoJugadores;
+            }
+
+            set
+            {
+                _listadoJugadores = value;
+                NotifyPropertyChanged("listadoJugadores");
+            }
         }
     }
 }

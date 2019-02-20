@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
 {
@@ -49,11 +50,12 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<bool>("contrasena", contrasena);
+            proxy.On("lobbyCompleto", lobbyCompleto);
 
             proxy.Invoke("obtenerListadoLobbies");
         }
 
-
+     
         #endregion
 
 
@@ -88,15 +90,25 @@ namespace PantallasMonopoly.ViewModels
                 _lobbySeleccionado = value;
                 NotifyPropertyChanged("lobbySeleccionado");
 
-                if (_lobbySeleccionado.tieneContrasena())
-                {
-                    _visibilidad = "Visible";
-                    NotifyPropertyChanged("visibilidad");
+                if (_lobbySeleccionado!=null) {
+
+                    if (_lobbySeleccionado.listadoJugadores.Count < _lobbySeleccionado.maxJugadores) {
+
+                        if (_lobbySeleccionado.tieneContrasena())
+                        {
+                            _visibilidad = "Visible";
+                            NotifyPropertyChanged("visibilidad");
+                        }
+                        else
+                        {
+                            proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, "");
+                        }
+
+                    }
+
+                    
                 }
-                else
-                {
-                    proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, "");
-                }
+               
 
             }
         }
@@ -250,6 +262,12 @@ namespace PantallasMonopoly.ViewModels
 
             }
 
+        }
+
+        private async void lobbyCompleto()
+        {
+            
+           
         }
 
         #endregion

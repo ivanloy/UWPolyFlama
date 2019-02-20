@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
@@ -59,9 +60,11 @@ namespace PantallasMonopoly.ViewModels
             //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
+            proxy.On<Lobby>("actualizarLobby", actualizarLobby);
+
         }
 
-      
+       
 
         #endregion
 
@@ -102,7 +105,30 @@ namespace PantallasMonopoly.ViewModels
 
         #endregion
 
-     
+
+        #region metodos SignalR
+
+
+        private async void actualizarLobby(Lobby obj)
+        {
+
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                    () =>
+                    {
+                        _lobby = obj;
+                        NotifyPropertyChanged("lobby");
+                    }
+                    );
+                    
+        }
+
+
+
+        #endregion
+
+
+
+
 
 
 
