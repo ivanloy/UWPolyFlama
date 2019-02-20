@@ -31,9 +31,7 @@ namespace PantallasMonopoly.ViewModels
 
         private INavigationService _navigationService;
 
-        public HubConnection conn { get; set; }
-        public IHubProxy proxy { get; set; }
-
+  
         #endregion
 
         #region Constructores
@@ -60,6 +58,9 @@ namespace PantallasMonopoly.ViewModels
 
 
         #region Propiedades publicas
+
+        public HubConnection conn { get; set; }
+        public IHubProxy proxy { get; set; }
 
         public List<Lobby> listadoLobby
         {
@@ -218,12 +219,19 @@ namespace PantallasMonopoly.ViewModels
 
         #region Metodos SignalR
 
-        private void actualizarListadoLobbies(List<Lobby> listado)
+        private async void actualizarListadoLobbies(List<Lobby> listado)
         {
+        
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               () =>
+               {
+                   _listadoLobby = listado;
+                   NotifyPropertyChanged("listadoLobby");
+               }
+               );
 
-            _listadoLobby = listado;
-            NotifyPropertyChanged("listadoLobby");  //Esto peta por alguna razon
 
+                      
         }
 
 
