@@ -55,7 +55,7 @@ namespace PantallasMonopoly.ViewModels
             proxy.Invoke("obtenerListadoLobbies");
         }
 
-     
+
         #endregion
 
 
@@ -87,12 +87,13 @@ namespace PantallasMonopoly.ViewModels
 
             set
             {
-                _lobbySeleccionado = value;
-                NotifyPropertyChanged("lobbySeleccionado");
+                if (value != null)
+                {
+                    _lobbySeleccionado = value;
+                    NotifyPropertyChanged("lobbySeleccionado");
 
-                if (_lobbySeleccionado!=null) {
-
-                    if (_lobbySeleccionado.listadoJugadores.Count < _lobbySeleccionado.maxJugadores) {
+                    if (_lobbySeleccionado.listadoJugadores.Count < _lobbySeleccionado.maxJugadores)
+                    {
 
                         if (_lobbySeleccionado.tieneContrasena())
                         {
@@ -105,11 +106,7 @@ namespace PantallasMonopoly.ViewModels
                         }
 
                     }
-
-                    
                 }
-               
-
             }
         }
 
@@ -261,16 +258,14 @@ namespace PantallasMonopoly.ViewModels
                     }
                     );
 
-                
-
             }
 
         }
 
         private void lobbyCompleto()
         {
-            
-           
+
+
         }
 
         #endregion
