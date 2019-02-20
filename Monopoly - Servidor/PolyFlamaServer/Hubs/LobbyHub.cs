@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using PolyFlamaServer.Models;
 using System.Collections.Concurrent;
 using System.Collections;
+using System.Threading;
 
 namespace PolyFlamaServer.Hubs
 {
@@ -62,7 +63,6 @@ namespace PolyFlamaServer.Hubs
                 if (LobbyInfo.listadoLobbies[nombreLobby].lobby.contrasena == contrasena)
                 {
                     //Si la contraseña es correcta, añadimos el jugador al grupo
-                    Groups.Add(Context.ConnectionId, nombreLobby);
                     LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores++;
                     Clients.Caller.contrasena(true);
                 }
@@ -77,14 +77,18 @@ namespace PolyFlamaServer.Hubs
         public void unirALobby(string nombreLobby, Jugador jugador)
         {
             //Añadimos el jugador al listado de jugadores del lobby
-            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
-
-            //Avisamos a los otros jugadores de que se ha unido
-            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+            Groups.Add(Context.ConnectionId, nombreLobby).ContinueWith(task =>
             {
-                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
-            }
-           
+                Thread.Sleep(new Random().Next(50, 200));
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
+                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
+                
+                //Avisamos a los otros jugadores de que se ha unido
+                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                {
+                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                }
+            });
         }
 
         public void empezarPartida(string nombreLobby)
