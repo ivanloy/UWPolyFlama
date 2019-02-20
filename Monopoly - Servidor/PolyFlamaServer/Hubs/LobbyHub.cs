@@ -80,7 +80,10 @@ namespace PolyFlamaServer.Hubs
             LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
 
             //Avisamos a los otros jugadores de que se ha unido
-            Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+            {
+                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+            }
            
         }
 
@@ -136,7 +139,7 @@ namespace PolyFlamaServer.Hubs
             Clients.Caller.actualizarListadoLobbies(listadoLobbies);
         }
 
-        //Cuando un jugador se desconecte
+        /*Cuando un jugador se desconecte
         public override Task OnDisconnected(bool stopCalled)
         {
             if(!stopCalled)
@@ -182,6 +185,6 @@ namespace PolyFlamaServer.Hubs
         public override Task OnConnected()
         {
             return base.OnConnected();
-        }
+        }*/
     }
 }
