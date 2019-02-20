@@ -61,6 +61,9 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<Lobby>("actualizarLobby", actualizarLobby);
 
+
+            _jugarCommand.RaiseCanExecuteChanged();
+
         }
 
        
@@ -83,7 +86,7 @@ namespace PantallasMonopoly.ViewModels
         {
             bool sePuedeJugar = false;
 
-            if (_lobby != null && _lobby.listadoJugadores.Count >=2)
+            if (_lobby != null && _lobby.listadoJugadores.Count == _lobby.maxJugadores)
             {
 
                 sePuedeJugar = true;
@@ -116,6 +119,7 @@ namespace PantallasMonopoly.ViewModels
                     {
                         _lobby = obj;
                         NotifyPropertyChanged("lobby");
+                        _jugarCommand.RaiseCanExecuteChanged();
                     }
                     );
                     

@@ -267,7 +267,7 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-        private async void lobbyCompleto()
+        private void lobbyCompleto()
         {
             
            
