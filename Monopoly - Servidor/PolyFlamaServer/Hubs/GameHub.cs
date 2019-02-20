@@ -33,17 +33,22 @@ namespace PolyFlamaServer.Hubs
                 int dado1 = random.Next(1, 7);
                 int dado2 = random.Next(1, 7);
 
-                //Actualizamos el lobby con los dados y lo pasamos a todos
+                //Actualizamos el lobby con los dados
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.arrayDados = new int[] { dado1, dado2 };
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
-                Clients.Group(connectionIDCreator).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby]);
-                Clients.Group(connectionIDCreator).moverCasillas();
-                Object casilla = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[posicionActual];
+
+                //Avisamos a los otros jugadores de los cambios
+                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                {
+                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                    Clients.Client(connectionId).moverCasillas();
+                }
 
                 //Esperamos un poquisho
                 Thread.Sleep(1000);
 
                 //Comprobar de que tipo es la casilla actual
+                Object casilla = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[posicionActual];
                 if (casilla is Propiedad)
                 {
                     Propiedad propiedad = (Propiedad)casilla;
@@ -92,9 +97,14 @@ namespace PolyFlamaServer.Hubs
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
 
             LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual = GestoraPartida.calcularNuevoTurno(turnoActual, LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores);
-            Clients.Group(connectionIDCreator).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
-            Clients.Caller.terminarTurno();
-            Clients.OthersInGroup(connectionIDCreator).siguienteTurno();
+
+            //Avisamos a los otros jugadores de los cambios
+            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+            {
+                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                if(connectionId != connectionIDCreator)
+                    Clients.Client(connectionId).siguienteTurno();
+            }
         }
 
         public void comprarPropiedad(string nombreLobby, bool quiereComprar)
@@ -113,19 +123,12 @@ namespace PolyFlamaServer.Hubs
 
             //Llamamos a todo el grupo y les actualizamos el lobby
             string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre];
-            Clients.Group(connectionIDCreador).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
-        }
 
-        //Cuando un jugador se desconecte
-        public override Task OnDisconnected(bool stopCalled)
-        {
-            return base.OnDisconnected(stopCalled);
-        }
-
-        //Cuando un jugador se conecte
-        public override Task OnConnected()
-        {
-            return base.OnConnected();
+            //Avisamos a los otros jugadores de los cambios
+            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+            {
+                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+            }
         }
     }
 }

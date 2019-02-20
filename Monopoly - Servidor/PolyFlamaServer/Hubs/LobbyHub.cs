@@ -35,7 +35,6 @@ namespace PolyFlamaServer.Hubs
                  * Se crea el grupo, que lo gestiona SignalR
                  * (Si se desconecta la última persona, se borra, y si se añade alguien a un grupo que no existe, se crea)
                 */
-                Groups.Add(Context.ConnectionId, lobby.nombre);
                 Jugador jugadorCreador = lobby.listadoJugadores[0];
 
                 //Creación y adición de datos del lobby
@@ -49,7 +48,6 @@ namespace PolyFlamaServer.Hubs
 
                 //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
                 Clients.Caller.crearLobby(true);
-                Clients.Others.actualizarListadoLobbies(LobbyInfo.listadoLobbies);
             }
             else
                 Clients.Caller.crearLobby(false);
@@ -58,11 +56,13 @@ namespace PolyFlamaServer.Hubs
 
         public void comprobarContrasena(string nombreLobby, string contrasena)
         {
+            //Si hay menos jugadores conectados que el maxJugadores
             if (LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores < LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores)
             {
+                //Si la contraseña es correcta
                 if (LobbyInfo.listadoLobbies[nombreLobby].lobby.contrasena == contrasena)
                 {
-                    //Si la contraseña es correcta, añadimos el jugador al grupo
+                    //Añadimos el jugador al grupo
                     LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores++;
                     Clients.Caller.contrasena(true);
                 }
@@ -77,18 +77,15 @@ namespace PolyFlamaServer.Hubs
         public void unirALobby(string nombreLobby, Jugador jugador)
         {
             //Añadimos el jugador al listado de jugadores del lobby
-            Groups.Add(Context.ConnectionId, nombreLobby).ContinueWith(task =>
-            {
-                Thread.Sleep(new Random().Next(50, 200));
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
-                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
+            Thread.Sleep(new Random().Next(50, 200)); //Tiempo random para evitar colapsos
+            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
+            LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
                 
-                //Avisamos a los otros jugadores de que se ha unido
-                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                {
-                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
-                }
-            });
+            //Avisamos a los otros jugadores de que se ha unido
+            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+            {
+                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+            }
         }
 
         public void empezarPartida(string nombreLobby)
@@ -105,20 +102,32 @@ namespace PolyFlamaServer.Hubs
                 //Asignar la partida al lobby
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partida = partida;
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partidaEmpezada = true;
-                Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+
+                //Avisamos a los otros jugadores para empezar la partida
+                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                {
+                    Clients.Client(connectionId).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                }
             }
         }
 
         public void salirDeLobby(string nombreLobby, Jugador jugador)
         {
             LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores--;
-            Groups.Remove(Context.ConnectionId, LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value);
             if(jugador != null)
             {
+                Thread.Sleep(new Random().Next(50, 200)); //Para evitar colapsos
+                string connectionID;
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Remove(jugador);
+                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.TryRemove(jugador.nombre, out connectionID);
+
                 //Avisamos a los otros jugadores de que se ha desconectado
-                Clients.Group(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                {
+                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                }
                 
+                //Si el lobby no tiene personas, entonces se elimina
                 if (LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores == 0)
                 {
                     DatosLobby lobbyRemoved;
@@ -172,7 +181,6 @@ namespace PolyFlamaServer.Hubs
                     foreach (string connectionId in datosLobby.listadoJugadoresConnection.Values)
                     {
                         Clients.Client(connectionId).salirDeLobby();
-                        Groups.Remove(connectionId, nombreLobby);
                     }
 
                 }
