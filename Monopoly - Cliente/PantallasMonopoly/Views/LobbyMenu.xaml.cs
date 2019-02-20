@@ -8,6 +8,7 @@ using PantallasMonopoly.Views;
 using PantallasMonopoly.ViewModels;
 using PantallasMonopoly.Util;
 using PantallasMonopoly.Models;
+using PantallasMonopoly.Connection;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -18,6 +19,8 @@ namespace PantallasMonopoly
     /// </summary>
     public sealed partial class LobbyMenu : Page
     {
+
+
         public LobbyMenu()
         {
             this.InitializeComponent();
@@ -28,8 +31,12 @@ namespace PantallasMonopoly
       
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainMenu));
+            lobbyVM viewModel;
+            viewModel = (lobbyVM)this.DataContext;
+            //this.Frame.Navigate(typeof(MainMenu));
 
+            conexionPadre.proxy.Invoke("salirDeLobby", viewModel.lobby.nombre);
+            
         }
 
 
