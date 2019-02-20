@@ -2,7 +2,7 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - crearNuevoLobby(Lobby lobby) //Crea un nuevo lobby, el cual ya tiene el jugador dentro
  - comprobarContrasena(string nombreLobby, string contrasena) //Hay que llamarlo siempre antes de uunirALobby
  - unirALobby(string nombreLobby, Jugador jugador) //Hay que llamarlo siempre después de comprobarContrasena y solo en caso de ser true
- - salirDeLobby(string nombreLobby, Jugador jugador) //Te saca del lobby
+ - salirDeLobby(string nombreLobby) //Te saca del lobby
  - obtenerListadoLobbies() //Llama a actualizarListadoLobbies en el cliente
 
 Funciones EN EL SERVIDOR (GameHub):
@@ -11,7 +11,7 @@ Funciones EN EL SERVIDOR (GameHub):
 Funciones EN EL CLIENTE:
  - crearLobby(bool creadoConExito) //Te avisa de si el lobby se ha podido crear correctamente o no. Si no se ha podido crear, es porque el nombre ya estaba elegido
  - contrasena(bool contrasenaCorrecta) //Si es true, se ha unido correctamente, si es false, la contraseña era incorrecta
- - actualizarLobby(Lobby lobby) //Actualiza el lobby en el que esté un jugador
+ - actualizarLobby(Lobby lobby, bool? esCreador) //Actualiza el lobby en el que esté un jugador. El boolean (nullable) indica si el cliente es el creador o no
  - actualizarListadoLobbies(List<Lobby> listado) //Actualiza el listado de lobbies de JOIN
  - lobbyCompleto() //Se llama cuando, al llamar comprobarContrasena en el Servidor, el lobby está lleno
  - empezarPartida() //Se llama cuando la partida ha empezado

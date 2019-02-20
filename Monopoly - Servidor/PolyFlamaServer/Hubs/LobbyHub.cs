@@ -80,11 +80,14 @@ namespace PolyFlamaServer.Hubs
             Thread.Sleep(new Random().Next(50, 200)); //Tiempo random para evitar colapsos
             LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
             LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
-                
+
+            //ConnectionID del creador para comprobar si el cliente al que se está llamando es el creador o no
+            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value;
+
             //Avisamos a los otros jugadores de que se ha unido
             foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
             {
-                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
             }
         }
 
@@ -111,31 +114,40 @@ namespace PolyFlamaServer.Hubs
             }
         }
 
-        public void salirDeLobby(string nombreLobby, Jugador jugador)
+        public void salirDeLobby(string nombreLobby)
         {
+            //Buscamos el jugador
+            string nombreJugador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Value == Context.ConnectionId).Key;
+            Jugador jugador = LobbyInfo.listadoLobbies[nombreJugador].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
+
+            //Quitamos en 1 el número de jugadores
             LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores--;
-            if(jugador != null)
+
+            //Para evitar colapsos
+            Thread.Sleep(new Random().Next(50, 200)); 
+
+            //Borramos de la lista de jugadores y de las conexiones
+            string connectionID;
+            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Remove(jugador);
+            LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.TryRemove(jugador.nombre, out connectionID);
+
+            //ConnectionID del creador para comprobar si el cliente al que se está llamando es el creador o no
+            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value;
+
+            //Avisamos a los otros jugadores de que se ha desconectado
+            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
             {
-                Thread.Sleep(new Random().Next(50, 200)); //Para evitar colapsos
-                string connectionID;
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Remove(jugador);
-                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.TryRemove(jugador.nombre, out connectionID);
-
-                //Avisamos a los otros jugadores de que se ha desconectado
-                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                {
-                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
-                }
-                
-                //Si el lobby no tiene personas, entonces se elimina
-                if (LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores == 0)
-                {
-                    DatosLobby lobbyRemoved;
-                    LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out lobbyRemoved);
-                }
-
-                Clients.Caller.salirDeLobby();
+                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
             }
+                
+            //Si el lobby no tiene personas, entonces se elimina
+            if (LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores == 0)
+            {
+                DatosLobby lobbyRemoved;
+                LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out lobbyRemoved);
+            }
+
+            Clients.Caller.salirDeLobby();
                 
         }
 
