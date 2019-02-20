@@ -31,7 +31,7 @@ namespace PantallasMonopoly.ViewModels
 
         private INavigationService _navigationService;
 
-  
+
         #endregion
 
         #region Constructores
@@ -95,8 +95,7 @@ namespace PantallasMonopoly.ViewModels
                 }
                 else
                 {
-                    proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir);
-                    _navigationService.Navigate(typeof(LobbyMenu));
+                    proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, "");
                 }
 
             }
@@ -221,7 +220,7 @@ namespace PantallasMonopoly.ViewModels
 
         private async void actualizarListadoLobbies(List<Lobby> listado)
         {
-        
+
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                () =>
                {
@@ -231,26 +230,25 @@ namespace PantallasMonopoly.ViewModels
                );
 
 
-                      
+
         }
 
 
         private async void contrasena(bool entra)
         {
-                             
-            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                () =>
-                {
-                    if (entra)
+
+            if (entra)
+            {
+
+                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                    () =>
                     {
                         proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir).Wait();
                         _navigationService.Navigate(typeof(LobbyMenu));
-
                     }
-                }
-                );
+                    );
 
-
+            }
 
         }
 
