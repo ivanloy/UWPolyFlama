@@ -2,6 +2,7 @@
 using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
+using PantallasMonopoly.Views;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -59,14 +60,13 @@ namespace PantallasMonopoly.ViewModels
             //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
-            proxy.On<Lobby>("actualizarLobby", actualizarLobby);
+            proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
 
-
-            _jugarCommand.RaiseCanExecuteChanged();
+            proxy.On("salirDeLobby", salirDeLobby);
+          
 
         }
-
-       
+    
 
         #endregion
 
@@ -111,7 +111,7 @@ namespace PantallasMonopoly.ViewModels
         #region metodos SignalR
 
 
-        private async void actualizarLobby(Lobby obj)
+        private async void actualizarLobby(Lobby obj, bool? esCreador)
         {
 
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
@@ -119,12 +119,34 @@ namespace PantallasMonopoly.ViewModels
                     {
                         _lobby = obj;
                         NotifyPropertyChanged("lobby");
-                        _jugarCommand.RaiseCanExecuteChanged();
+                        
                     }
                     );
-                    
+
+            if (esCreador != null &&  (bool) esCreador) {
+
+                _jugarCommand.RaiseCanExecuteChanged();
+
+            }
+
+           
+
         }
 
+
+        private async void salirDeLobby()
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                    () =>
+                    {
+
+                        _navigationService.Navigate(typeof(MainMenu));
+                    }
+                    );
+
+
+            
+        }
 
 
         #endregion
