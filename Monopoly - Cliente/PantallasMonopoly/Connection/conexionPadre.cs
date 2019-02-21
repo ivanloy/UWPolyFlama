@@ -13,25 +13,7 @@ namespace PantallasMonopoly.Connection
         private static HubConnection _conn;
         private static IHubProxy _proxy;
 
-
-        //public static HubConnection conn
-        //{
-
-        //    get
-        //    {
-
-        //        if (_conn == null)
-        //        {
-
-        //            _conn = new HubConnection("http://polyflama.azurewebsites.net/");
-                    
-        //        }
-
-        //        return _conn;
-        //    }          
-
-        //}
-
+     
 
         public static IHubProxy proxy
         {
@@ -48,6 +30,18 @@ namespace PantallasMonopoly.Connection
                 return _proxy;
             }
 
+        }
+
+
+        public static void close()
+        {
+            if (_conn != null && _conn.State == ConnectionState.Connected) {
+
+                _conn.Stop();
+                _proxy = null;
+            }
+
+          
         }
 
 

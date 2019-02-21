@@ -64,13 +64,13 @@ namespace PolyFlamaServer.Hubs
                 {
                     //Añadimos el jugador al grupo
                     LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores++;
-                    Clients.Caller.contrasena(true);
+                    Clients.Caller.contrasena(1);
                 }
                 else
-                    Clients.Caller.contrasena(false);
+                    Clients.Caller.contrasena(0);
             }
             else
-                Clients.Caller.lobbyCompleto();
+                Clients.Caller.contrasena(-1);
 
         }
 
@@ -78,16 +78,26 @@ namespace PolyFlamaServer.Hubs
         {
             //Añadimos el jugador al listado de jugadores del lobby
             Thread.Sleep(new Random().Next(100, 2000)); //Tiempo random para evitar colapsos
-            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
-            LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
 
-            //Obtenemos la connectionID del jugador creador
-            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Key == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre).Value;
-
-            //Avisamos a los otros jugadores de que se ha unido
-            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+            //Si el jugador ya está en la sala, le avisamos de que su nickname ya está elegido
+            if (LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.ContainsKey(jugador.nombre))
+                Clients.Caller.unirALobby(null);
+            else
             {
-                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
+                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
+
+                //Obtenemos la connectionID del jugador creador
+                string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Key == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre).Value;
+
+                //Avisamos a los otros jugadores de que se ha unido
+                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                {
+                    if(connectionId != Context.ConnectionId)
+                        Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
+                    else
+                        Clients.Caller.unirALobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                }
             }
         }
 

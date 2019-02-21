@@ -58,7 +58,6 @@ namespace PantallasMonopoly.ViewModels
         {
             _navigationService = navigationService;
 
-            //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
@@ -111,7 +110,7 @@ namespace PantallasMonopoly.ViewModels
 
         #region metodos SignalR
 
-
+        
         private async void actualizarLobby(Lobby obj, bool? esCreador)
         {
 
@@ -143,7 +142,7 @@ namespace PantallasMonopoly.ViewModels
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                     () =>
                     {
-
+                        conexionPadre.close();
                         _navigationService.Navigate(typeof(MainMenu));
                     }
                     );
