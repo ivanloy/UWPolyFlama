@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
@@ -20,7 +21,7 @@ namespace PantallasMonopoly.ViewModels
         private List<Ficha> _listadoFichas;
         private Ficha _fichaSeleccionada;
 
-        private TipoEntrada _tipoEntrada;
+        private Lobby _lobbyAEntrar;
 
         private DelegateCommand _crearCommand;
         private INavigationService _navigationService;
@@ -79,16 +80,16 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
-        public TipoEntrada tipoEntrada
+        public Lobby lobbyAEntrar
         {
             get
             {
-                return _tipoEntrada;
+                return _lobbyAEntrar;
             }
 
             set
             {
-                _tipoEntrada = value;
+                _lobbyAEntrar = value;
             }
         }
 
@@ -105,10 +106,13 @@ namespace PantallasMonopoly.ViewModels
 
             _navigationService = navigationService;
             _nickname = "";
-            _listadoFichas = generadorFichas.listadoFichas();         
+            _listadoFichas = generadorFichas.listadoFichas();
             _fichaSeleccionada = new Ficha();
 
+            proxy.On<Lobby>("unirALobby", unirALobby);
+
         }
+
 
 
         #endregion
@@ -131,7 +135,7 @@ namespace PantallasMonopoly.ViewModels
 
             if (!_nickname.Equals("") && _fichaSeleccionada.nombre != null)
             {
-                
+
                 sePuedeCrear = true;
             }
 
@@ -140,7 +144,8 @@ namespace PantallasMonopoly.ViewModels
 
         private void crearCommand_Executed()
         {
-            if (_tipoEntrada == TipoEntrada.CREATE) {
+            if (_lobbyAEntrar == null)
+            {
 
                 _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
 
@@ -148,18 +153,46 @@ namespace PantallasMonopoly.ViewModels
             else
             {
 
+                proxy.Invoke("unirALobby", _lobbyAEntrar.nombre, new Jugador(_nickname, _fichaSeleccionada));
 
-                _navigationService.Navigate(typeof(SearchMenu), new Jugador(_nickname, _fichaSeleccionada));
-
+               
             }
-      
-            
+
+
 
         }
 
 
         #endregion
 
+
+        #region Metodos SignalR
+
+        private async void unirALobby(Lobby lobby)
+        {
+
+            if (lobby != null)
+            {
+
+                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                        () =>
+                        {
+                            _navigationService.Navigate(typeof(LobbyMenu));
+                            
+                        }
+                        );
+
+            }
+            else
+            {
+
+               //Mensaje de error
+
+            }
+
+        }
+
+        #endregion
 
     }
 }

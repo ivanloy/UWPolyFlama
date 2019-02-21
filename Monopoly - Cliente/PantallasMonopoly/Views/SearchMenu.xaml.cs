@@ -33,18 +33,5 @@ namespace PantallasMonopoly
         }
 
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-
-            searchVM viewModel;
-            viewModel = (searchVM)this.DataContext;
-
-            if (e.Parameter is Jugador)
-            {
-                viewModel.jugadorAIntroducir = (Jugador)e.Parameter;
-            }
-        }
-
-
     }
 }

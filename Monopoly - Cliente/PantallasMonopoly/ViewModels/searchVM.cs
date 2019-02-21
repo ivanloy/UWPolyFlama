@@ -21,8 +21,6 @@ namespace PantallasMonopoly.ViewModels
 
         private Lobby _lobbySeleccionado;
 
-        private Jugador _jugadorAIntroducir;
-
         private DelegateCommand _actualizarCommand;
         private DelegateCommand _confirmarPassCommand;
 
@@ -45,11 +43,10 @@ namespace PantallasMonopoly.ViewModels
 
             _password = "";
 
-            //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
-            proxy.On<bool>("contrasena", contrasena);
+            proxy.On<int>("contrasena", contrasena);
             proxy.On("lobbyCompleto", lobbyCompleto);
 
             proxy.Invoke("obtenerListadoLobbies");
@@ -143,23 +140,6 @@ namespace PantallasMonopoly.ViewModels
         }
 
 
-        public Jugador jugadorAIntroducir
-        {
-            get
-            {
-                return _jugadorAIntroducir;
-            }
-
-            set
-            {
-                _jugadorAIntroducir = value;
-                NotifyPropertyChanged("jugadorAIntroducir");
-
-            }
-        }
-
-
-
 
 
         #endregion
@@ -242,25 +222,34 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
+        /*
+         1 Entra
+         0 Incorrecto
+         -1 Lobby completo
+         */
 
-        private async void contrasena(bool entra)
+        private async void contrasena(int entra)
         {
-
-            if (entra)
-            {
-
-                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                     () =>
                     {
-                        proxy.Invoke("unirALobby", _lobbySeleccionado.nombre, _jugadorAIntroducir).Wait();
-                        _lobbySeleccionado.listadoJugadores.Add(_jugadorAIntroducir);
-                        _navigationService.Navigate(typeof(LobbyMenu), _lobbySeleccionado);
+                        switch (entra)
+                        {
+
+                            case 1: //Entra
+
+                                _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
+
+                                break;
+
+                        }
+
                     }
                     );
 
-            }
-
+       
         }
+
 
         private void lobbyCompleto()
         {

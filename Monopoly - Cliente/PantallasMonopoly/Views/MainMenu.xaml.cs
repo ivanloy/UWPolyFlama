@@ -33,18 +33,16 @@ namespace PantallasMonopoly.Views
 
             Windows.UI.ViewManagement.ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
 
-            //Esto es para crear la conexion nada mas iniciar el videojoc
-            IHubProxy prox = conexionPadre.proxy;
         }
 
         private void Search_Tapped(object sender, TappedRoutedEventArgs e)
         {      
-            this.Frame.Navigate(typeof(CreatePlayer), TipoEntrada.SEARCH);
+            this.Frame.Navigate(typeof(SearchMenu));
         }
 
         private void Create_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CreatePlayer), TipoEntrada.CREATE);
+            this.Frame.Navigate(typeof(CreatePlayer));
         }
 
         private void About_Tapped(object sender, TappedRoutedEventArgs e)

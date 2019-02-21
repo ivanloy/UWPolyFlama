@@ -40,9 +40,9 @@ namespace PantallasMonopoly
             createPlayerVM viewModel;
             viewModel = (createPlayerVM)this.DataContext;
 
-            if (e.Parameter is TipoEntrada)
+            if (e.Parameter is Lobby)
             {
-                viewModel.tipoEntrada = (TipoEntrada)e.Parameter;
+                viewModel.lobbyAEntrar = (Lobby)e.Parameter;
             }
         }
 
