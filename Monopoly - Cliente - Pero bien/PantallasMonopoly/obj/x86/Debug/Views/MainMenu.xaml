@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="PantallasMonopoly.Views.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PantallasMonopoly.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Background>
+        <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
+    </Page.Background>
+
+    <Grid x:ConnectionId='2' Name="sampleGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.75*"></RowDefinition>
+            <RowDefinition Height="1.50*"></RowDefinition>
+            <RowDefinition Height="1.25*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border x:ConnectionId='3' Background="#8BC34A" Grid.Column="1" Grid.Row="0"                       >
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="140" Foreground="White">SEARCH</TextBlock>    
+        </Border>
+
+        <Border x:ConnectionId='4' Background="#2196F3" Grid.Column="1" Grid.Row="1"                       >
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="120" Foreground="White">CREATE</TextBlock>
+        </Border>
+
+        <Border x:ConnectionId='5' Background="#FFEB3B" Grid.Column="1" Grid.Row="2"                      >
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="100" Foreground="White">ABOUT</TextBlock>
+        </Border>
+
+        <Border x:ConnectionId='6' Background="#F44336" Grid.Column="1" Grid.Row="3"                     >
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="80" Foreground="White">EXIT</TextBlock>
+        </Border>
+
+
+    </Grid>
+</Page>
+
