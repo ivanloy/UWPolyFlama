@@ -1,0 +1,234 @@
+﻿<Page
+    x:Class="PantallasMonopoly.Views.GameScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PantallasMonopoly.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:vm="using:PantallasMonopoly.ViewModels">
+    <Page.DataContext>
+        <vm:GameViewModel></vm:GameViewModel>
+    </Page.DataContext>
+
+    <Page.Background>
+        <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
+    </Page.Background>
+
+    <RelativePanel>
+
+
+       
+
+        <StackPanel
+            Orientation="Horizontal"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True">
+
+            <Border
+                Height="180"
+                Width="300"
+                BorderThickness="4"
+                BorderBrush="Black"
+                CornerRadius="35"
+                Margin="15"
+                >
+                <RelativePanel>
+
+                    <Rectangle
+                        Name="rct_playerBox"
+                        Width="300"
+                        Height="180"
+                        Fill="Red"/>
+
+                    <Rectangle
+                        Name="rct_money"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        Width="300"
+                        Height="120"
+                        Fill="DarkRed"/>
+
+                    <Image
+                        Name="img_fichaJugador"
+                        Source="{Binding lobby.listadoJugadores[0].ficha.imagen}"
+                        Width="40"
+                        Height="40"
+                        Margin="20,5,0,0"
+                        RelativePanel.AlignTopWith="rct_playerBox"/>
+                    
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[0].nombre}"
+                        FontSize="30"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="Bold"
+                        Margin="20,5,0,0"
+                        RelativePanel.AlignTopWith="rct_playerBox"
+                        RelativePanel.RightOf="img_fichaJugador"/>
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[0].dinero}"
+                        FontSize="40"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="ExtraBold"
+                        Margin="20,5,0,0"
+                        RelativePanel.AlignLeftWith="rct_playerBox"
+                        RelativePanel.AlignTopWith="rct_money"/>
+
+                   
+                </RelativePanel>
+
+            </Border>
+
+            <Border
+                Height="180"
+                Width="300"
+                BorderThickness="4"
+                BorderBrush="Black"
+                CornerRadius="35"
+                Margin="15"
+                >
+                <RelativePanel>
+
+                    <Rectangle
+                        Name="rct_playerBox2"
+                        Width="300"
+                        Height="180"
+                        Fill="Blue"/>
+
+                    <Rectangle
+                        Name="rct_money2"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        Width="300"
+                        Height="120"
+                        Fill="DarkBlue"/>
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[1].nombre}"
+                        FontSize="30"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="Bold"
+                        Margin="20,5,0,0"
+                        RelativePanel.AlignTopWith="rct_playerBox2"/>
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[1].dinero}"
+                        FontSize="40"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="ExtraBold"
+                        Margin="20,-3,0,0"
+                        RelativePanel.AlignLeftWith="rct_playerBox2"
+                        RelativePanel.AlignTopWith="rct_money2"/>
+
+                </RelativePanel>
+
+            </Border>
+
+            <Border
+                Height="180"
+                Width="300"
+                BorderThickness="4"
+                BorderBrush="Black"
+                CornerRadius="35"
+                Margin="15"
+                >
+                <RelativePanel>
+
+                    <Rectangle
+                        Name="rct_playerBox3"
+                        Width="300"
+                        Height="180"
+                        Fill="Green"/>
+
+                    <Rectangle
+                        Name="rct_money3"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        Width="300"
+                        Height="120"
+                        Fill="DarkGreen"/>
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[2].nombre}"
+                        FontSize="30"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="Bold"
+                        Margin="20,5,0,0"
+                        RelativePanel.AlignTopWith="rct_playerBox3"/>
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[2].dinero}"
+                        FontSize="40"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="ExtraBold"
+                        Margin="20,-3,0,0"
+                        RelativePanel.AlignLeftWith="rct_playerBox3"
+                        RelativePanel.AlignTopWith="rct_money3"/>
+
+                </RelativePanel>
+
+            </Border>
+
+            <Border
+                Height="180"
+                Width="300"
+                BorderThickness="4"
+                BorderBrush="Black"
+                CornerRadius="35"
+                Margin="15"
+                >
+                <RelativePanel>
+
+                    <Rectangle
+                        Name="rct_playerBox4"
+                        Width="300"
+                        Height="180"
+                        Fill="MediumPurple"/>
+
+                    <Rectangle
+                        Name="rct_money4"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        Width="300"
+                        Height="120"
+                        Fill="Purple"/>
+
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[3].nombre}"
+                        FontSize="30"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="Bold"
+                        Margin="20,5,0,0"
+                        RelativePanel.AlignTopWith="rct_playerBox4"/>
+
+                    <TextBlock
+                        Text="{Binding lobby.listadoJugadores[3].dinero}"
+                        FontSize="40"
+                        Foreground="White"
+                        FontStyle="Italic"
+                        FontWeight="ExtraBold"
+                        Margin="20,-3,0,0"
+                        RelativePanel.AlignLeftWith="rct_playerBox4"
+                        RelativePanel.AlignTopWith="rct_money4"/>
+
+                </RelativePanel>
+
+            </Border>
+
+        </StackPanel>
+
+        <Rectangle
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True"
+            Height="80"
+            Width="Auto"
+            Fill="PaleVioletRed"/>
+
+    </RelativePanel>
+</Page>
