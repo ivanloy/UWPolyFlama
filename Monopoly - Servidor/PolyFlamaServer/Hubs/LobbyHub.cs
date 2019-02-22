@@ -128,7 +128,7 @@ namespace PolyFlamaServer.Hubs
 
         public void empezarPartida(string nombreLobby)
         {
-            if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores)
+            if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Count)
             {
                 //Crear una partida nueva
                 Partida partida = GestoraPartida.generarPartidaNueva();
@@ -144,7 +144,8 @@ namespace PolyFlamaServer.Hubs
                 //Avisamos a los otros jugadores para empezar la partida
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                 {
-                    Clients.Client(connectionId).empezarPartida(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                    Clients.Client(connectionId).empezarPartida();
                 }
             }
         }
@@ -196,6 +197,34 @@ namespace PolyFlamaServer.Hubs
             }
         }
 
+        //Método para obtener datos de un jugador
+        public void obtenerJugador()
+        {
+            string connectionId = Context.ConnectionId;
+            Jugador jugador;
+            string nombreJugador = null;
+            string nombreLobby = null;
+
+            foreach(DatosLobby datos in LobbyInfo.listadoLobbies.Values)
+            {
+                try
+                {
+                    nombreJugador = datos.listadoJugadoresConnection.Single(x => x.Value == connectionId).Key;
+                    nombreLobby = datos.lobby.nombre;
+                    break;
+                }
+                catch (InvalidOperationException) { }
+            }
+
+            if (nombreJugador != null)
+            {
+                jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
+                Clients.Caller.obtenerJugador(jugador);
+            }
+            else
+                Clients.Caller.obtenerJugador(null);
+        }
+
         //Actualizar el listado completo de lobbies
         public void obtenerListadoLobbies()
         {
@@ -209,51 +238,12 @@ namespace PolyFlamaServer.Hubs
             Clients.Caller.actualizarListadoLobbies(listadoLobbies);
         }
 
-        /*Cuando un jugador se desconecte
+        //Cuando un jugador se desconecte
         public override Task OnDisconnected(bool stopCalled)
         {
-            if(!stopCalled)
-            {
-                bool esJugadorCreador = false;
-                string nombreLobby = "";
-                foreach (DatosLobby datosLobby in LobbyInfo.listadoLobbies.Values)
-                {
-                    if (datosLobby.listadoJugadoresConnection.ContainsKey(datosLobby.lobby.listadoJugadores.First().nombre))
-                    {
-                        esJugadorCreador = true;
-                        nombreLobby = datosLobby.lobby.nombre;
-                        break;
-                    }
-                    else if (datosLobby.listadoJugadoresConnection.Values.ToList().Exists(x => x == Context.ConnectionId))
-                    {
-                        nombreLobby = datosLobby.lobby.nombre;
-                        break;
-                    }
-                }
-
-                if (esJugadorCreador)
-                {
-                    DatosLobby datosLobby;
-                    LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out datosLobby);
-                    foreach (string connectionId in datosLobby.listadoJugadoresConnection.Values)
-                    {
-                        Clients.Client(connectionId).salirDeLobby();
-                    }
-
-                }
-                else if(nombreLobby != "")
-                {
-                    Groups.Remove(Context.ConnectionId, nombreLobby);
-                }
-            }
+            
 
             return base.OnDisconnected(stopCalled);
         }
-
-        //Cuando un jugador se conecte
-        public override Task OnConnected()
-        {
-            return base.OnConnected();
-        }*/
     }
 }

@@ -17,7 +17,7 @@ namespace PolyFlamaServer.Hubs
         public void tirarDados(string nombreLobby)
         {
             int turnoActual = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual;
-            string connectionIDCreator = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value;
+            string connectionIDCreator = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.First().Value; //Incorrecto, rebote
 
             //Si el jugador no está en la carcel o si está en la carcel pero ya ha hecho 2 tiradas
             if (!LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].estaEnCarcel || LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].estaEnCarcel && LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual].turnosEnCarcel == 2)
@@ -129,6 +129,15 @@ namespace PolyFlamaServer.Hubs
             {
                 Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
             }
+        }
+
+        //Cuando un jugador se conecte, actualizamos su connectionID de la lista
+        public override Task OnConnected()
+        {
+            string nombreJugador = Context.QueryString["nombreJugador"];
+            string nombreLobby = Context.QueryString["nombreLobby"];
+
+            return base.OnConnected();
         }
     }
 }
