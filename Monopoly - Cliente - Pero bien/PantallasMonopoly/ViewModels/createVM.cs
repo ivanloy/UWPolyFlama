@@ -150,8 +150,10 @@ namespace PantallasMonopoly.ViewModels
             }
 
             Lobby lobby = new Lobby(_nombreLobby, _passwordLobby, _numeroJugadoresLobby, _creadorSala, new Partida());
-      
+
             //Aqui hay una llamada al server
+            //TODO CAMBIAR SI O SI, SOLO PRUEBAS
+            lobby.maxJugadores = 1;
             await proxy.Invoke("crearNuevoLobby", lobby);
 
             _navigation.Navigate(typeof(LobbyMenu), lobby);

@@ -95,7 +95,7 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="{Binding Path=ficha.imagen}" MaxHeight="50" MaxWidth="50"></Image>
-                                    <TextBlock Text="{Binding Path=nombre}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock Text="{Binding Path=nombre}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"></TextBlock>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>

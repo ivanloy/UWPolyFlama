@@ -14,6 +14,12 @@ namespace PantallasMonopoly.ViewModels
 
         private Lobby _lobby;
         private DelegateCommand _tirarDadosCommand;
+        private Jugador _jugadorCliente;
+
+        public Jugador jugadorCliente {
+            get { return _jugadorCliente; }
+            set { _jugadorCliente = value; }
+        }
 
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
@@ -37,15 +43,16 @@ namespace PantallasMonopoly.ViewModels
 
         private async void _tirarDadosCommand_Executed()
         {
-            await proxy.Invoke("tirarDados", lobby.nombre);
+           // await proxy.Invoke("tirarDados", lobby.nombre);
         }
 
         public GameViewModel()
         {
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            conn = new HubConnection("http://polyflama.azurewebsites.net/", $"nombreLobby={_lobby.nombre}&nombreJugador={_jugadorCliente.nombre}");
             proxy = conn.CreateHubProxy("GameHub");
             conn.Start();
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
+            lobby = new Lobby();
         }
 
         private void actualizarLobby(Lobby arg1, bool? arg2)

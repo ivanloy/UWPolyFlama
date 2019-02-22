@@ -213,45 +213,47 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[18];
+            _typeNameTable = new string[19];
             _typeNameTable[0] = "PantallasMonopoly.AboutMenu";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "PantallasMonopoly.ViewModels.GameViewModel";
             _typeNameTable[4] = "PantallasMonopoly.ViewModels.clsVMBase";
             _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "Microsoft.AspNet.SignalR.Client.HubConnection";
-            _typeNameTable[7] = "Microsoft.AspNet.SignalR.Client.Connection";
-            _typeNameTable[8] = "Microsoft.AspNet.SignalR.Client.IHubProxy";
-            _typeNameTable[9] = "PantallasMonopoly.Models.Lobby";
-            _typeNameTable[10] = "PantallasMonopoly.ViewModels.DelegateCommand";
-            _typeNameTable[11] = "PantallasMonopoly.Views.GameView";
-            _typeNameTable[12] = "PantallasMonopoly.LobbyMenu";
-            _typeNameTable[13] = "PantallasMonopoly.CreatePlayer";
-            _typeNameTable[14] = "PantallasMonopoly.Views.MainMenu";
-            _typeNameTable[15] = "PantallasMonopoly.Models.ComboBoxConverter";
-            _typeNameTable[16] = "PantallasMonopoly.CreateMenu";
-            _typeNameTable[17] = "PantallasMonopoly.SearchMenu";
+            _typeNameTable[6] = "PantallasMonopoly.Models.Jugador";
+            _typeNameTable[7] = "Microsoft.AspNet.SignalR.Client.HubConnection";
+            _typeNameTable[8] = "Microsoft.AspNet.SignalR.Client.Connection";
+            _typeNameTable[9] = "Microsoft.AspNet.SignalR.Client.IHubProxy";
+            _typeNameTable[10] = "PantallasMonopoly.Models.Lobby";
+            _typeNameTable[11] = "PantallasMonopoly.ViewModels.DelegateCommand";
+            _typeNameTable[12] = "PantallasMonopoly.Views.GameView";
+            _typeNameTable[13] = "PantallasMonopoly.LobbyMenu";
+            _typeNameTable[14] = "PantallasMonopoly.CreatePlayer";
+            _typeNameTable[15] = "PantallasMonopoly.Views.MainMenu";
+            _typeNameTable[16] = "PantallasMonopoly.Models.ComboBoxConverter";
+            _typeNameTable[17] = "PantallasMonopoly.CreateMenu";
+            _typeNameTable[18] = "PantallasMonopoly.SearchMenu";
 
-            _typeTable = new global::System.Type[18];
+            _typeTable = new global::System.Type[19];
             _typeTable[0] = typeof(global::PantallasMonopoly.AboutMenu);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::PantallasMonopoly.ViewModels.GameViewModel);
             _typeTable[4] = typeof(global::PantallasMonopoly.ViewModels.clsVMBase);
             _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::Microsoft.AspNet.SignalR.Client.HubConnection);
-            _typeTable[7] = typeof(global::Microsoft.AspNet.SignalR.Client.Connection);
-            _typeTable[8] = typeof(global::Microsoft.AspNet.SignalR.Client.IHubProxy);
-            _typeTable[9] = typeof(global::PantallasMonopoly.Models.Lobby);
-            _typeTable[10] = typeof(global::PantallasMonopoly.ViewModels.DelegateCommand);
-            _typeTable[11] = typeof(global::PantallasMonopoly.Views.GameView);
-            _typeTable[12] = typeof(global::PantallasMonopoly.LobbyMenu);
-            _typeTable[13] = typeof(global::PantallasMonopoly.CreatePlayer);
-            _typeTable[14] = typeof(global::PantallasMonopoly.Views.MainMenu);
-            _typeTable[15] = typeof(global::PantallasMonopoly.Models.ComboBoxConverter);
-            _typeTable[16] = typeof(global::PantallasMonopoly.CreateMenu);
-            _typeTable[17] = typeof(global::PantallasMonopoly.SearchMenu);
+            _typeTable[6] = typeof(global::PantallasMonopoly.Models.Jugador);
+            _typeTable[7] = typeof(global::Microsoft.AspNet.SignalR.Client.HubConnection);
+            _typeTable[8] = typeof(global::Microsoft.AspNet.SignalR.Client.Connection);
+            _typeTable[9] = typeof(global::Microsoft.AspNet.SignalR.Client.IHubProxy);
+            _typeTable[10] = typeof(global::PantallasMonopoly.Models.Lobby);
+            _typeTable[11] = typeof(global::PantallasMonopoly.ViewModels.DelegateCommand);
+            _typeTable[12] = typeof(global::PantallasMonopoly.Views.GameView);
+            _typeTable[13] = typeof(global::PantallasMonopoly.LobbyMenu);
+            _typeTable[14] = typeof(global::PantallasMonopoly.CreatePlayer);
+            _typeTable[15] = typeof(global::PantallasMonopoly.Views.MainMenu);
+            _typeTable[16] = typeof(global::PantallasMonopoly.Models.ComboBoxConverter);
+            _typeTable[17] = typeof(global::PantallasMonopoly.CreateMenu);
+            _typeTable[18] = typeof(global::PantallasMonopoly.SearchMenu);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -288,14 +290,15 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
 
         private object Activate_0_AboutMenu() { return new global::PantallasMonopoly.AboutMenu(); }
         private object Activate_3_GameViewModel() { return new global::PantallasMonopoly.ViewModels.GameViewModel(); }
-        private object Activate_9_Lobby() { return new global::PantallasMonopoly.Models.Lobby(); }
-        private object Activate_11_GameView() { return new global::PantallasMonopoly.Views.GameView(); }
-        private object Activate_12_LobbyMenu() { return new global::PantallasMonopoly.LobbyMenu(); }
-        private object Activate_13_CreatePlayer() { return new global::PantallasMonopoly.CreatePlayer(); }
-        private object Activate_14_MainMenu() { return new global::PantallasMonopoly.Views.MainMenu(); }
-        private object Activate_15_ComboBoxConverter() { return new global::PantallasMonopoly.Models.ComboBoxConverter(); }
-        private object Activate_16_CreateMenu() { return new global::PantallasMonopoly.CreateMenu(); }
-        private object Activate_17_SearchMenu() { return new global::PantallasMonopoly.SearchMenu(); }
+        private object Activate_6_Jugador() { return new global::PantallasMonopoly.Models.Jugador(); }
+        private object Activate_10_Lobby() { return new global::PantallasMonopoly.Models.Lobby(); }
+        private object Activate_12_GameView() { return new global::PantallasMonopoly.Views.GameView(); }
+        private object Activate_13_LobbyMenu() { return new global::PantallasMonopoly.LobbyMenu(); }
+        private object Activate_14_CreatePlayer() { return new global::PantallasMonopoly.CreatePlayer(); }
+        private object Activate_15_MainMenu() { return new global::PantallasMonopoly.Views.MainMenu(); }
+        private object Activate_16_ComboBoxConverter() { return new global::PantallasMonopoly.Models.ComboBoxConverter(); }
+        private object Activate_17_CreateMenu() { return new global::PantallasMonopoly.CreateMenu(); }
+        private object Activate_18_SearchMenu() { return new global::PantallasMonopoly.SearchMenu(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -325,6 +328,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             case 3:   //  PantallasMonopoly.ViewModels.GameViewModel
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("PantallasMonopoly.ViewModels.clsVMBase"));
                 userType.Activator = Activate_3_GameViewModel;
+                userType.AddMemberName("jugadorCliente");
                 userType.AddMemberName("conn");
                 userType.AddMemberName("proxy");
                 userType.AddMemberName("lobby");
@@ -343,82 +347,89 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 xamlType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Microsoft.AspNet.SignalR.Client.HubConnection
+            case 6:   //  PantallasMonopoly.Models.Jugador
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Microsoft.AspNet.SignalR.Client.HubConnection
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.AspNet.SignalR.Client.Connection"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Microsoft.AspNet.SignalR.Client.Connection
+            case 8:   //  Microsoft.AspNet.SignalR.Client.Connection
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 8:   //  Microsoft.AspNet.SignalR.Client.IHubProxy
+            case 9:   //  Microsoft.AspNet.SignalR.Client.IHubProxy
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 9:   //  PantallasMonopoly.Models.Lobby
+            case 10:   //  PantallasMonopoly.Models.Lobby
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("PantallasMonopoly.ViewModels.clsVMBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  PantallasMonopoly.ViewModels.DelegateCommand
+            case 11:   //  PantallasMonopoly.ViewModels.DelegateCommand
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  PantallasMonopoly.Views.GameView
+            case 12:   //  PantallasMonopoly.Views.GameView
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_GameView;
+                userType.Activator = Activate_12_GameView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  PantallasMonopoly.LobbyMenu
+            case 13:   //  PantallasMonopoly.LobbyMenu
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_LobbyMenu;
+                userType.Activator = Activate_13_LobbyMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  PantallasMonopoly.CreatePlayer
+            case 14:   //  PantallasMonopoly.CreatePlayer
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_CreatePlayer;
+                userType.Activator = Activate_14_CreatePlayer;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  PantallasMonopoly.Views.MainMenu
+            case 15:   //  PantallasMonopoly.Views.MainMenu
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_MainMenu;
+                userType.Activator = Activate_15_MainMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  PantallasMonopoly.Models.ComboBoxConverter
+            case 16:   //  PantallasMonopoly.Models.ComboBoxConverter
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_15_ComboBoxConverter;
+                userType.Activator = Activate_16_ComboBoxConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  PantallasMonopoly.CreateMenu
+            case 17:   //  PantallasMonopoly.CreateMenu
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_CreateMenu;
+                userType.Activator = Activate_17_CreateMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  PantallasMonopoly.SearchMenu
+            case 18:   //  PantallasMonopoly.SearchMenu
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_SearchMenu;
+                userType.Activator = Activate_18_SearchMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -481,37 +492,47 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             return foundXamlType;
         }
 
-        private object get_0_GameViewModel_conn(object instance)
+        private object get_0_GameViewModel_jugadorCliente(object instance)
+        {
+            var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
+            return that.jugadorCliente;
+        }
+        private void set_0_GameViewModel_jugadorCliente(object instance, object Value)
+        {
+            var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
+            that.jugadorCliente = (global::PantallasMonopoly.Models.Jugador)Value;
+        }
+        private object get_1_GameViewModel_conn(object instance)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             return that.conn;
         }
-        private void set_0_GameViewModel_conn(object instance, object Value)
+        private void set_1_GameViewModel_conn(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             that.conn = (global::Microsoft.AspNet.SignalR.Client.HubConnection)Value;
         }
-        private object get_1_GameViewModel_proxy(object instance)
+        private object get_2_GameViewModel_proxy(object instance)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             return that.proxy;
         }
-        private void set_1_GameViewModel_proxy(object instance, object Value)
+        private void set_2_GameViewModel_proxy(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             that.proxy = (global::Microsoft.AspNet.SignalR.Client.IHubProxy)Value;
         }
-        private object get_2_GameViewModel_lobby(object instance)
+        private object get_3_GameViewModel_lobby(object instance)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             return that.lobby;
         }
-        private void set_2_GameViewModel_lobby(object instance, object Value)
+        private void set_3_GameViewModel_lobby(object instance, object Value)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             that.lobby = (global::PantallasMonopoly.Models.Lobby)Value;
         }
-        private object get_3_GameViewModel_tirarDadosCommand(object instance)
+        private object get_4_GameViewModel_tirarDadosCommand(object instance)
         {
             var that = (global::PantallasMonopoly.ViewModels.GameViewModel)instance;
             return that.tirarDadosCommand;
@@ -524,28 +545,34 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "PantallasMonopoly.ViewModels.GameViewModel.jugadorCliente":
+                userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.GameViewModel");
+                xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "jugadorCliente", "PantallasMonopoly.Models.Jugador");
+                xamlMember.Getter = get_0_GameViewModel_jugadorCliente;
+                xamlMember.Setter = set_0_GameViewModel_jugadorCliente;
+                break;
             case "PantallasMonopoly.ViewModels.GameViewModel.conn":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.GameViewModel");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "conn", "Microsoft.AspNet.SignalR.Client.HubConnection");
-                xamlMember.Getter = get_0_GameViewModel_conn;
-                xamlMember.Setter = set_0_GameViewModel_conn;
+                xamlMember.Getter = get_1_GameViewModel_conn;
+                xamlMember.Setter = set_1_GameViewModel_conn;
                 break;
             case "PantallasMonopoly.ViewModels.GameViewModel.proxy":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.GameViewModel");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "proxy", "Microsoft.AspNet.SignalR.Client.IHubProxy");
-                xamlMember.Getter = get_1_GameViewModel_proxy;
-                xamlMember.Setter = set_1_GameViewModel_proxy;
+                xamlMember.Getter = get_2_GameViewModel_proxy;
+                xamlMember.Setter = set_2_GameViewModel_proxy;
                 break;
             case "PantallasMonopoly.ViewModels.GameViewModel.lobby":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.GameViewModel");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "lobby", "PantallasMonopoly.Models.Lobby");
-                xamlMember.Getter = get_2_GameViewModel_lobby;
-                xamlMember.Setter = set_2_GameViewModel_lobby;
+                xamlMember.Getter = get_3_GameViewModel_lobby;
+                xamlMember.Setter = set_3_GameViewModel_lobby;
                 break;
             case "PantallasMonopoly.ViewModels.GameViewModel.tirarDadosCommand":
                 userType = (global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PantallasMonopoly.ViewModels.GameViewModel");
                 xamlMember = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlMember(this, "tirarDadosCommand", "PantallasMonopoly.ViewModels.DelegateCommand");
-                xamlMember.Getter = get_3_GameViewModel_tirarDadosCommand;
+                xamlMember.Getter = get_4_GameViewModel_tirarDadosCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             }

@@ -24,6 +24,7 @@ namespace PantallasMonopoly.ViewModels
         private INavigationService _navigationService;
 
         private DelegateCommand _jugarCommand;
+        private Jugador _jugador;
 
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
@@ -63,10 +64,12 @@ namespace PantallasMonopoly.ViewModels
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
 
             proxy.On("salirDeLobby", salirDeLobby);
+            proxy.On("empezarPartida", empezarPartida);
+            proxy.On<Jugador>("obtenerJugador", obtenerJugador);
           
 
         }
-    
+
 
         #endregion
 
@@ -92,17 +95,15 @@ namespace PantallasMonopoly.ViewModels
                 sePuedeJugar = true;
             }
 
-            return sePuedeJugar;
-            //return true;
+            //return sePuedeJugar;
+            return true;
         }
 
         private async void jugarCommand_Executed()
         {
-
-            //Aqui hay una llamada al server
-            _navigationService.Navigate(typeof(GameView), _lobby); //Aqui llamara a la partida
-           
+            await proxy.Invoke("empezarPartida", _lobby.nombre);
         }
+
 
 
         #endregion
@@ -110,7 +111,7 @@ namespace PantallasMonopoly.ViewModels
 
         #region metodos SignalR
 
-        
+
         private async void actualizarLobby(Lobby obj, bool? esCreador)
         {
 
@@ -130,12 +131,20 @@ namespace PantallasMonopoly.ViewModels
                     }
                     );
 
-            
-
-           
-
         }
 
+        private void empezarPartida()
+        {
+            //await proxy.Invoke("obtenerJugador");
+            if (_jugador != null)
+            {
+                _navigationService.Navigate(typeof(GameView), _jugador);
+            }
+            else
+            {
+                throw new NotImplementedException("El jugador es null, no se actualizo");
+            }
+        }
 
         private async void salirDeLobby()
         {
@@ -151,6 +160,10 @@ namespace PantallasMonopoly.ViewModels
             
         }
 
+        private void obtenerJugador(Jugador jugador)
+        {
+            _jugador = jugador;
+        }
 
         #endregion
 
