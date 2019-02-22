@@ -4,6 +4,7 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - unirALobby(string nombreLobby, Jugador jugador) //Hay que llamarlo siempre después de comprobarContrasena y solo en caso de ser true
  - salirDeLobby(string nombreLobby) //Te saca del lobby
  - obtenerListadoLobbies() //Llama a actualizarListadoLobbies en el cliente
+ - actualizarConnectionID(string nombreLobby, string nombreJugador) //Para cuando SignalR no quiere funcionar bien
 
 Funciones EN EL SERVIDOR (GameHub):
  - tirarDados(string nombreLobby) //Hay que llamarlo cada vez que le toque a alguien
