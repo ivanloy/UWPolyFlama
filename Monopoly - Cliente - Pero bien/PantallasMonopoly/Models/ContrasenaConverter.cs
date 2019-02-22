@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
 namespace PantallasMonopoly.Models
@@ -12,18 +13,18 @@ namespace PantallasMonopoly.Models
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            String visibilidad;
-            String contrasena = (String)value;
+            Visibility visibilidad;
+            String contrasena = value.ToString();
 
             if (contrasena.Equals("")) {
 
-                visibilidad = "Collapsed";
+                visibilidad = Visibility.Collapsed;
 
             }
             else
             {
 
-                visibilidad = "Visible";
+                visibilidad = Visibility.Visible;
             }
 
             return visibilidad;

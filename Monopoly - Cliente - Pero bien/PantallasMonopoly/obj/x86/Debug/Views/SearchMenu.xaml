@@ -98,19 +98,26 @@
                 <ListView x:ConnectionId='4' Name="listadoLobby" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                                    <SymbolIcon Symbol="Permissions" Margin="0,0,0,0" Visibility="{Binding lobbySeleccionado.contrasena, Converter={StaticResource contrasenaConverter}, Mode=OneWay}"/>
-                                    <TextBlock Text="{Binding Path=nombre}" Margin="20,0,0,0"></TextBlock>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="450,0,0,0">
-                                    
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <SymbolIcon Grid.Column="0" Symbol="Permissions" Margin="0,0,0,0" Visibility="{Binding Path=contrasena,  Converter={StaticResource contrasenaConverter}}"/>
+                                <TextBlock  Grid.Column="1" Text="{Binding Path=nombre}" Margin="12,0,0,0"></TextBlock>
+
+
+                                <StackPanel Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="450,0,0,0">
                                     <SymbolIcon Symbol="Contact" Margin="0,0,20,0"/>
                                     <TextBlock Text="{Binding Path=listadoJugadores.Count}"></TextBlock>
                                     <TextBlock Text="/"></TextBlock>
                                     <TextBlock Text="{Binding Path=maxJugadores}"></TextBlock>
                                 </StackPanel>
-                            </StackPanel>
+
+                            </Grid>
+                                                     
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

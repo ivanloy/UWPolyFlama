@@ -177,21 +177,11 @@ namespace PantallasMonopoly.ViewModels
                {
                    _listadoLobby = listado;
                    NotifyPropertyChanged("listadoLobby");
-
-                   //Temporal
-                   List<Lobby> prueba = new List<Lobby>();
-
-                   prueba.Add(new Lobby("Prueba 1 mieo", "", 3, new Jugador(), new Partida()));
-                   prueba.Add(new Lobby("Prueba 2 mieo", "Tengo pass", 3, new Jugador(), new Partida()));
-                   prueba.Add(new Lobby("Prueba 3 mieo", "", 3, new Jugador(), new Partida()));
-                   _listadoLobby = prueba;
-                   NotifyPropertyChanged("listadoLobby");
+                
                }
                );
 
             
-
-
         }
 
         /*
@@ -264,7 +254,6 @@ namespace PantallasMonopoly.ViewModels
             }
 
             await proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
-
 
         }
 
