@@ -111,7 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <None Include="Properties\PublishProfiles\polyflama - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\PolyFlama - Casa.pubxml" />
+    <None Include="Properties\PublishProfiles\PolyFlama - Clase.pubxml" />
     <None Include="Properties\PublishProfiles\polyflama - Web Deploy5.pubxml" />
     <None Include="Properties\PublishProfiles\polyflama - Web Deploy6.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />

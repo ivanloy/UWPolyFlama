@@ -5,8 +5,11 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - salirDeLobby(string nombreLobby) //Te saca del lobby
  - obtenerListadoLobbies() //Llama a actualizarListadoLobbies en el cliente
  - actualizarConnectionID(string nombreLobby, string nombreJugador) //Para cuando SignalR no quiere funcionar bien
+ - empezarPartida(string nombreLobby)
+ - obtenerJugador()
 
 Funciones EN EL SERVIDOR (GameHub):
+(Para conectarse a GameHub, tienes que pasarle por QueryString nombreLobby y nombreJugador)
  - tirarDados(string nombreLobby) //Hay que llamarlo cada vez que le toque a alguien
 
 Funciones EN EL CLIENTE:
@@ -21,3 +24,4 @@ Funciones EN EL CLIENTE:
  - terminarTurno() //Método que llama al jugador que esté en ese turno, y le mostrará en un dialog lo que haya pasado
  - siguienteTurno() //Avisa a los demás de que el turno ha terminado y ha pasado al siguiente
  - salirDeLobby() //Método que te saca de la pantalla de lobby
+ - obtenerJugador(Jugador jugador) //Método que te devuelve un jugador una vez llamado obtenerJugador() en el server (si es null, es que no lo ha encontrado)
