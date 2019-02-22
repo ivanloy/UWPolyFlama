@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-22T08:54:37.655</Modified>
+      <Modified>2019-02-22T09:07:55.205</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
       <PackagePath>entrypoint\PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-02-22T08:54:35.947</Modified>
+      <Modified>2019-02-22T09:07:53.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\.nuget\packages\microsoft.aspnet.signalr.client\2.4.0\lib\netstandard1.3\Microsoft.AspNet.SignalR.Client.dll">
       <PackagePath>Microsoft.AspNet.SignalR.Client.dll</PackagePath>
@@ -626,35 +626,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.662</Modified>
+      <Modified>2019-02-22T09:07:53.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
       <PackagePath>CustomAssets\Dictionary.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.660</Modified>
+      <Modified>2019-02-22T09:07:53.376</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
       <PackagePath>Views\AboutMenu.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.666</Modified>
+      <Modified>2019-02-22T09:07:53.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
       <PackagePath>Views\LobbyMenu.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.668</Modified>
+      <Modified>2019-02-22T09:07:53.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
       <PackagePath>Views\CreatePlayer.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.668</Modified>
+      <Modified>2019-02-22T09:07:53.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.669</Modified>
+      <Modified>2019-02-22T09:07:53.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
       <PackagePath>Views\CreateMenu.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.669</Modified>
+      <Modified>2019-02-22T09:07:53.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
       <PackagePath>Views\SearchMenu.xbf</PackagePath>
-      <Modified>2019-02-22T08:54:35.670</Modified>
+      <Modified>2019-02-22T09:07:53.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -786,7 +786,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
       <PackagePath>PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-02-22T08:54:37.637</Modified>
+      <Modified>2019-02-22T09:07:55.195</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

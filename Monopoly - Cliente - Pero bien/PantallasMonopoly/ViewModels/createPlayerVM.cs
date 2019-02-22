@@ -99,12 +99,7 @@ namespace PantallasMonopoly.ViewModels
                     mostrarFichasRestantes();
 
                 }
-                else
-                {
-
-                    _listadoFichas = generadorFichas.listadoFichas();
-
-                }
+        
             }
         }
 
@@ -120,7 +115,8 @@ namespace PantallasMonopoly.ViewModels
             _navigationService = navigationService;
             _nickname = "";
 
-                  
+            _listadoFichas = generadorFichas.listadoFichas();
+
             _fichaSeleccionada = new Ficha();
 
             proxy.On<Lobby>("unirALobby", unirALobby);
