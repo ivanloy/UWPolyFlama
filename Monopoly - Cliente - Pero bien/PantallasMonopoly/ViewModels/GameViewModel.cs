@@ -48,10 +48,11 @@ namespace PantallasMonopoly.ViewModels
 
         public GameViewModel()
         {
-            conn = new HubConnection("http://polyflama.azurewebsites.net/", $"nombreLobby={_lobby.nombre}&nombreJugador={_jugadorCliente.nombre}");
+            conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("GameHub");
             conn.Start();
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
+            proxy.On("connected", connected);
             lobby = new Lobby();
         }
 
@@ -60,5 +61,10 @@ namespace PantallasMonopoly.ViewModels
             this._lobby = arg1;
             NotifyPropertyChanged("lobby");
         }
+        private void connected()
+        {
+            proxy.Invoke("connected", _lobby.nombre, _jugadorCliente.nombre);
+        }
+
     }
 }

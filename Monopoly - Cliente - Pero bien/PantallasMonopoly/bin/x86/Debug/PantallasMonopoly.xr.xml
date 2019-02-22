@@ -12,7 +12,6 @@
     <RootPropertyPathName Name="imagen" />
     <RootPropertyPathName Name="partida" />
     <RootPropertyPathName Name="turnoActual" />
-    <RootPropertyPathName Name="posicion" />
     <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="crearCommand" />
@@ -129,10 +128,11 @@
     <RootType FullName="PantallasMonopoly.AboutMenu" />
     <RootType FullName="PantallasMonopoly.ViewModels.GameViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Name" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Command" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="MinWidth" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="BorderThickness" />

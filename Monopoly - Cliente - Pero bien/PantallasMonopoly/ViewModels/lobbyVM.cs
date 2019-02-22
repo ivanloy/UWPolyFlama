@@ -133,17 +133,29 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-        private void empezarPartida()
+        private async void empezarPartida()
         {
-            //await proxy.Invoke("obtenerJugador");
-            if (_jugador != null)
-            {
-                _navigationService.Navigate(typeof(GameView), _jugador);
-            }
-            else
-            {
-                throw new NotImplementedException("El jugador es null, no se actualizo");
-            }
+            await proxy.Invoke("obtenerJugador");
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               () =>
+               {
+                   if (_jugador != null)
+                   {
+                       _navigationService.Navigate(
+                           typeof(GameView),
+                           new JugadorConLobby()
+                           {
+                               jugador = _jugador,
+                               lobby = _lobby
+                           }
+                       );
+                   }
+                   else
+                   {
+                       throw new NotImplementedException("El jugador es null, no se actualizo");
+                   }
+               }
+               );
         }
 
         private async void salirDeLobby()

@@ -132,6 +132,7 @@
     <Compile Include="Models\Jugador.cs" />
     <Compile Include="Models\Lobby.cs" />
     <Compile Include="Models\Partida.cs" />
+    <Compile Include="Models\JugadorConLobby.cs" />
     <Compile Include="Models\Propiedad.cs" />
     <Compile Include="Util\generadorFichas.cs" />
     <Compile Include="Util\INavigationService.cs" />

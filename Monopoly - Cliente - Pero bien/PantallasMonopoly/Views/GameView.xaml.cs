@@ -37,9 +37,11 @@ namespace PantallasMonopoly.Views
             GameViewModel viewModel;
             viewModel = (GameViewModel)this.DataContext;
 
-            if (e.Parameter is Jugador)
+            if (e.Parameter is JugadorConLobby)
             {
-                viewModel.jugadorCliente = (Jugador)e.Parameter;
+                JugadorConLobby model = (JugadorConLobby)e.Parameter;
+                viewModel.jugadorCliente = model.jugador;
+                viewModel.lobby = model.lobby;
             }
         }
 

@@ -18,15 +18,11 @@
     <RelativePanel>
 
         <Button
-            Name="btn_tirarDados"
-            Content="{Binding lobby.listadoJugadores[0].posicion}"
-            Background="White"
+            Content="{Binding lobby.partida.turnoActual}"
             Command="{Binding tirarDadosCommand}"
-            />
-        <TextBlock
-            Text="{Binding lobby.partida.turnoActual}"
-            RelativePanel.RightOf="btn_tirarDados"
-            />
+            Background="White"
+            MinHeight="30"
+            MinWidth="40"/>
 
 
         <StackPanel
