@@ -106,7 +106,6 @@ namespace PantallasMonopoly.ViewModels
 
             _navigation = navigationService;
 
-            //conn = conexionPadre.conn;
             proxy = conexionPadre.proxy;
 
 

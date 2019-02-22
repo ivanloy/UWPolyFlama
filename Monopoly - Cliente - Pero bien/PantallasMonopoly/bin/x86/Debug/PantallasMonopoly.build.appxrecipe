@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f103dd62-8baa-4a76-92e3-7dbe9c4eb27c</PackageIdentityName>
     <PackageIdentityPublisher>CN=jobando</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
       <PackagePath>entrypoint\PantallasMonopoly.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jobando\.nuget\packages\microsoft.aspnet.signalr.client\2.4.0\lib\netstandard1.3\Microsoft.AspNet.SignalR.Client.dll">
@@ -415,82 +415,82 @@
     <AppxPackagedFile Include="C:\Users\jobando\.nuget\packages\win2d.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\backArrow.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\backArrow.png">
       <PackagePath>CustomAssets\backArrow.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\dbk.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dbk.png">
       <PackagePath>CustomAssets\dbk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
       <PackagePath>CustomAssets\Fichas\Bread.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\Fichas\Hat.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat.png">
       <PackagePath>CustomAssets\Fichas\Hat.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\Fichas\Nacho.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Nacho.png">
       <PackagePath>CustomAssets\Fichas\Nacho.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\Fichas\Penny.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Penny.png">
       <PackagePath>CustomAssets\Fichas\Penny.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\CustomAssets\Fichas\Thermo.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo.png">
       <PackagePath>CustomAssets\Fichas\Thermo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.xr.xml">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.xr.xml">
       <PackagePath>PantallasMonopoly.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
       <PackagePath>CustomAssets\Dictionary.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
       <PackagePath>Views\AboutMenu.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
       <PackagePath>Views\LobbyMenu.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
       <PackagePath>Views\CreatePlayer.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
       <PackagePath>Views\CreateMenu.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
       <PackagePath>Views\SearchMenu.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
@@ -586,10 +586,10 @@
     <AppxPackagedFile Include="C:\Users\jobando\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
+    <AppxPackagedFile Include="C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
       <PackagePath>PantallasMonopoly.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

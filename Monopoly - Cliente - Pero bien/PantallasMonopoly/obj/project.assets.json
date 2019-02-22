@@ -31040,11 +31040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "projectUniqueName": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
       "projectName": "PantallasMonopoly",
-      "projectPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "projectPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
       "packagesPath": "C:\\Users\\jobando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente\\PantallasMonopoly\\obj\\",
+      "outputPath": "C:\\Users\\jobando\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
