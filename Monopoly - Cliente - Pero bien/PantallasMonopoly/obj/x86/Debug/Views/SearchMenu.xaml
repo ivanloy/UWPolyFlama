@@ -6,11 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:PantallasMonopoly.ViewModels"
+    xmlns:cv="using:PantallasMonopoly.Models"
     mc:Ignorable="d">
 
     <Page.Background>
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
     </Page.Background>
+
+    <Page.Resources>
+        <cv:ContrasenaConverter x:Key="contrasenaConverter"></cv:ContrasenaConverter>
+    </Page.Resources>
 
     <RelativePanel>
      
@@ -80,7 +85,9 @@
             HorizontalAlignment="Center"
             CornerRadius="8"
             Background="White"
-            VerticalAlignment="Center">
+            VerticalAlignment="Center"
+            MinHeight="500"
+            MaxHeight="500">
 
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -88,15 +95,17 @@
                     <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding actualizarCommand}"></AppBarButton>
                 </StackPanel>
 
-                <ListView x:ConnectionId='4' Name="listadoLobby" Padding="100,50,100,50" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView x:ConnectionId='4' Name="listadoLobby" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <StackPanel HorizontalAlignment="Left" > 
-                                    <TextBlock Text="{Binding Path=nombre}"></TextBlock>
+                                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <SymbolIcon Symbol="Permissions" Margin="0,0,0,0" Visibility="{Binding lobbySeleccionado.contrasena, Converter={StaticResource contrasenaConverter}, Mode=OneWay}"/>
+                                    <TextBlock Text="{Binding Path=nombre}" Margin="20,0,0,0"></TextBlock>
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="300,0,0,0">
-                                    <TextBlock Text="Jugadores: "></TextBlock>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="450,0,0,0">
+                                    
+                                    <SymbolIcon Symbol="Contact" Margin="0,0,20,0"/>
                                     <TextBlock Text="{Binding Path=listadoJugadores.Count}"></TextBlock>
                                     <TextBlock Text="/"></TextBlock>
                                     <TextBlock Text="{Binding Path=maxJugadores}"></TextBlock>

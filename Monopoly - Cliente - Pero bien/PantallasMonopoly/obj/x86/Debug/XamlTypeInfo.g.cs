@@ -213,7 +213,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "PantallasMonopoly.AboutMenu";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -223,9 +223,10 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             _typeNameTable[6] = "PantallasMonopoly.Models.ComboBoxConverter";
             _typeNameTable[7] = "Object";
             _typeNameTable[8] = "PantallasMonopoly.CreateMenu";
-            _typeNameTable[9] = "PantallasMonopoly.SearchMenu";
+            _typeNameTable[9] = "PantallasMonopoly.Models.ContrasenaConverter";
+            _typeNameTable[10] = "PantallasMonopoly.SearchMenu";
 
-            _typeTable = new global::System.Type[10];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::PantallasMonopoly.AboutMenu);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -235,7 +236,8 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             _typeTable[6] = typeof(global::PantallasMonopoly.Models.ComboBoxConverter);
             _typeTable[7] = typeof(global::System.Object);
             _typeTable[8] = typeof(global::PantallasMonopoly.CreateMenu);
-            _typeTable[9] = typeof(global::PantallasMonopoly.SearchMenu);
+            _typeTable[9] = typeof(global::PantallasMonopoly.Models.ContrasenaConverter);
+            _typeTable[10] = typeof(global::PantallasMonopoly.SearchMenu);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -276,7 +278,8 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
         private object Activate_5_MainMenu() { return new global::PantallasMonopoly.Views.MainMenu(); }
         private object Activate_6_ComboBoxConverter() { return new global::PantallasMonopoly.Models.ComboBoxConverter(); }
         private object Activate_8_CreateMenu() { return new global::PantallasMonopoly.CreateMenu(); }
-        private object Activate_9_SearchMenu() { return new global::PantallasMonopoly.SearchMenu(); }
+        private object Activate_9_ContrasenaConverter() { return new global::PantallasMonopoly.Models.ContrasenaConverter(); }
+        private object Activate_10_SearchMenu() { return new global::PantallasMonopoly.SearchMenu(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -342,9 +345,16 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  PantallasMonopoly.SearchMenu
+            case 9:   //  PantallasMonopoly.Models.ContrasenaConverter
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_9_ContrasenaConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  PantallasMonopoly.SearchMenu
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_SearchMenu;
+                userType.Activator = Activate_10_SearchMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

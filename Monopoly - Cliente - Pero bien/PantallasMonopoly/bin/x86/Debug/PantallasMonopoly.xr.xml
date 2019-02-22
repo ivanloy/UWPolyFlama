@@ -22,6 +22,7 @@
     <RootPropertyPathName Name="lobbySeleccionado" />
     <RootPropertyPathName Name="maxJugadores" />
     <RootPropertyPathName Name="Count" />
+    <RootPropertyPathName Name="contrasena" />
     <RootPropertyPathName Name="actualizarCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -68,6 +69,8 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="MaxHeight" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -197,6 +200,12 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="PantallasMonopoly.CreateMenu" />
+    <RootType FullName="PantallasMonopoly.Models.ContrasenaConverter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
+      <RootProperty Name="Symbol" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+    </RootType>
     <RootType FullName="PantallasMonopoly.SearchMenu" />
   </Roots.RootTypes>
 </Roots>
