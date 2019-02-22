@@ -28,11 +28,12 @@ namespace PantallasMonopoly.ViewModels
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
 
+        
         #endregion
 
 
         #region Propiedades publicas
-   
+
 
         public Lobby lobby
         {
@@ -153,10 +154,6 @@ namespace PantallasMonopoly.ViewModels
 
 
         #endregion
-
-
-
-
 
 
 

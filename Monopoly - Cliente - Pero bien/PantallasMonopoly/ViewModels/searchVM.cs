@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 
 namespace PantallasMonopoly.ViewModels
 {
@@ -22,15 +24,12 @@ namespace PantallasMonopoly.ViewModels
         private Lobby _lobbySeleccionado;
 
         private DelegateCommand _actualizarCommand;
-        private DelegateCommand _confirmarPassCommand;
 
         private String _visibilidad;
         private String _password;
-        private bool _puedeEntrar;
 
         private INavigationService _navigationService;
-
-
+      
         #endregion
 
         #region Constructores
@@ -94,8 +93,8 @@ namespace PantallasMonopoly.ViewModels
 
                         if (_lobbySeleccionado.tieneContrasena())
                         {
-                            _visibilidad = "Visible";
-                            NotifyPropertyChanged("visibilidad");
+
+                            mostrarInputContrasena();
                         }
                         else
                         {
@@ -107,6 +106,7 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+       
         public String visibilidad
         {
             get
@@ -133,7 +133,6 @@ namespace PantallasMonopoly.ViewModels
             {
                 _password = value;
                 NotifyPropertyChanged("password");
-                _confirmarPassCommand.RaiseCanExecuteChanged();
 
 
             }
@@ -166,43 +165,6 @@ namespace PantallasMonopoly.ViewModels
 
         #endregion
 
-
-        #region Confirmar command
-
-        public DelegateCommand confirmarPassCommand
-        {
-            get
-            {
-                _confirmarPassCommand = new DelegateCommand(confirmarPassCommand_Executed, confirmarPassCommand_CanExecute);
-                return _confirmarPassCommand;
-            }
-        }
-
-        private bool confirmarPassCommand_CanExecute()
-        {
-            bool puedeComprobar = false;
-
-
-            if (!_password.Equals(""))
-            {
-
-
-                puedeComprobar = true;
-
-            }
-
-            return puedeComprobar;
-        }
-
-        private void confirmarPassCommand_Executed()
-        {
-
-            proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
-
-        }
-
-
-        #endregion
 
 
         #region Metodos SignalR
@@ -241,9 +203,10 @@ namespace PantallasMonopoly.ViewModels
                                 _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
 
                                 break;
+ 
 
                         }
-
+                    
                     }
                     );
 
@@ -251,13 +214,53 @@ namespace PantallasMonopoly.ViewModels
         }
 
 
-        private void lobbyCompleto()
+        private async void lobbyCompleto()
         {
+
+            var messageDialog = new MessageDialog("Lobby is full");
+            await messageDialog.ShowAsync();
+
+        }
+
+        #endregion
+
+
+        #region Otros
+
+        private async void mostrarInputContrasena()
+        {
+
+            PasswordBox inputPass = new PasswordBox();
+            inputPass.Height = 22;
+
+
+            ContentDialog logDialog = new ContentDialog()
+            {
+                Title = "Contraseña para lobby",
+                Content = inputPass,
+                PrimaryButtonText = "Aceptar"
+
+            };
+
+            ContentDialogResult result = await logDialog.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+
+                _password = inputPass.Password;
+                NotifyPropertyChanged("password");
+
+                logDialog.Hide();
+            }
+
+            await proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
 
 
         }
 
         #endregion
+
+
 
 
     }

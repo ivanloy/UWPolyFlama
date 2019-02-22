@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
@@ -99,7 +100,7 @@ namespace PantallasMonopoly.ViewModels
                     mostrarFichasRestantes();
 
                 }
-        
+
             }
         }
 
@@ -162,7 +163,7 @@ namespace PantallasMonopoly.ViewModels
 
                 proxy.Invoke("unirALobby", _lobbyAEntrar.nombre, new Jugador(_nickname, _fichaSeleccionada));
 
-               
+
             }
 
 
@@ -185,7 +186,7 @@ namespace PantallasMonopoly.ViewModels
                         () =>
                         {
                             _navigationService.Navigate(typeof(LobbyMenu), lobby);
-                            
+
                         }
                         );
 
@@ -193,8 +194,8 @@ namespace PantallasMonopoly.ViewModels
             else
             {
 
-               //Mensaje de error
-               //Ficha seleccionada
+                var messageDialog = new MessageDialog("Nickname or tile is already choosen");
+                await messageDialog.ShowAsync();
 
             }
 
@@ -204,6 +205,7 @@ namespace PantallasMonopoly.ViewModels
         #endregion
 
 
+        #region Otros
 
         private void mostrarFichasRestantes()
         {
@@ -211,7 +213,8 @@ namespace PantallasMonopoly.ViewModels
             List<Ficha> fichasRestantes = generadorFichas.listadoFichas();
             List<Ficha> fichasSeleccionadas = new List<Ficha>();
 
-            for (int i = 0; i < _lobbyAEntrar._listadoJugadores.Count; i++) {
+            for (int i = 0; i < _lobbyAEntrar._listadoJugadores.Count; i++)
+            {
 
                 fichasSeleccionadas.Add(_lobbyAEntrar.listadoJugadores[i].ficha);
 
@@ -224,7 +227,8 @@ namespace PantallasMonopoly.ViewModels
                 for (int j = 0; j < fichasSeleccionadas.Count; j++)
                 {
 
-                    if (fichasRestantes[i].nombre.Equals(fichasSeleccionadas[j].nombre)) {
+                    if (fichasRestantes[i].nombre.Equals(fichasSeleccionadas[j].nombre))
+                    {
 
                         fichasRestantes.Remove(fichasRestantes[i]);
                     }
@@ -233,12 +237,16 @@ namespace PantallasMonopoly.ViewModels
 
             }
 
-            
+
 
             _listadoFichas = fichasRestantes;
             NotifyPropertyChanged("listadoFichas");
-            
+
         }
+
+        #endregion
+
+
 
     }
 }

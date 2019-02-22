@@ -88,7 +88,7 @@
                     <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding actualizarCommand}"></AppBarButton>
                 </StackPanel>
 
-                <ListView Padding="100,50,100,50" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView Name="listadoLobby" Padding="100,50,100,50" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -110,29 +110,6 @@
             </StackPanel>
 
 
-        </Border>
-
-
-        <Border
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            RelativePanel.AlignRightWithPanel="True"
-            RelativePanel.AlignLeftWithPanel="True"
-            RelativePanel.AlignTopWithPanel="True"
-            RelativePanel.AlignBottomWithPanel="True"
-            Visibility="{Binding visibilidad}"
-            Background="White"
-            CornerRadius="8">
-            <StackPanel>
-                <PasswordBox PlaceholderText="Password" Password="{Binding password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="0,20,0,20"></PasswordBox>
-                <Button HorizontalAlignment="Center" 
-                            FontSize="36"
-                            BorderThickness="0"
-                            Command="{Binding Path=confirmarPassCommand}" 
-                            Margin="0,0,0,20"
-                            Background="#2196F3"
-                            Foreground="White">GO</Button>
-            </StackPanel>
         </Border>
 
 

@@ -18,9 +18,6 @@
     <RootPropertyPathName Name="passwordLobby" />
     <RootPropertyPathName Name="numeroJugadoresLobby" />
     <RootPropertyPathName Name="nombreLobby" />
-    <RootPropertyPathName Name="visibilidad" />
-    <RootPropertyPathName Name="confirmarPassCommand" />
-    <RootPropertyPathName Name="password" />
     <RootPropertyPathName Name="listadoLobby" />
     <RootPropertyPathName Name="lobbySeleccionado" />
     <RootPropertyPathName Name="maxJugadores" />
@@ -71,7 +68,6 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
-      <RootProperty Name="Visibility" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -119,6 +115,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="HorizontalAlignment" />

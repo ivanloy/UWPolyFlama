@@ -5,6 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using PantallasMonopoly.Views;
+using Windows.UI.Core.Preview;
 
 namespace PantallasMonopoly
 {
@@ -59,11 +60,13 @@ namespace PantallasMonopoly
                     //parámetro de navegación
                     rootFrame.Navigate(typeof(MainMenu), e.Arguments);
                 }
+                
                 // Asegurarse de que la ventana actual está activa.
                 Window.Current.Activate();
             }
         }
 
+      
         /// <summary>
         /// Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos
         /// </summary>

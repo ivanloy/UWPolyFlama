@@ -28,14 +28,14 @@ namespace PantallasMonopoly
             this.DataContext = vm;
 
         }
-      
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             lobbyVM viewModel;
             viewModel = (lobbyVM)this.DataContext;
 
             conexionPadre.proxy.Invoke("salirDeLobby", viewModel.lobby.nombre);
-            
+
         }
 
 
