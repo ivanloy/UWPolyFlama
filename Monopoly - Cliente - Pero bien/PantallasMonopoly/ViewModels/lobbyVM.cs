@@ -93,14 +93,14 @@ namespace PantallasMonopoly.ViewModels
             }
 
             return sePuedeJugar;
+            //return true;
         }
 
-        private void jugarCommand_Executed()
+        private async void jugarCommand_Executed()
         {
 
             //Aqui hay una llamada al server
-
-            //_navigationService.Navigate(); Aqui llamara a la partida
+            _navigationService.Navigate(typeof(GameView), _lobby); //Aqui llamara a la partida
            
         }
 

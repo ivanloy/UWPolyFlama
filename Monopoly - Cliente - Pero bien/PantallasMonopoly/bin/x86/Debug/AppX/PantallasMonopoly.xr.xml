@@ -4,12 +4,17 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="lobby" />
     <RootPropertyPathName Name="listadoJugadores" />
+    <RootPropertyPathName Name="dinero" />
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="ficha" />
     <RootPropertyPathName Name="imagen" />
+    <RootPropertyPathName Name="partida" />
+    <RootPropertyPathName Name="turnoActual" />
+    <RootPropertyPathName Name="posicion" />
+    <RootPropertyPathName Name="tirarDadosCommand" />
+    <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="crearCommand" />
     <RootPropertyPathName Name="listadoFichas" />
     <RootPropertyPathName Name="fichaSeleccionada" />
@@ -36,6 +41,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
@@ -63,6 +69,10 @@
       <RootMethod Name="SetAlignVerticalCenterWithPanel" />
       <RootMethod Name="GetAlignHorizontalCenterWithPanel" />
       <RootMethod Name="SetAlignHorizontalCenterWithPanel" />
+      <RootMethod Name="GetAlignTopWith" />
+      <RootMethod Name="SetAlignTopWith" />
+      <RootMethod Name="GetAlignLeftWith" />
+      <RootMethod Name="SetAlignLeftWith" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Name" />
@@ -71,6 +81,11 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="Tapped" />
     </RootType>
@@ -91,6 +106,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="FontStyle" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
@@ -111,6 +127,42 @@
       <RootProperty Name="ScaleY" />
     </RootType>
     <RootType FullName="PantallasMonopoly.AboutMenu" />
+    <RootType FullName="PantallasMonopoly.ViewModels.GameViewModel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Name" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="MaxHeight" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="PantallasMonopoly.Views.GameView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Padding" />
       <RootProperty Name="ItemsSource" />
@@ -120,31 +172,8 @@
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="SelectedItem" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Path" />
-      <RootProperty Name="Mode" />
-      <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="ElementName" />
-      <RootProperty Name="Converter" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Source" />
-      <RootProperty Name="MaxHeight" />
-      <RootProperty Name="MaxWidth" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="PantallasMonopoly.LobbyMenu" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">

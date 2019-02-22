@@ -12,6 +12,7 @@ PantallasMonopoly.xr.xml
 Views\AboutMenu.xbf
 Views\CreateMenu.xbf
 Views\CreatePlayer.xbf
+Views\GameView.xbf
 Views\LobbyMenu.xbf
 Views\MainMenu.xbf
 Views\SearchMenu.xbf

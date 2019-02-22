@@ -138,12 +138,16 @@
     <Compile Include="Util\NavigationService.cs" />
     <Compile Include="ViewModels\clsVMBase.cs" />
     <Compile Include="ViewModels\createPlayerVM.cs" />
+    <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="ViewModels\lobbyVM.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\createVM.cs" />
     <Compile Include="ViewModels\searchVM.cs" />
     <Compile Include="Views\AboutMenu.xaml.cs">
       <DependentUpon>AboutMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LobbyMenu.xaml.cs">
       <DependentUpon>LobbyMenu.xaml</DependentUpon>
@@ -197,6 +201,10 @@
     <Page Include="Views\AboutMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LobbyMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
