@@ -18,6 +18,13 @@ namespace PolyFlamaServer.Models
             this.listadoJugadores = listadoJugadores;
         }
 
+        public Casilla(TipoCasilla tipo)
+        {
+            this.imagen = null;
+            this.tipo = tipo;
+            this.listadoJugadores = new List<Jugador>();
+        }
+
         public Casilla()
         {
 
