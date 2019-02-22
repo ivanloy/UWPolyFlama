@@ -120,7 +120,6 @@ namespace PantallasMonopoly.ViewModels
             _fichaSeleccionada = new Ficha();
 
             proxy.On<Lobby>("unirALobby", unirALobby);
-            proxy.On<bool>("crearLobby", crearLobby);
 
         }
 
@@ -155,8 +154,8 @@ namespace PantallasMonopoly.ViewModels
         {
             if (_lobbyAEntrar == null)
             {
-                proxy.Invoke("crearLobby", _lobbyAEntrar.nombre, new Jugador(_nickname, _fichaSeleccionada));
-             
+                _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
+
             }
             else
             {
@@ -201,22 +200,6 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-
-        private async void crearLobby(bool creado)
-        {
-            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                       () =>
-                       {
-                           if (creado)
-                           {
-                               _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
-                           }
-
-                       }
-                       );
-
-            
-        }
 
         #endregion
 

@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
@@ -25,6 +26,8 @@ namespace PantallasMonopoly.ViewModels
         private DelegateCommand _crearCommand;
 
         private INavigationService _navigation;
+
+        private Lobby _lobby;
 
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
@@ -113,7 +116,7 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-      
+
 
         #endregion
 
@@ -133,9 +136,9 @@ namespace PantallasMonopoly.ViewModels
         {
             bool sePuedeCrear = false;
 
-            if (!_nombreLobby.Equals("") && _numeroJugadoresLobby !=0)
+            if (!_nombreLobby.Equals("") && _numeroJugadoresLobby != 0)
             {
-                
+
                 sePuedeCrear = true;
             }
 
@@ -149,13 +152,12 @@ namespace PantallasMonopoly.ViewModels
                 _passwordLobby = "";
             }
 
-            Lobby lobby = new Lobby(_nombreLobby, _passwordLobby, _numeroJugadoresLobby, _creadorSala, new Partida());
-      
-            //Aqui hay una llamada al server
-            await proxy.Invoke("crearNuevoLobby", lobby);
+            _lobby = new Lobby(_nombreLobby, _passwordLobby, _numeroJugadoresLobby, _creadorSala, new Partida());
 
-            _navigation.Navigate(typeof(LobbyMenu), lobby);
-           
+            //Aqui hay una llamada al server
+            await proxy.Invoke("crearNuevoLobby", _lobby);
+
+
         }
 
 
@@ -164,10 +166,22 @@ namespace PantallasMonopoly.ViewModels
 
         #region Metodos SignalR
 
-        private void crearLobby(bool entra)
+        private async void crearLobby(bool entra)
         {
 
-            Debug.WriteLine(entra);
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                        () =>
+                        {
+                            if (entra)
+                            {
+
+                                _navigation.Navigate(typeof(LobbyMenu), _lobby);
+
+
+                            }
+
+                        }
+                        );
 
         }
 
