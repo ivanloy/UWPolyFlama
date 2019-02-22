@@ -1,4 +1,5 @@
 ﻿using PolyFlamaServer.Models;
+using PolyFlamaServer.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,9 +37,52 @@ namespace PolyFlamaServer.Gestora
             return new List<Propiedad>();
         }
 
-        private static List<Object> generarCasillas()
+        private static List<object> generarCasillas()
         {
-            return new List<Object>();
+            List<object> listadoCasillas = new List<object>();
+
+            listadoCasillas.Add(new Casilla(TipoCasilla.SALIDA));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.MARRON));
+            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.MARRON));
+            listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAPPLE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ESTACION));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.CELESTE));
+            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.CELESTE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.CELESTE));
+            listadoCasillas.Add(new Casilla(TipoCasilla.CARCEL));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ROSA));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.SERVICIO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ROSA));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ROSA));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ESTACION));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.NARANJA));
+            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.NARANJA));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.NARANJA));
+            listadoCasillas.Add(new Casilla(TipoCasilla.DESCANSO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ROJO));
+            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ROJO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ROJO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ESTACION));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AMARILLO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AMARILLO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.SERVICIO));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AMARILLO));
+            listadoCasillas.Add(new Casilla(TipoCasilla.IRALACARCEL));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.VERDE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.VERDE));
+            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.VERDE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.ESTACION));
+            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AZUL));
+            listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAZURE));
+            listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AZUL));
+
+            return listadoCasillas;
         }
 
 		public static int calcularNuevaPosicion(int posicionActual, int movimiento)

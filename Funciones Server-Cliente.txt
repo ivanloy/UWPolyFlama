@@ -25,3 +25,4 @@ Funciones EN EL CLIENTE:
  - siguienteTurno() //Avisa a los demás de que el turno ha terminado y ha pasado al siguiente
  - salirDeLobby() //Método que te saca de la pantalla de lobby
  - obtenerJugador(Jugador jugador) //Método que te devuelve un jugador una vez llamado obtenerJugador() en el server (si es null, es que no lo ha encontrado)
+ - connected() //Se llama cuando se ha conectado al GameHub

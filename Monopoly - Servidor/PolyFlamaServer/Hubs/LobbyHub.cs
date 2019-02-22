@@ -14,9 +14,8 @@ namespace PolyFlamaServer.Hubs
 {
     public class LobbyHub : Hub
     {
-        private static readonly object lockUnir = new object();
+        private static readonly object lockUnirSalir = new object();
         private static readonly object lockCrear = new object();
-        private static readonly object lockSalir = new object();
         private static readonly object lockDisconnect = new object();
 
         /*
@@ -88,28 +87,31 @@ namespace PolyFlamaServer.Hubs
             bool puedeContinuar = false;
 
             //Asegurar que solo uno de los clientes que está accediendo pueda meter el usuario
-            lock (lockUnir)
+            lock (lockUnirSalir)
             {
-                List<Ficha> fichasCogidas = new List<Ficha>();
-                bool contieneFicha = false;
-                foreach(Jugador jug in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                if(LobbyInfo.listadoLobbies.ContainsKey(nombreLobby))
                 {
-                    if(jug.ficha.nombre == jugador.ficha.nombre)
+                    List<Ficha> fichasCogidas = new List<Ficha>();
+                    bool contieneFicha = false;
+                    foreach (Jugador jug in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
                     {
-                        contieneFicha = true;
-                        break;
+                        if (jug.ficha.nombre == jugador.ficha.nombre)
+                        {
+                            contieneFicha = true;
+                            break;
+                        }
                     }
-                }
-                    
-                //Comprobamos que el jugador no esté metido en la sala ya
-                if (LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.ContainsKey(jugador.nombre) || contieneFicha)
-                    Clients.Caller.unirALobby(null);
-                else
-                {
-                    //Añadimos el jugador al listado de jugadores del lobby
-                    LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
-                    LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
-                    puedeContinuar = true;
+
+                    //Comprobamos que el jugador no esté metido en la sala ya
+                    if (LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.ContainsKey(jugador.nombre) || contieneFicha)
+                        Clients.Caller.unirALobby(null);
+                    else
+                    {
+                        //Añadimos el jugador al listado de jugadores del lobby
+                        LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(jugador.nombre, Context.ConnectionId, (key, value) => value);
+                        LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Add(jugador);
+                        puedeContinuar = true;
+                    }
                 }
             }
 
@@ -149,7 +151,7 @@ namespace PolyFlamaServer.Hubs
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                 {
                     Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
-                    Thread.Sleep(200);
+                    Thread.Sleep(200); //Para evitar dobles llamadas
                     Clients.Client(connectionId).empezarPartida();
                 }
             }
@@ -159,7 +161,7 @@ namespace PolyFlamaServer.Hubs
         public void salirDeLobby(string nombreLobby)
         {
             //Bloqueamos el acceso por si dos personas le han dado a salir a la vez
-            lock(lockSalir)
+            lock(lockUnirSalir)
             {
                 if(LobbyInfo.listadoLobbies.ContainsKey(nombreLobby))
                 {
