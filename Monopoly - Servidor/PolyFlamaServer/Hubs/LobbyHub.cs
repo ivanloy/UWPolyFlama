@@ -15,6 +15,7 @@ namespace PolyFlamaServer.Hubs
     public class LobbyHub : Hub
     {
         private static readonly object lockUnir = new object();
+        private static readonly object lockCrear = new object();
         private static readonly object lockSalir = new object();
 
         /*
@@ -23,38 +24,40 @@ namespace PolyFlamaServer.Hubs
          */ 
         public void crearNuevoLobby(Lobby lobby)
         {
-            bool lobbyExists = false;
-            foreach(KeyValuePair<string, DatosLobby> datoLobby in LobbyInfo.listadoLobbies)
+            //Bloquear el acceso por si dos personas crean lobbies a la vez
+            lock (lockCrear)
             {
-                if(datoLobby.Value.lobby.nombre == lobby.nombre)
+                bool lobbyExists = false;
+
+                foreach (KeyValuePair<string, DatosLobby> datoLobby in LobbyInfo.listadoLobbies)
                 {
-                    lobbyExists = true;
-                    break;
+                    if (datoLobby.Value.lobby.nombre == lobby.nombre)
+                    {
+                        lobbyExists = true;
+                        break;
+                    }
+                }
+
+                if(lobbyExists)
+                    Clients.Caller.crearLobby(false);
+                else
+                {
+                    //Sacamos el jugador creador
+                    Jugador jugadorCreador = lobby.listadoJugadores[0];
+
+                    //Creación y adición de datos del lobby
+                    DatosLobby datosLobby = new DatosLobby();
+                    datosLobby.lobby = lobby;
+                    datosLobby.numeroJugadores = 1;
+                    datosLobby.listadoJugadoresConnection.AddOrUpdate(jugadorCreador.nombre, Context.ConnectionId, (key, value) => value);
+
+                    //Creamos la entrada del diccionario de ese lobby
+                    LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, datosLobby, (key, value) => value);
+
+                    //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
+                    Clients.Caller.crearLobby(true);
                 }
             }
-            if(!lobbyExists)
-            {
-                /* 
-                 * Se crea el grupo, que lo gestiona SignalR
-                 * (Si se desconecta la última persona, se borra, y si se añade alguien a un grupo que no existe, se crea)
-                */
-                Jugador jugadorCreador = lobby.listadoJugadores[0];
-
-                //Creación y adición de datos del lobby
-                DatosLobby datosLobby = new DatosLobby();
-                datosLobby.lobby = lobby;
-                datosLobby.numeroJugadores = 1;
-                datosLobby.listadoJugadoresConnection.AddOrUpdate(jugadorCreador.nombre, Context.ConnectionId, (key, value) => value);
-
-                //Creamos la entrada del diccionario de ese lobby
-                LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, datosLobby, (key, value) => value);
-
-                //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
-                Clients.Caller.crearLobby(true);
-            }
-            else
-                Clients.Caller.crearLobby(false);
-
         }
 
         public void comprobarContrasena(string nombreLobby, string contrasena)
@@ -84,8 +87,19 @@ namespace PolyFlamaServer.Hubs
             //Asegurar que solo uno de los clientes que está accediendo pueda meter el usuario
             lock (lockUnir)
             {
+                List<Ficha> fichasCogidas = new List<Ficha>();
+                bool contieneFicha = false;
+                foreach(Jugador jug in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                {
+                    if(jug.ficha.nombre == jugador.ficha.nombre)
+                    {
+                        contieneFicha = true;
+                        break;
+                    }
+                }
+                    
                 //Comprobamos que el jugador no esté metido en la sala ya
-                if (LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.ContainsKey(jugador.nombre))
+                if (LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.ContainsKey(jugador.nombre) || contieneFicha)
                     Clients.Caller.unirALobby(null);
                 else
                 {
