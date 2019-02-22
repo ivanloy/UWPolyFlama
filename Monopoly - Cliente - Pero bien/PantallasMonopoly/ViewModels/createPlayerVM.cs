@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
+using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Models.Enums;
 using PantallasMonopoly.Util;
@@ -90,6 +91,20 @@ namespace PantallasMonopoly.ViewModels
             set
             {
                 _lobbyAEntrar = value;
+                NotifyPropertyChanged("lobbyAEntrar");
+
+                if (_lobbyAEntrar != null)
+                {
+
+                    mostrarFichasRestantes();
+
+                }
+                else
+                {
+
+                    _listadoFichas = generadorFichas.listadoFichas();
+
+                }
             }
         }
 
@@ -100,21 +115,19 @@ namespace PantallasMonopoly.ViewModels
 
         public createPlayerVM(INavigationService navigationService)
         {
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
-            proxy = conn.CreateHubProxy("LobbyHub");
-            conn.Start();
+            proxy = conexionPadre.proxy;
 
             _navigationService = navigationService;
             _nickname = "";
-            _listadoFichas = generadorFichas.listadoFichas();
+
+                  
             _fichaSeleccionada = new Ficha();
 
             proxy.On<Lobby>("unirALobby", unirALobby);
 
         }
 
-
-
+     
         #endregion
 
 
@@ -193,6 +206,43 @@ namespace PantallasMonopoly.ViewModels
         }
 
         #endregion
+
+
+
+        private void mostrarFichasRestantes()
+        {
+
+            List<Ficha> fichasRestantes = generadorFichas.listadoFichas();
+            List<Ficha> fichasSeleccionadas = new List<Ficha>();
+
+            for (int i = 0; i < _lobbyAEntrar._listadoJugadores.Count; i++) {
+
+                fichasSeleccionadas.Add(_lobbyAEntrar.listadoJugadores[i].ficha);
+
+            }
+
+
+            for (int i = 0; i < fichasRestantes.Count; i++)
+            {
+
+                for (int j = 0; j < fichasSeleccionadas.Count; j++)
+                {
+
+                    if (fichasRestantes[i].nombre.Equals(fichasSeleccionadas[j].nombre)) {
+
+                        fichasRestantes.Remove(fichasRestantes[i]);
+                    }
+
+                }
+
+            }
+
+            
+
+            _listadoFichas = fichasRestantes;
+            NotifyPropertyChanged("listadoFichas");
+            
+        }
 
     }
 }
