@@ -5,6 +5,7 @@ using PantallasMonopoly.Util;
 using PantallasMonopoly.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,9 @@ namespace PantallasMonopoly.ViewModels
 
         private Lobby _lobby;
 
-        private List<Mensaje> _chat;
+        private ObservableCollection<Mensaje> _chat;
+
+        private String _nuevoMensaje;
 
         private INavigationService _navigationService;
 
@@ -51,7 +54,7 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
-        public List<Mensaje> chat
+        public ObservableCollection<Mensaje> chat
         {
 
             get
@@ -70,6 +73,26 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
+    
+        public String nuevoMensaje
+        {
+
+            get
+            {
+
+                return _nuevoMensaje;
+            }
+
+
+            set
+            {
+
+                _nuevoMensaje = value;
+                NotifyPropertyChanged("nuevoMensaje");
+            }
+
+        }
+
 
         #endregion
 
@@ -80,17 +103,22 @@ namespace PantallasMonopoly.ViewModels
         {
             _navigationService = navigationService;
 
-            _chat = new List<Mensaje>();
+            _chat = new ObservableCollection<Mensaje>();
 
             proxy = conexionPadre.proxy;
 
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
 
             proxy.On("salirDeLobby", salirDeLobby);
+
+            proxy.On<Mensaje>("imprimirMensajeLobby", imprimirMensajeLobby);
+
+           
           
 
         }
-    
+
+       
 
         #endregion
 
@@ -173,6 +201,38 @@ namespace PantallasMonopoly.ViewModels
 
 
             
+        }
+
+
+        private async void imprimirMensajeLobby(Mensaje message)
+        {
+
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                    () =>
+                    {
+
+                       
+                        _chat.Insert(0, message);  //Facil
+                        NotifyPropertyChanged("chat");
+
+                    }
+                    );
+
+        }
+
+
+        #endregion
+
+
+        #region Otros
+
+        public void enviarMensaje() {
+
+            proxy.Invoke("enviarMensaje", _nuevoMensaje, false);
+
+            _nuevoMensaje = "";
+            NotifyPropertyChanged("nuevoMensaje");
+
         }
 
 

@@ -34,7 +34,7 @@
                        RelativePanel.AlignTopWithPanel="True"
                        RelativePanel.AlignBottomWithPanel="True"/>-->
 
-            <AppBarButton x:ConnectionId='12' 
+            <AppBarButton x:ConnectionId='13' 
                        Name="icon"
                        Icon="Back"
                        Foreground="White"
@@ -57,7 +57,7 @@
 
 
 
-            <TextBlock x:ConnectionId='13'  
+            <TextBlock x:ConnectionId='14'  
                        Name="Title"
                        RelativePanel.RightOf="icon"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
@@ -91,6 +91,8 @@
 
                 
             <Border Background="White" Grid.Column="0"
+                    BorderThickness="0,0,1,0"
+                    BorderBrush="#2196F3"
                 RelativePanel.AlignBottomWithPanel="True"
                 RelativePanel.AlignRightWithPanel="True"
                 RelativePanel.AlignBottomWith="Content"
@@ -102,17 +104,18 @@
                         <TextBlock Text="Lobby's chat" FontSize="28" Foreground="White" TextAlignment="Center"></TextBlock>
                     </StackPanel>
 
-                    <ListView x:ConnectionId='9' SelectionMode="None" ItemsSource="{Binding chat}" Name="Chat" MinHeight="160" RelativePanel.Below="ChatHeader" RelativePanel.Above="ChatInput" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                    <ScrollViewer x:ConnectionId='9' Name="Chat" MaxHeight="400"  RelativePanel.Below="ChatHeader" RelativePanel.Above="ChatInput" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                    <ListView x:ConnectionId='11' Name="ListaMensajes" SelectionMode="None" ItemsSource="{Binding chat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
                         <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=texto}" Foreground="{Binding Path=color}"></TextBlock>
+                            <DataTemplate                             >
+                                <TextBlock x:ConnectionId='12'                                                  ></TextBlock>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                    </ScrollViewer>
 
 
-
-                    <TextBox x:ConnectionId='10' Name="ChatInput" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,1" ></TextBox>
+                    <TextBox x:ConnectionId='10' Name="ChatInput" Text="{Binding nuevoMensaje, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                             RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,0" ></TextBox>
                 </RelativePanel>
 
 
@@ -158,8 +161,8 @@
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
-                                            <ColumnDefinition Width="*"></ColumnDefinition>
-                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
 
 

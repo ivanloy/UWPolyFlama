@@ -104,17 +104,18 @@
                         <TextBlock Text="Lobby's chat" FontSize="28" Foreground="White" TextAlignment="Center"></TextBlock>
                     </StackPanel>
 
-                    <ListView SelectionMode="None" ItemsSource="{Binding chat}" Name="Chat" MinHeight="160" RelativePanel.Below="ChatHeader" RelativePanel.Above="ChatInput" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                    <ScrollViewer Name="Chat" MaxHeight="400"  RelativePanel.Below="ChatHeader" RelativePanel.Above="ChatInput" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                    <ListView Name="ListaMensajes" SelectionMode="None" ItemsSource="{Binding chat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
                         <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=texto}" Foreground="{Binding Path=color}"></TextBlock>
+                            <DataTemplate x:DataType="convert:Mensaje">
+                                <TextBlock Text="{x:Bind texto}" Foreground="{x:Bind color}"></TextBlock>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                    </ScrollViewer>
 
 
-
-                    <TextBox Name="ChatInput" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,0" ></TextBox>
+                    <TextBox Name="ChatInput" Text="{Binding nuevoMensaje, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" KeyDown="ChatInput_KeyDown" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,0" ></TextBox>
                 </RelativePanel>
 
 
