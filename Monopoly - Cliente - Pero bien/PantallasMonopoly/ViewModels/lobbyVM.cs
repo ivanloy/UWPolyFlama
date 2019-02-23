@@ -21,6 +21,8 @@ namespace PantallasMonopoly.ViewModels
 
         private Lobby _lobby;
 
+        private List<Mensaje> _chat;
+
         private INavigationService _navigationService;
 
         private DelegateCommand _jugarCommand;
@@ -48,7 +50,26 @@ namespace PantallasMonopoly.ViewModels
                 NotifyPropertyChanged("lobby");
             }
         }
-  
+
+        public List<Mensaje> chat
+        {
+
+            get
+            {
+
+                return _chat;
+            }
+
+
+            set
+            {
+
+                _chat = value;
+                NotifyPropertyChanged("chat");
+            }
+
+        }
+
 
         #endregion
 
@@ -58,6 +79,8 @@ namespace PantallasMonopoly.ViewModels
         public lobbyVM(INavigationService navigationService)
         {
             _navigationService = navigationService;
+
+            _chat = new List<Mensaje>();
 
             proxy = conexionPadre.proxy;
 

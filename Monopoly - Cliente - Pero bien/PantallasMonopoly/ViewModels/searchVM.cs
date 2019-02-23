@@ -29,7 +29,7 @@ namespace PantallasMonopoly.ViewModels
         private String _password;
 
         private INavigationService _navigationService;
-      
+
         #endregion
 
         #region Constructores
@@ -46,9 +46,9 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<int>("contrasena", contrasena);
-            proxy.On("lobbyCompleto", lobbyCompleto);
+            //proxy.On("lobbyCompleto", lobbyCompleto);
 
-            proxy.Invoke("obtenerListadoLobbies");          
+            proxy.Invoke("obtenerListadoLobbies");
         }
 
 
@@ -106,7 +106,7 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
-       
+
         public String visibilidad
         {
             get
@@ -177,11 +177,11 @@ namespace PantallasMonopoly.ViewModels
                {
                    _listadoLobby = listado;
                    NotifyPropertyChanged("listadoLobby");
-                
+
                }
                );
 
-            
+
         }
 
         /*
@@ -193,7 +193,7 @@ namespace PantallasMonopoly.ViewModels
         private async void contrasena(int entra)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                    () =>
+                    async () =>
                     {
                         switch (entra)
                         {
@@ -203,24 +203,31 @@ namespace PantallasMonopoly.ViewModels
                                 _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
 
                                 break;
- 
+
+
+                            case -1:
+
+                                var messageDialog = new MessageDialog("Lobby is full");
+                                await messageDialog.ShowAsync();
+
+                                break;
+
+                            case 0:
+
+                                var messageDialog2 = new MessageDialog("Incorrect password");
+                                await messageDialog2.ShowAsync();
+
+                                break;
+
 
                         }
-                    
+
                     }
                     );
 
-       
-        }
-
-
-        private async void lobbyCompleto()
-        {
-
-            var messageDialog = new MessageDialog("Lobby is full");
-            await messageDialog.ShowAsync();
 
         }
+
 
         #endregion
 

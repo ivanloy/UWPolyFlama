@@ -34,7 +34,7 @@
                        RelativePanel.AlignTopWithPanel="True"
                        RelativePanel.AlignBottomWithPanel="True"/>-->
 
-            <AppBarButton x:ConnectionId='5' 
+            <AppBarButton x:ConnectionId='12' 
                        Name="icon"
                        Icon="Back"
                        Foreground="White"
@@ -57,13 +57,13 @@
 
 
 
-            <TextBlock x:ConnectionId='6'  
+            <TextBlock x:ConnectionId='13'  
                        Name="Title"
                        RelativePanel.RightOf="icon"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"
-                       Text="LOBBY" 
+                       Text="{Binding lobby.nombre}" 
                        FontSize="60" 
                        HorizontalAlignment="Center"
                        TextAlignment="Center"
@@ -73,51 +73,127 @@
         </RelativePanel>
 
 
-        <Border x:ConnectionId='3' 
-            Name="Content" 
+        
+
+            <Grid x:ConnectionId='3' Name="Content" 
             RelativePanel.Below="Header"
             RelativePanel.AlignRightWithPanel="True"
             RelativePanel.AlignLeftWithPanel="True"
             RelativePanel.AlignBottomWithPanel="True"
-            HorizontalAlignment="Center"
-            CornerRadius="8"
-            Background="White"
-            VerticalAlignment="Center">
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+                
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-            <StackPanel>
-                <StackPanel Orientation="Vertical">
-                    <ListView Padding="100,50,100,50" 
-                              ItemsSource="{Binding lobby.listadoJugadores, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                              MaxHeight="300"
-                              HorizontalAlignment="Center"
-                              Margin="0,0,0,20">
+                
+            <Border Background="White" Grid.Column="0"
+                RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignBottomWith="Content"
+                RelativePanel.AlignLeftWith="Content"
+                CornerRadius="8,0,0,8">
+
+                <RelativePanel MinWidth="600" MaxWidth="600">
+                    <StackPanel x:ConnectionId='8' Name="ChatHeader" Background="#2196F3" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                        <TextBlock Text="Lobby's chat" FontSize="28" Foreground="White" TextAlignment="Center"></TextBlock>
+                    </StackPanel>
+
+                    <ListView x:ConnectionId='9' SelectionMode="None" ItemsSource="{Binding chat}" Name="Chat" MinHeight="160" RelativePanel.Below="ChatHeader" RelativePanel.Above="ChatInput" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="{Binding Path=ficha.imagen}" MaxHeight="50" MaxWidth="50"></Image>
-                                    <TextBlock Text="{Binding Path=nombre}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                                </StackPanel>
+                                <TextBlock Text="{Binding Path=texto}" Foreground="{Binding Path=color}"></TextBlock>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
 
-                    <Button HorizontalAlignment="Center" 
-                            FontSize="36"
+
+
+                    <TextBox x:ConnectionId='10' Name="ChatInput" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,1" ></TextBox>
+                </RelativePanel>
+
+
+
+            </Border>
+
+
+                
+                
+                
+                
+                
+                
+                
+            <Border 
+               Grid.Column="1"      
+               CornerRadius="0,8,8,0"
+            Background="White"
+            
+            MinHeight="500"
+            MaxHeight="500"
+            MinWidth="200"
+            MaxWidth="200">
+                <RelativePanel>
+
+                    <StackPanel x:ConnectionId='4' MinHeight="40" Name="playerListCount" Orientation="Horizontal" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                        
+                        <StackPanel Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Center">
+                            <SymbolIcon Symbol="Contact" Margin="60,0,20,0"/>
+                            <TextBlock Text="{Binding lobby.listadoJugadores.Count}"  VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="/"  VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding lobby.maxJugadores}"  VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <ListView x:ConnectionId='5' Name="playerList" RelativePanel.Below="playerListCount" RelativePanel.Above="play" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"
+                              ItemsSource="{Binding lobby.listadoJugadores, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              SelectionMode="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <Image Grid.Column="0" MaxHeight="50" MaxWidth="50"></Image>
+                                        <Image Grid.Column="1" Source="{Binding Path=ficha.imagen}" MaxHeight="50" MaxWidth="50" Margin="0,20,20,20"></Image>
+                                        <TextBlock Grid.Column="2" Text="{Binding Path=nombre}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+                                    </Grid>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+
+                    <Button x:ConnectionId='6' Name="play" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"
+                            HorizontalAlignment="Stretch"
+                            FontSize="24"
                             BorderThickness="0"
                             Command="{Binding Path=jugarCommand}" 
-                            Margin="0,0,0,20"
                             Background="#2196F3"
-                            Foreground="White">PLAY</Button>
-                </StackPanel>
-             
-
-            </StackPanel>
-
-
-        </Border>
+                            Foreground="White">START</Button>
 
 
 
+                </RelativePanel>
+
+
+            </Border>
+
+
+
+        </Grid>
+
+       
 
 
     </RelativePanel>

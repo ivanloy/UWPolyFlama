@@ -179,26 +179,27 @@ namespace PantallasMonopoly.ViewModels
         private async void unirALobby(Lobby lobby)
         {
 
-            if (lobby != null)
-            {
-
-                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                        () =>
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                        async () =>
                         {
-                            _navigationService.Navigate(typeof(LobbyMenu), lobby);
+
+                            if (lobby != null)
+                            {
+
+                                _navigationService.Navigate(typeof(LobbyMenu), lobby);
+
+                            }
+                            else
+                            {
+
+                                var messageDialog = new MessageDialog("Nickname or tile is already choosen");
+                                await messageDialog.ShowAsync();
+
+                            }
 
                         }
                         );
-
-            }
-            else
-            {
-
-                var messageDialog = new MessageDialog("Nickname or tile is already choosen");
-                await messageDialog.ShowAsync();
-
-            }
-
+           
         }
 
 
