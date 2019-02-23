@@ -57,7 +57,9 @@ namespace PolyFlamaServer.Hubs
 
                     //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
                     Clients.Caller.crearLobby(true);
-                    Clients.Caller.imprimirMensajeGlobal(new Mensaje("[LOBBY] Lobby created successfully 👍", "Gray"));
+                    Thread.Sleep(500);
+                    Clients.Caller.imprimirMensajeLobby(new Mensaje("[SYSTEM] Remember not to share your password with anyone 🤫", "Red"));
+                    Clients.Caller.imprimirMensajeLobby(new Mensaje("[LOBBY] Lobby created successfully 👍", "#2196F3"));
                 }
             }
         }
@@ -128,11 +130,12 @@ namespace PolyFlamaServer.Hubs
                     if (connectionId != Context.ConnectionId)
                     {
                         Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
-                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {jugador.nombre} has joined 😄", "Gray"));
+                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {jugador.nombre} has joined 😄", "#2196F3"));
                     }
                     else
                     {
                         Clients.Caller.unirALobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                        Thread.Sleep(500);
                         Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[SYSTEM] Remember not to share your password with anyone 🤫", "Red"));
                     }
 
@@ -261,7 +264,7 @@ namespace PolyFlamaServer.Hubs
         public void unirChatGlobal()
         {
             Groups.Add(Context.ConnectionId, nombreChatGlobal);
-            Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say 👋!", "Gray"));
+            Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say 👋!", "#8BC34A"));
         }
 
         //Método para hacer saber a todos que alguien se ha salido de Search. Si el nombreLobby es null, se ha salido al menú, si no, ha entrado a un lobby
@@ -270,9 +273,9 @@ namespace PolyFlamaServer.Hubs
             Groups.Remove(Context.ConnectionId, nombreChatGlobal);
 
             if(nombreLobby == null)
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat 😭", "Gray"));
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat 😭", "#8BC34A"));
             else
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "Gray"));
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "#2196F3"));
 
         }
 
