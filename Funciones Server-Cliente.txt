@@ -9,7 +9,7 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - obtenerJugador() //Función para obtener el jugador asociado con la connectionID
  - unirChatGlobal() //Hay que llamarlo cuando se abra SEARCH
  - salirChatGlobal(string? nombreLobby) //Hay que llamarlo cuando se salga de SEARCH. Si se manda el nombre del lobby, es que se ha unido a un lobby, si no, ha salido de SEARCH
- - enviarMensaje(string mensaje, string nombreJugador) //Llamarlo para enviar un mensaje. No mandar nada si es un mensaje para el chat global, mandar el nombre del jugador si es para el chat de lobby
+ - enviarMensaje(string mensaje, bool esGlobal) //Llamarlo para enviar un mensaje. Mandar true si es un mensaje de chat global. No mandar nada o false si es un mensaje de lobby
 
 Funciones EN EL SERVIDOR (GameHub):
  - tirarDados(string nombreLobby) //Hay que llamarlo cada vez que le toque a alguien

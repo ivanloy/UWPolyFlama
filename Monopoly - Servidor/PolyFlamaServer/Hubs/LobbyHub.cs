@@ -57,6 +57,9 @@ namespace PolyFlamaServer.Hubs
 
                     //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
                     Clients.Caller.crearLobby(true);
+                    Thread.Sleep(500);
+                    Clients.Caller.imprimirMensajeLobby(new Mensaje("[SYSTEM] Remember not to share your password with anyone 🤫", "Red"));
+                    Clients.Caller.imprimirMensajeLobby(new Mensaje("[LOBBY] Lobby created successfully 👍", "#2196F3"));
                 }
             }
         }
@@ -127,10 +130,15 @@ namespace PolyFlamaServer.Hubs
                     if (connectionId != Context.ConnectionId)
                     {
                         Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
-                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {jugador.nombre} has joined. UwU", "Gray"));
+                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {jugador.nombre} has joined 😄", "#2196F3"));
                     }
                     else
+                    {
                         Clients.Caller.unirALobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                        Thread.Sleep(500);
+                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[SYSTEM] Remember not to share your password with anyone 🤫", "Red"));
+                    }
+
                 }
             }
         }
@@ -201,6 +209,7 @@ namespace PolyFlamaServer.Hubs
                         foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                         {
                             Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
+                            Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador} has left the lobby 😭", "Gray"));
                         }
 
                         Clients.Caller.salirDeLobby();
@@ -255,7 +264,7 @@ namespace PolyFlamaServer.Hubs
         public void unirChatGlobal()
         {
             Groups.Add(Context.ConnectionId, nombreChatGlobal);
-            Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say hi to him/her!", "Gray"));
+            Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say 👋!", "#8BC34A"));
         }
 
         //Método para hacer saber a todos que alguien se ha salido de Search. Si el nombreLobby es null, se ha salido al menú, si no, ha entrado a un lobby
@@ -264,37 +273,44 @@ namespace PolyFlamaServer.Hubs
             Groups.Remove(Context.ConnectionId, nombreChatGlobal);
 
             if(nombreLobby == null)
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat :(", "Gray"));
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat 😭", "#8BC34A"));
             else
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "Gray"));
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "#2196F3"));
 
         }
 
-        public void enviarMensaje(string mensaje, string nombreJugador = null)
+        public void enviarMensaje(string mensaje, bool esGlobal = false)
         {
-            if(nombreJugador == null)
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] {mensaje}", "Black"));
+            Random random = new Random();
+            int chanceOfUwu = random.Next(1, 11);
+
+            if(esGlobal)
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] {mensaje}{(chanceOfUwu == 10 ? " UwU" : "")}", "Black"));
             else
             {
-                ConcurrentDictionary<string, string> listado = null;
+                string connectionId = Context.ConnectionId;
+                ConcurrentDictionary<string, string> conexiones = null;
+                string nombreJugador = null;
 
-                //Obtener el jugador
                 foreach (DatosLobby datos in LobbyInfo.listadoLobbies.Values)
                 {
                     try
                     {
-                        if (datos.listadoJugadoresConnection.ContainsKey(nombreJugador))
-                            listado = datos.listadoJugadoresConnection;
+                        nombreJugador = datos.listadoJugadoresConnection.Single(x => x.Value == connectionId).Key;
+                        conexiones = datos.listadoJugadoresConnection;
                         break;
                     }
                     catch (InvalidOperationException) { }
                 }
 
-                if(listado != null)
+                if (nombreJugador != null)
                 {
-                    foreach (string connectionId in listado.Values)
-                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador}: {mensaje}", "Black"));
+                    foreach (string conId in conexiones.Values)
+                        Clients.Client(conId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador}: {mensaje}{(chanceOfUwu == 10 ? " UwU" : "")}", "Black"));
                 }
+                else
+                    Clients.Caller.imprimirMensajeLobby(new Mensaje($"[SYSTEM] There was an error sending the message", "Red"));
+
             }
         }
         #endregion
