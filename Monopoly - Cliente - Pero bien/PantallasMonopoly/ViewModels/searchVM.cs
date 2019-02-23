@@ -4,8 +4,10 @@ using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using Windows.UI.Popups;
@@ -23,10 +25,17 @@ namespace PantallasMonopoly.ViewModels
 
         private Lobby _lobbySeleccionado;
 
+        private ObservableCollection<Mensaje> _chatGlobal;
+
+        private String _nuevoMensaje;
+
         private DelegateCommand _actualizarCommand;
 
         private String _visibilidad;
         private String _password;
+
+        private Regex _regex;
+        private MatchCollection _match;
 
         private INavigationService _navigationService;
 
@@ -42,13 +51,19 @@ namespace PantallasMonopoly.ViewModels
 
             _password = "";
 
+            _chatGlobal = new ObservableCollection<Mensaje>();
+
             proxy = conexionPadre.proxy;
+
+            proxy.Invoke("unirChatGlobal");
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<int>("contrasena", contrasena);
-            //proxy.On("lobbyCompleto", lobbyCompleto);
+            proxy.On<Mensaje>("imprimirMensajeGlobal", imprimirMensajeGlobal);
 
             proxy.Invoke("obtenerListadoLobbies");
+
+            _regex = new Regex(@".*[^ ].*");
         }
 
 
@@ -138,6 +153,44 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+        public ObservableCollection<Mensaje> chatGlobal
+        {
+
+            get
+            {
+
+                return _chatGlobal;
+            }
+
+
+            set
+            {
+
+                _chatGlobal = value;
+                NotifyPropertyChanged("chatGlobal");
+            }
+
+        }
+
+        public String nuevoMensaje
+        {
+
+            get
+            {
+
+                return _nuevoMensaje;
+            }
+
+
+            set
+            {
+
+                _nuevoMensaje = value;
+                NotifyPropertyChanged("nuevoMensaje");
+            }
+
+        }
+
 
 
 
@@ -184,12 +237,7 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-        /*
-         1 Entra
-         0 Incorrecto
-         -1 Lobby completo
-         */
-
+     
         private async void contrasena(int entra)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
@@ -200,19 +248,21 @@ namespace PantallasMonopoly.ViewModels
 
                             case 1: //Entra
 
+                                await conexionPadre.proxy.Invoke("salirChatGlobal", _lobbySeleccionado.nombre);
                                 _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
+
 
                                 break;
 
 
-                            case -1:
+                            case -1: //Completo
 
                                 var messageDialog = new MessageDialog("Lobby is full");
                                 await messageDialog.ShowAsync();
 
                                 break;
 
-                            case 0:
+                            case 0: //Contraseña cacas
 
                                 var messageDialog2 = new MessageDialog("Incorrect password");
                                 await messageDialog2.ShowAsync();
@@ -225,6 +275,22 @@ namespace PantallasMonopoly.ViewModels
                     }
                     );
 
+
+        }
+
+        private async void imprimirMensajeGlobal(Mensaje message)
+        {
+
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                    () =>
+                    {
+
+
+                        _chatGlobal.Insert(0, message);  //Facil
+                        NotifyPropertyChanged("chatGlobal");
+
+                    }
+                    );
 
         }
 
@@ -261,6 +327,23 @@ namespace PantallasMonopoly.ViewModels
             }
 
             await proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
+
+        }
+
+        public void enviarMensaje()
+        {
+
+            _match = _regex.Matches(_nuevoMensaje);
+
+            if (_nuevoMensaje != "" && _match.Count != 0)
+            { //Facil
+
+                proxy.Invoke("enviarMensaje", _nuevoMensaje, true);
+
+                _nuevoMensaje = "";
+                NotifyPropertyChanged("nuevoMensaje");
+
+            }
 
         }
 

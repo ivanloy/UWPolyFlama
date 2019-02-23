@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using Windows.UI.Popups;
@@ -24,6 +25,9 @@ namespace PantallasMonopoly.ViewModels
         private Ficha _fichaSeleccionada;
 
         private Lobby _lobbyAEntrar;
+
+        private Regex _regex;
+        private MatchCollection _match;
 
         private DelegateCommand _crearCommand;
         private INavigationService _navigationService;
@@ -122,6 +126,8 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<Lobby>("unirALobby", unirALobby);
 
+            _regex = new Regex(@".*[^ ].*");
+
         }
 
         #endregion
@@ -142,7 +148,9 @@ namespace PantallasMonopoly.ViewModels
         {
             bool sePuedeCrear = false;
 
-            if (!_nickname.Equals("") && _fichaSeleccionada.nombre != null)
+            _match = _regex.Matches(_nickname);
+
+            if (!_nickname.Equals("") && _fichaSeleccionada.nombre != null && _match.Count!=0 && _nickname.Count() <= 20)
             {
 
                 sePuedeCrear = true;

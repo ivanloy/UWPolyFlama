@@ -37,7 +37,7 @@
                        RelativePanel.AlignTopWithPanel="True"
                        RelativePanel.AlignBottomWithPanel="True"/>-->
 
-            <AppBarButton x:ConnectionId='6' 
+            <AppBarButton x:ConnectionId='11' 
                        Name="icon"
                        Icon="Back"
                        Foreground="White"
@@ -60,7 +60,7 @@
 
 
 
-            <TextBlock x:ConnectionId='7'  
+            <TextBlock x:ConnectionId='12'  
                        Name="Title"
                        RelativePanel.RightOf="icon"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
@@ -95,7 +95,8 @@
                     <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding actualizarCommand}"></AppBarButton>
                 </StackPanel>
 
-                <ListView x:ConnectionId='4' Name="listadoLobby" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ScrollViewer MaxHeight="400" MinHeight="400">
+                <ListView x:ConnectionId='9' Name="listadoLobby" ItemsSource="{Binding listadoLobby, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding lobbySeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -121,12 +122,46 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
-                
+                </ScrollViewer>
+
+
             </StackPanel>
 
 
         </Border>
+
+
+
+
+        <Border Background="White" Grid.Column="0"
+                    BorderThickness="0,0,1,0"
+                    BorderBrush="#2196F3"
+                RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                CornerRadius="8,0,0,8">
+
+            <RelativePanel MinWidth="600" MaxWidth="600">
+                <StackPanel x:ConnectionId='4' Name="ChatHeader" Background="#8BC34A" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                    <TextBlock Text="Global chat" FontSize="28" Foreground="White" TextAlignment="Center"></TextBlock>
+                </StackPanel>
+
+                <ScrollViewer x:ConnectionId='5' Name="Chat" MaxHeight="400" MinHeight="100"  RelativePanel.Below="ChatHeader" RelativePanel.Above="ChatInput" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                    <ListView x:ConnectionId='7' Name="ListaMensajes" SelectionMode="None" ItemsSource="{Binding chatGlobal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate                        >
+                                <TextBlock x:ConnectionId='8'                                                   TextWrapping="Wrap"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollViewer>
+
+
+                <TextBox x:ConnectionId='6' Name="ChatInput" Text="{Binding nuevoMensaje, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                             RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,0" ></TextBox>
+            </RelativePanel>
+
+        </Border>
+
+
 
 
     </RelativePanel>

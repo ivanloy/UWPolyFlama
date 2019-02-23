@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
@@ -25,6 +26,11 @@ namespace PantallasMonopoly.ViewModels
         private ObservableCollection<Mensaje> _chat;
 
         private String _nuevoMensaje;
+
+
+        private Regex _regex;
+        private MatchCollection _match;
+
 
         private INavigationService _navigationService;
 
@@ -113,8 +119,10 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<Mensaje>("imprimirMensajeLobby", imprimirMensajeLobby);
 
-           
-          
+
+            _regex = new Regex(@".*[^ ].*");
+
+
 
         }
 
@@ -228,10 +236,16 @@ namespace PantallasMonopoly.ViewModels
 
         public void enviarMensaje() {
 
-            proxy.Invoke("enviarMensaje", _nuevoMensaje, false);
+            _match = _regex.Matches(_nuevoMensaje);
 
-            _nuevoMensaje = "";
-            NotifyPropertyChanged("nuevoMensaje");
+            if (_nuevoMensaje != "" && _match.Count != 0) { //Facil
+
+                proxy.Invoke("enviarMensaje", _nuevoMensaje, false);
+
+                _nuevoMensaje = "";
+                NotifyPropertyChanged("nuevoMensaje");
+
+            }
 
         }
 

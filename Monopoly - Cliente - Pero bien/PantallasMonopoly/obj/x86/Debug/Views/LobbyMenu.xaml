@@ -108,7 +108,7 @@
                     <ListView x:ConnectionId='11' Name="ListaMensajes" SelectionMode="None" ItemsSource="{Binding chat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
                         <ListView.ItemTemplate>
                             <DataTemplate                             >
-                                <TextBlock x:ConnectionId='12'                                                  ></TextBlock>
+                                <TextBlock x:ConnectionId='12'                                                   TextWrapping="Wrap"></TextBlock>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
@@ -137,14 +137,14 @@
             
             MinHeight="500"
             MaxHeight="500"
-            MinWidth="200"
-            MaxWidth="200">
+            MinWidth="250"
+            MaxWidth="250">
                 <RelativePanel>
 
                     <StackPanel x:ConnectionId='4' MinHeight="40" Name="playerListCount" Orientation="Horizontal" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
                         
                         <StackPanel Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Center">
-                            <SymbolIcon Symbol="Contact" Margin="60,0,20,0"/>
+                            <SymbolIcon Symbol="Contact" Margin="80,0,20,0"/>
                             <TextBlock Text="{Binding lobby.listadoJugadores.Count}"  VerticalAlignment="Center"></TextBlock>
                             <TextBlock Text="/"  VerticalAlignment="Center"></TextBlock>
                             <TextBlock Text="{Binding lobby.maxJugadores}"  VerticalAlignment="Center"></TextBlock>

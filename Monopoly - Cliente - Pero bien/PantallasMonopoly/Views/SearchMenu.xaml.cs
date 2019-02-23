@@ -8,6 +8,8 @@ using PantallasMonopoly.Views;
 using PantallasMonopoly.ViewModels;
 using PantallasMonopoly.Util;
 using PantallasMonopoly.Models;
+using Windows.System;
+using PantallasMonopoly.Connection;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -18,17 +20,34 @@ namespace PantallasMonopoly
     /// </summary>
     public sealed partial class SearchMenu : Page
     {
+        searchVM miVM;
+
         public SearchMenu()
         {
             this.InitializeComponent();
-            var vm = new searchVM(new NavigationService());
-            this.DataContext = vm;
+            miVM = new searchVM(new NavigationService());
+            this.DataContext = miVM;
 
         }
       
         private void Back_Click(object sender, RoutedEventArgs e)
         {
+
+            conexionPadre.proxy.Invoke("salirChatGlobal");
+
             this.Frame.Navigate(typeof(MainMenu));
+
+        }
+
+        private void ChatInput_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+
+            if (e.Key == VirtualKey.Enter)
+            {
+
+                miVM.enviarMensaje();
+
+            }
 
         }
 
