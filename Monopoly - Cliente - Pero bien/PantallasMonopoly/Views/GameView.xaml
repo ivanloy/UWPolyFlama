@@ -21,8 +21,13 @@
             Content="{Binding lobby.partida.turnoActual}"
             Command="{Binding tirarDadosCommand}"
             Background="White"
+            Foreground="Black"
             MinHeight="30"
             MinWidth="40"/>
+
+        <TextBlock
+            Text="{Binding lobby.listadoJugadores[0].posicion}"
+            Foreground="Black"/>
 
 
         <StackPanel

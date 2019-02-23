@@ -1,14 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using PantallasMonopoly.ViewModels;
+using System.Collections.Generic;
 
 namespace PantallasMonopoly.Models
 {
-    public class Jugador
+    public class Jugador : clsVMBase
     {
         public string nombre { get; set; }
         public Ficha ficha { get; set; }
         public double dinero { get; set; }
         public List<Propiedad> listadoPropiedades { get; set; }
-        public int posicion { get; set; }
+        private int _posicion;
+        public int posicion {
+            get { return _posicion; }
+            set {
+                _posicion = value;
+                NotifyPropertyChanged("posicion");
+            }
+        }
         public bool carcelGratisSuerte { get; set; }
         public bool carcelGratisComunidad { get; set; }
         public bool estaEnCarcel { get; set; }

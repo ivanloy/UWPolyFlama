@@ -22,7 +22,7 @@ namespace PantallasMonopoly.Connection
             {
                 if (_proxy == null) {
 
-                    _conn = new HubConnection("http://polyflama.azurewebsites.net/");
+                    _conn = new HubConnection("http://localhost:51144/");
                     _proxy = _conn.CreateHubProxy("LobbyHub");
                     _conn.Start().Wait();
                 }

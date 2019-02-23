@@ -10,6 +10,7 @@
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="ficha" />
     <RootPropertyPathName Name="imagen" />
+    <RootPropertyPathName Name="posicion" />
     <RootPropertyPathName Name="partida" />
     <RootPropertyPathName Name="turnoActual" />
     <RootPropertyPathName Name="tirarDadosCommand" />
@@ -131,13 +132,13 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Command" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="MinHeight" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Height" />

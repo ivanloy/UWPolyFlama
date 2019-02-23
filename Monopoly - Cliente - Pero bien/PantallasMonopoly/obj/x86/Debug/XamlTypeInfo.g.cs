@@ -348,7 +348,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 break;
 
             case 6:   //  PantallasMonopoly.Models.Jugador
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("PantallasMonopoly.ViewModels.clsVMBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;

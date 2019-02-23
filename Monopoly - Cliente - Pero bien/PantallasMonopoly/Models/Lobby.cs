@@ -11,7 +11,7 @@ namespace PantallasMonopoly.Models
         public string contrasena { get; set; }
         public int maxJugadores { get; set; }
 
-        public List<Jugador> _listadoJugadores;
+        private List<Jugador> _listadoJugadores;
 
         public bool partidaEmpezada { get; set; }
         public Partida partida { get; set; }

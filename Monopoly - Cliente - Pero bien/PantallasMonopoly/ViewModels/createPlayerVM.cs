@@ -211,7 +211,7 @@ namespace PantallasMonopoly.ViewModels
             List<Ficha> fichasRestantes = generadorFichas.listadoFichas();
             List<Ficha> fichasSeleccionadas = new List<Ficha>();
 
-            for (int i = 0; i < _lobbyAEntrar._listadoJugadores.Count; i++) {
+            for (int i = 0; i < _lobbyAEntrar.listadoJugadores.Count; i++) {
 
                 fichasSeleccionadas.Add(_lobbyAEntrar.listadoJugadores[i].ficha);
 
