@@ -14,6 +14,7 @@ namespace PolyFlamaServer.Hubs
 {
     public class LobbyHub : Hub
     {
+        private static readonly string nombreChatGlobal = "global";
         private static readonly object lockUnirSalir = new object();
         private static readonly object lockCrear = new object();
         private static readonly object lockDisconnect = new object();
@@ -64,7 +65,7 @@ namespace PolyFlamaServer.Hubs
         public void comprobarContrasena(string nombreLobby, string contrasena)
         {
             //Si hay menos jugadores conectados que el maxJugadores
-            if (LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores < LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores)
+            if (LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Count < LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores)
             {
                 //Si la contraseña es correcta
                 if (LobbyInfo.listadoLobbies[nombreLobby].lobby.contrasena == contrasena)
@@ -124,7 +125,10 @@ namespace PolyFlamaServer.Hubs
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                 {
                     if (connectionId != Context.ConnectionId)
+                    {
                         Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
+                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {jugador.nombre} has joined. UwU", "Gray"));
+                    }
                     else
                         Clients.Caller.unirALobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
                 }
@@ -246,9 +250,60 @@ namespace PolyFlamaServer.Hubs
             Clients.Caller.actualizarListadoLobbies(listadoLobbies);
         }
 
+        #region Chats
+        //Método para hacer saber a todos que alguien ha entrado en Search mostrando un mensaje en el chat
+        public void unirChatGlobal()
+        {
+            Groups.Add(Context.ConnectionId, nombreChatGlobal);
+            Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say hi to him/her!", "Gray"));
+        }
+
+        //Método para hacer saber a todos que alguien se ha salido de Search. Si el nombreLobby es null, se ha salido al menú, si no, ha entrado a un lobby
+        public void salirChatGlobal(string nombreLobby = null)
+        {
+            Groups.Remove(Context.ConnectionId, nombreChatGlobal);
+
+            if(nombreLobby == null)
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat :(", "Gray"));
+            else
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "Gray"));
+
+        }
+
+        public void enviarMensaje(string mensaje, string nombreJugador = null)
+        {
+            if(nombreJugador == null)
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] {mensaje}", "Black"));
+            else
+            {
+                ConcurrentDictionary<string, string> listado = null;
+
+                //Obtener el jugador
+                foreach (DatosLobby datos in LobbyInfo.listadoLobbies.Values)
+                {
+                    try
+                    {
+                        if (datos.listadoJugadoresConnection.ContainsKey(nombreJugador))
+                            listado = datos.listadoJugadoresConnection;
+                        break;
+                    }
+                    catch (InvalidOperationException) { }
+                }
+
+                if(listado != null)
+                {
+                    foreach (string connectionId in listado.Values)
+                        Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador}: {mensaje}", "Black"));
+                }
+            }
+        }
+        #endregion
+
         //Cuando un jugador se desconecte
         public override Task OnDisconnected(bool stopCalled)
         {
+            Groups.Remove(Context.ConnectionId, nombreChatGlobal);
+
             //Bloqueamos el acceso por si dos personas le han dado a salir a la vez
             lock (lockDisconnect)
             {
@@ -311,6 +366,6 @@ namespace PolyFlamaServer.Hubs
 
             return base.OnDisconnected(stopCalled);
         }
-
+        
     }
 }

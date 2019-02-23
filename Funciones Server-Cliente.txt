@@ -5,11 +5,13 @@ Funciones EN EL SERVIDOR (LobbyHub):
  - salirDeLobby(string nombreLobby) //Te saca del lobby
  - obtenerListadoLobbies() //Llama a actualizarListadoLobbies en el cliente
  - actualizarConnectionID(string nombreLobby, string nombreJugador) //Para cuando SignalR no quiere funcionar bien
- - empezarPartida(string nombreLobby)
- - obtenerJugador()
+ - empezarPartida(string nombreLobby) //Llamarlo para empezar la partida
+ - obtenerJugador() //Función para obtener el jugador asociado con la connectionID
+ - unirChatGlobal() //Hay que llamarlo cuando se abra SEARCH
+ - salirChatGlobal(string? nombreLobby) //Hay que llamarlo cuando se salga de SEARCH. Si se manda el nombre del lobby, es que se ha unido a un lobby, si no, ha salido de SEARCH
+ - enviarMensaje(string mensaje, string nombreJugador) //Llamarlo para enviar un mensaje. No mandar nada si es un mensaje para el chat global, mandar el nombre del jugador si es para el chat de lobby
 
 Funciones EN EL SERVIDOR (GameHub):
-(Para conectarse a GameHub, tienes que pasarle por QueryString nombreLobby y nombreJugador)
  - tirarDados(string nombreLobby) //Hay que llamarlo cada vez que le toque a alguien
 
 Funciones EN EL CLIENTE:
@@ -26,3 +28,5 @@ Funciones EN EL CLIENTE:
  - salirDeLobby() //Método que te saca de la pantalla de lobby
  - obtenerJugador(Jugador jugador) //Método que te devuelve un jugador una vez llamado obtenerJugador() en el server (si es null, es que no lo ha encontrado)
  - connected() //Se llama cuando se ha conectado al GameHub
+ - imprimirMensajeGlobal(Mensaje mensaje) //Mensaje para imprimir mensaje en pantalla en el chat global. Se manda true si es un mensaje de aviso
+ - imprimirMensajeLobby(Mensaje mensaje) //Mensaje para imprimir mensaje en pantalla en el chat de lobby. Se manda true si es un mensaje de aviso
