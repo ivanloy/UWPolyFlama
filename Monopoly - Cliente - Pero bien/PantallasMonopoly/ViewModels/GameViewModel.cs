@@ -43,7 +43,8 @@ namespace PantallasMonopoly.ViewModels
 
         private async void _tirarDadosCommand_Executed()
         {
-           await proxy.Invoke("tirarDados", lobby.nombre);
+            await proxy.Invoke("tirarDados", lobby.nombre);
+            NotifyPropertyChanged("lobby");
         }
 
         public GameViewModel()

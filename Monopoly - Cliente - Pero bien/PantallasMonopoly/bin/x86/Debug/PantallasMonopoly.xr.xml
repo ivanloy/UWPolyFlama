@@ -10,9 +10,9 @@
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="ficha" />
     <RootPropertyPathName Name="imagen" />
-    <RootPropertyPathName Name="posicion" />
     <RootPropertyPathName Name="partida" />
-    <RootPropertyPathName Name="turnoActual" />
+    <RootPropertyPathName Name="listadoCasillas" />
+    <RootPropertyPathName Name="posicion" />
     <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="crearCommand" />
@@ -140,11 +140,29 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Name" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Name" />
+      <RootProperty Name="Stroke" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
@@ -162,6 +180,12 @@
       <RootProperty Name="MaxHeight" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="PantallasMonopoly.Views.GameView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -187,22 +211,6 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="PantallasMonopoly.CreatePlayer" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Name" />
-      <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="Children" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="PantallasMonopoly.Views.MainMenu" />
     <RootType FullName="PantallasMonopoly.Models.ComboBoxConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">

@@ -42,7 +42,7 @@ namespace PantallasMonopoly.Models
         {
             this.nombre = nombre;
             this.ficha = ficha;
-            this.dinero = 0;
+            this.dinero = 1500;
             this.listadoPropiedades = new List<Propiedad>();
             this.posicion = 0;
             this.carcelGratisSuerte = false;
