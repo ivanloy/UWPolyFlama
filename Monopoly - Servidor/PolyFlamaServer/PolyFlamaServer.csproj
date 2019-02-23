@@ -139,6 +139,7 @@
     <Compile Include="Models\Ficha.cs" />
     <Compile Include="Models\Jugador.cs" />
     <Compile Include="Models\Lobby.cs" />
+    <Compile Include="Models\Mensaje.cs" />
     <Compile Include="Models\Partida.cs" />
     <Compile Include="Models\Propiedad.cs" />
     <Compile Include="Models\Enums\ColorPropiedad.cs" />
