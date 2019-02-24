@@ -20,6 +20,8 @@ namespace PantallasMonopoly.Util
             listado.Add(new Ficha("Nacho", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/Nacho.png")));
             listado.Add(new Ficha("Penny", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/Penny.png")));
             listado.Add(new Ficha("Thermo", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/Thermo.png")));
+            listado.Add(new Ficha("Rupee", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/Rupee.png")));
+            listado.Add(new Ficha("Danboard", new Uri("ms-appx://ExamenDI/CustomAssets/Fichas/Danboard.png")));
 
             return listado;
         }

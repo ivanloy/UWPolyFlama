@@ -174,9 +174,11 @@
     <Content Include="CustomAssets\backArrow.png" />
     <Content Include="CustomAssets\dbk.png" />
     <Content Include="CustomAssets\Fichas\Bread.png" />
+    <Content Include="CustomAssets\Fichas\Danboard.png" />
     <Content Include="CustomAssets\Fichas\Hat.png" />
     <Content Include="CustomAssets\Fichas\Nacho.png" />
     <Content Include="CustomAssets\Fichas\Penny.png" />
+    <Content Include="CustomAssets\Fichas\Rupee.png" />
     <Content Include="CustomAssets\Fichas\Thermo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

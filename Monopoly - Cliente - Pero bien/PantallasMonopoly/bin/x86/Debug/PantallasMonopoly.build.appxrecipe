@@ -424,6 +424,9 @@
     <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
       <PackagePath>CustomAssets\Fichas\Bread.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Danboard.png">
+      <PackagePath>CustomAssets\Fichas\Danboard.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat.png">
       <PackagePath>CustomAssets\Fichas\Hat.png</PackagePath>
     </AppxPackagedFile>
@@ -432,6 +435,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Penny.png">
       <PackagePath>CustomAssets\Fichas\Penny.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Rupee.png">
+      <PackagePath>CustomAssets\Fichas\Rupee.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo.png">
       <PackagePath>CustomAssets\Fichas\Thermo.png</PackagePath>
