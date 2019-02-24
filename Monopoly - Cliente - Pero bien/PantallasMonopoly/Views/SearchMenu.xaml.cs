@@ -32,8 +32,8 @@ namespace PantallasMonopoly
       
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-
-            conexionPadre.proxy.Invoke("salirChatGlobal");
+            string nullo = null;
+            conexionPadre.proxy.Invoke("salirChatGlobal", nullo);
 
             this.Frame.Navigate(typeof(MainMenu));
 
