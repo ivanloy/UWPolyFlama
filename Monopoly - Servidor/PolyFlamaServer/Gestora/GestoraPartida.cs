@@ -78,7 +78,7 @@ namespace PolyFlamaServer.Gestora
             listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AZUL));
 
             //Añadimos todos los jugadores a la casilla de Salida
-
+            listadoCasillas[0].listadoJugadores = listadoJugadores;
 
             return listadoCasillas;
         }
