@@ -17,13 +17,7 @@
 
     <RelativePanel>
 
-        <Button
-            Content="{Binding Path=lobby.listadoJugadores[0].posicion, Mode=TwoWay}"
-            Command="{Binding tirarDadosCommand}"
-            Background="White"
-            Foreground="Black"
-            MinHeight="30"
-            MinWidth="40"/>
+
 
         <Grid
             RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -1130,12 +1124,24 @@
         </StackPanel>
 
         <Rectangle
+            Name="rct_downStackPanel"
             RelativePanel.AlignBottomWithPanel="True"
             RelativePanel.AlignLeftWithPanel="True"
             RelativePanel.AlignRightWithPanel="True"
             Height="80"
             Width="Auto"
             Fill="PaleVioletRed"/>
+        
+        <Button
+            RelativePanel.AlignTopWith="rct_downStackPanel"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            Content="Tirar dados"
+            Margin="8"
+            Command="{Binding tirarDadosCommand}"
+            Background="PaleVioletRed"
+            Foreground="White"
+            MinHeight="30"
+            MinWidth="40"/>
 
     </RelativePanel>
 </Page>

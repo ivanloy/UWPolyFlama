@@ -4,6 +4,7 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="lobby" />
     <RootPropertyPathName Name="listadoJugadores" />
     <RootPropertyPathName Name="listadoPropiedades" />
@@ -15,8 +16,6 @@
     <RootPropertyPathName Name="partida" />
     <RootPropertyPathName Name="listadoCasillas" />
     <RootPropertyPathName Name="tamanoImagenFichaJugador" />
-    <RootPropertyPathName Name="posicion" />
-    <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="crearCommand" />
     <RootPropertyPathName Name="listadoFichas" />
@@ -135,18 +134,6 @@
     </RootType>
     <RootType FullName="PantallasMonopoly.AboutMenu" />
     <RootType FullName="PantallasMonopoly.ViewModels.GameViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="MinHeight" />
-      <RootProperty Name="MinWidth" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Margin" />
       <RootProperty Name="ColumnDefinitions" />
@@ -165,18 +152,24 @@
       <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Name" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Fill" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Stroke" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
@@ -184,6 +177,12 @@
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Name" />
