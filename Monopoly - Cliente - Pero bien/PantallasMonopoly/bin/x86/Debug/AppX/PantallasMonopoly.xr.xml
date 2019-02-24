@@ -6,12 +6,13 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="lobby" />
     <RootPropertyPathName Name="listadoJugadores" />
-    <RootPropertyPathName Name="dinero" />
+    <RootPropertyPathName Name="dineroConSimboloDolar" />
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="ficha" />
     <RootPropertyPathName Name="imagen" />
     <RootPropertyPathName Name="partida" />
     <RootPropertyPathName Name="listadoCasillas" />
+    <RootPropertyPathName Name="tamanoImagenFichaJugador" />
     <RootPropertyPathName Name="posicion" />
     <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="jugarCommand" />

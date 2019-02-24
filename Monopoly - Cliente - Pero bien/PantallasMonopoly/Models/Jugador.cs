@@ -21,6 +21,7 @@ namespace PantallasMonopoly.Models
         public bool carcelGratisComunidad { get; set; }
         public bool estaEnCarcel { get; set; }
         public int turnosEnCarcel { get; set; }
+        public string dineroConSimboloDolar { get { return "$ " + this.dinero; } }
 
         public Jugador(string nombre, Ficha ficha, double dinero, List<Propiedad> listadoPropiedades, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel, int turnosEnCarcel)
         {
