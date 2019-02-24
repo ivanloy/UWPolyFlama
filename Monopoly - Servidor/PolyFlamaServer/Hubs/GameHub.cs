@@ -25,6 +25,7 @@ namespace PolyFlamaServer.Hubs
             {
                 Random random = new Random();
                 int posicionActual = lobby.listadoJugadores[turnoActual].posicion;
+                int posicionAnterior = posicionActual;
 
                 //Le quitamos el estado de estar en la carcel, independiente de si está o no, why not? 🤷🤷🤷🤷🤷🤷🤷🤷
                 jugador.estaEnCarcel = false;
@@ -39,6 +40,10 @@ namespace PolyFlamaServer.Hubs
                 lobby.listadoJugadores[turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
                 posicionActual = lobby.listadoJugadores[turnoActual].posicion;
 
+                //Actualizamos las fichas del jugador
+                lobby.partida.listadoCasillas[posicionAnterior].listadoJugadores.Remove(jugador);
+                lobby.partida.listadoCasillas[posicionActual].listadoJugadores.Add(jugador);
+
                 //Avisamos a los otros jugadores de los cambios
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                 {
@@ -46,29 +51,26 @@ namespace PolyFlamaServer.Hubs
                     Clients.Client(connectionId).moverCasillas();
                 }
 
-                //Esperamos un poquisho
-                Thread.Sleep(1000);
-
                 //Comprobar de que tipo es la casilla actual
-                Object casilla = lobby.partida.listadoCasillas[posicionActual];
+                Casilla casilla = lobby.partida.listadoCasillas[posicionActual];
                 if (casilla is Propiedad)
                 {
                     Propiedad propiedad = (Propiedad)casilla;
                     if (!propiedad.estaComprado)
                         Clients.Caller.comprarPropiedad();
                     else
-                    {
                         lobby.listadoJugadores[turnoActual].dinero -= propiedad.dineroAPagar;
-                    }
+
                 }
-                else
+                /*else
                 {
-                    Casilla cas = (Casilla)casilla;
+                    //Miramos en qué tipo de casilla ha caído
                     Random rnd = new Random();
                     Carta carta;
                     int cartaRandom;
 
-                    switch (cas.tipo)
+                    
+                    switch (casilla.tipo)
                     {
                         case TipoCasilla.SUERTE:
                             cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
@@ -93,11 +95,12 @@ namespace PolyFlamaServer.Hubs
                             lobby.listadoJugadores[turnoActual].dinero -= 100;
                             break;
                     }
-                }
+                }*/
             }
             else
                 lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
 
+            //Se calcula el nuevo turno
             lobby.partida.turnoActual = GestoraPartida.calcularNuevoTurno(turnoActual, lobby.maxJugadores);
 
             //Avisamos a los otros jugadores de los cambios
@@ -132,12 +135,12 @@ namespace PolyFlamaServer.Hubs
 
         }
 
-        public void connected(string nombreLobby, string nombreJugador)
+        public void conectar(string nombreLobby, string nombreJugador)
         {
             lock(lockConnection)
             {
                 //Actualizamos el connectionID del jugador en la lista de conexiones
-                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.AddOrUpdate(nombreJugador, Context.ConnectionId, (key, value) => value);
+                LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[nombreJugador] = Context.ConnectionId;
 
                 //Actualizamos el número de personas que ya se han conectado y actualizado su listado de conexiones
                 if (GameInfo.conexionesEstablecidas.ContainsKey(nombreLobby))
@@ -145,6 +148,15 @@ namespace PolyFlamaServer.Hubs
                 else
                     GameInfo.conexionesEstablecidas.AddOrUpdate(nombreLobby, 1, (key, value) => value);
                 
+                if(GameInfo.conexionesEstablecidas[nombreLobby] == LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores)
+                {
+                    //La partida ha empezado
+                    LobbyInfo.listadoLobbies[nombreLobby].lobby.partidaEmpezada = true;
+
+                    //Avisamos a todos de que todos se han conectado correctamente
+                    foreach (string connectionID in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                        Clients.Client(connectionID).todosConectados();
+                }
             }
 
         }
@@ -152,7 +164,7 @@ namespace PolyFlamaServer.Hubs
         //Cuando un jugador se conecte, actualizamos su connectionID de la lista
         public override Task OnConnected()
         {
-            Clients.Caller.connected();
+            Clients.Caller.conectar();
 
             return base.OnConnected();
         }

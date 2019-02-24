@@ -16,7 +16,7 @@ namespace PolyFlamaServer.Models
         public int dineroAPagar { get; set; }
         public Jugador comprador { get; set; }
 
-        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador)
+        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador) : base()
         {
             this.precio = precio;
             this.nCasas = nCasas;
@@ -30,7 +30,7 @@ namespace PolyFlamaServer.Models
         /*
          * Constructor para crear propiedades más fácilmente
          */ 
-        public Propiedad(int precio, ColorPropiedad color)
+        public Propiedad(int precio, ColorPropiedad color) : base()
         {
             this.precio = precio;
             this.nCasas = 0;

@@ -9,12 +9,12 @@ namespace PolyFlamaServer.Gestora
 {
     public class GestoraPartida
     {
-        public static Partida generarPartidaNueva()
+        public static Partida generarPartidaNueva(List<Jugador> listadoJugadores)
         {
             Partida partida = new Partida();
             partida.listadoCartasSuerte = generarCartasSuerte();
             partida.listadoCartasComunidad = generarCartasComunidad();
-            partida.listadoCasillas = generarCasillas();
+            partida.listadoCasillas = generarCasillas(listadoJugadores);
             partida.turnoActual = 0;
             partida.arrayDados = new int[] {1, 1};
             partida.nTiradasDobles = 0;
@@ -32,14 +32,9 @@ namespace PolyFlamaServer.Gestora
             return new List<Carta>();
         }
 
-        private static List<Propiedad> generarPropiedades()
+        private static List<Casilla> generarCasillas(List<Jugador> listadoJugadores)
         {
-            return new List<Propiedad>();
-        }
-
-        private static List<object> generarCasillas()
-        {
-            List<object> listadoCasillas = new List<object>();
+            List<Casilla> listadoCasillas = new List<Casilla>();
 
             listadoCasillas.Add(new Casilla(TipoCasilla.SALIDA));
             listadoCasillas.Add(new Propiedad(0, ColorPropiedad.MARRON));
@@ -82,14 +77,16 @@ namespace PolyFlamaServer.Gestora
             listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAZURE));
             listadoCasillas.Add(new Propiedad(0, ColorPropiedad.AZUL));
 
+            //Añadimos todos los jugadores a la casilla de Salida
+
+
             return listadoCasillas;
         }
 
 		public static int calcularNuevaPosicion(int posicionActual, int movimiento)
 		{
 			int posicionNueva = posicionActual + movimiento;
-			if (posicionNueva / 35 >= 1)
-				posicionNueva -= 35;
+            posicionNueva = posicionNueva % 40;
 
 			return posicionNueva;
 		}
