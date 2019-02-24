@@ -64,7 +64,7 @@ namespace PantallasMonopoly.ViewModels
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
 
             proxy.On("salirDeLobby", salirDeLobby);
-            proxy.On("empezarPartida", empezarPartida);
+            proxy.On("entrarEnPartida", entrarEnPartida);
             proxy.On<Jugador>("obtenerJugador", obtenerJugador);
           
 
@@ -101,7 +101,7 @@ namespace PantallasMonopoly.ViewModels
 
         private async void jugarCommand_Executed()
         {
-            await proxy.Invoke("empezarPartida", _lobby.nombre);
+            await proxy.Invoke("entrarEnPartida", _lobby.nombre);
         }
 
 
@@ -119,7 +119,6 @@ namespace PantallasMonopoly.ViewModels
                     () =>
                     {
                         _lobby = obj;
-                        NotifyPropertyChanged("lobby");
 
                         if (esCreador != null && (bool)esCreador)
                         {
@@ -133,7 +132,7 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-        private async void empezarPartida()
+        private async void entrarEnPartida()
         {
             await proxy.Invoke("obtenerJugador");
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,

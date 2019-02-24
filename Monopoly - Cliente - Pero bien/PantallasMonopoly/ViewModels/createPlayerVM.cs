@@ -162,7 +162,7 @@ namespace PantallasMonopoly.ViewModels
             else
             {
 
-                proxy.Invoke("unirALobby", _lobbyAEntrar.nombre, new Jugador(_nickname, _fichaSeleccionada));
+                proxy.Invoke("unirALobby", new Jugador(_nickname, _fichaSeleccionada));
 
                
             }

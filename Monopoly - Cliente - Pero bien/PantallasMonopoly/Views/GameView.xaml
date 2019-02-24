@@ -60,17 +60,176 @@
             <Rectangle Fill="Wheat" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="9"/>
 
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="0"/>
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[20].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[20].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="1"/>
+            <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[21].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[21].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[21].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[21].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[21].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[21].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="2"/>
+            <Grid Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[22].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[22].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="3"/>
+            <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[23].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[23].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="4"/>
+            <Grid Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[24].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[24].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[24].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[24].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[24].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[24].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="5"/>
+            <Grid Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[25].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[25].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="6"/>
+            <Grid Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[26].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[26].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="7"/>
+            <Grid Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[27].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[27].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="8"/>
+            <Grid Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[28].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[28].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="9"/>
+            <Grid Grid.Row="0" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[29].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[29].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="10"/>
+            <Grid Grid.Row="0" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[30].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[30].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[30].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[30].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[30].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[30].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
 
+            
+            
+            
+            
+            
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="0"/>
             <Grid Grid.Row="10" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
@@ -82,8 +241,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[10].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="1"/>
@@ -97,8 +256,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[9].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="2"/>
@@ -112,8 +271,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[8].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="3"/>
@@ -127,8 +286,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[7].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="4"/>
@@ -142,8 +301,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[6].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="5"/>
@@ -157,8 +316,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[5].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="6"/>
@@ -172,8 +331,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[4].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="7"/>
@@ -187,8 +346,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[3].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="8"/>
@@ -202,8 +361,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[2].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="9"/>
@@ -217,8 +376,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[1].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="10"/>
@@ -232,8 +391,8 @@
                     <RowDefinition Height="{Binding lobby.partida.listadoCasillas[0].tamanoImagenFichaJugador}"/>
                 </Grid.RowDefinitions>
                 <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[2].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
 
@@ -377,15 +536,145 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[11].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
 
+            
+            
+            
+            
             <Rectangle Fill="White" Stroke="Black" Grid.Row="1" Grid.Column="10"/>
+            <Grid Grid.Row="1" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[31].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[31].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[31].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[31].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[31].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[31].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="2" Grid.Column="10"/>
+            <Grid Grid.Row="2" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[32].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[32].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[32].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[32].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[32].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[32].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="3" Grid.Column="10"/>
+            <Grid Grid.Row="3" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[33].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[33].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[33].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[33].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[33].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[33].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="4" Grid.Column="10"/>
+            <Grid Grid.Row="4" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[34].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[34].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[34].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[34].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[34].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[34].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="5" Grid.Column="10"/>
+            <Grid Grid.Row="5" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[35].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[35].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[35].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[35].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[35].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[35].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="6" Grid.Column="10"/>
+            <Grid Grid.Row="6" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[36].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[36].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[36].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[36].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[36].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[36].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="7" Grid.Column="10"/>
+            <Grid Grid.Row="7" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[37].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[37].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[37].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[37].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[37].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[37].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="8" Grid.Column="10"/>
+            <Grid Grid.Row="8" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[38].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[38].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[38].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[38].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[38].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[38].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
             <Rectangle Fill="White" Stroke="Black" Grid.Row="9" Grid.Column="10"/>
+            <Grid Grid.Row="9" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{Binding lobby.partida.listadoCasillas[39].tamanoImagenFichaJugador}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding lobby.partida.listadoCasillas[39].tamanoImagenFichaJugador}"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding lobby.partida.listadoCasillas[39].listadoJugadores[0].ficha.imagen}" Grid.Row="0" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[39].listadoJugadores[1].ficha.imagen}" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[39].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
+                <Image Source="{Binding lobby.partida.listadoCasillas[39].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
 
         </Grid>
 
@@ -445,7 +734,69 @@
                         RelativePanel.AlignLeftWith="rct_playerBox"
                         RelativePanel.AlignTopWith="rct_money"/>
 
+                    <Grid
+                        RelativePanel.AlignBottomWith="rct_playerBox"
+                        RelativePanel.AlignRightWith="rct_money"
+                        Margin="0,0,7,60">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                        </Grid.RowDefinitions>
 
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+
+                    </Grid>
                 </RelativePanel>
 
             </Border>
@@ -491,7 +842,69 @@
                         Margin="20,-3,0,0"
                         RelativePanel.AlignLeftWith="rct_playerBox2"
                         RelativePanel.AlignTopWith="rct_money2"/>
+                    <Grid
+                        RelativePanel.AlignBottomWith="rct_playerBox2"
+                        RelativePanel.AlignRightWith="rct_money2"
+                        Margin="0,0,7,60">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                        </Grid.RowDefinitions>
 
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+
+                    </Grid>
                 </RelativePanel>
 
             </Border>
@@ -537,7 +950,70 @@
                         Margin="20,-3,0,0"
                         RelativePanel.AlignLeftWith="rct_playerBox3"
                         RelativePanel.AlignTopWith="rct_money3"/>
+                    
+                    <Grid
+                        RelativePanel.AlignBottomWith="rct_playerBox3"
+                        RelativePanel.AlignRightWith="rct_money3"
+                        Margin="0,0,7,60">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                        </Grid.RowDefinitions>
 
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+
+                    </Grid>
                 </RelativePanel>
 
             </Border>
@@ -584,7 +1060,69 @@
                         Margin="20,-3,0,0"
                         RelativePanel.AlignLeftWith="rct_playerBox4"
                         RelativePanel.AlignTopWith="rct_money4"/>
+                    <Grid
+                        RelativePanel.AlignBottomWith="rct_playerBox4"
+                        RelativePanel.AlignRightWith="rct_money4"
+                        Margin="0,0,7,60">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="12" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                            <RowDefinition Height="11" />
+                        </Grid.RowDefinitions>
 
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="Black" Grid.Column="0" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[4].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+
+                    </Grid>
                 </RelativePanel>
 
             </Border>

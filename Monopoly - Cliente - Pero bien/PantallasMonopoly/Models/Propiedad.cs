@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace PantallasMonopoly.Models
 {
@@ -13,7 +15,48 @@ namespace PantallasMonopoly.Models
         public bool estaComprado { get; set; }
         public ColorPropiedad color { get; set; }
         public int dineroAPagar { get; set; }
-
+        public Brush brushColor {
+            get {
+                Brush ret = new SolidColorBrush(Colors.Black);
+                if (this.estaComprado)
+                {
+                    switch (this.color)
+                    {
+                        case ColorPropiedad.AMARILLO:
+                            ret = new SolidColorBrush(Colors.Yellow);
+                            break;
+                        case ColorPropiedad.AZUL:
+                            ret = new SolidColorBrush(Colors.Blue);
+                            break;
+                        case ColorPropiedad.CELESTE:
+                            ret = new SolidColorBrush(Colors.AliceBlue);
+                            break;
+                        case ColorPropiedad.ESTACION:
+                            ret = new SolidColorBrush(Colors.White);
+                            break;
+                        case ColorPropiedad.MARRON:
+                            ret = new SolidColorBrush(Colors.Brown);
+                            break;
+                        case ColorPropiedad.NARANJA:
+                            ret = new SolidColorBrush(Colors.Orange);
+                            break;
+                        case ColorPropiedad.ROJO:
+                            ret = new SolidColorBrush(Colors.Red);
+                            break;
+                        case ColorPropiedad.ROSA:
+                            ret = new SolidColorBrush(Colors.Pink);
+                            break;
+                        case ColorPropiedad.SERVICIO:
+                            ret = new SolidColorBrush(Colors.LightGray);
+                            break;
+                        case ColorPropiedad.VERDE:
+                            ret = new SolidColorBrush(Colors.Green);
+                            break;
+                    }
+                }
+                return ret;
+            }
+        }
         public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar)
         {
             this.precio = precio;
