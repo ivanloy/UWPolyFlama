@@ -23,11 +23,14 @@ namespace PantallasMonopoly.ViewModels
 
         private List<Lobby> _listadoLobby;
 
+        private List<Lobby> _listadoLobbyCompleto;
+
         private Lobby _lobbySeleccionado;
 
         private ObservableCollection<Mensaje> _chatGlobal;
 
         private String _nuevoMensaje;
+        private String _textoABuscar;
 
         private DelegateCommand _actualizarCommand;
 
@@ -88,6 +91,19 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+        public List<Lobby> listadoLobbyCompleto
+        {
+            get
+            {
+                return _listadoLobbyCompleto;
+            }
+
+            set
+            {
+                _listadoLobbyCompleto = value;
+            }
+        }
+
         public Lobby lobbySeleccionado
         {
             get
@@ -118,6 +134,24 @@ namespace PantallasMonopoly.ViewModels
 
                     }
                 }
+            }
+        }
+
+
+
+        public String textoABuscar
+        {
+            get
+            {
+                return _textoABuscar;
+            }
+
+            set
+            {
+                _textoABuscar = value;
+                NotifyPropertyChanged("textoABuscar");
+                filtrarLista();
+
             }
         }
 
@@ -187,6 +221,7 @@ namespace PantallasMonopoly.ViewModels
 
                 _nuevoMensaje = value;
                 NotifyPropertyChanged("nuevoMensaje");
+                
             }
 
         }
@@ -228,7 +263,9 @@ namespace PantallasMonopoly.ViewModels
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                () =>
                {
-                   _listadoLobby = listado;
+
+                   _listadoLobbyCompleto = listado;
+                   _listadoLobby = _listadoLobbyCompleto;
                    NotifyPropertyChanged("listadoLobby");
 
                }
@@ -237,7 +274,7 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-     
+
         private async void contrasena(int entra)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
@@ -345,6 +382,18 @@ namespace PantallasMonopoly.ViewModels
 
             }
 
+        }
+
+
+        private void filtrarLista()
+        {
+
+            _listadoLobby = new List<Lobby>();
+
+            _listadoLobby = _listadoLobbyCompleto.Where(p => p.nombre.Contains(_textoABuscar)).ToList();
+
+            NotifyPropertyChanged("listadoLobby");
+      
         }
 
         #endregion

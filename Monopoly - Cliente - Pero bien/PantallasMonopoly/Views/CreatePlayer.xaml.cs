@@ -10,6 +10,7 @@ using PantallasMonopoly.Util;
 using System;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Models.Enums;
+using PantallasMonopoly.Connection;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -20,16 +21,23 @@ namespace PantallasMonopoly
     /// </summary>
     public sealed partial class CreatePlayer : Page
     {
+        createPlayerVM miVM;
+
         public CreatePlayer()
         {
             this.InitializeComponent();
-            var vm = new createPlayerVM(new NavigationService());
-            this.DataContext = vm;
+            miVM = new createPlayerVM(new NavigationService());
+            this.DataContext = miVM;
 
         }
       
         private void Back_Click(object sender, RoutedEventArgs e)
         {
+            if (miVM.lobbyAEntrar != null) {
+
+                conexionPadre.proxy.Invoke("salirDeLobby", miVM.lobbyAEntrar.nombre);
+            } 
+
             this.Frame.Navigate(typeof(MainMenu));
 
         }
@@ -37,12 +45,10 @@ namespace PantallasMonopoly
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
-            createPlayerVM viewModel;
-            viewModel = (createPlayerVM)this.DataContext;
-
+           
             if (e.Parameter is Lobby)
             {
-                viewModel.lobbyAEntrar = (Lobby)e.Parameter;
+                miVM.lobbyAEntrar = (Lobby)e.Parameter;
             }
         }
 

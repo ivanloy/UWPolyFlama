@@ -91,7 +91,7 @@
 
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBox PlaceholderText="Search a lobby" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="8"></TextBox>
+                    <TextBox Text="{Binding textoABuscar, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PlaceholderText="Search a lobby" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="8"></TextBox>
                     <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding actualizarCommand}"></AppBarButton>
                 </StackPanel>
 
