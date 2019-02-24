@@ -185,7 +185,7 @@ namespace PolyFlamaServer.Hubs
                     {
                         //Buscamos el jugador
                         string connection = Context.ConnectionId;
-                        string nombreJugador = listadoNombres.First().Value;
+                        string nombreJugador = listadoNombres.First().Key;
                         Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
 
                         //Obtenemos la connectionID del jugador creador
