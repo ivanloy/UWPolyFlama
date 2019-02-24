@@ -27,7 +27,7 @@ namespace PolyFlamaServer.Models
 
         public Casilla()
         {
-
+            this.listadoJugadores = new List<Jugador>();
         }
     }
 }

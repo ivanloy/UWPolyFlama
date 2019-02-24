@@ -144,12 +144,12 @@ namespace PolyFlamaServer.Hubs
         }
 
         //Función para empezar la partida
-        public void empezarPartida(string nombreLobby)
+        public void entrarEnPartida(string nombreLobby)
         {
             if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Count)
             {
                 //Crear una partida nueva
-                Partida partida = GestoraPartida.generarPartidaNueva();
+                Partida partida = GestoraPartida.generarPartidaNueva(new List<Jugador>(LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores));
                 Random random = new Random();
                 
                 //Generar el índice del jugador que va a salir primero
@@ -157,14 +157,13 @@ namespace PolyFlamaServer.Hubs
 
                 //Asignar la partida al lobby
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partida = partida;
-                LobbyInfo.listadoLobbies[nombreLobby].lobby.partidaEmpezada = true;
 
                 //Avisamos a los otros jugadores para empezar la partida
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                 {
                     Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
                     Thread.Sleep(200); //Para evitar dobles llamadas
-                    Clients.Client(connectionId).empezarPartida();
+                    Clients.Client(connectionId).entrarEnPartida();
                 }
             }
         }
@@ -177,42 +176,47 @@ namespace PolyFlamaServer.Hubs
             {
                 if(LobbyInfo.listadoLobbies.ContainsKey(nombreLobby))
                 {
-                    //Buscamos el jugador
-                    string connection = Context.ConnectionId;
-                    string nombreJugador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Value == Context.ConnectionId).Key;
-                    Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
-
                     //Quitamos en 1 el número de jugadores
                     LobbyInfo.listadoLobbies[nombreLobby].numeroJugadores--;
+                    List<KeyValuePair<string, string>> listadoNombres = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Where(x => x.Value == Context.ConnectionId).ToList();
 
-                    //Obtenemos la connectionID del jugador creador
-                    string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Key == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre).Value;
-
-                    //Si es el creador el que se ha desconectado
-                    if (connectionIDCreador == Context.ConnectionId)
+                    //Si se ha salido estando dentro del lobby (no es que le ha dado atrás en la creacìón de personajes)
+                    if (listadoNombres.Count != 0)
                     {
-                        DatosLobby datosLobby;
-                        LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out datosLobby);
-                        foreach (string connectionId in datosLobby.listadoJugadoresConnection.Values)
-                        {
-                            Clients.Client(connectionId).salirDeLobby();
-                        }
-                    }
-                    else
-                    {
-                        //Borramos al jugador de la lista de jugadores y de las conexiones
-                        string connectionID;
-                        LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Remove(jugador);
-                        LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.TryRemove(jugador.nombre, out connectionID);
+                        //Buscamos el jugador
+                        string connection = Context.ConnectionId;
+                        string nombreJugador = listadoNombres.First().Value;
+                        Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
 
-                        //Avisamos a los otros jugadores de que se ha desconectado
-                        foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                        {
-                            Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
-                            Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador} has left the lobby 😭", "Gray"));
-                        }
+                        //Obtenemos la connectionID del jugador creador
+                        string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Key == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre).Value;
 
-                        Clients.Caller.salirDeLobby();
+                        //Si es el creador el que se ha desconectado
+                        if (connectionIDCreador == Context.ConnectionId)
+                        {
+                            DatosLobby datosLobby;
+                            LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out datosLobby);
+                            foreach (string connectionId in datosLobby.listadoJugadoresConnection.Values)
+                            {
+                                Clients.Client(connectionId).salirDeLobby();
+                            }
+                        }
+                        else
+                        {
+                            //Borramos al jugador de la lista de jugadores y de las conexiones
+                            string connectionID;
+                            LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Remove(jugador);
+                            LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.TryRemove(jugador.nombre, out connectionID);
+
+                            //Avisamos a los otros jugadores de que se ha desconectado
+                            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                            {
+                                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
+                                Clients.Client(connectionId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador} has left the lobby 😭", "Gray"));
+                            }
+
+                            Clients.Caller.salirDeLobby();
+                        }
                     }
                 }
             }
