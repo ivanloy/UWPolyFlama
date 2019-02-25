@@ -21,34 +21,34 @@
 
         <Grid
             RelativePanel.AlignHorizontalCenterWithPanel="True"
-            Margin="50">
+            Margin="5">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="90"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="72"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="47"/>
+                <ColumnDefinition Width="72"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="90"/>
+                <RowDefinition Height="72"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="72"/>
             </Grid.RowDefinitions>
 
             <Rectangle Fill="Wheat" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="9"/>
@@ -239,7 +239,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="1"/>
+            <Image Source="../CustomAssets/luffy.png"  Grid.Row="10" Grid.Column="1"/>
             <Grid Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -254,7 +254,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="2"/>
+            <Image Source="../CustomAssets/stackoverflow.png"  Grid.Row="10" Grid.Column="2"/>
             <Grid Grid.Row="10" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -284,7 +284,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="4"/>
+            <Image Source="../CustomAssets/kingston.png"  Grid.Row="10" Grid.Column="4"/>
             <Grid Grid.Row="10" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -329,7 +329,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="7"/>
+            <Image Source="../CustomAssets/microsoft.png"  Grid.Row="10" Grid.Column="7"/>
             <Grid Grid.Row="10" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -359,7 +359,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="10" Grid.Column="9"/>
+            <Image Source="../CustomAssets/php.png"  Grid.Row="10" Grid.Column="9"/>
             <Grid Grid.Row="10" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -469,7 +469,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[15].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[15].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="6" Grid.Column="0"/>
+            <Image Source="../CustomAssets/overwatch.png"  Grid.Row="6" Grid.Column="0"/>
             <Grid Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -484,7 +484,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[14].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[14].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="7" Grid.Column="0"/>
+            <Image Source="../CustomAssets/anime.png"  Grid.Row="7" Grid.Column="0"/>
             <Grid Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -514,7 +514,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[12].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[12].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="9" Grid.Column="0"/>
+            <Image Source="../CustomAssets/cookie.png"  Grid.Row="9" Grid.Column="0"/>
             <Grid Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

@@ -64,8 +64,7 @@ namespace PantallasMonopoly.ViewModels
 
         private void actualizarLobby(Lobby arg1)
         {
-            this._lobby = arg1;
-            NotifyPropertyChanged("lobby"); //AHHHHHH NO BINDEA
+            this._lobby = arg1; //AHHHHHH NO BINDEA
         }
         private void conectar()
         {
