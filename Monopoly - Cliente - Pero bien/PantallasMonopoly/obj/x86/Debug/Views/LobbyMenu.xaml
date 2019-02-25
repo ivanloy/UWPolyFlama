@@ -115,7 +115,7 @@
                     </ScrollViewer>
 
 
-                    <TextBox x:ConnectionId='10' Name="ChatInput" Text="{Binding nuevoMensaje, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                             RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Type here" BorderThickness="0,0,0,0" ></TextBox>
+                    <TextBox x:ConnectionId='10' Name="ChatInput" Text="{Binding nuevoMensaje, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                             RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" PlaceholderText="Say hello!" BorderThickness="0,0,0,0" ></TextBox>
                 </RelativePanel>
 
 

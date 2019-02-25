@@ -2245,3 +2245,4 @@ C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\Pantal
 C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
 C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\jobando\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\Microsoft.AspNet.SignalR.Client\en-US\Microsoft.AspNet.SignalR.Client.Resources.resw

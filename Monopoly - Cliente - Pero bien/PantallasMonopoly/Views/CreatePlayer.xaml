@@ -88,7 +88,7 @@
                 <StackPanel Orientation="Vertical">
                     <TextBox PlaceholderText="Nickname" Text="{Binding nickname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0,0,0,1" VerticalAlignment="Center" MinWidth="600" MaxWidth="600" Margin="8"></TextBox>
 
-                    <ScrollViewer MinWidth="600" MaxWidth="600" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    <ScrollViewer MinWidth="600" MaxWidth="600" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                                 ScrollViewer.HorizontalScrollMode="Auto"
                                  ScrollViewer.VerticalScrollBarVisibility="Disabled"
                                 ScrollViewer.VerticalScrollMode="Disabled">
@@ -100,7 +100,10 @@
                               Margin="0,0,0,20">
                         <GridView.ItemTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding Path=imagen}" MaxWidth="150" MaxHeight="150" HorizontalAlignment="Center"></Image>
+                                    <StackPanel>
+                                        <Image Source="{Binding Path=imagen}" MaxWidth="150" MaxHeight="150" HorizontalAlignment="Center"></Image>
+                                        <TextBlock Margin="0,0,0,20" FontWeight="SemiBold" Text="{Binding Path=nombre}" HorizontalAlignment="Center"></TextBlock>
+                                    </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                         <GridView.ItemsPanel>
