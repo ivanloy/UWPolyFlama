@@ -15,8 +15,9 @@ namespace PolyFlamaServer.Models
         public ColorPropiedad color { get; set; }
         public int dineroAPagar { get; set; }
         public Jugador comprador { get; set; }
+        public int posicionEnTablero { get; set; }
 
-        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador) : base()
+        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador, int posicionEnTablero) : base()
         {
             this.precio = precio;
             this.nCasas = nCasas;
@@ -25,12 +26,13 @@ namespace PolyFlamaServer.Models
             this.color = color;
             this.dineroAPagar = dineroAPagar;
             this.comprador = comprador;
+            this.posicionEnTablero = posicionEnTablero;
         }
 
         /*
          * Constructor para crear propiedades más fácilmente
          */ 
-        public Propiedad(int precio, ColorPropiedad color) : base()
+        public Propiedad(int precio, ColorPropiedad color, int posicionEnTablero) : base()
         {
             this.precio = precio;
             this.nCasas = 0;
@@ -39,6 +41,7 @@ namespace PolyFlamaServer.Models
             this.color = color;
             this.dineroAPagar = 0;
             this.comprador = null;
+            this.posicionEnTablero = posicionEnTablero;
         }
     }
 }

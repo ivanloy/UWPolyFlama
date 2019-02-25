@@ -117,10 +117,11 @@ namespace PolyFlamaServer.Hubs
             //Buscamos la información de 💩💩💩
             Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual];
             Propiedad propiedad = (Propiedad)LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[jugador.posicion];
-
+            Propiedad propiedadJugador = jugador.listadoPropiedades.Single(x => x.posicionEnTablero == jugador.posicion);
+            
             //Cambiamos la información en el jugador
-            jugador.listadoPropiedades[jugador.posicion].estaComprado = true;
-            jugador.listadoPropiedades[jugador.posicion].comprador = jugador;
+            propiedadJugador.estaComprado = true;
+            propiedadJugador.comprador = jugador;
 
             //Cambiamos la información en la propiedad de la partida
             propiedad.comprador = jugador;
