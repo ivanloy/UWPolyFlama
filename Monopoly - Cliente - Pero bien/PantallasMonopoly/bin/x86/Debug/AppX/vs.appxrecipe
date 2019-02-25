@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-25T12:18:54.527</Modified>
+      <Modified>2019-02-25T13:06:02.012</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
       <PackagePath>entrypoint\PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-02-25T12:18:52.442</Modified>
+      <Modified>2019-02-25T13:05:59.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.aspnet.signalr.client\2.4.0\lib\netstandard1.3\Microsoft.AspNet.SignalR.Client.dll">
       <PackagePath>Microsoft.AspNet.SignalR.Client.dll</PackagePath>
@@ -554,6 +554,10 @@
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2016-08-09T06:14:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\android.png">
+      <PackagePath>CustomAssets\android.png</PackagePath>
+      <Modified>2019-02-25T12:32:08.251</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\anime.png">
       <PackagePath>CustomAssets\anime.png</PackagePath>
       <Modified>2019-02-25T12:10:42.437</Modified>
@@ -561,6 +565,14 @@
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\backArrow.png">
       <PackagePath>CustomAssets\backArrow.png</PackagePath>
       <Modified>2019-02-21T13:36:48.163</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\chollometro.png">
+      <PackagePath>CustomAssets\chollometro.png</PackagePath>
+      <Modified>2019-02-25T12:26:25.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\conan.png">
+      <PackagePath>CustomAssets\conan.png</PackagePath>
+      <Modified>2019-02-25T12:26:25.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\cookie.png">
       <PackagePath>CustomAssets\cookie.png</PackagePath>
@@ -570,9 +582,21 @@
       <PackagePath>CustomAssets\dbk.png</PackagePath>
       <Modified>2019-02-21T13:36:48.159</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\deloitte.png">
+      <PackagePath>CustomAssets\deloitte.png</PackagePath>
+      <Modified>2019-02-25T12:39:13.755</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\discord.png">
+      <PackagePath>CustomAssets\discord.png</PackagePath>
+      <Modified>2019-02-25T12:32:08.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dora.png">
+      <PackagePath>CustomAssets\dora.png</PackagePath>
+      <Modified>2019-02-25T12:32:08.260</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
       <PackagePath>CustomAssets\Fichas\Bread.png</PackagePath>
-      <Modified>2019-02-25T12:18:33.666</Modified>
+      <Modified>2019-02-25T12:21:59.216</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat.png">
       <PackagePath>CustomAssets\Fichas\Hat.png</PackagePath>
@@ -590,6 +614,10 @@
       <PackagePath>CustomAssets\Fichas\Thermo.png</PackagePath>
       <Modified>2019-02-21T13:36:48.175</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\github.png">
+      <PackagePath>CustomAssets\github.png</PackagePath>
+      <Modified>2019-02-25T12:26:25.938</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\kingston.png">
       <PackagePath>CustomAssets\kingston.png</PackagePath>
       <Modified>2019-02-25T11:50:34.893</Modified>
@@ -602,6 +630,10 @@
       <PackagePath>CustomAssets\microsoft.png</PackagePath>
       <Modified>2019-02-25T11:44:07.322</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\monitors.png">
+      <PackagePath>CustomAssets\monitors.png</PackagePath>
+      <Modified>2019-02-25T12:39:13.777</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\overwatch.png">
       <PackagePath>CustomAssets\overwatch.png</PackagePath>
       <Modified>2019-02-25T12:10:42.428</Modified>
@@ -613,6 +645,10 @@
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\stackoverflow.png">
       <PackagePath>CustomAssets\stackoverflow.png</PackagePath>
       <Modified>2019-02-25T12:02:18.325</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\ubuntu.png">
+      <PackagePath>CustomAssets\ubuntu.png</PackagePath>
+      <Modified>2019-02-25T12:39:13.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -658,39 +694,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.138</Modified>
+      <Modified>2019-02-25T13:05:58.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
       <PackagePath>CustomAssets\Dictionary.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.138</Modified>
+      <Modified>2019-02-25T13:05:58.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
       <PackagePath>Views\AboutMenu.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.139</Modified>
+      <Modified>2019-02-25T13:05:58.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\GameView.xbf">
       <PackagePath>Views\GameView.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.139</Modified>
+      <Modified>2019-02-25T13:05:58.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
       <PackagePath>Views\LobbyMenu.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.139</Modified>
+      <Modified>2019-02-25T13:05:58.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
       <PackagePath>Views\CreatePlayer.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.140</Modified>
+      <Modified>2019-02-25T13:05:58.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.140</Modified>
+      <Modified>2019-02-25T13:05:58.445</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
       <PackagePath>Views\CreateMenu.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.140</Modified>
+      <Modified>2019-02-25T13:05:58.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
       <PackagePath>Views\SearchMenu.xbf</PackagePath>
-      <Modified>2019-02-25T12:18:52.140</Modified>
+      <Modified>2019-02-25T13:05:58.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -818,11 +854,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-02-25T12:12:35.480</Modified>
+      <Modified>2019-02-25T12:40:36.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
       <PackagePath>PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-02-25T12:18:54.513</Modified>
+      <Modified>2019-02-25T13:06:02.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

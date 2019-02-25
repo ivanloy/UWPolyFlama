@@ -174,21 +174,30 @@
     <None Include="PantallasMonopoly_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomAssets\android.png" />
     <Content Include="CustomAssets\anime.png" />
     <Content Include="CustomAssets\backArrow.png" />
+    <Content Include="CustomAssets\chollometro.png" />
+    <Content Include="CustomAssets\conan.png" />
     <Content Include="CustomAssets\cookie.png" />
     <Content Include="CustomAssets\dbk.png" />
+    <Content Include="CustomAssets\deloitte.png" />
+    <Content Include="CustomAssets\discord.png" />
+    <Content Include="CustomAssets\dora.png" />
     <Content Include="CustomAssets\Fichas\Bread.png" />
     <Content Include="CustomAssets\Fichas\Hat.png" />
     <Content Include="CustomAssets\Fichas\Nacho.png" />
     <Content Include="CustomAssets\Fichas\Penny.png" />
     <Content Include="CustomAssets\Fichas\Thermo.png" />
+    <Content Include="CustomAssets\github.png" />
     <Content Include="CustomAssets\kingston.png" />
     <Content Include="CustomAssets\luffy.png" />
     <Content Include="CustomAssets\microsoft.png" />
+    <Content Include="CustomAssets\monitors.png" />
     <Content Include="CustomAssets\overwatch.png" />
     <Content Include="CustomAssets\php.png" />
     <Content Include="CustomAssets\stackoverflow.png" />
+    <Content Include="CustomAssets\ubuntu.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

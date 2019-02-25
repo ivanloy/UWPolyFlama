@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
 {
@@ -54,8 +55,28 @@ namespace PantallasMonopoly.ViewModels
             conn.Start();
             proxy.On<Lobby>("actualizarLobby", actualizarLobby);
             proxy.On("moverCasillas", moverCasillas);
+            proxy.On("comprarPropiedad", comprarPropiedad);
             proxy.On("conectar", conectar);
             lobby = new Lobby();
+        }
+
+        private void comprarPropiedad()
+        {
+            dialogComprar();
+        }
+
+        private async void dialogComprar()
+        {
+            ContentDialog logDialog = new ContentDialog()
+            {
+                Title = "Comprar Propiedad",
+                Content = "Quiere comprah?",
+                PrimaryButtonText = "Po si",
+                CloseButtonText = "Po no"
+
+            };
+
+            ContentDialogResult result = await logDialog.ShowAsync();
         }
 
         private void moverCasillas()

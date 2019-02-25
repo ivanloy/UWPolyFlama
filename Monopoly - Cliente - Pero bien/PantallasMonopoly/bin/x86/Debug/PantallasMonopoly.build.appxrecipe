@@ -415,17 +415,35 @@
     <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\win2d.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\android.png">
+      <PackagePath>CustomAssets\android.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\anime.png">
       <PackagePath>CustomAssets\anime.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\backArrow.png">
       <PackagePath>CustomAssets\backArrow.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\chollometro.png">
+      <PackagePath>CustomAssets\chollometro.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\conan.png">
+      <PackagePath>CustomAssets\conan.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\cookie.png">
       <PackagePath>CustomAssets\cookie.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dbk.png">
       <PackagePath>CustomAssets\dbk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\deloitte.png">
+      <PackagePath>CustomAssets\deloitte.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\discord.png">
+      <PackagePath>CustomAssets\discord.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dora.png">
+      <PackagePath>CustomAssets\dora.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
       <PackagePath>CustomAssets\Fichas\Bread.png</PackagePath>
@@ -442,6 +460,9 @@
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo.png">
       <PackagePath>CustomAssets\Fichas\Thermo.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\github.png">
+      <PackagePath>CustomAssets\github.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\kingston.png">
       <PackagePath>CustomAssets\kingston.png</PackagePath>
     </AppxPackagedFile>
@@ -451,6 +472,9 @@
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\microsoft.png">
       <PackagePath>CustomAssets\microsoft.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\monitors.png">
+      <PackagePath>CustomAssets\monitors.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\overwatch.png">
       <PackagePath>CustomAssets\overwatch.png</PackagePath>
     </AppxPackagedFile>
@@ -459,6 +483,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\stackoverflow.png">
       <PackagePath>CustomAssets\stackoverflow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\ubuntu.png">
+      <PackagePath>CustomAssets\ubuntu.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

@@ -68,7 +68,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="1"/>
+            <Image Source="../CustomAssets/dora.png"  Grid.Row="0" Grid.Column="1"/>
             <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -98,7 +98,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="3"/>
+            <Image Source="../CustomAssets/discord.png"  Grid.Row="0" Grid.Column="3"/>
             <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -113,7 +113,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="4"/>
+            <Image Source="../CustomAssets/android.png"  Grid.Row="0" Grid.Column="4"/>
             <Grid Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -143,7 +143,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="6"/>
+            <Image Source="../CustomAssets/ubuntu.png"  Grid.Row="0" Grid.Column="6"/>
             <Grid Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -158,7 +158,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="7"/>
+            <Image Source="../CustomAssets/deloitte.png"  Grid.Row="0" Grid.Column="7"/>
             <Grid Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -188,7 +188,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[1].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="0" Grid.Column="9"/>
+            <Image Source="../CustomAssets/monitors.png"  Grid.Row="0" Grid.Column="9"/>
             <Grid Grid.Row="0" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -390,11 +390,11 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[0].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
 
-            
-            
-            
-            
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="1" Grid.Column="0"/>
+
+
+
+
+            <Image Source="../CustomAssets/conan.png"  Grid.Row="1" Grid.Column="0"/>
             <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -409,7 +409,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[19].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[19].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="2" Grid.Column="0"/>
+            <Image Source="../CustomAssets/github.png"  Grid.Row="2" Grid.Column="0"/>
             <Grid Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -439,7 +439,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[17].listadoJugadores[2].ficha.imagen}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[17].listadoJugadores[3].ficha.imagen}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Rectangle Fill="White" Stroke="Black" Grid.Row="4" Grid.Column="0"/>
+            <Image Source="../CustomAssets/chollometro.png"  Grid.Row="4" Grid.Column="0"/>
             <Grid Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
