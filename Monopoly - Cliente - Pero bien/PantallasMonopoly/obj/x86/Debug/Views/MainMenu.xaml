@@ -23,6 +23,8 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <Image Grid.Column="0" Grid.RowSpan="4" MaxHeight="500" Source="/CustomAssets/logo.png"></Image>
+
         <Border x:ConnectionId='3' Background="#8BC34A" Grid.Column="1" Grid.Row="0"                       >
             <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="140" Foreground="White">SEARCH</TextBlock>    
         </Border>

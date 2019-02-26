@@ -102,7 +102,7 @@
                             <DataTemplate>
                                     <StackPanel>
                                         <Image Source="{Binding Path=imagen}" MaxWidth="150" MaxHeight="150" HorizontalAlignment="Center"></Image>
-                                        <TextBlock Margin="0,0,0,0" FontWeight="SemiBold" Text="{Binding Path=nombre}" HorizontalAlignment="Center"></TextBlock>
+                                        <TextBlock Margin="0,0,0,20" FontWeight="SemiBold" Text="{Binding Path=nombre}" HorizontalAlignment="Center"></TextBlock>
                                     </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
