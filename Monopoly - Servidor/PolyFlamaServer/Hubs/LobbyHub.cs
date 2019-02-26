@@ -15,9 +15,6 @@ namespace PolyFlamaServer.Hubs
     public class LobbyHub : Hub
     {
         private static readonly string nombreChatGlobal = "global";
-        private static readonly object lockUnirSalir = new object();
-        private static readonly object lockCrear = new object();
-        private static readonly object lockDisconnect = new object();
 
         /*
          * Para crear un nuevo lobby, se requiere que Lobby tenga ya dentro el jugador
@@ -26,7 +23,7 @@ namespace PolyFlamaServer.Hubs
         public void crearNuevoLobby(Lobby lobby)
         {
             //Bloquear el acceso por si dos personas crean lobbies a la vez
-            lock (lockCrear)
+            lock (Locks.lockCrear)
             {
                 bool lobbyExists = false;
 
@@ -54,6 +51,10 @@ namespace PolyFlamaServer.Hubs
 
                     //Creamos la entrada del diccionario de ese lobby
                     LobbyInfo.listadoLobbies.AddOrUpdate(lobby.nombre, datosLobby, (key, value) => value);
+
+                    //Añadimos un nuevo lock al diccionario
+                    Locks.lockUnirSalir.Add(datosLobby.lobby.nombre, new object());
+                    Locks.lockChatLobby.Add(datosLobby.lobby.nombre, new object());
 
                     //Llamamos al creador indicándole que todo ha ido bien 👌👌👌
                     Clients.Caller.crearLobby(true);
@@ -90,13 +91,14 @@ namespace PolyFlamaServer.Hubs
         public void unirALobby(Jugador jugador)
         {
             bool puedeContinuar = false;
+
+            //Quitamos al jugador de la lista temporal y cogemos el nombre del lobby
             string nombreLobby;
+            LobbyInfo.listadoUsuariosCreandoPersonaje.TryRemove(Context.ConnectionId, out nombreLobby);
 
             //Asegurar que solo uno de los clientes que está accediendo pueda meter el usuario
-            lock (lockUnirSalir)
+            lock (Locks.lockUnirSalir[nombreLobby])
             {
-                //Quitamos al jugador de la lista temporal y cogemos el nombre del lobby
-                LobbyInfo.listadoUsuariosCreandoPersonaje.TryRemove(Context.ConnectionId, out nombreLobby);
 
                 if (LobbyInfo.listadoLobbies.ContainsKey(nombreLobby))
                 {
@@ -185,7 +187,7 @@ namespace PolyFlamaServer.Hubs
         public void salirDeLobby(string nombreLobby)
         {
             //Bloqueamos el acceso por si dos personas le han dado a salir a la vez
-            lock(lockUnirSalir)
+            lock(Locks.lockUnirSalir[nombreLobby])
             {
                 if(LobbyInfo.listadoLobbies.ContainsKey(nombreLobby))
                 {
@@ -213,6 +215,10 @@ namespace PolyFlamaServer.Hubs
                             {
                                 Clients.Client(connectionId).salirDeLobby();
                             }
+
+                            //Borramos los locks del lobby
+                            Locks.lockChatLobby.Remove(nombreLobby);
+                            Locks.lockUnirSalir.Remove(nombreLobby);
                         }
                         else
                         {
@@ -283,19 +289,25 @@ namespace PolyFlamaServer.Hubs
         //Método para hacer saber a todos que alguien ha entrado en Search mostrando un mensaje en el chat
         public void unirChatGlobal()
         {
-            Groups.Add(Context.ConnectionId, nombreChatGlobal);
-            Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say 👋!", "#8BC34A"));
+            lock (Locks.lockChatGlobal)
+            {
+                Groups.Add(Context.ConnectionId, nombreChatGlobal);
+                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone joined the global chat, say 👋!", "#8BC34A"));
+            }
         }
 
         //Método para hacer saber a todos que alguien se ha salido de Search. Si el nombreLobby es null, se ha salido al menú, si no, ha entrado a un lobby
         public void salirChatGlobal(string nombreLobby = null)
         {
-            Groups.Remove(Context.ConnectionId, nombreChatGlobal);
+            lock(Locks.lockChatGlobal)
+            {
+                Groups.Remove(Context.ConnectionId, nombreChatGlobal);
 
-            if(nombreLobby == null)
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat 😭", "#8BC34A"));
-            else
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "#2196F3"));
+                if (nombreLobby == null)
+                    Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje("[GLOBAL] Someone left the global chat 😭", "#8BC34A"));
+                else
+                    Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] Someone joined {nombreLobby}", "#2196F3"));
+            }
 
         }
 
@@ -305,17 +317,24 @@ namespace PolyFlamaServer.Hubs
             int chanceOfUwu = random.Next(1, 201);
 
             if(esGlobal)
-                Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] {mensaje}{(chanceOfUwu == 1 ? " UwU" : "")}", "Black"));
+            {
+                lock(Locks.lockChatGlobal)
+                {
+                    Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[GLOBAL] {mensaje}{(chanceOfUwu == 1 ? " UwU" : "")}", "Black"));
+                }
+            }
             else
             {
                 string connectionId = Context.ConnectionId;
                 ConcurrentDictionary<string, string> conexiones = null;
                 string nombreJugador = null;
+                string nombreLobby = null;
 
                 foreach (DatosLobby datos in LobbyInfo.listadoLobbies.Values)
                 {
                     try
                     {
+                        nombreLobby = datos.lobby.nombre;
                         nombreJugador = datos.listadoJugadoresConnection.Single(x => x.Value == connectionId).Key;
                         conexiones = datos.listadoJugadoresConnection;
                         break;
@@ -325,8 +344,11 @@ namespace PolyFlamaServer.Hubs
 
                 if (nombreJugador != null)
                 {
-                    foreach (string conId in conexiones.Values)
-                        Clients.Client(conId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador}: {mensaje}{(chanceOfUwu == 1 ? " UwU" : "")}", "Black"));
+                    lock(Locks.lockChatLobby[nombreLobby])
+                    {
+                        foreach (string conId in conexiones.Values)
+                            Clients.Client(conId).imprimirMensajeLobby(new Mensaje($"[LOBBY] {nombreJugador}: {mensaje}{(chanceOfUwu == 1 ? " UwU" : "")}", "Black"));
+                    }
                 }
                 else
                     Clients.Caller.imprimirMensajeLobby(new Mensaje($"[SYSTEM] There was an error sending the message", "Red"));
@@ -348,7 +370,7 @@ namespace PolyFlamaServer.Hubs
             else
             {
                 //Bloqueamos el acceso por si dos personas le han dado a salir a la vez
-                lock (lockDisconnect)
+                lock (Locks.lockDisconnect)
                 {
                     #region Obtener jugador
 
@@ -390,6 +412,10 @@ namespace PolyFlamaServer.Hubs
                             {
                                 Clients.Client(connectionId).salirDeLobby();
                             }
+
+                            //Borramos los locks del lobby
+                            Locks.lockChatLobby.Remove(nombreLobby);
+                            Locks.lockUnirSalir.Remove(nombreLobby);
                         }
                         else
                         {
