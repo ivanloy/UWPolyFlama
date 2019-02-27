@@ -36,7 +36,7 @@ namespace PantallasMonopoly.Views
         }
 
         private void Search_Tapped(object sender, TappedRoutedEventArgs e)
-        {      
+        {
             this.Frame.Navigate(typeof(SearchMenu));
         }
 

@@ -3,10 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PantallasMonopoly.CustomAssets">
 
-    <ResourceDictionary.ThemeDictionaries>
-        <ResourceDictionary x:Key="Default">
-            <FontFamily x:Key="ContentControlThemeFontFamily">Bahnschrift</FontFamily>
-        </ResourceDictionary>
-    </ResourceDictionary.ThemeDictionaries>
+   
 
 </ResourceDictionary>
