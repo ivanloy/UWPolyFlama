@@ -62,17 +62,18 @@ namespace PolyFlamaServer.Hubs
                         lobby.listadoJugadores[turnoActual].dinero -= propiedad.dineroAPagar;
 
                 }
-                /*else
+                else
                 {
                     //Miramos en qué tipo de casilla ha caído
                     Random rnd = new Random();
                     Carta carta;
                     int cartaRandom;
 
-                    
-                    switch (casilla.tipo)
+                    Enum.TryParse(casilla.tipo, out TipoCasilla tipo);
+
+                    switch (tipo)
                     {
-                        case TipoCasilla.SUERTE:
+                        /*case TipoCasilla.SUERTE:
                             cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
                             carta = lobby.partida.listadoCartasSuerte[cartaRandom];
                             break;
@@ -85,7 +86,7 @@ namespace PolyFlamaServer.Hubs
                         case TipoCasilla.IRALACARCEL:
                             lobby.listadoJugadores[turnoActual].posicion = 9;
                             lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
-                            break;
+                            break;*/
 
                         case TipoCasilla.IMPUESTOAPPLE:
                             lobby.listadoJugadores[turnoActual].dinero -= 200;
@@ -95,7 +96,7 @@ namespace PolyFlamaServer.Hubs
                             lobby.listadoJugadores[turnoActual].dinero -= 100;
                             break;
                     }
-                }*/
+                }
             }
             else
                 lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
@@ -112,7 +113,7 @@ namespace PolyFlamaServer.Hubs
             }
         }
 
-        public void comprarPropiedad(string nombreLobby, bool quiereComprar)
+        public void comprarPropiedad(string nombreLobby)
         {
             //Buscamos la información de 💩💩💩
             Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual];

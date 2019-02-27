@@ -14,7 +14,7 @@ Funciones EN EL SERVIDOR (LobbyHub):
 Funciones EN EL SERVIDOR (GameHub):
  - tirarDados(string nombreLobby) //Hay que llamarlo cada vez que le toque a alguien
  - conectar(string nombreLobby, string nombreJugador) //Hay que llamarlo cuando ya haya entrado en GameHub y se haya conectado para actualizar la nueva ConnectionID
- - comprarPropiedad(string nombreLobby, bool quiereComprar) //Hay que llamarlo cuando haya caído en una propiedad vacía
+ - comprarPropiedad(string nombreLobby) //Hay que llamarlo cuando se quiera comprar la propiedad en la que ha caído (solo si sí la quiere comprar)
 
 Funciones EN EL CLIENTE:
  - crearLobby(bool creadoConExito) //Te avisa de si el lobby se ha podido crear correctamente o no. Si no se ha podido crear, es porque el nombre ya estaba elegido

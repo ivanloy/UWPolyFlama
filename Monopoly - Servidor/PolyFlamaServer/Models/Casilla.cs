@@ -9,16 +9,16 @@ namespace PolyFlamaServer.Models
     public class Casilla
     {
         public Uri imagen { get; set; }
-        public TipoCasilla tipo { get; set; }
+        public string tipo { get; set; }
         public List<Jugador> listadoJugadores { get; set; }
 
-        public Casilla(TipoCasilla tipo, List<Jugador> listadoJugadores)
+        public Casilla(string tipo, List<Jugador> listadoJugadores)
         {
             this.tipo = tipo;
             this.listadoJugadores = listadoJugadores;
         }
 
-        public Casilla(TipoCasilla tipo)
+        public Casilla(string tipo)
         {
             this.imagen = null;
             this.tipo = tipo;
@@ -27,6 +27,8 @@ namespace PolyFlamaServer.Models
 
         public Casilla()
         {
+            this.imagen = null;
+            this.tipo = TipoCasilla.PROPIEDAD.ToString();
             this.listadoJugadores = new List<Jugador>();
         }
     }

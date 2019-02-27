@@ -15,7 +15,7 @@ namespace PolyFlamaServer.Gestora
             Partida partida = new Partida();
             partida.listadoCartasSuerte = generarCartasSuerte();
             partida.listadoCartasComunidad = generarCartasComunidad();
-            partida.listadoCasillas = generarCasillas(listadoJugadores);
+            partida.listadoCasillas = new List<Casilla>(); //generarCasillas(listadoJugadores);
             partida.turnoActual = 0;
             partida.arrayDados = new int[] {1, 1};
             partida.nTiradasDobles = 0;
@@ -35,87 +35,87 @@ namespace PolyFlamaServer.Gestora
 
         private static List<Casilla> generarCasillas(List<Jugador> listadoJugadores)
         {
-            List<Casilla> listadoCasillas = new List<Casilla>();
-
-            listadoCasillas.Add(new Casilla(TipoCasilla.SALIDA));
-            listadoCasillas.Add(new Propiedad(-99, ColorPropiedad.MARRON, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD));
-            listadoCasillas.Add(new Propiedad(-99, ColorPropiedad.MARRON, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAPPLE));
-            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION, 1));
-            listadoCasillas.Add(new Propiedad(100, ColorPropiedad.CELESTE, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE));
-            listadoCasillas.Add(new Propiedad(100, ColorPropiedad.CELESTE, 1));
-            listadoCasillas.Add(new Propiedad(120, ColorPropiedad.CELESTE, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.CARCEL));
-            listadoCasillas.Add(new Propiedad(140, ColorPropiedad.ROSA, 1));
-            listadoCasillas.Add(new Propiedad(150, ColorPropiedad.SERVICIO, 1));
-            listadoCasillas.Add(new Propiedad(140, ColorPropiedad.ROSA, 1));
-            listadoCasillas.Add(new Propiedad(160, ColorPropiedad.ROSA, 1));
-            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION, 1));
-            listadoCasillas.Add(new Propiedad(180, ColorPropiedad.NARANJA, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD));
-            listadoCasillas.Add(new Propiedad(180, ColorPropiedad.NARANJA, 1));
-            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.NARANJA, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.DESCANSO));
-            listadoCasillas.Add(new Propiedad(220, ColorPropiedad.ROJO, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE));
-            listadoCasillas.Add(new Propiedad(220, ColorPropiedad.ROJO, 1));
-            listadoCasillas.Add(new Propiedad(240, ColorPropiedad.ROJO, 1));
-            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION, 1));
-            listadoCasillas.Add(new Propiedad(260, ColorPropiedad.AMARILLO, 1));
-            listadoCasillas.Add(new Propiedad(260, ColorPropiedad.AMARILLO, 1));
-            listadoCasillas.Add(new Propiedad(150, ColorPropiedad.SERVICIO, 1));
-            listadoCasillas.Add(new Propiedad(280, ColorPropiedad.AMARILLO, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.IRALACARCEL));
-            listadoCasillas.Add(new Propiedad(300, ColorPropiedad.VERDE, 1));
-            listadoCasillas.Add(new Propiedad(300, ColorPropiedad.VERDE, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD));
-            listadoCasillas.Add(new Propiedad(320, ColorPropiedad.VERDE, 1));
-            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE));
-            listadoCasillas.Add(new Propiedad(350, ColorPropiedad.AZUL, 1));
-            listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAZURE));
-            listadoCasillas.Add(new Propiedad(400, ColorPropiedad.AZUL, 1));
-
+            /*List<Casilla> listadoCasillas = new List<Casilla>();
+            
+            listadoCasillas.Add(new Casilla(TipoCasilla.SALIDA.ToString()));
+            listadoCasillas.Add(new Propiedad(-99, ColorPropiedad.MARRON.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD.ToString()));
+            listadoCasillas.Add(new Propiedad(-99, ColorPropiedad.MARRON.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAPPLE.ToString()));
+            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(100, ColorPropiedad.CELESTE.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE.ToString()));
+            listadoCasillas.Add(new Propiedad(100, ColorPropiedad.CELESTE.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(120, ColorPropiedad.CELESTE.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.CARCEL.ToString()));
+            listadoCasillas.Add(new Propiedad(140, ColorPropiedad.ROSA.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(150, ColorPropiedad.SERVICIO.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(140, ColorPropiedad.ROSA.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(160, ColorPropiedad.ROSA.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(180, ColorPropiedad.NARANJA.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD.ToString()));
+            listadoCasillas.Add(new Propiedad(180, ColorPropiedad.NARANJA.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.NARANJA.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.DESCANSO.ToString()));
+            listadoCasillas.Add(new Propiedad(220, ColorPropiedad.ROJO.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE.ToString()));
+            listadoCasillas.Add(new Propiedad(220, ColorPropiedad.ROJO.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(240, ColorPropiedad.ROJO.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(260, ColorPropiedad.AMARILLO.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(260, ColorPropiedad.AMARILLO.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(150, ColorPropiedad.SERVICIO.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(280, ColorPropiedad.AMARILLO.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.IRALACARCEL.ToString()));
+            listadoCasillas.Add(new Propiedad(300, ColorPropiedad.VERDE.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(300, ColorPropiedad.VERDE.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.COMUNIDAD.ToString()));
+            listadoCasillas.Add(new Propiedad(320, ColorPropiedad.VERDE.ToString(), 1));
+            listadoCasillas.Add(new Propiedad(200, ColorPropiedad.ESTACION.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.SUERTE.ToString()));
+            listadoCasillas.Add(new Propiedad(350, ColorPropiedad.AZUL.ToString(), 1));
+            listadoCasillas.Add(new Casilla(TipoCasilla.IMPUESTOAZURE.ToString()));
+            listadoCasillas.Add(new Propiedad(400, ColorPropiedad.AZUL.ToString(), 1));
+            
             //Añadimos todos los jugadores a la casilla de Salida
-            listadoCasillas[0].listadoJugadores = listadoJugadores;
+            listadoCasillas[0].listadoJugadores = listadoJugadores;*/
 
-            return listadoCasillas;
+            return null;
         }
 
         public static List<Propiedad> generarPropiedadesJugador()
         {
             List<Propiedad> listado = new List<Propiedad>();
             
-            listado.Add(new Propiedad(0, ColorPropiedad.MARRON, 1));
-            listado.Add(new Propiedad(0, ColorPropiedad.MARRON, 3));
-            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION, 5));
-            listado.Add(new Propiedad(0, ColorPropiedad.CELESTE, 6));
-            listado.Add(new Propiedad(0, ColorPropiedad.CELESTE, 8));
-            listado.Add(new Propiedad(0, ColorPropiedad.CELESTE, 9));
-            listado.Add(new Propiedad(0, ColorPropiedad.ROSA, 11));
-            listado.Add(new Propiedad(0, ColorPropiedad.SERVICIO, 12));
-            listado.Add(new Propiedad(0, ColorPropiedad.ROSA, 13));
-            listado.Add(new Propiedad(0, ColorPropiedad.ROSA, 14));
-            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION, 15));
-            listado.Add(new Propiedad(0, ColorPropiedad.NARANJA, 16));
-            listado.Add(new Propiedad(0, ColorPropiedad.NARANJA, 18));
-            listado.Add(new Propiedad(0, ColorPropiedad.NARANJA, 19));
-            listado.Add(new Propiedad(0, ColorPropiedad.ROJO, 21));
-            listado.Add(new Propiedad(0, ColorPropiedad.ROJO, 23));
-            listado.Add(new Propiedad(0, ColorPropiedad.ROJO, 24));
-            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION, 25));
-            listado.Add(new Propiedad(0, ColorPropiedad.AMARILLO, 26));
-            listado.Add(new Propiedad(0, ColorPropiedad.AMARILLO, 27));
-            listado.Add(new Propiedad(0, ColorPropiedad.SERVICIO, 28));
-            listado.Add(new Propiedad(0, ColorPropiedad.AMARILLO, 29));
-            listado.Add(new Propiedad(0, ColorPropiedad.VERDE, 31));
-            listado.Add(new Propiedad(0, ColorPropiedad.VERDE, 32));
-            listado.Add(new Propiedad(0, ColorPropiedad.VERDE, 34));
-            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION, 35));
-            listado.Add(new Propiedad(0, ColorPropiedad.AZUL, 37));
-            listado.Add(new Propiedad(0, ColorPropiedad.AZUL, 39));
+            listado.Add(new Propiedad(0, ColorPropiedad.MARRON.ToString(), 1));
+            listado.Add(new Propiedad(0, ColorPropiedad.MARRON.ToString(), 3));
+            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION.ToString(), 5));
+            listado.Add(new Propiedad(0, ColorPropiedad.CELESTE.ToString(), 6));
+            listado.Add(new Propiedad(0, ColorPropiedad.CELESTE.ToString(), 8));
+            listado.Add(new Propiedad(0, ColorPropiedad.CELESTE.ToString(), 9));
+            listado.Add(new Propiedad(0, ColorPropiedad.ROSA.ToString(), 11));
+            listado.Add(new Propiedad(0, ColorPropiedad.SERVICIO.ToString(), 12));
+            listado.Add(new Propiedad(0, ColorPropiedad.ROSA.ToString(), 13));
+            listado.Add(new Propiedad(0, ColorPropiedad.ROSA.ToString(), 14));
+            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION.ToString(), 15));
+            listado.Add(new Propiedad(0, ColorPropiedad.NARANJA.ToString(), 16));
+            listado.Add(new Propiedad(0, ColorPropiedad.NARANJA.ToString(), 18));
+            listado.Add(new Propiedad(0, ColorPropiedad.NARANJA.ToString(), 19));
+            listado.Add(new Propiedad(0, ColorPropiedad.ROJO.ToString(), 21));
+            listado.Add(new Propiedad(0, ColorPropiedad.ROJO.ToString(), 23));
+            listado.Add(new Propiedad(0, ColorPropiedad.ROJO.ToString(), 24));
+            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION.ToString(), 25));
+            listado.Add(new Propiedad(0, ColorPropiedad.AMARILLO.ToString(), 26));
+            listado.Add(new Propiedad(0, ColorPropiedad.AMARILLO.ToString(), 27));
+            listado.Add(new Propiedad(0, ColorPropiedad.SERVICIO.ToString(), 28));
+            listado.Add(new Propiedad(0, ColorPropiedad.AMARILLO.ToString(), 29));
+            listado.Add(new Propiedad(0, ColorPropiedad.VERDE.ToString(), 31));
+            listado.Add(new Propiedad(0, ColorPropiedad.VERDE.ToString(), 32));
+            listado.Add(new Propiedad(0, ColorPropiedad.VERDE.ToString(), 34));
+            listado.Add(new Propiedad(0, ColorPropiedad.ESTACION.ToString(), 35));
+            listado.Add(new Propiedad(0, ColorPropiedad.AZUL.ToString(), 37));
+            listado.Add(new Propiedad(0, ColorPropiedad.AZUL.ToString(), 39));
 
             return listado;
         }

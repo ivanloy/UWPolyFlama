@@ -157,20 +157,33 @@ namespace PolyFlamaServer.Hubs
             {
                 //Crear una partida nueva
                 Partida partida = GestoraPartida.generarPartidaNueva(new List<Jugador>(LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores));
+                LobbyInfo.listadoLobbies[nombreLobby].lobby.partida = partida;
                 Random random = new Random();
                 
                 //Generar el índice del jugador que va a salir primero
                 partida.turnoActual = random.Next(0, LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores);
 
+                //Actualizar cada jugador el dinero y el listado de propiedades
+                foreach(Jugador jugador2 in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                {
+                    jugador2.dinero = 1500;
+                    jugador2.listadoPropiedades = new List<Propiedad>();
+                }
+
                 //Asignar la partida al lobby
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partida = partida;
 
+                string nombreJugador;
+                Jugador jugador;
+                string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Key == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre).Value;
                 //Avisamos a los otros jugadores para empezar la partida
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                 {
-                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                    nombreJugador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Single(x => x.Value == connectionId).Key;
+                    jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Single(x => x.nombre == nombreJugador);
+                    Clients.Client(connectionId).entrarEnPartida(jugador);
                     Thread.Sleep(200); //Para evitar dobles llamadas
-                    Clients.Client(connectionId).entrarEnPartida();
+                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
                 }
             }
         }
