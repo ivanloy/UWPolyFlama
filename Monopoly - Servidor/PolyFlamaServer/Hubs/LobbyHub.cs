@@ -157,14 +157,6 @@ namespace PolyFlamaServer.Hubs
             {
                 //Crear una partida nueva
                 Partida partida = GestoraPartida.generarPartidaNueva(new List<Jugador>(LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores));
-
-                //Iniciamos el dinero inicial y le damos las propiedades
-                foreach(Jugador jugador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
-                {
-                    jugador.dinero = 1500;
-                    jugador.listadoPropiedades = GestoraPartida.generarPropiedadesJugador();
-                }
-
                 Random random = new Random();
                 
                 //Generar el índice del jugador que va a salir primero
