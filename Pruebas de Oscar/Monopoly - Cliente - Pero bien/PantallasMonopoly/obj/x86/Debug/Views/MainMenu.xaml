@@ -10,6 +10,7 @@
     <Page.Background>
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
     </Page.Background>
+    
 
     <Grid x:ConnectionId='2' Name="sampleGrid">
         <Grid.ColumnDefinitions>
@@ -17,26 +18,28 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.75*"></RowDefinition>
-            <RowDefinition Height="1.50*"></RowDefinition>
-            <RowDefinition Height="1.25*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Border x:ConnectionId='3' Background="#8BC34A" Grid.Column="1" Grid.Row="0"                       >
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="140" Foreground="White">SEARCH</TextBlock>    
+        <Image Grid.Column="0" Grid.RowSpan="4" MaxHeight="500" Source="/CustomAssets/logo.png"></Image>
+
+        <Border x:ConnectionId='3' Background="Transparent" Name="Search"  Grid.Column="1" Grid.Row="0"                       >
+            <Button Background="#8BC34A" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="120" Foreground="White">SEARCH</Button>
         </Border>
 
-        <Border x:ConnectionId='4' Background="#2196F3" Grid.Column="1" Grid.Row="1"                       >
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="120" Foreground="White">CREATE</TextBlock>
+        <Border x:ConnectionId='4' Background="Transparent" Grid.Column="1" Grid.Row="1"                       >
+            <Button Background="#2196F3" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="120" Foreground="White">CREATE</Button>
         </Border>
 
-        <Border x:ConnectionId='5' Background="#FFEB3B" Grid.Column="1" Grid.Row="2"                      >
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="100" Foreground="White">ABOUT</TextBlock>
+        <Border x:ConnectionId='5' Background="Transparent" Grid.Column="1" Grid.Row="2"                      >
+            <Button Background="#FFEB3B" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="80" Foreground="White">ABOUT</Button>
         </Border>
 
-        <Border x:ConnectionId='6' Background="#F44336" Grid.Column="1" Grid.Row="3"                     >
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="80" Foreground="White">EXIT</TextBlock>
+        <Border x:ConnectionId='6' Background="Transparent" Grid.Column="1" Grid.Row="3"                     >
+            <Button Background="#F44336" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="80" Foreground="White">EXIT</Button>
         </Border>
 
 

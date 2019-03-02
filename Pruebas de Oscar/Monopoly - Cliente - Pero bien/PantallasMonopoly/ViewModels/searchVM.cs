@@ -4,11 +4,15 @@ using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 
 namespace PantallasMonopoly.ViewModels
 {
@@ -19,17 +23,24 @@ namespace PantallasMonopoly.ViewModels
 
         private List<Lobby> _listadoLobby;
 
+        private List<Lobby> _listadoLobbyCompleto;
+
         private Lobby _lobbySeleccionado;
 
+        private ObservableCollection<Mensaje> _chatGlobal;
+
+        private String _nuevoMensaje;
+        private String _textoABuscar;
+
         private DelegateCommand _actualizarCommand;
-        private DelegateCommand _confirmarPassCommand;
 
         private String _visibilidad;
         private String _password;
-        private bool _puedeEntrar;
+
+        private Regex _regex;
+        private MatchCollection _match;
 
         private INavigationService _navigationService;
-
 
         #endregion
 
@@ -43,13 +54,19 @@ namespace PantallasMonopoly.ViewModels
 
             _password = "";
 
+            _chatGlobal = new ObservableCollection<Mensaje>();
+
             proxy = conexionPadre.proxy;
+
+            proxy.Invoke("unirChatGlobal");
 
             proxy.On<List<Lobby>>("actualizarListadoLobbies", actualizarListadoLobbies);
             proxy.On<int>("contrasena", contrasena);
-            proxy.On("lobbyCompleto", lobbyCompleto);
+            proxy.On<Mensaje>("imprimirMensajeGlobal", imprimirMensajeGlobal);
 
             proxy.Invoke("obtenerListadoLobbies");
+
+            _regex = new Regex(@".*[^ ].*");
         }
 
 
@@ -74,6 +91,19 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+        public List<Lobby> listadoLobbyCompleto
+        {
+            get
+            {
+                return _listadoLobbyCompleto;
+            }
+
+            set
+            {
+                _listadoLobbyCompleto = value;
+            }
+        }
+
         public Lobby lobbySeleccionado
         {
             get
@@ -94,8 +124,8 @@ namespace PantallasMonopoly.ViewModels
 
                         if (_lobbySeleccionado.tieneContrasena())
                         {
-                            _visibilidad = "Visible";
-                            NotifyPropertyChanged("visibilidad");
+
+                            mostrarInputContrasena();
                         }
                         else
                         {
@@ -106,6 +136,25 @@ namespace PantallasMonopoly.ViewModels
                 }
             }
         }
+
+
+
+        public String textoABuscar
+        {
+            get
+            {
+                return _textoABuscar;
+            }
+
+            set
+            {
+                _textoABuscar = value;
+                NotifyPropertyChanged("textoABuscar");
+                filtrarLista();
+
+            }
+        }
+
 
         public String visibilidad
         {
@@ -133,10 +182,48 @@ namespace PantallasMonopoly.ViewModels
             {
                 _password = value;
                 NotifyPropertyChanged("password");
-                _confirmarPassCommand.RaiseCanExecuteChanged();
 
 
             }
+        }
+
+        public ObservableCollection<Mensaje> chatGlobal
+        {
+
+            get
+            {
+
+                return _chatGlobal;
+            }
+
+
+            set
+            {
+
+                _chatGlobal = value;
+                NotifyPropertyChanged("chatGlobal");
+            }
+
+        }
+
+        public String nuevoMensaje
+        {
+
+            get
+            {
+
+                return _nuevoMensaje;
+            }
+
+
+            set
+            {
+
+                _nuevoMensaje = value;
+                NotifyPropertyChanged("nuevoMensaje");
+                
+            }
+
         }
 
 
@@ -167,43 +254,6 @@ namespace PantallasMonopoly.ViewModels
         #endregion
 
 
-        #region Confirmar command
-
-        public DelegateCommand confirmarPassCommand
-        {
-            get
-            {
-                _confirmarPassCommand = new DelegateCommand(confirmarPassCommand_Executed, confirmarPassCommand_CanExecute);
-                return _confirmarPassCommand;
-            }
-        }
-
-        private bool confirmarPassCommand_CanExecute()
-        {
-            bool puedeComprobar = false;
-
-
-            if (!_password.Equals(""))
-            {
-
-
-                puedeComprobar = true;
-
-            }
-
-            return puedeComprobar;
-        }
-
-        private void confirmarPassCommand_Executed()
-        {
-
-            proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
-
-        }
-
-
-        #endregion
-
 
         #region Metodos SignalR
 
@@ -213,51 +263,142 @@ namespace PantallasMonopoly.ViewModels
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                () =>
                {
-                   _listadoLobby = listado;
+
+                   _listadoLobbyCompleto = listado;
+                   _listadoLobby = _listadoLobbyCompleto;
                    NotifyPropertyChanged("listadoLobby");
+
                }
                );
 
 
-
         }
 
-        /*
-         1 Entra
-         0 Incorrecto
-         -1 Lobby completo
-         */
 
         private async void contrasena(int entra)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                    () =>
+                    async () =>
                     {
                         switch (entra)
                         {
 
                             case 1: //Entra
 
+                                await conexionPadre.proxy.Invoke("salirChatGlobal", _lobbySeleccionado.nombre);
                                 _navigationService.Navigate(typeof(CreatePlayer), _lobbySeleccionado);
 
+
                                 break;
+
+
+                            case -1: //Completo
+
+                                var messageDialog = new MessageDialog("Lobby is full");
+                                await messageDialog.ShowAsync();
+
+                                break;
+
+                            case 0: //Contraseña cacas
+
+                                var messageDialog2 = new MessageDialog("Incorrect password");
+                                await messageDialog2.ShowAsync();
+
+                                break;
+
 
                         }
 
                     }
                     );
 
-       
+
+        }
+
+        private async void imprimirMensajeGlobal(Mensaje message)
+        {
+
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                    () =>
+                    {
+
+
+                        _chatGlobal.Insert(0, message);  //Facil
+                        NotifyPropertyChanged("chatGlobal");
+
+                    }
+                    );
+
         }
 
 
-        private void lobbyCompleto()
+        #endregion
+
+
+        #region Otros
+
+        private async void mostrarInputContrasena()
         {
 
+            PasswordBox inputPass = new PasswordBox();
+            inputPass.Height = 22;
 
+
+            ContentDialog logDialog = new ContentDialog()
+            {
+                Title = "Contraseña para lobby",
+                Content = inputPass,
+                PrimaryButtonText = "Aceptar"
+
+            };
+
+            ContentDialogResult result = await logDialog.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+
+                _password = inputPass.Password;
+                NotifyPropertyChanged("password");
+
+                logDialog.Hide();
+            }
+
+            await proxy.Invoke("comprobarContrasena", _lobbySeleccionado.nombre, _password);
+
+        }
+
+        public void enviarMensaje()
+        {
+
+            _match = _regex.Matches(_nuevoMensaje);
+
+            if (_nuevoMensaje != "" && _match.Count != 0)
+            { //Facil
+
+                proxy.Invoke("enviarMensaje", _nuevoMensaje, true);
+
+                _nuevoMensaje = "";
+                NotifyPropertyChanged("nuevoMensaje");
+
+            }
+
+        }
+
+
+        private void filtrarLista()
+        {
+
+            _listadoLobby = new List<Lobby>();
+
+            _listadoLobby = _listadoLobbyCompleto.Where(p => p.nombre.Contains(_textoABuscar)).ToList();
+
+            NotifyPropertyChanged("listadoLobby");
+      
         }
 
         #endregion
+
+
 
 
     }

@@ -9,6 +9,7 @@ using PantallasMonopoly.ViewModels;
 using PantallasMonopoly.Util;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Connection;
+using Windows.System;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -19,38 +20,43 @@ namespace PantallasMonopoly
     /// </summary>
     public sealed partial class LobbyMenu : Page
     {
-
+        lobbyVM miVM;
 
         public LobbyMenu()
         {
             this.InitializeComponent();
-            var vm = new lobbyVM(new NavigationService());
-            this.DataContext = vm;
+            miVM = new lobbyVM(new NavigationService());
+            this.DataContext = miVM;
+
 
         }
-      
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            lobbyVM viewModel;
-            viewModel = (lobbyVM)this.DataContext;
 
-            conexionPadre.proxy.Invoke("salirDeLobby", viewModel.lobby.nombre);
-            
+            conexionPadre.proxy.Invoke("salirDeLobby", miVM.lobby.nombre);
+
         }
 
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
-            lobbyVM viewModel;
-            viewModel = (lobbyVM)this.DataContext;
-
             if (e.Parameter is Lobby)
             {
-                viewModel.lobby = (Lobby)e.Parameter;
+                miVM.lobby = (Lobby)e.Parameter;
             }
         }
 
+        private void ChatInput_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            
+            if (e.Key == VirtualKey.Enter) {
 
+                miVM.enviarMensaje();
+
+            }
+
+        }
     }
 }

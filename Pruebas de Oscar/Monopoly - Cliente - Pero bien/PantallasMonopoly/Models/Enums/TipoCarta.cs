@@ -1,10 +1,9 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PolyFlamaServer.Models.Enums
+
+namespace PantallasMonopoly.Models.Enums
 {
     public enum TipoCarta
     {

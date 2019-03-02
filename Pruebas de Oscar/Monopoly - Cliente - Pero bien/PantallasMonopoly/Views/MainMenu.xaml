@@ -10,6 +10,7 @@
     <Page.Background>
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
     </Page.Background>
+    
 
     <Grid Name="sampleGrid">
         <Grid.ColumnDefinitions>
@@ -17,26 +18,28 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.75*"></RowDefinition>
-            <RowDefinition Height="1.50*"></RowDefinition>
-            <RowDefinition Height="1.25*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Border Background="#8BC34A" Grid.Column="1" Grid.Row="0" Tapped="Search_Tapped">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="140" Foreground="White">SEARCH</TextBlock>    
+        <Image Grid.Column="0" Grid.RowSpan="4" MaxHeight="500" Source="/CustomAssets/logo.png"></Image>
+
+        <Border Background="Transparent" Name="Search"  Grid.Column="1" Grid.Row="0" Tapped="Search_Tapped">
+            <Button Background="#8BC34A" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="120" Foreground="White">SEARCH</Button>
         </Border>
 
-        <Border Background="#2196F3" Grid.Column="1" Grid.Row="1" Tapped="Create_Tapped">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="120" Foreground="White">CREATE</TextBlock>
+        <Border Background="Transparent" Grid.Column="1" Grid.Row="1" Tapped="Create_Tapped">
+            <Button Background="#2196F3" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="120" Foreground="White">CREATE</Button>
         </Border>
 
-        <Border Background="#FFEB3B" Grid.Column="1" Grid.Row="2" Tapped="About_Tapped">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="100" Foreground="White">ABOUT</TextBlock>
+        <Border Background="Transparent" Grid.Column="1" Grid.Row="2" Tapped="About_Tapped">
+            <Button Background="#FFEB3B" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="80" Foreground="White">ABOUT</Button>
         </Border>
 
-        <Border Background="#F44336" Grid.Column="1" Grid.Row="3" Tapped="Exit_Tapped">
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="80" Foreground="White">EXIT</TextBlock>
+        <Border Background="Transparent" Grid.Column="1" Grid.Row="3" Tapped="Exit_Tapped">
+            <Button Background="#F44336" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="80" Foreground="White">EXIT</Button>
         </Border>
 
 

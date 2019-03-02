@@ -167,7 +167,7 @@ namespace PolyFlamaServer.Hubs
                 foreach(Jugador jugador2 in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
                 {
                     jugador2.dinero = 1500;
-                    jugador2.listadoPropiedades = new List<Propiedad>();
+                    jugador2.listadoPropiedades = GestoraPartida.generarPropiedadesJugador();
                 }
 
                 //Asignar la partida al lobby

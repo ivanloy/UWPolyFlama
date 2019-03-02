@@ -16,11 +16,11 @@ namespace PolyFlamaServer
     {
         public void Configuration(IAppBuilder app)
         {
-
+            
             app.MapSignalR();
             //Marcar un usuario como desconectado tras 5 segundos
             GlobalHost.Configuration.DisconnectTimeout = TimeSpan.FromSeconds(6);
-            
+
         }
     }
 }

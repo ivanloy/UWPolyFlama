@@ -5,9 +5,11 @@ using PantallasMonopoly.Util;
 using PantallasMonopoly.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
@@ -21,14 +23,23 @@ namespace PantallasMonopoly.ViewModels
 
         private Lobby _lobby;
 
+        private ObservableCollection<Mensaje> _chat;
+
+        private String _nuevoMensaje;
+
+
+        private Regex _regex;
+        private MatchCollection _match;
+
+
         private INavigationService _navigationService;
 
         private DelegateCommand _jugarCommand;
-        private Jugador _jugador;
 
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
 
+        
         #endregion
 
 
@@ -49,6 +60,45 @@ namespace PantallasMonopoly.ViewModels
             }
         }
 
+        public ObservableCollection<Mensaje> chat
+        {
+
+            get
+            {
+
+                return _chat;
+            }
+
+
+            set
+            {
+
+                _chat = value;
+                NotifyPropertyChanged("chat");
+            }
+
+        }
+
+    
+        public String nuevoMensaje
+        {
+
+            get
+            {
+
+                return _nuevoMensaje;
+            }
+
+
+            set
+            {
+
+                _nuevoMensaje = value;
+                NotifyPropertyChanged("nuevoMensaje");
+            }
+
+        }
+
 
         #endregion
 
@@ -59,16 +109,24 @@ namespace PantallasMonopoly.ViewModels
         {
             _navigationService = navigationService;
 
+            _chat = new ObservableCollection<Mensaje>();
+
             proxy = conexionPadre.proxy;
 
             proxy.On<Lobby, bool?>("actualizarLobby", actualizarLobby);
 
             proxy.On("salirDeLobby", salirDeLobby);
+
+            proxy.On<Mensaje>("imprimirMensajeLobby", imprimirMensajeLobby);
+
             proxy.On<Jugador>("entrarEnPartida", entrarEnPartida);
 
+            _regex = new Regex(@".*[^ ].*");
+
+
+
         }
-
-
+        
         #endregion
 
 
@@ -93,7 +151,7 @@ namespace PantallasMonopoly.ViewModels
                 sePuedeJugar = true;
             }
 
-            //return sePuedeJugar;
+            //TODO Cambiar
             return true;
         }
 
@@ -103,13 +161,12 @@ namespace PantallasMonopoly.ViewModels
         }
 
 
-
         #endregion
 
 
         #region metodos SignalR
 
-
+        
         private async void actualizarLobby(Lobby obj, bool? esCreador)
         {
 
@@ -117,6 +174,7 @@ namespace PantallasMonopoly.ViewModels
                     () =>
                     {
                         _lobby = obj;
+                        NotifyPropertyChanged("lobby");
 
                         if (esCreador != null && (bool)esCreador)
                         {
@@ -128,31 +186,24 @@ namespace PantallasMonopoly.ViewModels
                     }
                     );
 
+            
+
+           
+
         }
 
-        private async void entrarEnPartida(Jugador jugadorServer)
+        private async void entrarEnPartida(Jugador jugador)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-            () =>
-            {
-                if (jugadorServer != null)
+                () =>
                 {
-                    _navigationService.Navigate(
-                        typeof(GameView),
-                        new JugadorConLobby()
-                        {
-                            jugador = jugadorServer,
-                            lobby = _lobby
-                        }
-                    );
+                    string nombre = jugador.nombre;
+                    int i = 0;
+                    i = 4;
                 }
-                else
-                {
-                    throw new NotImplementedException("El jugador es null, no se actualizo");
-                }
-            }
-            );
+                );
         }
+
 
         private async void salirDeLobby()
         {
@@ -165,24 +216,49 @@ namespace PantallasMonopoly.ViewModels
                     );
 
 
-
+            
         }
 
-        private async void obtenerJugador(Jugador jugador)
+
+        private async void imprimirMensajeLobby(Mensaje message)
         {
+
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-               () =>
-               {
-                   _jugador = jugador;
-               }
-               );
+                    () =>
+                    {
+
+                       
+                        _chat.Insert(0, message);  //Facil
+                        NotifyPropertyChanged("chat");
+
+                    }
+                    );
+
         }
+
 
         #endregion
 
 
+        #region Otros
+
+        public void enviarMensaje() {
+
+            _match = _regex.Matches(_nuevoMensaje);
+
+            if (_nuevoMensaje != "" && _match.Count != 0) { //Facil
+
+                proxy.Invoke("enviarMensaje", _nuevoMensaje, false);
+
+                _nuevoMensaje = "";
+                NotifyPropertyChanged("nuevoMensaje");
+
+            }
+
+        }
 
 
+        #endregion
 
 
 

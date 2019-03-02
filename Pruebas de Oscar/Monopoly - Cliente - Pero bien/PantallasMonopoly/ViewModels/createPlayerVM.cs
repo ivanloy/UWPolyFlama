@@ -7,8 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
@@ -23,6 +25,9 @@ namespace PantallasMonopoly.ViewModels
         private Ficha _fichaSeleccionada;
 
         private Lobby _lobbyAEntrar;
+
+        private Regex _regex;
+        private MatchCollection _match;
 
         private DelegateCommand _crearCommand;
         private INavigationService _navigationService;
@@ -99,7 +104,7 @@ namespace PantallasMonopoly.ViewModels
                     mostrarFichasRestantes();
 
                 }
-        
+
             }
         }
 
@@ -121,9 +126,10 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<Lobby>("unirALobby", unirALobby);
 
+            _regex = new Regex(@".*[^ ].*");
+
         }
 
-     
         #endregion
 
 
@@ -142,7 +148,9 @@ namespace PantallasMonopoly.ViewModels
         {
             bool sePuedeCrear = false;
 
-            if (!_nickname.Equals("") && _fichaSeleccionada.nombre != null)
+            _match = _regex.Matches(_nickname);
+
+            if (!_nickname.Equals("") && _fichaSeleccionada.nombre != null && _match.Count!=0 && _nickname.Count() <= 20)
             {
 
                 sePuedeCrear = true;
@@ -155,7 +163,6 @@ namespace PantallasMonopoly.ViewModels
         {
             if (_lobbyAEntrar == null)
             {
-
                 _navigationService.Navigate(typeof(CreateMenu), new Jugador(_nickname, _fichaSeleccionada));
 
             }
@@ -164,7 +171,7 @@ namespace PantallasMonopoly.ViewModels
 
                 proxy.Invoke("unirALobby", new Jugador(_nickname, _fichaSeleccionada));
 
-               
+
             }
 
 
@@ -180,30 +187,34 @@ namespace PantallasMonopoly.ViewModels
         private async void unirALobby(Lobby lobby)
         {
 
-            if (lobby != null)
-            {
-
-                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                        () =>
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                        async () =>
                         {
-                            _navigationService.Navigate(typeof(LobbyMenu), lobby);
-                            
+
+                            if (lobby != null)
+                            {
+
+                                _navigationService.Navigate(typeof(LobbyMenu), lobby);
+
+                            }
+                            else
+                            {
+
+                                var messageDialog = new MessageDialog("Nickname or tile is already choosen");
+                                await messageDialog.ShowAsync();
+
+                            }
+
                         }
                         );
-
-            }
-            else
-            {
-
-               //Mensaje de error
-
-            }
-
+           
         }
+
 
         #endregion
 
 
+        #region Otros
 
         private void mostrarFichasRestantes()
         {
@@ -211,7 +222,8 @@ namespace PantallasMonopoly.ViewModels
             List<Ficha> fichasRestantes = generadorFichas.listadoFichas();
             List<Ficha> fichasSeleccionadas = new List<Ficha>();
 
-            for (int i = 0; i < _lobbyAEntrar.listadoJugadores.Count; i++) {
+            for (int i = 0; i < _lobbyAEntrar._listadoJugadores.Count; i++)
+            {
 
                 fichasSeleccionadas.Add(_lobbyAEntrar.listadoJugadores[i].ficha);
 
@@ -224,7 +236,8 @@ namespace PantallasMonopoly.ViewModels
                 for (int j = 0; j < fichasSeleccionadas.Count; j++)
                 {
 
-                    if (fichasRestantes[i].nombre.Equals(fichasSeleccionadas[j].nombre)) {
+                    if (fichasRestantes[i].nombre.Equals(fichasSeleccionadas[j].nombre))
+                    {
 
                         fichasRestantes.Remove(fichasRestantes[i]);
                     }
@@ -233,12 +246,16 @@ namespace PantallasMonopoly.ViewModels
 
             }
 
-            
+
 
             _listadoFichas = fichasRestantes;
             NotifyPropertyChanged("listadoFichas");
-            
+
         }
+
+        #endregion
+
+
 
     }
 }

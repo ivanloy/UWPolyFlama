@@ -1,4 +1,4 @@
-﻿using PolyFlamaServer.Models.Enums;
+﻿using PantallasMonopoly.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +11,12 @@ namespace PantallasMonopoly.Models
         public int nCasas { get; set; }
         public bool tieneHotel { get; set; }
         public bool estaComprado { get; set; }
-        public string color { get; set; }
+        public ColorPropiedad color { get; set; }
         public int dineroAPagar { get; set; }
         public Jugador comprador { get; set; }
         public int posicionEnTablero { get; set; }
 
-        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, string color, int dineroAPagar, Jugador comprador, int posicionEnTablero) : base()
+        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador, int posicionEnTablero) : base()
         {
             this.precio = precio;
             this.nCasas = nCasas;
@@ -30,8 +30,8 @@ namespace PantallasMonopoly.Models
 
         /*
          * Constructor para crear propiedades más fácilmente
-         */ 
-        public Propiedad(int precio, string color, int posicionEnTablero) : base()
+         */
+        public Propiedad(int precio, ColorPropiedad color, int posicionEnTablero) : base()
         {
             this.precio = precio;
             this.nCasas = 0;
@@ -41,6 +41,11 @@ namespace PantallasMonopoly.Models
             this.dineroAPagar = 0;
             this.comprador = null;
             this.posicionEnTablero = posicionEnTablero;
+        }
+
+        public Propiedad()
+        {
+
         }
     }
 }

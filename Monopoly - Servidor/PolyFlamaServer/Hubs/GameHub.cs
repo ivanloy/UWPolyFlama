@@ -69,9 +69,7 @@ namespace PolyFlamaServer.Hubs
                     Carta carta;
                     int cartaRandom;
 
-                    Enum.TryParse(casilla.tipo, out TipoCasilla tipo);
-
-                    switch (tipo)
+                    switch (casilla.tipo)
                     {
                         /*case TipoCasilla.SUERTE:
                             cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
@@ -81,12 +79,12 @@ namespace PolyFlamaServer.Hubs
                         case TipoCasilla.COMUNIDAD:
                             cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
                             carta = lobby.partida.listadoCartasComunidad[cartaRandom];
-                            break;
+                            break;*/
 
                         case TipoCasilla.IRALACARCEL:
                             lobby.listadoJugadores[turnoActual].posicion = 9;
                             lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
-                            break;*/
+                            break;
 
                         case TipoCasilla.IMPUESTOAPPLE:
                             lobby.listadoJugadores[turnoActual].dinero -= 200;

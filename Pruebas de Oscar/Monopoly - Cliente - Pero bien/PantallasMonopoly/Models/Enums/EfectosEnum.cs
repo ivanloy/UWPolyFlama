@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PolyFlamaServer.Models.Enums
+
+namespace PantallasMonopoly.Models.Enums
 {
     public enum EfectosEnum
     {

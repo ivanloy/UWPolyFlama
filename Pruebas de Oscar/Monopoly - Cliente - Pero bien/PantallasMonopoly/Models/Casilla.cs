@@ -1,24 +1,23 @@
-﻿using PolyFlamaServer.Models.Enums;
+﻿using PantallasMonopoly.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 
 namespace PantallasMonopoly.Models
 {
     public class Casilla
     {
         public Uri imagen { get; set; }
-        public string tipo { get; set; }
+        public TipoCasilla tipo { get; set; }
         public List<Jugador> listadoJugadores { get; set; }
 
-        public Casilla(string tipo, List<Jugador> listadoJugadores)
+        public Casilla(TipoCasilla tipo, List<Jugador> listadoJugadores)
         {
             this.tipo = tipo;
             this.listadoJugadores = listadoJugadores;
         }
 
-        public Casilla(string tipo)
+        public Casilla(TipoCasilla tipo)
         {
             this.imagen = null;
             this.tipo = tipo;
@@ -28,7 +27,7 @@ namespace PantallasMonopoly.Models
         public Casilla()
         {
             this.imagen = null;
-            this.tipo = TipoCasilla.PROPIEDAD.ToString();
+            this.tipo = TipoCasilla.PROPIEDAD;
             this.listadoJugadores = new List<Jugador>();
         }
     }

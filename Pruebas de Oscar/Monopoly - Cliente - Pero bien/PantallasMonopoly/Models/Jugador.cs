@@ -14,11 +14,11 @@ namespace PantallasMonopoly.Models
         public bool estaEnCarcel { get; set; }
         public int turnosEnCarcel { get; set; }
 
-        public Jugador(string nombre, Ficha ficha, List<Propiedad> listadoPropiedades, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel, int turnosEnCarcel)
+        public Jugador(string nombre, Ficha ficha, double dinero, List<Propiedad> listadoPropiedades, int posicion, bool carcelGratisSuerte, bool carcelGratisComunidad, bool estaEnCarcel, int turnosEnCarcel)
         {
             this.nombre = nombre;
             this.ficha = ficha;
-            this.dinero = 1500;
+            this.dinero = dinero;
             this.listadoPropiedades = listadoPropiedades;
             this.posicion = posicion;
             this.carcelGratisSuerte = carcelGratisSuerte;
@@ -34,7 +34,7 @@ namespace PantallasMonopoly.Models
         {
             this.nombre = nombre;
             this.ficha = ficha;
-            this.dinero = 1500;
+            this.dinero = 0;
             this.listadoPropiedades = new List<Propiedad>();
             this.posicion = 0;
             this.carcelGratisSuerte = false;
