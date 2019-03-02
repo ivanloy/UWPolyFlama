@@ -138,6 +138,7 @@
     <Compile Include="Util\generadorFichas.cs" />
     <Compile Include="Util\INavigationService.cs" />
     <Compile Include="Util\NavigationService.cs" />
+    <Compile Include="ViewModels\clsVMBaseHilo.cs" />
     <Compile Include="ViewModels\clsVMBase.cs" />
     <Compile Include="ViewModels\createPlayerVM.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />

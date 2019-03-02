@@ -28452,7 +28452,7 @@
       ]
     },
     "System.Private.ServiceModel/4.1.3": {
-      "sha512": "PS9pmdXqvLxxt02jF7Lrbq0kBi+IQGhVOP38V6Wv5IlUW2vFVBbtPb2euhl7bJsh80paIeUEjjA3QtvgMVE7Vw==",
+      "sha512": "XMGmlPfRAKNT/GTHNp/RM2DJ3L4Q7I7jdkWGsCP2NcmuPrO4oKUT5eWS9/z+KPQoB2lLW0KclE4n4EuAOdBDvg==",
       "type": "package",
       "path": "system.private.servicemodel/4.1.3",
       "files": [
@@ -30006,7 +30006,7 @@
       ]
     },
     "System.ServiceModel.Duplex/4.0.4": {
-      "sha512": "UV1BhrNh6qyW0Xw1xM0L5bnPYFFkFt18Nqq2BqrYtso5tj359QLtj/xoxZ52HWuqOL8p4mNuVNNseNZNmv0lkA==",
+      "sha512": "yBFdrm04/c3ApEM8TmHnN+d5nEXBX7ZDQ5kgL06TuXHWR6M8OogaUVFqfb9hkBH/PrA1aFLgaTTj4PqhvRSTBQ==",
       "type": "package",
       "path": "system.servicemodel.duplex/4.0.4",
       "files": [
@@ -30028,7 +30028,7 @@
       ]
     },
     "System.ServiceModel.Http/4.1.3": {
-      "sha512": "7mW2JvvQ8JRH0fp6/CMgqIckxmSTSo1hkes5VAosXlGuvW7C8pzd5936EQGhSRwOtWX8zgb6CsUhqBts3WtkRA==",
+      "sha512": "8hpHlzYjJI6zxDq0jOLd7oioVokGJ9mVb+O9ME7Me5c+JLl0lny3snkKtCIXi0NJ98SjLUsF0uFg/lyBVos9QQ==",
       "type": "package",
       "path": "system.servicemodel.http/4.1.3",
       "files": [
@@ -30068,7 +30068,7 @@
       ]
     },
     "System.ServiceModel.NetTcp/4.1.3": {
-      "sha512": "QYaj8wl05oHOW4thLtrHDNOLMGXKz1TtFBezZNNTY5k5KPdMtVTJsc5g9k6Q0/2w4rmq/MYtY5Rdn2HIfXjiCg==",
+      "sha512": "qiAn9GyWS5zFNWBjgnFMThN1iO2ryyJCTAZgYehTQyLvBr3E3XHlW9rM1bTTbbxU0neTKuJPLjEn7QVQ96H9gA==",
       "type": "package",
       "path": "system.servicemodel.nettcp/4.1.3",
       "files": [
@@ -30093,7 +30093,7 @@
       ]
     },
     "System.ServiceModel.Primitives/4.1.3": {
-      "sha512": "PNSwn/diEbGTdOZauCuSEBQbAYCGaImfV6Exh9QUnypkk6aAyfF9WrpSldULNJ8ysjnq7bqvQ6yUUFzBAA2Khw==",
+      "sha512": "ooQ7+rc+4NOU3fzVDBpH9DGubH2U09rSpKOK5LoI/RQg00zWCtGuPN1Ve09LxkjTkD+nEssoHxVaWDW8lWmevQ==",
       "type": "package",
       "path": "system.servicemodel.primitives/4.1.3",
       "files": [
@@ -31019,24 +31019,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ignacio Van Loy\\.nuget\\packages\\": {},
+    "C:\\Users\\jolsensei\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "projectUniqueName": "C:\\Users\\jolsensei\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
       "projectName": "PantallasMonopoly",
-      "projectPath": "D:\\Proyectos\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
-      "packagesPath": "C:\\Users\\Ignacio Van Loy\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\obj\\",
+      "projectPath": "C:\\Users\\jolsensei\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "packagesPath": "C:\\Users\\jolsensei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jolsensei\\Desktop\\Git\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ignacio Van Loy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jolsensei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

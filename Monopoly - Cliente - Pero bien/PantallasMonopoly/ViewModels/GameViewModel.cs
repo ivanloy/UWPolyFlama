@@ -11,29 +11,47 @@ using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
 {
-    public class GameViewModel : clsVMBase
+    public class GameViewModel : clsVMBaseHilo
     {
+
+        #region Propiedades privadas
 
         private Lobby _lobby;
         private DelegateCommand _tirarDadosCommand;
         private Jugador _jugadorCliente;
 
-        public Jugador jugadorCliente {
+        #endregion
+
+        #region Propiedades publicas
+
+        public Jugador jugadorCliente
+        {
             get { return _jugadorCliente; }
             set { _jugadorCliente = value; }
         }
 
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
-        public Lobby lobby {
+
+        public Lobby lobby
+        {
             get { return _lobby; }
-            set {
+            set
+            {
                 _lobby = value;
                 NotifyPropertyChanged("lobby");
             }
         }
-        public DelegateCommand tirarDadosCommand {
-            get {
+
+        #endregion
+
+        #region Tirar dados command
+
+
+        public DelegateCommand tirarDadosCommand
+        {
+            get
+            {
                 _tirarDadosCommand = new DelegateCommand(_tirarDadosCommand_Executed, _tirarDadosCommand_CanExecute);
                 return _tirarDadosCommand;
             }
@@ -46,8 +64,12 @@ namespace PantallasMonopoly.ViewModels
         private async void _tirarDadosCommand_Executed()
         {
             await proxy.Invoke("tirarDados", lobby.nombre);
-            NotifyPropertyChanged("lobby");
+            //NotifyPropertyChanged("lobby"); //Esto ya no hace falta con el nuevo notify
         }
+
+        #endregion
+
+        #region Constructores
 
         public GameViewModel()
         {
@@ -61,30 +83,15 @@ namespace PantallasMonopoly.ViewModels
             lobby = new Lobby();
         }
 
-        private async void comprarPropiedad()
+        #endregion
+
+        #region Metodos Signalr
+
+        private void comprarPropiedad()
         {
 
-                    dialogComprar();
- 
-        }
+            dialogComprar();
 
-        private async void dialogComprar()
-    {
-        await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-           async () =>
-           {
-               ContentDialog logDialog = new ContentDialog()
-                    {
-                        Title = "Comprar Propiedad",
-                        Content = "Quiere comprah?",
-                        PrimaryButtonText = "Po si",
-                        CloseButtonText = "Po no"
-
-                    };
-
-               ContentDialogResult result = await logDialog.ShowAsync();
-           }
-           );
         }
 
         private async void moverCasillas()
@@ -102,9 +109,11 @@ namespace PantallasMonopoly.ViewModels
                 () =>
                 {
                     this._lobby = arg1; //AHHHHHH NO BINDEA
+                    NotifyPropertyChanged("lobby");
                 }
             );
         }
+
         private async void conectar()
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
@@ -114,6 +123,42 @@ namespace PantallasMonopoly.ViewModels
                }
             );
         }
+
+
+        #endregion
+
+        #region Otros
+
+        private async void dialogComprar()
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               async () =>
+               {
+                   ContentDialog logDialog = new ContentDialog()
+                   {
+                       Title = "Buy property",
+                       Content = "Do you want to buy this property?",
+                       PrimaryButtonText = "For sure!",
+                       CloseButtonText = "Meh, maybe next time"
+
+                   };
+
+                   ContentDialogResult result = await logDialog.ShowAsync();
+
+                   if (result == ContentDialogResult.Primary)
+                   {
+
+                       await proxy.Invoke("comprarPropiedad", _lobby.nombre);
+                   }
+               }
+               );
+        }
+
+        #endregion
+
+
+
+
 
     }
 }

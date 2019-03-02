@@ -218,7 +218,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "PantallasMonopoly.ViewModels.GameViewModel";
-            _typeNameTable[4] = "PantallasMonopoly.ViewModels.clsVMBase";
+            _typeNameTable[4] = "PantallasMonopoly.ViewModels.clsVMBaseHilo";
             _typeNameTable[5] = "Object";
             _typeNameTable[6] = "PantallasMonopoly.Models.Jugador";
             _typeNameTable[7] = "Microsoft.AspNet.SignalR.Client.HubConnection";
@@ -240,7 +240,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::PantallasMonopoly.ViewModels.GameViewModel);
-            _typeTable[4] = typeof(global::PantallasMonopoly.ViewModels.clsVMBase);
+            _typeTable[4] = typeof(global::PantallasMonopoly.ViewModels.clsVMBaseHilo);
             _typeTable[5] = typeof(global::System.Object);
             _typeTable[6] = typeof(global::PantallasMonopoly.Models.Jugador);
             _typeTable[7] = typeof(global::Microsoft.AspNet.SignalR.Client.HubConnection);
@@ -329,7 +329,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 break;
 
             case 3:   //  PantallasMonopoly.ViewModels.GameViewModel
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("PantallasMonopoly.ViewModels.clsVMBase"));
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("PantallasMonopoly.ViewModels.clsVMBaseHilo"));
                 userType.Activator = Activate_3_GameViewModel;
                 userType.AddMemberName("jugadorCliente");
                 userType.AddMemberName("conn");
@@ -340,7 +340,7 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  PantallasMonopoly.ViewModels.clsVMBase
+            case 4:   //  PantallasMonopoly.ViewModels.clsVMBaseHilo
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsLocalType();
                 xamlType = userType;
