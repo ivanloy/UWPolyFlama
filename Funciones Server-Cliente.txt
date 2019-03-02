@@ -31,5 +31,7 @@ Funciones EN EL CLIENTE:
  - obtenerJugador(Jugador jugador) //Método que te devuelve un jugador una vez llamado obtenerJugador() en el server (si es null, es que no lo ha encontrado)
  - imprimirMensajeGlobal(Mensaje mensaje) //Mensaje para imprimir mensaje en pantalla en el chat global. Se manda true si es un mensaje de aviso
  - imprimirMensajeLobby(Mensaje mensaje) //Mensaje para imprimir mensaje en pantalla en el chat de lobby. Se manda true si es un mensaje de aviso
- - entrarEnPartida() //Se llama cuando se ha conectado al GameHub
+ - entrarEnPartida(Jugador jugador) //Se llama cuando se ha conectado al GameHub, te manda la información de tu jugador
  - todosConectados() //Se llama cuando todos han conectado y actualizado su connectionID correctamente
+ - partidaPerdida() //Se llama cuando te quedas sin dinero
+ - partidaGanada() //Se llama cuando ganas la partida
