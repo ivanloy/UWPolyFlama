@@ -19,11 +19,11 @@ namespace PantallasMonopoly.Models
          * "ganardinero:200" (Hacer que el jugador gane 200$)
          * "movercasilla:20" (Hacer que el jugador se mueva a la casilla 20)
          */
-        public EfectosEnum efecto { get; set; }
+        public string efecto { get; set; }
         public static readonly Uri imagenDetras = new Uri("");
-        public TipoCarta tipo { get; set; }
+        public string tipo { get; set; }
 
-        public Carta(string texto, EfectosEnum efecto, TipoCarta tipo)
+        public Carta(string texto, string efecto, string tipo)
         {
             this.texto = texto;
             this.efecto = efecto;

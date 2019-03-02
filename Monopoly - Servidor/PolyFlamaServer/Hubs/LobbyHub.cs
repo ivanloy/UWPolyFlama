@@ -153,8 +153,8 @@ namespace PolyFlamaServer.Hubs
         //Función para empezar la partida
         public void entrarEnPartida(string nombreLobby)
         {
-            if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Count)
-            {
+            /*if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Count)
+            {*/
                 //Crear una partida nueva
                 Partida partida = GestoraPartida.generarPartidaNueva(new List<Jugador>(LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores));
                 LobbyInfo.listadoLobbies[nombreLobby].lobby.partida = partida;
@@ -185,7 +185,7 @@ namespace PolyFlamaServer.Hubs
                     Thread.Sleep(200); //Para evitar dobles llamadas
                     Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby, connectionId == connectionIDCreador);
                 }
-            }
+            //}
         }
         
         //Función para salir del lobby

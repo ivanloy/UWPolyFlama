@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace PantallasMonopoly.Models
 {
     public class Casilla
@@ -17,9 +18,18 @@ namespace PantallasMonopoly.Models
             this.listadoJugadores = listadoJugadores;
         }
 
+        public Casilla(TipoCasilla tipo)
+        {
+            this.imagen = null;
+            this.tipo = tipo;
+            this.listadoJugadores = new List<Jugador>();
+        }
+
         public Casilla()
         {
-
+            this.imagen = null;
+            this.tipo = TipoCasilla.PROPIEDAD;
+            this.listadoJugadores = new List<Jugador>();
         }
     }
 }

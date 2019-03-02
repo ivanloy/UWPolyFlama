@@ -119,14 +119,14 @@ namespace PantallasMonopoly.ViewModels
 
             proxy.On<Mensaje>("imprimirMensajeLobby", imprimirMensajeLobby);
 
+            proxy.On<Jugador>("entrarEnPartida", entrarEnPartida);
+
 
             _regex = new Regex(@".*[^ ].*");
 
 
 
         }
-
-       
 
         #endregion
 
@@ -152,15 +152,13 @@ namespace PantallasMonopoly.ViewModels
                 sePuedeJugar = true;
             }
 
-            return sePuedeJugar;
+            return true;
         }
 
         private void jugarCommand_Executed()
         {
 
-            //Aqui hay una llamada al server
-
-            //_navigationService.Navigate(); Aqui llamara a la partida
+            proxy.Invoke("entrarEnPartida", _lobby.nombre);
            
         }
 
@@ -190,10 +188,16 @@ namespace PantallasMonopoly.ViewModels
                     }
                     );
 
-            
+        }
 
-           
-
+        private async void entrarEnPartida(Jugador jugador)
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                () =>
+                {
+                    string nombre = jugador.nombre;
+                }
+                );
         }
 
 

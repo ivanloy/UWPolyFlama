@@ -1,18 +1,16 @@
-﻿using PantallasMonopoly.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace PantallasMonopoly.Models
 {
-    public class Lobby : clsVMBase
+    public class Lobby
     {
         public string nombre { get; set; }
         public string contrasena { get; set; }
         public int maxJugadores { get; set; }
-
-        public List<Jugador> _listadoJugadores;
-
+        public List<Jugador> listadoJugadores { get; set; }
         public bool partidaEmpezada { get; set; }
         public Partida partida { get; set; }
 
@@ -31,7 +29,7 @@ namespace PantallasMonopoly.Models
          * Solo hará falta el nombre, la contraseña, el máximo de jugadores, y el jugador
          * que ha creado el lobby, que se añadirá a la lista.
          */ 
-        public Lobby(string nombre, string contrasena, int maxJugadores, Jugador jugadorCreador, Partida partida)
+        public Lobby(string nombre, string contrasena, int maxJugadores, Jugador jugadorCreador)
         {
             this.nombre = nombre;
             this.contrasena = contrasena;
@@ -39,7 +37,7 @@ namespace PantallasMonopoly.Models
             this.listadoJugadores = new List<Jugador>();
             this.listadoJugadores.Add(jugadorCreador);
             this.partidaEmpezada = false;
-            this.partida = partida;
+            this.partida = new Partida();
         }
 
         public Lobby()
@@ -55,23 +53,6 @@ namespace PantallasMonopoly.Models
         public void quitarContrasena()
         {
             this.contrasena = "";
-        }
-
-
-        public List<Jugador> listadoJugadores
-        {
-
-            get
-            {
-
-                return _listadoJugadores;
-            }
-
-            set
-            {
-                _listadoJugadores = value;
-                NotifyPropertyChanged("listadoJugadores");
-            }
         }
     }
 }
