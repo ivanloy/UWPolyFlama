@@ -190,12 +190,26 @@ namespace PantallasMonopoly.ViewModels
 
         }
 
-        private async void entrarEnPartida(Jugador jugador)
+        private async void entrarEnPartida(Jugador _jugador)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                 () =>
                 {
-                    string nombre = jugador.nombre;
+                    if (_jugador != null)
+                    {
+                        _navigationService.Navigate(
+                            typeof(GameView),
+                            new JugadorConLobby()
+                            {
+                                jugador = _jugador,
+                                lobby = _lobby
+                            }
+                        );
+                    }
+                    else
+                    {
+                        throw new NotImplementedException("El jugador es null, no se actualizo");
+                    }
                 }
                 );
         }
