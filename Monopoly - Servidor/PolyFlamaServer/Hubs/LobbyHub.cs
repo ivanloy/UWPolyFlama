@@ -61,6 +61,9 @@ namespace PolyFlamaServer.Hubs
                     Thread.Sleep(500);
                     Clients.Caller.imprimirMensajeLobby(new Mensaje("[SYSTEM] Remember not to share your password with anyone 🤫", "Red"));
                     Clients.Caller.imprimirMensajeLobby(new Mensaje("[LOBBY] Lobby created successfully 👍", "#2196F3"));
+
+                    //Avisamos a todos los que están en el chat global de que un lobby se ha creado
+                    Clients.Group(nombreChatGlobal).imprimirMensajeGlobal(new Mensaje($"[SYSTEM] Someone created \"{lobby.nombre}\" just now! Refresh to see it! 🔄", "#2196F3"));
                 }
             }
         }
@@ -153,6 +156,7 @@ namespace PolyFlamaServer.Hubs
         //Función para empezar la partida
         public void entrarEnPartida(string nombreLobby)
         {
+            //TODO Quitar pal release
             /*if (LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores == LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores.Count)
             {*/
                 //Crear una partida nueva
@@ -194,6 +198,7 @@ namespace PolyFlamaServer.Hubs
             //Bloqueamos el acceso por si dos personas le han dado a salir a la vez
             lock(Locks.lockUnirSalir[nombreLobby])
             {
+                //Si el lobby aún existe (puede que el creador se haya salido antes y lo haya borrado)
                 if(LobbyInfo.listadoLobbies.ContainsKey(nombreLobby))
                 {
                     //Quitamos en 1 el número de jugadores
@@ -214,12 +219,11 @@ namespace PolyFlamaServer.Hubs
                         //Si es el creador el que se ha desconectado
                         if (connectionIDCreador == Context.ConnectionId)
                         {
+                            //Sacamos a todos del lobby
                             DatosLobby datosLobby;
                             LobbyInfo.listadoLobbies.TryRemove(nombreLobby, out datosLobby);
                             foreach (string connectionId in datosLobby.listadoJugadoresConnection.Values)
-                            {
                                 Clients.Client(connectionId).salirDeLobby();
-                            }
 
                             //Borramos los locks del lobby
                             Locks.lockChatLobby.Remove(nombreLobby);
@@ -283,9 +287,7 @@ namespace PolyFlamaServer.Hubs
             List<Lobby> listadoLobbies = new List<Lobby>();
 
             foreach(DatosLobby datosLobby in LobbyInfo.listadoLobbies.Values)
-            {
                 listadoLobbies.Add(datosLobby.lobby);
-            }
 
             Clients.Caller.actualizarListadoLobbies(listadoLobbies);
         }

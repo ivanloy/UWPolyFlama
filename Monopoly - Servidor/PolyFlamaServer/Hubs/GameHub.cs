@@ -17,97 +17,175 @@ namespace PolyFlamaServer.Hubs
         {
             Lobby lobby = LobbyInfo.listadoLobbies[nombreLobby].lobby;
             int turnoActual = lobby.partida.turnoActual;
-            Jugador jugador = lobby.listadoJugadores[turnoActual];
-            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugador.nombre];
-            
-            //Si el jugador no está en la carcel o si está en la carcel pero ya ha hecho 2 tiradas
-            if (!jugador.estaEnCarcel || (jugador.estaEnCarcel && jugador.turnosEnCarcel == 2))
+
+            //Lockeaso guapo 🔐🔐🔐
+            lock (Locks.lockTirarDados[nombreLobby])
             {
-                Random random = new Random();
-                int posicionActual = lobby.listadoJugadores[turnoActual].posicion;
-                int posicionAnterior = posicionActual;
-
-                //Le quitamos el estado de estar en la carcel, independiente de si está o no, why not? 🤷🤷🤷🤷🤷🤷🤷🤷
-                jugador.estaEnCarcel = false;
-                jugador.turnosEnCarcel = 0;
-
-                //Tirar los dados
-                int dado1 = random.Next(1, 7);
-                int dado2 = random.Next(1, 7);
-
-                //Actualizamos el lobby con los dados
-                lobby.partida.arrayDados = new int[] { dado1, dado2 };
-                lobby.listadoJugadores[turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
-                posicionActual = lobby.listadoJugadores[turnoActual].posicion;
-
-                //Actualizamos las fichas del jugador
-                lobby.partida.listadoCasillas[posicionAnterior].listadoJugadores.Remove(jugador);
-                lobby.partida.listadoCasillas[posicionActual].listadoJugadores.Add(jugador);
-
-                //Avisamos a los otros jugadores de los cambios
-                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                //Comprobamos por si acaso le ha dado varias veces al botón de tirar dados
+                if(turnoActual == LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual)
                 {
-                    Clients.Client(connectionId).actualizarLobby(lobby);
-                    Clients.Client(connectionId).moverCasillas();
-                }
+                    int turnoNuevo;
+                    Jugador jugador = lobby.listadoJugadores[turnoActual];
+                    string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugador.nombre];
 
-                //Comprobar de que tipo es la casilla actual
-                Casilla casilla = lobby.partida.listadoCasillas[posicionActual];
-                if (casilla is Propiedad)
-                {
-                    Propiedad propiedad = (Propiedad)casilla;
-                    if (!propiedad.estaComprado)
-                        Clients.Caller.comprarPropiedad();
-                    else
-                        lobby.listadoJugadores[turnoActual].dinero -= propiedad.dineroAPagar;
-
-                }
-                else
-                {
-                    //Miramos en qué tipo de casilla ha caído
-                    Random rnd = new Random();
-                    Carta carta;
-                    int cartaRandom;
-
-                    switch (casilla.tipo)
+                    //Si el jugador no está en la carcel o si está en la carcel pero ya ha hecho 2 tiradas
+                    if (!jugador.estaEnCarcel || (jugador.estaEnCarcel && jugador.turnosEnCarcel == 2))
                     {
-                        /*case TipoCasilla.SUERTE:
-                            cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
-                            carta = lobby.partida.listadoCartasSuerte[cartaRandom];
-                            break;
+                        Random random = new Random();
+                        int posicionActual = lobby.listadoJugadores[turnoActual].posicion;
+                        int posicionAnterior = posicionActual;
 
-                        case TipoCasilla.COMUNIDAD:
-                            cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
-                            carta = lobby.partida.listadoCartasComunidad[cartaRandom];
-                            break;*/
+                        //Le quitamos el estado de estar en la carcel, independiente de si está o no, why not? 🤷🤷🤷🤷🤷🤷🤷🤷
+                        jugador.estaEnCarcel = false;
+                        jugador.turnosEnCarcel = 0;
 
-                        case TipoCasilla.IRALACARCEL:
-                            lobby.listadoJugadores[turnoActual].posicion = 9;
-                            lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
-                            break;
+                        //Tirar los dados
+                        int dado1 = random.Next(1, 7);
+                        int dado2 = random.Next(1, 7);
 
-                        case TipoCasilla.IMPUESTOAPPLE:
-                            lobby.listadoJugadores[turnoActual].dinero -= 200;
-                            break;
+                        //Actualizamos el lobby con los dados
+                        lobby.partida.arrayDados = new int[] { dado1, dado2 };
+                        lobby.listadoJugadores[turnoActual].posicion = GestoraPartida.calcularNuevaPosicion(posicionActual, dado1 + dado2);
+                        posicionActual = lobby.listadoJugadores[turnoActual].posicion;
 
-                        case TipoCasilla.IMPUESTOAZURE:
-                            lobby.listadoJugadores[turnoActual].dinero -= 100;
-                            break;
+                        //Actualizamos las fichas del jugador
+                        lobby.partida.listadoCasillas[posicionAnterior].listadoJugadores.Remove(jugador);
+                        lobby.partida.listadoCasillas[posicionActual].listadoJugadores.Add(jugador);
+
+                        //Avisamos a los otros jugadores de los cambios
+                        foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                        {
+                            Clients.Client(connectionId).actualizarLobby(lobby);
+                            Clients.Client(connectionId).moverCasillas();
+                        }
+
+                        //Comprobar de que tipo es la casilla actual
+                        Casilla casilla = lobby.partida.listadoCasillas[posicionActual];
+                        if (casilla is Propiedad)
+                        {
+                            Propiedad propiedad = (Propiedad)casilla;
+                            //Si la propiedad no está comprada y el jugador tiene dinero para comprarla
+                            if (!propiedad.estaComprado && jugador.dinero >= propiedad.precio)
+                                Clients.Caller.comprarPropiedad();
+                            else
+                            {
+                                //Empezamos cogiendo el dinero del dinero a pagar de la propiedad
+                                int dineroAPagar = propiedad.dineroAPagar;
+
+                                //Si la propiedad en la que ha caído es una estación o un servicio, hay que comprobar cuántas estaciones o servicios tiene compradas el dueño
+                                if (propiedad.color == ColorPropiedad.ESTACION)
+                                {
+                                    //Cogemos el jugador
+                                    Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
+                                    int nEstacionesCompradas = 0;
+
+                                    //Cogemos todas las estaciones
+                                    bool estacion1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 5).estaComprado;
+                                    bool estacion2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 15).estaComprado;
+                                    bool estacion3 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 25).estaComprado;
+                                    bool estacion4 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 35).estaComprado;
+
+                                    if (estacion1)
+                                        nEstacionesCompradas++;
+                                    if (estacion2)
+                                        nEstacionesCompradas++;
+                                    if (estacion3)
+                                        nEstacionesCompradas++;
+                                    if (estacion4)
+                                        nEstacionesCompradas++;
+
+                                    //Si tiene 1 estación, paga 25; 2, 50; 3, 100; 4, 200.
+                                    dineroAPagar = 25 * (int)Math.Pow(2, nEstacionesCompradas);
+                                }
+                                else if (propiedad.color == ColorPropiedad.SERVICIO)
+                                {
+                                    //Cogemos el jugador
+                                    Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
+
+                                    //Cogemos todas sus estaciones
+                                    bool servicio1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 12).estaComprado;
+                                    bool servicio2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 28).estaComprado;
+                                    
+                                    //Si tiene los dos servicios comprados, paga 10 veces la tirada; si solo tiene un servicio, 4 veces la tirada
+                                    dineroAPagar = (dado1 + dado2) * (servicio1 && servicio2 ? 10 : 4);
+                                }
+
+                                lobby.listadoJugadores[turnoActual].dinero -= dineroAPagar;
+                            }
+                        }
+                        else
+                        {
+                            //Miramos en qué tipo de casilla ha caído
+                            Random rnd = new Random();
+                            Carta carta;
+                            int cartaRandom;
+
+                            switch (casilla.tipo)
+                            {
+                                /*case TipoCasilla.SUERTE:
+                                    cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
+                                    carta = lobby.partida.listadoCartasSuerte[cartaRandom];
+                                    break;
+
+                                case TipoCasilla.COMUNIDAD:
+                                    cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
+                                    carta = lobby.partida.listadoCartasComunidad[cartaRandom];
+                                    break;*/
+
+                                case TipoCasilla.IRALACARCEL:
+                                    lobby.listadoJugadores[turnoActual].posicion = 9;
+                                    lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
+                                    break;
+
+                                case TipoCasilla.IMPUESTOAPPLE:
+                                    lobby.listadoJugadores[turnoActual].dinero -= 200;
+                                    break;
+
+                                case TipoCasilla.IMPUESTOAZURE:
+                                    lobby.listadoJugadores[turnoActual].dinero -= 100;
+                                    break;
+                            }
+                        }
+
+                        //Le damos 200$ si ha pasado por la casilla de SALIDA
+                        if (posicionActual < posicionAnterior)
+                            jugador.dinero += 200;
+
+                        if (jugador.dinero <= 0)
+                        {
+                            //TODO El jugador ha perdido
+                        }
+                        else
+                        {
+                            //TODO El jugador no ha perdido
+                        }
+
+                    }
+                    else
+                        lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
+                    
+                    //Se calcula el nuevo turno
+                    turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+
+                    //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
+                    //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
+                    if (turnoNuevo == turnoActual)
+                    {
+                        //TODO Se ha decidido un ganador
+                    }
+                    else
+                    {
+                        //TODO La partida continúa
+                    }
+
+                    //Avisamos a los otros jugadores de los cambios
+                    foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                    {
+                        Clients.Client(connectionId).actualizarLobby(lobby);
+                        if (connectionId != connectionIDCreador)
+                            Clients.Client(connectionId).siguienteTurno();
                     }
                 }
-            }
-            else
-                lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
-
-            //Se calcula el nuevo turno
-            lobby.partida.turnoActual = GestoraPartida.calcularNuevoTurno(turnoActual, lobby.maxJugadores);
-
-            //Avisamos a los otros jugadores de los cambios
-            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-            {
-                Clients.Client(connectionId).actualizarLobby(lobby);
-                if(connectionId != connectionIDCreador)
-                    Clients.Client(connectionId).siguienteTurno();
             }
         }
 
@@ -123,8 +201,8 @@ namespace PolyFlamaServer.Hubs
             propiedadJugador.comprador = jugador;
 
             //Cambiamos la información en la propiedad de la partida
-            propiedad.comprador = jugador;
             propiedad.estaComprado = true;
+            propiedad.comprador = jugador;
 
             //Llamamos a todo el grupo y les actualizamos el lobby
             string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre];
@@ -150,6 +228,9 @@ namespace PolyFlamaServer.Hubs
                 
                 if(GameInfo.conexionesEstablecidas[nombreLobby] == LobbyInfo.listadoLobbies[nombreLobby].lobby.maxJugadores)
                 {
+                    //Creamos el lock
+                    Locks.lockTirarDados.Add(nombreLobby, new object());
+
                     //La partida ha empezado
                     LobbyInfo.listadoLobbies[nombreLobby].lobby.partidaEmpezada = true;
 

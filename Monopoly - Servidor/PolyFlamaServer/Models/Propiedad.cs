@@ -32,19 +32,20 @@ namespace PolyFlamaServer.Models
         /*
          * Constructor para crear propiedades más fácilmente
          */ 
-        public Propiedad(int precio, ColorPropiedad color, int posicionEnTablero) : base()
+        public Propiedad(int precio, ColorPropiedad color, int posicionEnTablero, int dineroAPagar) : base()
         {
             this.precio = precio;
             this.nCasas = 0;
             this.tieneHotel = false;
             this.estaComprado = false;
             this.color = color;
-            this.dineroAPagar = 0;
+            this.dineroAPagar = dineroAPagar;
             this.comprador = null;
             this.posicionEnTablero = posicionEnTablero;
         }
 
-        public Propiedad()
+        //ME CAGO EN TU PUTA VIDA PUTO CONSTRUCTOR DE LOS GÜEBOS
+        public Propiedad() //🔫🔫🔫
         {
 
         }
