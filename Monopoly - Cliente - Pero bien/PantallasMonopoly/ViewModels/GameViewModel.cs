@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 
 namespace PantallasMonopoly.ViewModels
@@ -73,13 +74,15 @@ namespace PantallasMonopoly.ViewModels
 
         public GameViewModel()
         {
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            conn = new HubConnection("http://localhost:51144/");
             proxy = conn.CreateHubProxy("GameHub");
             conn.Start();
             proxy.On<Lobby>("actualizarLobby", actualizarLobby);
             proxy.On("moverCasillas", moverCasillas);
             proxy.On("comprarPropiedad", comprarPropiedad);
             proxy.On("conectar", conectar);
+            proxy.On("todosConectados", todosConectados);
+            proxy.On("partidaPerdida", partidaPerdida);
             lobby = new Lobby();
         }
 
@@ -124,6 +127,27 @@ namespace PantallasMonopoly.ViewModels
             );
         }
 
+        private async void todosConectados()
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               async () =>
+               {
+                   var messageDialog = new MessageDialog("Everyone has loaded in! The game can begin. GLHF");
+                   await messageDialog.ShowAsync();
+               }
+            );
+        }
+
+        private async void partidaPerdida()
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               async () =>
+               {
+                   var messageDialog = new MessageDialog("You lost :( GL next time");
+                   await messageDialog.ShowAsync();
+               }
+            );
+        }
 
         #endregion
 
@@ -147,7 +171,6 @@ namespace PantallasMonopoly.ViewModels
 
                    if (result == ContentDialogResult.Primary)
                    {
-
                        await proxy.Invoke("comprarPropiedad", _lobby.nombre);
                    }
                }

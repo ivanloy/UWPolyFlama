@@ -130,12 +130,12 @@ namespace PolyFlamaServer.Hubs
                                 case TipoCasilla.COMUNIDAD:
                                     cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
                                     carta = lobby.partida.listadoCartasComunidad[cartaRandom];
-                                    break;*/
+                                    break;
 
                                 case TipoCasilla.IRALACARCEL:
                                     lobby.listadoJugadores[turnoActual].posicion = 9;
                                     lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
-                                    break;
+                                    break;*/
 
                                 case TipoCasilla.IMPUESTOAPPLE:
                                     lobby.listadoJugadores[turnoActual].dinero -= 200;
@@ -153,7 +153,7 @@ namespace PolyFlamaServer.Hubs
 
                         if (jugador.dinero <= 0)
                         {
-                            //TODO El jugador ha perdido
+                            Clients.Caller.partidaPerdida();
                         }
                         else
                         {
@@ -195,10 +195,12 @@ namespace PolyFlamaServer.Hubs
             Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual];
             Propiedad propiedad = (Propiedad)LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[jugador.posicion];
             Propiedad propiedadJugador = jugador.listadoPropiedades.Single(x => x.posicionEnTablero == jugador.posicion);
-            
+
+            //Le quitamos el dinero al jugador, taría bien la verdad
+            jugador.dinero -= propiedad.precio;
+
             //Cambiamos la información en el jugador
             propiedadJugador.estaComprado = true;
-            propiedadJugador.comprador = jugador;
 
             //Cambiamos la información en la propiedad de la partida
             propiedad.estaComprado = true;
