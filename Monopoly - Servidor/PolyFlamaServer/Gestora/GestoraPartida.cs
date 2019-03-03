@@ -90,32 +90,32 @@ namespace PolyFlamaServer.Gestora
             
             listado.Add(new Propiedad(-99, ColorPropiedad.MARRON, 1, 2));
             listado.Add(new Propiedad(-99, ColorPropiedad.MARRON, 3, 4));
-            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 5, 25));
             listado.Add(new Propiedad(100, ColorPropiedad.CELESTE, 6, 6));
             listado.Add(new Propiedad(100, ColorPropiedad.CELESTE, 8, 6));
             listado.Add(new Propiedad(120, ColorPropiedad.CELESTE, 9, 8));
             listado.Add(new Propiedad(140, ColorPropiedad.ROSA, 11, 10));
-            listado.Add(new Propiedad(150, ColorPropiedad.SERVICIO, 12, 4));
             listado.Add(new Propiedad(140, ColorPropiedad.ROSA, 13, 10));
             listado.Add(new Propiedad(160, ColorPropiedad.ROSA, 14, 12));
-            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 15, 25));
             listado.Add(new Propiedad(180, ColorPropiedad.NARANJA, 16, 14));
             listado.Add(new Propiedad(180, ColorPropiedad.NARANJA, 18, 14));
             listado.Add(new Propiedad(200, ColorPropiedad.NARANJA, 19, 16));
             listado.Add(new Propiedad(220, ColorPropiedad.ROJO, 21, 18));
             listado.Add(new Propiedad(220, ColorPropiedad.ROJO, 23, 18));
             listado.Add(new Propiedad(240, ColorPropiedad.ROJO, 24, 20));
-            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 25, 25));
             listado.Add(new Propiedad(260, ColorPropiedad.AMARILLO, 26, 22));
             listado.Add(new Propiedad(260, ColorPropiedad.AMARILLO, 27, 22));
-            listado.Add(new Propiedad(150, ColorPropiedad.SERVICIO, 28, 4));
             listado.Add(new Propiedad(280, ColorPropiedad.AMARILLO, 29, 24));
             listado.Add(new Propiedad(300, ColorPropiedad.VERDE, 31, 26));
             listado.Add(new Propiedad(300, ColorPropiedad.VERDE, 32, 26));
             listado.Add(new Propiedad(320, ColorPropiedad.VERDE, 34, 28));
-            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 35, 25));
             listado.Add(new Propiedad(350, ColorPropiedad.AZUL, 37, 35));
             listado.Add(new Propiedad(400, ColorPropiedad.AZUL, 39, 50));
+            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 5, 25));
+            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 15, 25));
+            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 25, 25));
+            listado.Add(new Propiedad(200, ColorPropiedad.ESTACION, 35, 25));
+            listado.Add(new Propiedad(150, ColorPropiedad.SERVICIO, 12, 4));
+            listado.Add(new Propiedad(150, ColorPropiedad.SERVICIO, 28, 4));
 
             return listado;
         }

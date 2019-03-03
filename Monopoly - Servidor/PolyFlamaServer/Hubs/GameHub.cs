@@ -67,16 +67,17 @@ namespace PolyFlamaServer.Hubs
                             //Si la propiedad no está comprada y el jugador tiene dinero para comprarla
                             if (!propiedad.estaComprado && jugador.dinero >= propiedad.precio)
                                 Clients.Caller.comprarPropiedad(propiedad);
-                            else
+                            else if (propiedad.estaComprado && propiedad.comprador.nombre != jugador.nombre) //Comprobar que si la propiedad esté comprada, que no sea del mismo jugador que ha caído
                             {
                                 //Empezamos cogiendo el dinero del dinero a pagar de la propiedad
                                 int dineroAPagar = propiedad.dineroAPagar;
 
+                                //Cogemos el jugador
+                                Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
+
                                 //Si la propiedad en la que ha caído es una estación o un servicio, hay que comprobar cuántas estaciones o servicios tiene compradas el dueño
                                 if (propiedad.color == ColorPropiedad.ESTACION)
                                 {
-                                    //Cogemos el jugador
-                                    Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
                                     int nEstacionesCompradas = 0;
 
                                     //Cogemos todas las estaciones
@@ -99,18 +100,18 @@ namespace PolyFlamaServer.Hubs
                                 }
                                 else if (propiedad.color == ColorPropiedad.SERVICIO)
                                 {
-                                    //Cogemos el jugador
-                                    Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
-
                                     //Cogemos todas sus estaciones
                                     bool servicio1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 12).estaComprado;
                                     bool servicio2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 28).estaComprado;
-                                    
+
                                     //Si tiene los dos servicios comprados, paga 10 veces la tirada; si solo tiene un servicio, 4 veces la tirada
                                     dineroAPagar = (dado1 + dado2) * (servicio1 && servicio2 ? 10 : 4);
                                 }
 
+                                //Le quitamos el dinero al jugador
                                 lobby.listadoJugadores[turnoActual].dinero -= dineroAPagar;
+                                //Le damos el dinero al jugador dueño
+                                jugadorDueno.dinero += dineroAPagar;
                             }
                         }
                         else
@@ -169,17 +170,18 @@ namespace PolyFlamaServer.Hubs
 
                     //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
                     //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
-                    if (turnoNuevo == turnoActual)
+                    //TODO Quitarlo pal release
+                    /*if (turnoNuevo == turnoActual)
                     {
                         //TODO Se ha decidido un ganador
                     }
                     else
-                    {
+                    {*/
                         //Avisamos al jugador de que es su turno nuevo
                         Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
                         string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
                         Clients.Client(connectionIDNuevo).esTuTurno();
-                    }
+                    //}
 
                     //Avisamos a los otros jugadores de los cambios
                     foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
@@ -239,9 +241,21 @@ namespace PolyFlamaServer.Hubs
                     //La partida ha empezado
                     LobbyInfo.listadoLobbies[nombreLobby].lobby.partidaEmpezada = true;
 
-                    //Avisamos a todos de que todos se han conectado correctamente
+                    //Cogemos el jugador que vaya a ser el primero en tirar
+                    int turnoActual = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual;
+                    Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoActual];
+                    string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
+
+                    //Avisamos a todos de que todos se han conectado correctamente, y al que tire primero, le avisamos de que es su turno
                     foreach (string connectionID in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                        Clients.Client(connectionID).todosConectados();
+                    {
+                        //Si la connectionID es la del jugador que va a tirar primero, le avisamos de que es su turno
+                        if(connectionID == connectionIDNuevo)
+                            Clients.Client(connectionIDNuevo).esTuTurno();
+                        else //Si no, avisamos a los demás de que todos se han conectado ya y la partida va a empezar
+                            Clients.Client(connectionID).todosConectados();
+                    }
+
                 }
             }
 
