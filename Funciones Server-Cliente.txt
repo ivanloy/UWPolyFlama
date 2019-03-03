@@ -24,7 +24,7 @@ Funciones EN EL CLIENTE:
  - unirALobby(bool puedeEntrar) //Método que te debe entrar al lobby si es true, y si es false es que el nombre estaba ya elegido
  - empezarPartida() //Se llama cuando la partida ha empezado
  - moverCasillas() //No necesita nada porque Lobby tiene el array de dados y el jugador que debe moverse
- - comprarPropiedad() //No necesita nada porque Lobby tiene el jugador y la posición en la que está
+ - comprarPropiedad(Propiedad propiedad) //No necesita nada porque Lobby tiene el jugador y la posición en la que está. Te devuelve la propiedad que va a comprar el jugador.
  - terminarTurno() //Método que llama al jugador que esté en ese turno, y le mostrará en un dialog lo que haya pasado
  - siguienteTurno() //Avisa a los demás de que el turno ha terminado y ha pasado al siguiente
  - salirDeLobby() //Método que te saca de la pantalla de lobby
@@ -35,3 +35,4 @@ Funciones EN EL CLIENTE:
  - todosConectados() //Se llama cuando todos han conectado y actualizado su connectionID correctamente
  - partidaPerdida() //Se llama cuando te quedas sin dinero
  - partidaGanada() //Se llama cuando ganas la partida
+ - esTuTurno() //Se llama cuando es tu turno. Se llama solo a la persona la cual sea su turno.

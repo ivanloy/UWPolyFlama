@@ -66,7 +66,7 @@ namespace PolyFlamaServer.Hubs
                             Propiedad propiedad = (Propiedad)casilla;
                             //Si la propiedad no está comprada y el jugador tiene dinero para comprarla
                             if (!propiedad.estaComprado && jugador.dinero >= propiedad.precio)
-                                Clients.Caller.comprarPropiedad();
+                                Clients.Caller.comprarPropiedad(propiedad);
                             else
                             {
                                 //Empezamos cogiendo el dinero del dinero a pagar de la propiedad
@@ -175,7 +175,10 @@ namespace PolyFlamaServer.Hubs
                     }
                     else
                     {
-                        //TODO La partida continúa
+                        //Avisamos al jugador de que es su turno nuevo
+                        Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
+                        string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
+                        Clients.Client(connectionIDNuevo).esTuTurno();
                     }
 
                     //Avisamos a los otros jugadores de los cambios
