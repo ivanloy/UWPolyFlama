@@ -44,6 +44,22 @@ namespace PantallasMonopoly.Views
                 viewModel.lobby = model.lobby;
             }
         }
+        private void Image_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Image image = (Image)sender;
+            img_cartaHover.Source = image.Source;
+                
+        }
+
+        private void Image_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            img_cartaHover.Source = null;
+            //imageCenter.Source = null;
+            //imageCenter2.Source = null;
+            //image.Scale(duration: 200, delay: 0, centerX: 0.5f, centerY: 0.5f, scaleX: 1f, scaleY: 1f).StartAsync();
+            //image.Offset(offsetX: 0f, offsetY: 0f, duration: 200, delay: 200, easingType: EasingType.Linear);
+
+        }
 
     }
 }
