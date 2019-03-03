@@ -1,4 +1,5 @@
 ﻿using PantallasMonopoly.Models.Enums;
+using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,42 +18,49 @@ namespace PantallasMonopoly.Models
         public int dineroAPagar { get; set; }
         public Jugador comprador { get; set; }
         public int posicionEnTablero { get; set; }
+        public float opacidad {
+            get {
+                if (listadoJugadores.Count >= 1) return 0.6f;
+                return 1;
+            }
+        }
         public Brush brushColor {
             get {
                 Brush ret = new SolidColorBrush(Colors.Black);
+                Colores colores = new Colores();
                 if (this.estaComprado)
                 {
                     switch (this.color)
                     {
                         case ColorPropiedad.AMARILLO:
-                            ret = new SolidColorBrush(Colors.Yellow);
+                            ret = colores.AMARILLO;
                             break;
                         case ColorPropiedad.AZUL:
-                            ret = new SolidColorBrush(Colors.Blue);
+                            ret = colores.AZUL;
                             break;
                         case ColorPropiedad.CELESTE:
-                            ret = new SolidColorBrush(Colors.AliceBlue);
+                            ret = colores.CELESTE;
                             break;
                         case ColorPropiedad.ESTACION:
                             ret = new SolidColorBrush(Colors.White);
                             break;
                         case ColorPropiedad.MARRON:
-                            ret = new SolidColorBrush(Colors.Brown);
+                            ret = colores.MARRON;
                             break;
                         case ColorPropiedad.NARANJA:
-                            ret = new SolidColorBrush(Colors.Orange);
+                            ret = colores.NARANJA;
                             break;
                         case ColorPropiedad.ROJO:
-                            ret = new SolidColorBrush(Colors.Red);
+                            ret = colores.ROJO;
                             break;
                         case ColorPropiedad.ROSA:
-                            ret = new SolidColorBrush(Colors.Pink);
+                            ret = colores.ROSA;
                             break;
                         case ColorPropiedad.SERVICIO:
                             ret = new SolidColorBrush(Colors.LightGray);
                             break;
                         case ColorPropiedad.VERDE:
-                            ret = new SolidColorBrush(Colors.Green);
+                            ret = colores.VERDE;
                             break;
                     }
                 }

@@ -11,6 +11,12 @@ namespace PantallasMonopoly.Models
         public Uri imagen { get; set; }
         public TipoCasilla tipo { get; set; }
         public List<Jugador> listadoJugadores { get; set; }
+        public float opacidad {
+            get {
+                if (listadoJugadores.Count >= 1) return 0.6f;
+                return 1;
+            }
+        }
 
         public string tamanoImagenFichaJugador {
             get {

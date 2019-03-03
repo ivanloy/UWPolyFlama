@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
 using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
+using PantallasMonopoly.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace PantallasMonopoly.ViewModels
         private Lobby _lobby;
         private DelegateCommand _tirarDadosCommand;
         private Jugador _jugadorCliente;
+        private bool esMiTurno;
 
         #endregion
 
@@ -43,6 +45,7 @@ namespace PantallasMonopoly.ViewModels
                 NotifyPropertyChanged("lobby");
             }
         }
+        public Colores colores { get; set; }
 
         #endregion
 
@@ -74,15 +77,17 @@ namespace PantallasMonopoly.ViewModels
 
         public GameViewModel()
         {
-            conn = new HubConnection("http://localhost:51144/");
+            colores = new Colores();
+            conn = new HubConnection("http://polyflama.azurewebsites.net/");
             proxy = conn.CreateHubProxy("GameHub");
             conn.Start();
             proxy.On<Lobby>("actualizarLobby", actualizarLobby);
             proxy.On("moverCasillas", moverCasillas);
-            proxy.On("comprarPropiedad", comprarPropiedad);
+            proxy.On<Propiedad>("comprarPropiedad", comprarPropiedad);
             proxy.On("conectar", conectar);
             proxy.On("todosConectados", todosConectados);
             proxy.On("partidaPerdida", partidaPerdida);
+            proxy.On("esTuTurno", esTuTurno);
             lobby = new Lobby();
         }
 
@@ -90,11 +95,16 @@ namespace PantallasMonopoly.ViewModels
 
         #region Metodos Signalr
 
-        private void comprarPropiedad()
+        private void comprarPropiedad(Propiedad propiedad)
         {
 
-            dialogComprar();
+            dialogComprar(propiedad);
 
+        }
+        private void esTuTurno()
+        {
+            esMiTurno = true;
+            _tirarDadosCommand.RaiseCanExecuteChanged();
         }
 
         private async void moverCasillas()
@@ -102,6 +112,8 @@ namespace PantallasMonopoly.ViewModels
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                 () =>
                 {
+                    esMiTurno = false; //TODO UFF, esto puedo joder
+                    _tirarDadosCommand.RaiseCanExecuteChanged();
                 }
             );
         }
@@ -153,7 +165,7 @@ namespace PantallasMonopoly.ViewModels
 
         #region Otros
 
-        private async void dialogComprar()
+        private async void dialogComprar(Propiedad propiedad)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                async () =>
@@ -161,7 +173,7 @@ namespace PantallasMonopoly.ViewModels
                    ContentDialog logDialog = new ContentDialog()
                    {
                        Title = "Buy property",
-                       Content = "Do you want to buy this property?",
+                       Content = $"Do you want to buy this property for ${propiedad.precio}?",
                        PrimaryButtonText = "For sure!",
                        CloseButtonText = "Meh, maybe next time"
 
