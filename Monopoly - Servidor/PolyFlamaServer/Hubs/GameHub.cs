@@ -17,6 +17,7 @@ namespace PolyFlamaServer.Hubs
         {
             Lobby lobby = LobbyInfo.listadoLobbies[nombreLobby].lobby;
             int turnoActual = lobby.partida.turnoActual;
+            bool calcularNuevoTurno = false;
 
             //Lockeaso guapo 🔐🔐🔐
             lock (Locks.lockTirarDados[nombreLobby])
@@ -117,77 +118,27 @@ namespace PolyFlamaServer.Hubs
                                     dineroAPagar = (dado1 + dado2) * (nServicios == 1 ? 4 : 10);
 
                                     //Mandarle mensajito al jugador
-                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugador.nombre} owns this service. He {(nServicios == 1 ? "only owns this service" : "owns both services")}, therefore, you paid him {(nServicios == 1 ? "4" : "10")} times the roll: {dineroAPagar}$");
+                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this service. He {(nServicios == 1 ? "only owns this service" : "owns both services")}, therefore, you paid him {(nServicios == 1 ? "4" : "10")} times the roll: {dineroAPagar}$");
                                 }
                                 else
                                 {
                                     //Mandarle mensajito al jugador
-                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugador.nombre} owns this property. You paid him {dineroAPagar}$");
+                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this property. You paid him {dineroAPagar}$");
                                 }
 
                                 //Le quitamos el dinero al jugador
                                 lobby.listadoJugadores[turnoActual].dinero -= dineroAPagar;
                                 //Le damos el dinero al jugador dueño
                                 jugadorDueno.dinero += dineroAPagar;
-
                                 
-                                //Se calcula el nuevo turno
-                                turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+                                //Avisamos de que se debe calcular nuevo turno
+                                calcularNuevoTurno = true;
 
-                                //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
-                                //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
-                                //TODO Quitarlo pal release
-                                if (turnoNuevo == turnoActual)
-                                {
-                                    foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
-                                    {
-                                        if (jugadorGanador.dinero > 0)
-                                        {
-                                            Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
-                                            break;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    //Avisamos al jugador de que es su turno nuevo
-                                    Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
-                                    string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
-                                    lobby.partida.turnoActual = turnoNuevo;
-
-                                    //Avisamos al jugador
-                                    Clients.Client(connectionIDNuevo).esTuTurno();
-                                }
                             }
-                            else //Pasar el turno
+                            else //Se pasa el turno
                             {
-                                //Se calcula el nuevo turno
-                                turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
-
-                                //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
-                                //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
-                                //TODO Quitarlo pal release
-                                if (turnoNuevo == turnoActual)
-                                {
-                                    foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
-                                    {
-                                        if (jugadorGanador.dinero > 0)
-                                        {
-                                            Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
-                                            break;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    //Avisamos al jugador de que es su turno nuevo
-                                    Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
-                                    string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
-                                    lobby.partida.turnoActual = turnoNuevo;
-
-                                    //Avisamos al jugador
-                                    Clients.Client(connectionIDNuevo).esTuTurno();
-                                }
+                                //Avisamos de que se debe calcular nuevo turno
+                                calcularNuevoTurno = true;
                             }
 
                         }
@@ -195,20 +146,22 @@ namespace PolyFlamaServer.Hubs
                         {
                             //Miramos en qué tipo de casilla ha caído
                             Random rnd = new Random();
-                            Carta carta;
+                            Carta carta = null;
                             int cartaRandom;
 
                             switch (casilla.tipo)
                             {
-                                /*case TipoCasilla.SUERTE:
+                                case TipoCasilla.SUERTE:
                                     cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
                                     carta = lobby.partida.listadoCartasSuerte[cartaRandom];
+                                    Clients.Caller.mostrarMensaje(carta.texto);
                                     break;
 
                                 case TipoCasilla.COMUNIDAD:
                                     cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
                                     carta = lobby.partida.listadoCartasComunidad[cartaRandom];
-                                    break;*/
+                                    Clients.Caller.mostrarMensaje(carta.texto);
+                                    break;
 
                                 case TipoCasilla.IRALACARCEL:
                                     lobby.listadoJugadores[turnoActual].posicion = 10;
@@ -226,33 +179,45 @@ namespace PolyFlamaServer.Hubs
                                     break;
                             }
 
-                            //Se calcula el nuevo turno
-                            turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
-
-                            //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
-                            //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
-                            //TODO Quitarlo pal release
-                            if (turnoNuevo == turnoActual)
+                            if(casilla.tipo == TipoCasilla.SUERTE || casilla.tipo == TipoCasilla.COMUNIDAD)
                             {
-                                foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                                string[] efectoString = carta.efecto.ToString().Split('_');
+                                string efecto = efectoString[0];
+                                int valor = int.Parse(efectoString[1]);
+
+                                switch(efecto)
                                 {
-                                    if (jugadorGanador.dinero > 0)
-                                    {
-                                        Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
+                                    case "DAR":
+                                        jugador.dinero += valor;
                                         break;
-                                    }
+
+                                    case "QUITAR":
+                                        jugador.dinero -= valor;
+                                        break;
+
+                                    case "MOVER":
+                                        lobby.listadoJugadores[turnoActual].posicion = 10;
+                                        lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
+                                        lobby.partida.listadoCasillas[10].listadoJugadores.Add(jugador);
+                                        lobby.partida.listadoCasillas[posicionActual].listadoJugadores.Remove(jugador);
+                                        break;
+
+                                    case "GLOBAL":
+                                        foreach(Jugador jugadorGlobal in lobby.listadoJugadores)
+                                        {
+                                            if(jugadorGlobal.dinero > 0)
+                                            {
+                                                jugadorGlobal.dinero += valor;
+                                                jugador.dinero -= valor;
+                                            }
+                                        }
+                                        break;
                                 }
                             }
-                            else
-                            {
-                                //Avisamos al jugador de que es su turno nuevo
-                                Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
-                                string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
-                                lobby.partida.turnoActual = turnoNuevo;
 
-                                //Avisamos al jugador
-                                Clients.Client(connectionIDNuevo).esTuTurno();
-                            }
+                            //Avisamos de que se debe calcular nuevo turno
+                            calcularNuevoTurno = true;
+
                         }
 
                         //Le damos 200$ si ha pasado por la casilla de SALIDA
@@ -267,21 +232,45 @@ namespace PolyFlamaServer.Hubs
                     {
                         lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
 
-                        //Se calcula el nuevo turno
-                        turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
-                        
-                        //Avisamos al jugador de que es su turno nuevo
-                        Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
-                        string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
-                        lobby.partida.turnoActual = turnoNuevo;
-
-                        //Avisamos al jugador
-                        Clients.Client(connectionIDNuevo).esTuTurno();
+                        //Avisamos de que se debe calcular nuevo turno
+                        calcularNuevoTurno = true;
                     }
 
                     //Avisamos a los otros jugadores de los cambios
                     foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                         Clients.Client(connectionId).actualizarLobby(lobby);
+
+                    //Comprobamos si hay que calcular un nuevo turno
+                    if (calcularNuevoTurno)
+                    {
+                        //Se calcula el nuevo turno
+                        turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+
+                        //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
+                        //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
+                        //TODO Quitarlo pal release
+                        if (turnoNuevo == turnoActual)
+                        {
+                            foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                            {
+                                if (jugadorGanador.dinero > 0)
+                                {
+                                    Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //Avisamos al jugador de que es su turno nuevo
+                            Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
+                            string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
+                            lobby.partida.turnoActual = turnoNuevo;
+
+                            //Avisamos al jugador
+                            Clients.Client(connectionIDNuevo).esTuTurno();
+                        }
+                    }
 
                 }
             }
