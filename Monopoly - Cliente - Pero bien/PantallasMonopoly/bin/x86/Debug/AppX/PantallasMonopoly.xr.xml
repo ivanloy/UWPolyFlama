@@ -11,6 +11,8 @@
     <RootPropertyPathName Name="brushColor" />
     <RootPropertyPathName Name="dineroConSimboloDolar" />
     <RootPropertyPathName Name="nombre" />
+    <RootPropertyPathName Name="ficha" />
+    <RootPropertyPathName Name="imagenBordes" />
     <RootPropertyPathName Name="colores" />
     <RootPropertyPathName Name="PLAYER_4B" />
     <RootPropertyPathName Name="PLAYER_4" />
@@ -18,8 +20,6 @@
     <RootPropertyPathName Name="PLAYER_3" />
     <RootPropertyPathName Name="PLAYER_2B" />
     <RootPropertyPathName Name="PLAYER_2" />
-    <RootPropertyPathName Name="ficha" />
-    <RootPropertyPathName Name="imagenBordes" />
     <RootPropertyPathName Name="PLAYER_1B" />
     <RootPropertyPathName Name="PLAYER_1" />
     <RootPropertyPathName Name="partida" />
@@ -179,7 +179,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Stroke" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -204,13 +203,6 @@
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-      <RootProperty Name="MinWidth" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Name" />
       <RootProperty Name="Source" />
@@ -224,6 +216,13 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="PointerEntered" />
       <RootEvent Name="PointerExited" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+      <RootProperty Name="MinWidth" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="PantallasMonopoly.Views.GameView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
