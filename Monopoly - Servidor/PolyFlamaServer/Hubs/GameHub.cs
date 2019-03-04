@@ -86,6 +86,7 @@ namespace PolyFlamaServer.Hubs
                                     bool estacion3 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 25).estaComprado;
                                     bool estacion4 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 35).estaComprado;
 
+                                    //Contar cuántas estaciones tiene compradas
                                     if (estacion1)
                                         nEstacionesCompradas++;
                                     if (estacion2)
@@ -131,12 +132,14 @@ namespace PolyFlamaServer.Hubs
                                 case TipoCasilla.COMUNIDAD:
                                     cartaRandom = rnd.Next(0, lobby.partida.listadoCartasSuerte.Count);
                                     carta = lobby.partida.listadoCartasComunidad[cartaRandom];
-                                    break;
+                                    break;*/
 
                                 case TipoCasilla.IRALACARCEL:
-                                    lobby.listadoJugadores[turnoActual].posicion = 9;
+                                    lobby.listadoJugadores[turnoActual].posicion = 10;
                                     lobby.listadoJugadores[turnoActual].estaEnCarcel = true;
-                                    break;*/
+                                    lobby.partida.listadoCasillas[10].listadoJugadores.Add(jugador);
+                                    lobby.partida.listadoCasillas[posicionActual].listadoJugadores.Remove(jugador);
+                                    break;
 
                                 case TipoCasilla.IMPUESTOAPPLE:
                                     lobby.listadoJugadores[turnoActual].dinero -= 200;
@@ -194,29 +197,36 @@ namespace PolyFlamaServer.Hubs
             }
         }
 
-        public void comprarPropiedad(string nombreLobby)
+        public void comprarPropiedad(string nombreLobby, bool quiereComprar)
         {
-            //Buscamos la información de 💩💩💩
-            Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual];
-            Propiedad propiedad = (Propiedad)LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[jugador.posicion];
-            Propiedad propiedadJugador = jugador.listadoPropiedades.Single(x => x.posicionEnTablero == jugador.posicion);
+            if(quiereComprar)
+            {
+                //Buscamos la información de 💩💩💩
+                Jugador jugador = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual];
+                Propiedad propiedad = (Propiedad)LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.listadoCasillas[jugador.posicion];
+                Propiedad propiedadJugador = jugador.listadoPropiedades.Single(x => x.posicionEnTablero == jugador.posicion);
 
-            //Le quitamos el dinero al jugador, taría bien la verdad
-            jugador.dinero -= propiedad.precio;
+                //Le quitamos el dinero al jugador, taría bien la verdad
+                jugador.dinero -= propiedad.precio;
 
-            //Cambiamos la información en el jugador
-            propiedadJugador.estaComprado = true;
+                //Cambiamos la información en el jugador
+                propiedadJugador.estaComprado = true;
 
-            //Cambiamos la información en la propiedad de la partida
-            propiedad.estaComprado = true;
-            propiedad.comprador = jugador;
+                //Cambiamos la información en la propiedad de la partida
+                propiedad.estaComprado = true;
+                propiedad.comprador = jugador;
 
-            //Llamamos a todo el grupo y les actualizamos el lobby
-            string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre];
+                //Llamamos a todo el grupo y les actualizamos el lobby
+                string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[0].nombre];
 
-            //Avisamos a los otros jugadores de los cambios
-            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+                //Avisamos a los otros jugadores de los cambios
+                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                    Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
+            }
+            else
+            {
+                //TODO Seguir con el siguiente turno
+            }
 
         }
 

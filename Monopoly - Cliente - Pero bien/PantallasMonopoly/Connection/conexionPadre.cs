@@ -9,12 +9,10 @@ namespace PantallasMonopoly.Connection
 {
     public class conexionPadre
     {
-
+        public static string conexionURL = "http://polyflama.azurewebsites.net/";
+        //public static string conexionURL = "http://localhost:51144/";
         private static HubConnection _conn;
         private static IHubProxy _proxy;
-
-     
-
         public static IHubProxy proxy
         {
 
@@ -22,7 +20,8 @@ namespace PantallasMonopoly.Connection
             {
                 if (_proxy == null) {
 
-                    _conn = new HubConnection("http://polyflama.azurewebsites.net/");
+                    if (_conn == null)
+                        _conn = new HubConnection(conexionURL);
                     _proxy = _conn.CreateHubProxy("LobbyHub");
                     _conn.Start().Wait();
                 }
@@ -32,18 +31,17 @@ namespace PantallasMonopoly.Connection
 
         }
 
-
         public static void close()
         {
-            if (_conn != null && _conn.State == ConnectionState.Connected) {
+            if (_conn != null && _conn.State == ConnectionState.Connected)
+            {
 
                 _conn.Stop();
                 _proxy = null;
             }
 
-          
-        }
 
+        }
 
     }
 }

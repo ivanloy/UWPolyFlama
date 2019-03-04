@@ -21,7 +21,7 @@ namespace PantallasMonopoly.ViewModels
         private Lobby _lobby;
         private DelegateCommand _tirarDadosCommand;
         private Jugador _jugadorCliente;
-        private bool esMiTurno;
+        private bool _esMiTurno;
 
         #endregion
 
@@ -62,11 +62,13 @@ namespace PantallasMonopoly.ViewModels
         }
         private bool _tirarDadosCommand_CanExecute()
         {
-            return true;
+            return _esMiTurno;
         }
 
         private async void _tirarDadosCommand_Executed()
         {
+            _esMiTurno = false;
+            _tirarDadosCommand.RaiseCanExecuteChanged();
             await proxy.Invoke("tirarDados", lobby.nombre);
             //NotifyPropertyChanged("lobby"); //Esto ya no hace falta con el nuevo notify
         }
@@ -78,11 +80,11 @@ namespace PantallasMonopoly.ViewModels
         public GameViewModel()
         {
             colores = new Colores();
-            conn = new HubConnection("http://polyflama.azurewebsites.net/");
+            conn = new HubConnection(conexionPadre.conexionURL);
             proxy = conn.CreateHubProxy("GameHub");
             conn.Start();
             proxy.On<Lobby>("actualizarLobby", actualizarLobby);
-            proxy.On("moverCasillas", moverCasillas);
+            //proxy.On("moverCasillas", moverCasillas);
             proxy.On<Propiedad>("comprarPropiedad", comprarPropiedad);
             proxy.On("conectar", conectar);
             proxy.On("todosConectados", todosConectados);
@@ -101,10 +103,18 @@ namespace PantallasMonopoly.ViewModels
             dialogComprar(propiedad);
 
         }
-        private void esTuTurno()
+        private async void esTuTurno()
         {
-            esMiTurno = true;
-            _tirarDadosCommand.RaiseCanExecuteChanged();
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+            async() =>
+                {
+                    _esMiTurno = true;
+                    _tirarDadosCommand.RaiseCanExecuteChanged();
+
+                    var messageDialog = new MessageDialog("It's your turn");
+                    await messageDialog.ShowAsync();
+                }
+                );
         }
 
         private async void moverCasillas()
@@ -112,7 +122,6 @@ namespace PantallasMonopoly.ViewModels
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                 () =>
                 {
-                    esMiTurno = false; //TODO UFF, esto puedo joder
                     _tirarDadosCommand.RaiseCanExecuteChanged();
                 }
             );
@@ -181,10 +190,8 @@ namespace PantallasMonopoly.ViewModels
 
                    ContentDialogResult result = await logDialog.ShowAsync();
 
-                   if (result == ContentDialogResult.Primary)
-                   {
-                       await proxy.Invoke("comprarPropiedad", _lobby.nombre);
-                   }
+                   //Llama con true si quiere comprar, false si le ha dado al otro botón
+                   await proxy.Invoke("comprarPropiedad", _lobby.nombre, result == ContentDialogResult.Primary);
                }
                );
         }
