@@ -25,12 +25,34 @@ namespace PolyFlamaServer.Gestora
 
         private static List<Carta> generarCartasComunidad()
         {
-            return new List<Carta>();
+            List<Carta> listadoCartas = new List<Carta>();
+
+            listadoCartas.Add(new Carta("You enter in the family, you get 50$", EfectosEnum.DAR_50, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("Compiladora Dora finds a treasure, you get 50$", EfectosEnum.DAR_50, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("Your answer gets the most upvotes in StackOverflow, you get 50$", EfectosEnum.DAR_50, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("You find a flaw in Kingston's SSDs. They give you 100$ for your help.", EfectosEnum.DAR_100, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("You earn the average IT salary, you get 100$", EfectosEnum.DAR_100, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("You get hungry during break time, you spend 50$ on Hot Doritos and Mountain Dew", EfectosEnum.QUITAR_50, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("You dropped your headphones on your phone screen. It broke 😢. You spent 50$ on repairs", EfectosEnum.QUITAR_50, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("Did you know you can make clean code? You go to jail", EfectosEnum.MOVER_10, TipoCarta.COMUNIDAD));
+
+            return listadoCartas;
         }
 
         private static List<Carta> generarCartasSuerte()
         {
-            return new List<Carta>();
+            List<Carta> listadoCartas = new List<Carta>();
+
+            listadoCartas.Add(new Carta("You co-founded a big-ass company but sold it too early. You still get 50$", EfectosEnum.DAR_50, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You fixed your grandma's PC and she gave you some cash \" for you to spend it on something nice, young boy\". You love your grandma. You get 50$", EfectosEnum.DAR_50, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You found System! You also found 100$ under the couch", EfectosEnum.DAR_100, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You opened a PC to fix it. Inside there was an HDD with some bitcoins. You get 100$", EfectosEnum.DAR_100, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You screwed up everyone's git branches, you pay everyone 50$ to stay alive.", EfectosEnum.GLOBAL_50, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You didn't set WHERE in the DELETE FROM, you need to pay everyone 50$ for collateral damages", EfectosEnum.GLOBAL_50, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You spent 1 month trying to fix a simple error. You need an expensive psychologist. You lose 100$", EfectosEnum.QUITAR_100, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You kill your tiring co-worker who always makes the same joke. You go to jail very happily :) worth it tbh", EfectosEnum.MOVER_10, TipoCarta.SUERTE));
+
+            return listadoCartas;
         }
 
         private static List<Casilla> generarCasillas(List<Jugador> listadoJugadores)

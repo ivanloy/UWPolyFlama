@@ -19,11 +19,10 @@ namespace PolyFlamaServer.Models
          * "ganardinero:200" (Hacer que el jugador gane 200$)
          * "movercasilla:20" (Hacer que el jugador se mueva a la casilla 20)
          */
-        public string efecto { get; set; }
-        public static readonly Uri imagenDetras = new Uri("");
-        public string tipo { get; set; }
+        public EfectosEnum efecto { get; set; }
+        public TipoCarta tipo { get; set; }
 
-        public Carta(string texto, string efecto, string tipo)
+        public Carta(string texto, EfectosEnum efecto, TipoCarta tipo)
         {
             this.texto = texto;
             this.efecto = efecto;
