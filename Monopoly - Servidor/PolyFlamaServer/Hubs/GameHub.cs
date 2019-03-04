@@ -65,54 +65,90 @@ namespace PolyFlamaServer.Hubs
                         {
                             Propiedad propiedad = (Propiedad)casilla;
                             //Si la propiedad no está comprada y el jugador tiene dinero para comprarla
-                            if (!propiedad.estaComprado && jugador.dinero >= propiedad.precio)
+                            if (!propiedad.estaComprado && jugador.dinero > propiedad.precio)
                                 Clients.Caller.comprarPropiedad(propiedad);
-                            else if (propiedad.estaComprado && propiedad.comprador.nombre != jugador.nombre) //Comprobar que si la propiedad esté comprada, que no sea del mismo jugador que ha caído
+                            else
                             {
-                                //Empezamos cogiendo el dinero del dinero a pagar de la propiedad
-                                int dineroAPagar = propiedad.dineroAPagar;
-
-                                //Cogemos el jugador
-                                Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
-
-                                //Si la propiedad en la que ha caído es una estación o un servicio, hay que comprobar cuántas estaciones o servicios tiene compradas el dueño
-                                if (propiedad.color == ColorPropiedad.ESTACION)
+                                if (propiedad.estaComprado && propiedad.comprador.nombre != jugador.nombre) //Comprobar que si la propiedad esté comprada, que no sea del mismo jugador que ha caído
                                 {
-                                    int nEstacionesCompradas = 0;
+                                    //Empezamos cogiendo el dinero del dinero a pagar de la propiedad
+                                    int dineroAPagar = propiedad.dineroAPagar;
 
-                                    //Cogemos todas las estaciones
-                                    bool estacion1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 5).estaComprado;
-                                    bool estacion2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 15).estaComprado;
-                                    bool estacion3 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 25).estaComprado;
-                                    bool estacion4 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 35).estaComprado;
+                                    //Cogemos el jugador
+                                    Jugador jugadorDueno = lobby.listadoJugadores.Single(x => x.nombre == propiedad.comprador.nombre);
 
-                                    //Contar cuántas estaciones tiene compradas
-                                    if (estacion1)
-                                        nEstacionesCompradas++;
-                                    if (estacion2)
-                                        nEstacionesCompradas++;
-                                    if (estacion3)
-                                        nEstacionesCompradas++;
-                                    if (estacion4)
-                                        nEstacionesCompradas++;
+                                    //Si la propiedad en la que ha caído es una estación o un servicio, hay que comprobar cuántas estaciones o servicios tiene compradas el dueño
+                                    if (propiedad.color == ColorPropiedad.ESTACION)
+                                    {
+                                        int nEstacionesCompradas = 0;
 
-                                    //Si tiene 1 estación, paga 25; 2, 50; 3, 100; 4, 200.
-                                    dineroAPagar = 25 * (int)Math.Pow(2, nEstacionesCompradas);
+                                        //Cogemos todas las estaciones
+                                        bool estacion1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 5).estaComprado;
+                                        bool estacion2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 15).estaComprado;
+                                        bool estacion3 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 25).estaComprado;
+                                        bool estacion4 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 35).estaComprado;
+
+                                        //Contar cuántas estaciones tiene compradas
+                                        if (estacion1)
+                                            nEstacionesCompradas++;
+                                        if (estacion2)
+                                            nEstacionesCompradas++;
+                                        if (estacion3)
+                                            nEstacionesCompradas++;
+                                        if (estacion4)
+                                            nEstacionesCompradas++;
+
+                                        //Si tiene 1 estación, paga 25; 2, 50; 3, 100; 4, 200.
+                                        dineroAPagar = 25 * (int)Math.Pow(2, nEstacionesCompradas);
+                                    }
+                                    else if (propiedad.color == ColorPropiedad.SERVICIO)
+                                    {
+                                        //Cogemos todas sus estaciones
+                                        bool servicio1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 12).estaComprado;
+                                        bool servicio2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 28).estaComprado;
+
+                                        //Si tiene los dos servicios comprados, paga 10 veces la tirada; si solo tiene un servicio, 4 veces la tirada
+                                        dineroAPagar = (dado1 + dado2) * (servicio1 && servicio2 ? 10 : 4);
+                                    }
+
+                                    //Le quitamos el dinero al jugador
+                                    lobby.listadoJugadores[turnoActual].dinero -= dineroAPagar;
+                                    //Le damos el dinero al jugador dueño
+                                    jugadorDueno.dinero += dineroAPagar;
                                 }
-                                else if (propiedad.color == ColorPropiedad.SERVICIO)
+                                
+                                //Se calcula el nuevo turno
+                                turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+
+                                //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
+                                //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
+                                //TODO Quitarlo pal release
+                                if (turnoNuevo == turnoActual)
                                 {
-                                    //Cogemos todas sus estaciones
-                                    bool servicio1 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 12).estaComprado;
-                                    bool servicio2 = jugadorDueno.listadoPropiedades.Single(x => x.posicionEnTablero == 28).estaComprado;
+                                    foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                                    {
+                                        if (jugadorGanador.dinero > 0)
+                                        {
+                                            Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
+                                            break;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    //Avisamos al jugador de que es su turno nuevo
+                                    Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
+                                    string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
+                                    lobby.partida.turnoActual = turnoNuevo;
 
-                                    //Si tiene los dos servicios comprados, paga 10 veces la tirada; si solo tiene un servicio, 4 veces la tirada
-                                    dineroAPagar = (dado1 + dado2) * (servicio1 && servicio2 ? 10 : 4);
+                                    //Avisamos al jugador
+                                    Clients.Client(connectionIDNuevo).esTuTurno();
                                 }
 
-                                //Le quitamos el dinero al jugador
-                                lobby.listadoJugadores[turnoActual].dinero -= dineroAPagar;
-                                //Le damos el dinero al jugador dueño
-                                jugadorDueno.dinero += dineroAPagar;
+                                //Avisamos a los otros jugadores de los cambios
+                                foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                                    Clients.Client(connectionId).actualizarLobby(lobby);
+
                             }
                         }
                         else
@@ -164,41 +200,57 @@ namespace PolyFlamaServer.Hubs
                             //TODO El jugador no ha perdido
                         }
 
-                    }
-                    else
-                        lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
-                    
-                    //Se calcula el nuevo turno
-                    turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+                        //Se calcula el nuevo turno
+                        turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
 
-                    //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
-                    //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
-                    //TODO Quitarlo pal release
-                    if (turnoNuevo == turnoActual)
-                    {
-                        foreach(Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                        //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
+                        //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
+                        //TODO Quitarlo pal release
+                        if (turnoNuevo == turnoActual)
                         {
-                            if (jugadorGanador.dinero > 0)
+                            foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
                             {
-                                Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
-                                break;
+                                if (jugadorGanador.dinero > 0)
+                                {
+                                    Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
+                                    break;
+                                }
                             }
                         }
+                        else
+                        {
+                            //Avisamos al jugador de que es su turno nuevo
+                            Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
+                            string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
+                            lobby.partida.turnoActual = turnoNuevo;
+
+                            //Avisamos al jugador
+                            Clients.Client(connectionIDNuevo).esTuTurno();
+                        }
+
+                        //Avisamos a los otros jugadores de los cambios
+                        foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                            Clients.Client(connectionId).actualizarLobby(lobby);
+
                     }
                     else
                     {
+                        lobby.listadoJugadores[turnoActual].turnosEnCarcel++;
+
+                        //Se calcula el nuevo turno
+                        turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+                        
                         //Avisamos al jugador de que es su turno nuevo
                         Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
                         string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
-                        Clients.Client(connectionIDNuevo).esTuTurno();
-                    }
+                        lobby.partida.turnoActual = turnoNuevo;
 
-                    //Avisamos a los otros jugadores de los cambios
-                    foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                    {
-                        Clients.Client(connectionId).actualizarLobby(lobby);
-                        if (connectionId != connectionIDCreador)
-                            Clients.Client(connectionId).siguienteTurno();
+                        //Avisamos al jugador
+                        Clients.Client(connectionIDNuevo).esTuTurno();
+
+                        //Avisamos a los otros jugadores de los cambios
+                        foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                            Clients.Client(connectionId).actualizarLobby(lobby);
                     }
                 }
             }
@@ -230,10 +282,40 @@ namespace PolyFlamaServer.Hubs
                 foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
                     Clients.Client(connectionId).actualizarLobby(LobbyInfo.listadoLobbies[nombreLobby].lobby);
             }
+
+            Lobby lobby = LobbyInfo.listadoLobbies[nombreLobby].lobby;
+
+            //Se calcula el nuevo turno
+            int turnoActual = LobbyInfo.listadoLobbies[nombreLobby].lobby.partida.turnoActual;
+            int turnoNuevo = GestoraPartida.calcularNuevoTurno(lobby);
+
+            //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
+            //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
+            if (turnoNuevo == turnoActual)
+            {
+                foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                {
+                    if (jugadorGanador.dinero > 0)
+                    {
+                        Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
+                        break;
+                    }
+                }
+            }
             else
             {
-                //TODO Seguir con el siguiente turno
+                //Avisamos al jugador de que es su turno nuevo
+                Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
+                string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
+                lobby.partida.turnoActual = turnoNuevo;
+
+                //Avisamos al jugador
+                Clients.Client(connectionIDNuevo).esTuTurno();
             }
+
+            //Avisamos a los otros jugadores de los cambios
+            foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                Clients.Client(connectionId).actualizarLobby(lobby);
 
         }
 

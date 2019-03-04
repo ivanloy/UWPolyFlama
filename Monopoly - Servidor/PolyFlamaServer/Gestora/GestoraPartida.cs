@@ -134,7 +134,7 @@ namespace PolyFlamaServer.Gestora
         {
             int turnoActual = lobby.partida.turnoActual;
             int maxJugadores = lobby.maxJugadores;
-            int turnoNuevo;
+            int turnoNuevo = turnoActual;
             bool seHaRepetido = false;
             List<int> listadoPerdedores = new List<int>();
 
@@ -146,7 +146,7 @@ namespace PolyFlamaServer.Gestora
 
             do
             {
-                turnoNuevo = turnoActual + 1;
+                turnoNuevo++;
                 if (turnoNuevo == maxJugadores)
                     turnoNuevo = 0;
 
@@ -154,7 +154,7 @@ namespace PolyFlamaServer.Gestora
                 //y el bucle se encuentra en un loop infinito
                 if (turnoNuevo == turnoActual)
                     seHaRepetido = true;
-            } while (!listadoPerdedores.Contains(turnoNuevo) && !seHaRepetido);
+            } while (listadoPerdedores.Contains(turnoNuevo) && !seHaRepetido);
 
             return turnoNuevo;
         }
