@@ -3400,3 +3400,4 @@ D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x8
 D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
 D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\ProjectArchitectures.txt
+D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\PantallasMonopoly.csprojAssemblyReference.cache

@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T19:34:22.389</Modified>
+      <Modified>2019-03-04T20:55:14.630</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
       <PackagePath>entrypoint\PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-03-04T19:34:19.178</Modified>
+      <Modified>2019-03-04T20:55:12.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ignacio Van Loy\.nuget\packages\microsoft.aspnet.signalr.client\2.4.0\lib\netstandard1.3\Microsoft.AspNet.SignalR.Client.dll">
       <PackagePath>Microsoft.AspNet.SignalR.Client.dll</PackagePath>
@@ -1019,43 +1019,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.xr.xml">
       <PackagePath>PantallasMonopoly.xr.xml</PackagePath>
-      <Modified>2019-03-04T19:34:18.986</Modified>
+      <Modified>2019-03-04T20:42:59.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.045</Modified>
+      <Modified>2019-03-04T20:55:12.044</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
       <PackagePath>CustomAssets\Dictionary.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.045</Modified>
+      <Modified>2019-03-04T20:55:12.044</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
       <PackagePath>Views\AboutMenu.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.046</Modified>
+      <Modified>2019-03-04T20:55:12.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\GameView.xbf">
       <PackagePath>Views\GameView.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.046</Modified>
+      <Modified>2019-03-04T20:55:12.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
       <PackagePath>Views\LobbyMenu.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.047</Modified>
+      <Modified>2019-03-04T20:55:12.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
       <PackagePath>Views\CreatePlayer.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.047</Modified>
+      <Modified>2019-03-04T20:55:12.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.048</Modified>
+      <Modified>2019-03-04T20:55:12.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
       <PackagePath>Views\CreateMenu.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.048</Modified>
+      <Modified>2019-03-04T20:55:12.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
       <PackagePath>Views\SearchMenu.xbf</PackagePath>
-      <Modified>2019-03-04T19:34:19.048</Modified>
+      <Modified>2019-03-04T20:55:12.047</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1184,11 +1184,11 @@
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T19:34:20.131</Modified>
+      <Modified>2019-03-04T20:26:21.652</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
       <PackagePath>PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-03-04T19:34:22.386</Modified>
+      <Modified>2019-03-04T20:55:14.627</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -782,7 +782,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox"
                         RelativePanel.AlignRightWith="rct_money"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -899,7 +899,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox2"
                         RelativePanel.AlignRightWith="rct_money2"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -1017,7 +1017,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox3"
                         RelativePanel.AlignRightWith="rct_money3"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -1135,7 +1135,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox4"
                         RelativePanel.AlignRightWith="rct_money4"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
