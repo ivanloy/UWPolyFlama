@@ -18,6 +18,7 @@ namespace PantallasMonopoly.Models
         public int dineroAPagar { get; set; }
         public Jugador comprador { get; set; }
         public int posicionEnTablero { get; set; }
+        public string nombre { get; set; }
         public float opacidad {
             get {
                 if (listadoJugadores.Count >= 1) return 0.6f;

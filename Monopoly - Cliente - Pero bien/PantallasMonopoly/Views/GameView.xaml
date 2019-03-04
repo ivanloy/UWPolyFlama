@@ -5,11 +5,7 @@
     xmlns:local="using:PantallasMonopoly.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    xmlns:vm="using:PantallasMonopoly.ViewModels">
-    <Page.DataContext>
-        <vm:GameViewModel></vm:GameViewModel>
-    </Page.DataContext>
+    mc:Ignorable="d">
 
     <Page.Background>
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
@@ -52,7 +48,8 @@
             </Grid.RowDefinitions>
 
             <Rectangle Fill="{Binding colores.TABLERO}" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="9"/>
-            <Image Name="img_cartaHover" Stretch="UniformToFill" Source="../CustomAssets/dora.png" Grid.Row="2" Grid.Column="3" Grid.RowSpan="8" Grid.ColumnSpan="5"/>
+            <Image Source="/CustomAssets/logo.png" Grid.Row="3" Grid.Column="3" Grid.RowSpan="5" Grid.ColumnSpan="5"/>
+            <Image Name="img_cartaHover" Grid.Row="2" Grid.Column="3" Grid.RowSpan="7" Grid.ColumnSpan="5"/>
 
 
             <Image Source="../CustomAssets/setup.png"  Grid.Row="0" Grid.Column="0"
@@ -181,7 +178,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/apple.png"  Grid.Row="0" Grid.Column="8"
+            <Image Source="../CustomAssets/aws.png"  Grid.Row="0" Grid.Column="8"
                    Opacity="{Binding lobby.partida.listadoCasillas[28].opacidad}" 
                    PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -213,7 +210,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/basement.png"  Grid.Row="0" Grid.Column="10"
+            <Image Source="../CustomAssets/asun.png"  Grid.Row="0" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[30].opacidad}" 
                    PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="0" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -236,7 +233,7 @@
 
 
 
-            <Image Source="../CustomAssets/asun.png"  Grid.Row="10" Grid.Column="0"
+            <Image Source="../CustomAssets/basement.png"  Grid.Row="10" Grid.Column="0"
                    Opacity="{Binding lobby.partida.listadoCasillas[10].opacidad}" 
                    PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="10" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -332,7 +329,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/azureS1.png"  Grid.Row="10" Grid.Column="6"
+            <Image Source="../CustomAssets/apple.png"  Grid.Row="10" Grid.Column="6"
                    Opacity="{Binding lobby.partida.listadoCasillas[4].opacidad}" 
                    PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="10" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -418,7 +415,7 @@
 
 
 
-            <Image Source="../CustomAssets/conan.png"  Grid.Row="1" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[19].opacidad}"/>
+            <Image Source="../CustomAssets/conan.png"  Grid.Row="1" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[19].opacidad}" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -433,7 +430,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[19].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[19].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/github.png"  Grid.Row="2" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[18].opacidad}"/>
+            <Image Source="../CustomAssets/github.png"  Grid.Row="2" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[18].opacidad}" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -465,7 +462,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[17].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[17].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/chollometro.png"  Grid.Row="4" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[16].opacidad}"/>
+            <Image Source="../CustomAssets/chollometro.png"  Grid.Row="4" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[16].opacidad}" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -497,7 +494,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[15].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[15].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/overwatch.png"  Grid.Row="6" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[14].opacidad}"/>
+            <Image Source="../CustomAssets/overwatch.png"  Grid.Row="6" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[14].opacidad}" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -512,7 +509,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[14].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[14].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/anime.png"  Grid.Row="7" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[13].opacidad}"/>
+            <Image Source="../CustomAssets/anime.png"  Grid.Row="7" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[13].opacidad}" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -544,7 +541,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[12].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[12].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image Source="../CustomAssets/cookie.png"  Grid.Row="9" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[11].opacidad}"/>
+            <Image Source="../CustomAssets/cookie.png"  Grid.Row="9" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[11].opacidad}" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited"/>
             <Grid Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -881,7 +878,8 @@
                         FontStyle="Italic"
                         FontWeight="Bold"
                         Margin="20,5,0,0"
-                        RelativePanel.AlignTopWith="rct_playerBox2"/>
+                        RelativePanel.AlignTopWith="rct_playerBox2"
+                        RelativePanel.RightOf="img_fichaJugador2"/>
 
                     <TextBlock
                         Text="{Binding lobby.listadoJugadores[1].dineroConSimboloDolar}"
@@ -997,7 +995,8 @@
                         FontStyle="Italic"
                         FontWeight="Bold"
                         Margin="20,5,0,0"
-                        RelativePanel.AlignTopWith="rct_playerBox3"/>
+                        RelativePanel.AlignTopWith="rct_playerBox3"
+                        RelativePanel.RightOf="img_fichaJugador3"/>
 
                     <TextBlock
                         Text="{Binding lobby.listadoJugadores[2].dineroConSimboloDolar}"
@@ -1115,7 +1114,8 @@
                         FontStyle="Italic"
                         FontWeight="Bold"
                         Margin="20,5,0,0"
-                        RelativePanel.AlignTopWith="rct_playerBox4"/>
+                        RelativePanel.AlignTopWith="rct_playerBox4"
+                        RelativePanel.RightOf="img_fichaJugador4"/>
 
                     <TextBlock
                         Text="{Binding lobby.listadoJugadores[3].dineroConSimboloDolar}"
@@ -1202,8 +1202,8 @@
             RelativePanel.AlignRightWithPanel="True"
             Height="80"
             Width="Auto"
-            Fill="PaleVioletRed"/>
-
+            Fill="{Binding lobby.partida.colorBarra}"/>
+        
         <Button
             RelativePanel.AlignTopWith="rct_downStackPanel"
             RelativePanel.AlignHorizontalCenterWithPanel="True"

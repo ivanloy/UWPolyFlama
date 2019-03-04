@@ -23,16 +23,20 @@ namespace PantallasMonopoly.Util
 
         public Brush PLAYER_1 { get; set; }
         public Brush PLAYER_1B { get; set; }
+        public Brush PLAYER_1C { get; set; }
 
         public Brush PLAYER_2 { get; set; }
         public Brush PLAYER_2B { get; set; }
+        public Brush PLAYER_2C { get; set; }
 
         public Brush PLAYER_3 { get; set; }
         public Brush PLAYER_3B { get; set; }
+        public Brush PLAYER_3C { get; set; }
 
         public Brush PLAYER_4 { get; set; }
         public Brush PLAYER_4B { get; set; }
-        
+        public Brush PLAYER_4C { get; set; }
+
         public Colores()
         {
 
@@ -49,15 +53,19 @@ namespace PantallasMonopoly.Util
 
             PLAYER_1 = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 46, 125, 50));
             PLAYER_1B = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 129, 199, 132));
+            PLAYER_1C = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 200, 230, 201));
 
-            PLAYER_2 = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 198, 40, 40));
-            PLAYER_2B = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 229, 115, 115));
+            PLAYER_4 = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 198, 40, 40));
+            PLAYER_4B = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 229, 115, 115));
+            PLAYER_4C = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 205, 210));
 
             PLAYER_3 = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 21, 101, 192));
             PLAYER_3B = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 100, 181, 246));
+            PLAYER_3C = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 179, 229, 252));
 
-            PLAYER_4 = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 106, 27, 154));
-            PLAYER_4B = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 186, 104, 200));
+            PLAYER_2 = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 106, 27, 154));
+            PLAYER_2B = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 186, 104, 200));
+            PLAYER_2C = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 225, 190, 231));
 
 
         }

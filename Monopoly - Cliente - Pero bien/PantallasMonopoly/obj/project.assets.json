@@ -20758,12 +20758,12 @@
       ]
     },
     "Microsoft.CSharp/4.0.1": {
-      "sha512": "SuvSPFxuJldijkn+ShXv63AyjmvDOMj3mIARq98WbQT5ZfqaG9XfBfDsHu66t/Zo8iNo6lrw0hTPwubbecXSEg==",
+      "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "type": "package",
       "path": "microsoft.csharp/4.0.1",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
+        "Microsoft.CSharp.4.0.1.nupkg.sha512",
+        "Microsoft.CSharp.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -20779,8 +20779,6 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.0.1.nupkg.sha512",
-        "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -23054,11 +23052,10 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "1nTvK10WUDP1CvhCvqMCpQg2aSKrGObuVhtea7vYs27EmxY+QDND4LLDMJcVErPj0hrwhOibMqTeo/zkwPW9gg==",
+      "sha512": "SqEqdp+osasbB2RsXAhzLx03c3aH8orItBXAWOU22RibDt6CCeIe9+8fODk/TAWV4PUgJnEAJSCqIEbBw4q6yw==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -23446,12 +23443,12 @@
       ]
     },
     "Microsoft.VisualBasic/10.0.1": {
-      "sha512": "etxchRjJpWEU8QcD6mtxqeXGCzlL3LyiHoDTBAxEkih3W9KTRZINkgnDAr1Diy8hD9ifaPQq2u5QPuHDrg/uog==",
+      "sha512": "HpNyOf/4Tp2lh4FyywB55VITk0SqVxEjDzsVDDyF1yafDN6Bq18xcHowzCPINyYHUTgGcEtmpYiRsFdSo0KKdQ==",
       "type": "package",
       "path": "microsoft.visualbasic/10.0.1",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
+        "Microsoft.VisualBasic.10.0.1.nupkg.sha512",
+        "Microsoft.VisualBasic.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net45/_._",
@@ -23460,8 +23457,6 @@
         "lib/portable-net45+win8+wpa81/_._",
         "lib/win8/_._",
         "lib/wpa81/_._",
-        "microsoft.visualbasic.10.0.1.nupkg.sha512",
-        "microsoft.visualbasic.nuspec",
         "ref/net45/_._",
         "ref/netcore50/Microsoft.VisualBasic.dll",
         "ref/netcore50/Microsoft.VisualBasic.xml",
@@ -24558,11 +24553,10 @@
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "yd3MHby8zUeTAtWGxx0gM2vYpThYqYqUbEbVrXY6Hm1K+wrJSjsxJ1v5jeCqsJBY3mcygGl/DHZnACJ/RChK7Q==",
+      "sha512": "QDsdFTd6lCNMhdkg5LEWz5AoyEtjFNA+lJIU/8qiQ5izH3bQYmF+j0HW+p1G4w0Z4lBSQZrBGErVsg4nRPl7dQ==",
       "type": "package",
       "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -24751,11 +24745,10 @@
       ]
     },
     "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "ARCGW2RsQJlW/D3R4W7iOG00SY1EuYyNLDW1wMtho2KEF1Yrm0gTrP5R+Pihvz3DnnbD2WttJrJTUzCbCuHUdQ==",
+      "sha512": "zkTVHk+u7QonqmUXuJto6sXx2aVkBIFCwdbdG0bnXmgOte8KiXhks2KoBkPXgWVwskgq43I9usHopT72MLEJDg==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -24931,11 +24924,10 @@
       ]
     },
     "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "R7Kp71uu8IVGgoi8amXz4D6uVKsIX+OFpE6A9jHv31p3SAn/JHGirLPdVDBLSrz38IZEqpWbrWCLCZWV3cJ/hg==",
+      "sha512": "JmYhFoi4yr1iLPVGIa5o77F/KugQaS3GALw/5CWcO98mowZjLVl6+TvoqsWI8YWHXpgJDqyO64BZbPBaVaWlnw==",
       "type": "package",
       "path": "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -25125,11 +25117,10 @@
       ]
     },
     "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "lEFHTJyjHvcfiIJNcwqHB37kFsNMvlFeOE1z5KCWFZVA8/wOpmHVCPp6J4DNE8e/DqCHUWRWtg2bl7ZWQP9GPg==",
+      "sha512": "2A2e8cySZGFNq0JmF6XROIfiVWd56HLk4LfpiZVDVvXOiA/mgY3DT5vUpO9pempE1+a56TTBsevaVr05YXAirg==",
       "type": "package",
       "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -25318,11 +25309,10 @@
       ]
     },
     "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "iufkZip18UWFljbZjVpXcCqB8LBvxAoFMLRAMyANVNXkuayKYuQPl/E07muRlCYmkDTUFGyQioU5WHBawCu/gw==",
+      "sha512": "gzK8KGCnbb+06gyVye19iniq3EnxeQ0zlPORqeNoHkS8aXaMaSojorCSobKj9wq3jrgwwSt8t69/6Qhhu8IDPw==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -25498,11 +25488,10 @@
       ]
     },
     "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "cyuG6c1fX2tuLByZ+RyIqzI22Y1qcusVA2xWma1T3q0dJY43oUu8p37hRnLLg+iKCmeWx2p6pf365xR9wl/0qQ==",
+      "sha512": "WQ5iYVHY8KUZ9ky+wJIPSl5qYPuYPVxtVMNgUsaKJkK2xlGZh45lNtbEkiCrc/wnngMTto4PRZON8XnmHmxK1g==",
       "type": "package",
       "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -25691,11 +25680,10 @@
       ]
     },
     "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "brlcvN8Tp9bz+jp46O2iNXhqcEbnvtpmViUENyzAJj+BNm60TxUJbG56+9D+yauA+5BT2CR3nEkfeTnWV8/ILQ==",
+      "sha512": "Xf6aRAi8DXOnEvnYYMdq5mkxkPw7j45LA3i+tQsizv/3Brn8cwPlMfT7Un0AXsGKuU9+bvYJCXR1N1ovo34ygw==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -28465,20 +28453,19 @@
       ]
     },
     "System.Private.ServiceModel/4.1.3": {
-      "sha512": "nXoKlG2znsZ5lcR/ULZ7hIFrEqRBW8m5PK1qHf5T/eeogmuL50WpuHxhpNM/arTYS5FtlSN8Sl7YXZIGPcf/zQ==",
+      "sha512": "PS9pmdXqvLxxt02jF7Lrbq0kBi+IQGhVOP38V6Wv5IlUW2vFVBbtPb2euhl7bJsh80paIeUEjjA3QtvgMVE7Vw==",
       "type": "package",
       "path": "system.private.servicemodel/4.1.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
+        "System.Private.ServiceModel.4.1.3.nupkg.sha512",
+        "System.Private.ServiceModel.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
         "runtimes/unix/lib/netstandard1.3/System.Private.ServiceModel.dll",
         "runtimes/win7/lib/netcore50/System.Private.ServiceModel.dll",
-        "runtimes/win7/lib/netstandard1.3/System.Private.ServiceModel.dll",
-        "system.private.servicemodel.4.1.3.nupkg.sha512",
-        "system.private.servicemodel.nuspec"
+        "runtimes/win7/lib/netstandard1.3/System.Private.ServiceModel.dll"
       ]
     },
     "System.Private.Uri/4.3.0": {
@@ -30020,7 +30007,7 @@
       ]
     },
     "System.ServiceModel.Duplex/4.0.4": {
-      "sha512": "yBFdrm04/c3ApEM8TmHnN+d5nEXBX7ZDQ5kgL06TuXHWR6M8OogaUVFqfb9hkBH/PrA1aFLgaTTj4PqhvRSTBQ==",
+      "sha512": "UV1BhrNh6qyW0Xw1xM0L5bnPYFFkFt18Nqq2BqrYtso5tj359QLtj/xoxZ52HWuqOL8p4mNuVNNseNZNmv0lkA==",
       "type": "package",
       "path": "system.servicemodel.duplex/4.0.4",
       "files": [
@@ -30042,7 +30029,7 @@
       ]
     },
     "System.ServiceModel.Http/4.1.3": {
-      "sha512": "8hpHlzYjJI6zxDq0jOLd7oioVokGJ9mVb+O9ME7Me5c+JLl0lny3snkKtCIXi0NJ98SjLUsF0uFg/lyBVos9QQ==",
+      "sha512": "7mW2JvvQ8JRH0fp6/CMgqIckxmSTSo1hkes5VAosXlGuvW7C8pzd5936EQGhSRwOtWX8zgb6CsUhqBts3WtkRA==",
       "type": "package",
       "path": "system.servicemodel.http/4.1.3",
       "files": [
@@ -30082,7 +30069,7 @@
       ]
     },
     "System.ServiceModel.NetTcp/4.1.3": {
-      "sha512": "qiAn9GyWS5zFNWBjgnFMThN1iO2ryyJCTAZgYehTQyLvBr3E3XHlW9rM1bTTbbxU0neTKuJPLjEn7QVQ96H9gA==",
+      "sha512": "QYaj8wl05oHOW4thLtrHDNOLMGXKz1TtFBezZNNTY5k5KPdMtVTJsc5g9k6Q0/2w4rmq/MYtY5Rdn2HIfXjiCg==",
       "type": "package",
       "path": "system.servicemodel.nettcp/4.1.3",
       "files": [
@@ -30107,7 +30094,7 @@
       ]
     },
     "System.ServiceModel.Primitives/4.1.3": {
-      "sha512": "ooQ7+rc+4NOU3fzVDBpH9DGubH2U09rSpKOK5LoI/RQg00zWCtGuPN1Ve09LxkjTkD+nEssoHxVaWDW8lWmevQ==",
+      "sha512": "PNSwn/diEbGTdOZauCuSEBQbAYCGaImfV6Exh9QUnypkk6aAyfF9WrpSldULNJ8ysjnq7bqvQ6yUUFzBAA2Khw==",
       "type": "package",
       "path": "system.servicemodel.primitives/4.1.3",
       "files": [
@@ -30147,12 +30134,13 @@
       ]
     },
     "System.ServiceModel.Security/4.0.4": {
-      "sha512": "TYSUCu8ejtp+8CLznJR57GS/LTR+wIGV6RlehUYwZImOhqnMvCRH35G0SXqbGrUd7wThlD+DowRHU3LivG89Mg==",
+      "sha512": "UrpkR8UEKHbdPIaJI9yfgQ3EPYke8fW7VE7mzuY8Pg+fCfE6XLp7rx+ZBUf4VFxmG4w6Ql87CAAGIAZSEnRF+A==",
       "type": "package",
       "path": "system.servicemodel.security/4.0.4",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
+        "System.ServiceModel.Security.4.0.4.nupkg.sha512",
+        "System.ServiceModel.Security.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net45/_._",
@@ -30167,9 +30155,7 @@
         "ref/netstandard1.1/System.ServiceModel.Security.dll",
         "ref/portable-net45+win8+wp8/_._",
         "ref/win8/_._",
-        "ref/wp8/_._",
-        "system.servicemodel.security.4.0.4.nupkg.sha512",
-        "system.servicemodel.security.nuspec"
+        "ref/wp8/_._"
       ]
     },
     "System.Text.Encoding/4.3.0": {
@@ -31034,24 +31020,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivanloy\\.nuget\\packages\\": {},
+    "C:\\Users\\Ignacio Van Loy\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivanloy\\Desktop\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "projectUniqueName": "D:\\Proyectos\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
       "projectName": "PantallasMonopoly",
-      "projectPath": "C:\\Users\\ivanloy\\Desktop\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
-      "packagesPath": "C:\\Users\\ivanloy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivanloy\\Desktop\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\obj\\",
+      "projectPath": "D:\\Proyectos\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\PantallasMonopoly.csproj",
+      "packagesPath": "C:\\Users\\Ignacio Van Loy\\.nuget\\packages\\",
+      "outputPath": "D:\\Proyectos\\UWPolyFlama\\Monopoly - Cliente - Pero bien\\PantallasMonopoly\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ivanloy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ignacio Van Loy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
