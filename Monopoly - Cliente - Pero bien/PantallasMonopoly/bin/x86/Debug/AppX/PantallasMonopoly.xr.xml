@@ -7,10 +7,8 @@
     <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="lobby" />
     <RootPropertyPathName Name="partida" />
-    <RootPropertyPathName Name="dado2" />
-    <RootPropertyPathName Name="dado1" />
-    <RootPropertyPathName Name="colores" />
-    <RootPropertyPathName Name="TABLERO" />
+    <RootPropertyPathName Name="turnoActual" />
+    <RootPropertyPathName Name="arrayDados" />
     <RootPropertyPathName Name="listadoJugadores" />
     <RootPropertyPathName Name="listadoPropiedades" />
     <RootPropertyPathName Name="brushColor" />
@@ -18,6 +16,7 @@
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="ficha" />
     <RootPropertyPathName Name="imagenBordes" />
+    <RootPropertyPathName Name="colores" />
     <RootPropertyPathName Name="PLAYER_4B" />
     <RootPropertyPathName Name="PLAYER_4" />
     <RootPropertyPathName Name="PLAYER_3B" />
@@ -29,6 +28,7 @@
     <RootPropertyPathName Name="listadoCasillas" />
     <RootPropertyPathName Name="tamanoImagenFichaJugador" />
     <RootPropertyPathName Name="opacidad" />
+    <RootPropertyPathName Name="TABLERO" />
     <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="imagen" />
     <RootPropertyPathName Name="maxJugadores" />
@@ -156,6 +156,8 @@
       <RootProperty Name="ScaleY" />
     </RootType>
     <RootType FullName="PantallasMonopoly.AboutMenu" />
+    <RootType FullName="PantallasMonopoly.Models.DadoConverter" />
+    <RootType FullName="PantallasMonopoly.Models.BarraConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Margin" />
       <RootProperty Name="ColumnDefinitions" />
@@ -212,11 +214,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
-      <RootProperty Name="Converter" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
       <RootProperty Name="MinWidth" />
@@ -303,7 +306,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
       <RootProperty Name="Content" />
     </RootType>

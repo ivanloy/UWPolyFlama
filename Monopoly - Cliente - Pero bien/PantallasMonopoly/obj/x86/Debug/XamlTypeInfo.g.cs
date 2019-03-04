@@ -213,33 +213,37 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "PantallasMonopoly.AboutMenu";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "PantallasMonopoly.Views.GameView";
-            _typeNameTable[4] = "PantallasMonopoly.LobbyMenu";
-            _typeNameTable[5] = "PantallasMonopoly.CreatePlayer";
-            _typeNameTable[6] = "PantallasMonopoly.Views.MainMenu";
-            _typeNameTable[7] = "PantallasMonopoly.Models.ComboBoxConverter";
-            _typeNameTable[8] = "Object";
-            _typeNameTable[9] = "PantallasMonopoly.CreateMenu";
-            _typeNameTable[10] = "PantallasMonopoly.Models.ContrasenaConverter";
-            _typeNameTable[11] = "PantallasMonopoly.SearchMenu";
+            _typeNameTable[3] = "PantallasMonopoly.Models.DadoConverter";
+            _typeNameTable[4] = "Object";
+            _typeNameTable[5] = "PantallasMonopoly.Models.BarraConverter";
+            _typeNameTable[6] = "PantallasMonopoly.Views.GameView";
+            _typeNameTable[7] = "PantallasMonopoly.LobbyMenu";
+            _typeNameTable[8] = "PantallasMonopoly.CreatePlayer";
+            _typeNameTable[9] = "PantallasMonopoly.Views.MainMenu";
+            _typeNameTable[10] = "PantallasMonopoly.Models.ComboBoxConverter";
+            _typeNameTable[11] = "PantallasMonopoly.CreateMenu";
+            _typeNameTable[12] = "PantallasMonopoly.Models.ContrasenaConverter";
+            _typeNameTable[13] = "PantallasMonopoly.SearchMenu";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::PantallasMonopoly.AboutMenu);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::PantallasMonopoly.Views.GameView);
-            _typeTable[4] = typeof(global::PantallasMonopoly.LobbyMenu);
-            _typeTable[5] = typeof(global::PantallasMonopoly.CreatePlayer);
-            _typeTable[6] = typeof(global::PantallasMonopoly.Views.MainMenu);
-            _typeTable[7] = typeof(global::PantallasMonopoly.Models.ComboBoxConverter);
-            _typeTable[8] = typeof(global::System.Object);
-            _typeTable[9] = typeof(global::PantallasMonopoly.CreateMenu);
-            _typeTable[10] = typeof(global::PantallasMonopoly.Models.ContrasenaConverter);
-            _typeTable[11] = typeof(global::PantallasMonopoly.SearchMenu);
+            _typeTable[3] = typeof(global::PantallasMonopoly.Models.DadoConverter);
+            _typeTable[4] = typeof(global::System.Object);
+            _typeTable[5] = typeof(global::PantallasMonopoly.Models.BarraConverter);
+            _typeTable[6] = typeof(global::PantallasMonopoly.Views.GameView);
+            _typeTable[7] = typeof(global::PantallasMonopoly.LobbyMenu);
+            _typeTable[8] = typeof(global::PantallasMonopoly.CreatePlayer);
+            _typeTable[9] = typeof(global::PantallasMonopoly.Views.MainMenu);
+            _typeTable[10] = typeof(global::PantallasMonopoly.Models.ComboBoxConverter);
+            _typeTable[11] = typeof(global::PantallasMonopoly.CreateMenu);
+            _typeTable[12] = typeof(global::PantallasMonopoly.Models.ContrasenaConverter);
+            _typeTable[13] = typeof(global::PantallasMonopoly.SearchMenu);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -275,14 +279,16 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
         }
 
         private object Activate_0_AboutMenu() { return new global::PantallasMonopoly.AboutMenu(); }
-        private object Activate_3_GameView() { return new global::PantallasMonopoly.Views.GameView(); }
-        private object Activate_4_LobbyMenu() { return new global::PantallasMonopoly.LobbyMenu(); }
-        private object Activate_5_CreatePlayer() { return new global::PantallasMonopoly.CreatePlayer(); }
-        private object Activate_6_MainMenu() { return new global::PantallasMonopoly.Views.MainMenu(); }
-        private object Activate_7_ComboBoxConverter() { return new global::PantallasMonopoly.Models.ComboBoxConverter(); }
-        private object Activate_9_CreateMenu() { return new global::PantallasMonopoly.CreateMenu(); }
-        private object Activate_10_ContrasenaConverter() { return new global::PantallasMonopoly.Models.ContrasenaConverter(); }
-        private object Activate_11_SearchMenu() { return new global::PantallasMonopoly.SearchMenu(); }
+        private object Activate_3_DadoConverter() { return new global::PantallasMonopoly.Models.DadoConverter(); }
+        private object Activate_5_BarraConverter() { return new global::PantallasMonopoly.Models.BarraConverter(); }
+        private object Activate_6_GameView() { return new global::PantallasMonopoly.Views.GameView(); }
+        private object Activate_7_LobbyMenu() { return new global::PantallasMonopoly.LobbyMenu(); }
+        private object Activate_8_CreatePlayer() { return new global::PantallasMonopoly.CreatePlayer(); }
+        private object Activate_9_MainMenu() { return new global::PantallasMonopoly.Views.MainMenu(); }
+        private object Activate_10_ComboBoxConverter() { return new global::PantallasMonopoly.Models.ComboBoxConverter(); }
+        private object Activate_11_CreateMenu() { return new global::PantallasMonopoly.CreateMenu(); }
+        private object Activate_12_ContrasenaConverter() { return new global::PantallasMonopoly.Models.ContrasenaConverter(); }
+        private object Activate_13_SearchMenu() { return new global::PantallasMonopoly.SearchMenu(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -309,62 +315,76 @@ namespace PantallasMonopoly.PantallasMonopoly_XamlTypeInfo
                 xamlType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  PantallasMonopoly.Views.GameView
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_GameView;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  PantallasMonopoly.LobbyMenu
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_LobbyMenu;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 5:   //  PantallasMonopoly.CreatePlayer
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_CreatePlayer;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 6:   //  PantallasMonopoly.Views.MainMenu
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_MainMenu;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  PantallasMonopoly.Models.ComboBoxConverter
+            case 3:   //  PantallasMonopoly.Models.DadoConverter
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_7_ComboBoxConverter;
+                userType.Activator = Activate_3_DadoConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Object
+            case 4:   //  Object
                 xamlType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  PantallasMonopoly.CreateMenu
-                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_CreateMenu;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 10:   //  PantallasMonopoly.Models.ContrasenaConverter
+            case 5:   //  PantallasMonopoly.Models.BarraConverter
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_10_ContrasenaConverter;
+                userType.Activator = Activate_5_BarraConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  PantallasMonopoly.SearchMenu
+            case 6:   //  PantallasMonopoly.Views.GameView
                 userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_SearchMenu;
+                userType.Activator = Activate_6_GameView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  PantallasMonopoly.LobbyMenu
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_LobbyMenu;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  PantallasMonopoly.CreatePlayer
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_CreatePlayer;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  PantallasMonopoly.Views.MainMenu
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_MainMenu;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  PantallasMonopoly.Models.ComboBoxConverter
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_10_ComboBoxConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  PantallasMonopoly.CreateMenu
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_CreateMenu;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  PantallasMonopoly.Models.ContrasenaConverter
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_12_ContrasenaConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  PantallasMonopoly.SearchMenu
+                userType = new global::PantallasMonopoly.PantallasMonopoly_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_13_SearchMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
