@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Shapes;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -54,7 +55,7 @@ namespace PantallasMonopoly.Views
             Image image = (Image)sender;
             int row = (int)image.GetValue(Grid.RowProperty);
             int col = (int)image.GetValue(Grid.ColumnProperty);
-            BitmapImage bm = getUriCartaRecta(row, col, image.Source);
+            BitmapImage bm = getUriCartaRecta(row, col);
             if (bm == null)
                 img_cartaHover.Source = image.Source;
             else
@@ -65,14 +66,10 @@ namespace PantallasMonopoly.Views
         private void Image_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             img_cartaHover.Source = null;
-            //imageCenter.Source = null;
-            //imageCenter2.Source = null;
-            //image.Scale(duration: 200, delay: 0, centerX: 0.5f, centerY: 0.5f, scaleX: 1f, scaleY: 1f).StartAsync();
-            //image.Offset(offsetX: 0f, offsetY: 0f, duration: 200, delay: 200, easingType: EasingType.Linear);
 
         }
 
-        private BitmapImage getUriCartaRecta(int row, int col, ImageSource bitmapImage)
+        private BitmapImage getUriCartaRecta(int row, int col)
         {
             if (row == 10) return null;
             else if (row == 0 && col == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/dora.png"));
@@ -102,6 +99,61 @@ namespace PantallasMonopoly.Views
             else if (row == 7 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/myanimelist.png"));
         //    else if (row == 8 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/azure.png"));
             else if (row == 9 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/cookie.png"));
+            return null;
+        }
+
+        private void Rectangle_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Rectangle rect = (Rectangle)sender;
+            int row = (int)rect.GetValue(Grid.RowProperty);
+            int col = (int)rect.GetValue(Grid.ColumnProperty);
+            img_cartaHover.Source = getUriCartaRectaRectangulo(row, col);
+        }
+
+        private void Rectangle_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            img_cartaHover.Source = null;
+        }
+
+        private BitmapImage getUriCartaRectaRectangulo(int row, int col)
+        {
+            if (col == 0 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/php.png"));
+            else if (col == 0 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/microsoft.png"));
+
+            else if (col == 1 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/kingston.png"));
+            else if (col == 1 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/stackoverflow.png"));
+            else if (col == 1 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/luffy.png"));
+
+            else if (col == 2 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/cookie.png"));
+            else if (col == 2 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/myanimelist.png"));
+            else if (col == 2 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/overwatch.png"));
+
+            else if (col == 3 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/chollometro.png"));
+            else if (col == 3 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/github.png"));
+            else if (col == 3 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/conan.png"));
+
+            else if (col == 4 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/dora.png"));
+            else if (col == 4 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/discord.png"));
+            else if (col == 4 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/android.png"));
+
+            else if (col == 5 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/ubuntu.png"));
+            else if (col == 5 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/deloitte.png"));
+            else if (col == 5 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/dual.png"));
+
+            else if (col == 6 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/pccomponentes.png"));
+            else if (col == 6 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/xiaomi.png"));
+            else if (col == 6 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/polvillo.png"));
+
+            else if (col == 7 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/twitch.png"));
+            else if (col == 7 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/java.png"));
+
+            else if (col == 9 && row == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/geany.png"));
+            else if (col == 9 && row == 1) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/netbeans.png"));
+            else if (col == 9 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/intelij.png"));
+            else if (col == 9 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/eclipse.png"));
+
+           // else if (col == 10 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/dora.png"));
+            else if (col == 10 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/aws.png"));
             return null;
         }
 

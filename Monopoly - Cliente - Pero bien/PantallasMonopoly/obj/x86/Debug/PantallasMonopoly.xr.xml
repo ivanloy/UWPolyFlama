@@ -181,6 +181,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Margin" />
+      <RootEvent Name="PointerEntered" />
+      <RootEvent Name="PointerExited" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Name" />
