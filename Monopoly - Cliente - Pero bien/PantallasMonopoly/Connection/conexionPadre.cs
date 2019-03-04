@@ -9,7 +9,7 @@ namespace PantallasMonopoly.Connection
 {
     public class conexionPadre
     {
-        public static string conexionURL = "http://polyflama.azurewebsites.net/";
+        public static string conexionURL = "http://polyflama2.azurewebsites.net/";
         //public static string conexionURL = "http://localhost:51144/";
         private static HubConnection _conn;
         private static IHubProxy _proxy;

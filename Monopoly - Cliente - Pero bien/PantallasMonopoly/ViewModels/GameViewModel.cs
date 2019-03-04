@@ -22,6 +22,7 @@ namespace PantallasMonopoly.ViewModels
         private DelegateCommand _tirarDadosCommand;
         private Jugador _jugadorCliente;
         private bool _esMiTurno;
+        private INavigationService _navigationService;
 
         #endregion
 
@@ -77,7 +78,7 @@ namespace PantallasMonopoly.ViewModels
 
         #region Constructores
 
-        public GameViewModel()
+        public GameViewModel(INavigationService navigationService)
         {
             colores = new Colores();
             conn = new HubConnection(conexionPadre.conexionURL);
@@ -91,8 +92,11 @@ namespace PantallasMonopoly.ViewModels
             proxy.On("partidaPerdida", partidaPerdida);
             proxy.On("partidaGanada", partidaGanada);
             proxy.On("esTuTurno", esTuTurno);
+            proxy.On("salirDePartida", salirDePartida);
+            proxy.On<string>("mostrarMensaje", mostrarMensaje);
             lobby = new Lobby();
         }
+
 
         #endregion
 
@@ -181,6 +185,25 @@ namespace PantallasMonopoly.ViewModels
                }
             );
         }
+        private async void salirDePartida()
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                  () =>
+                  {
+                      _navigationService.GoBack(); 
+                  }
+                  );
+        }
+        private async void mostrarMensaje(string msn)
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               async () =>
+               {
+                   var messageDialog = new MessageDialog(msn);
+                   await messageDialog.ShowAsync();
+               }
+               );
+        }
 
         #endregion
 
@@ -194,7 +217,7 @@ namespace PantallasMonopoly.ViewModels
                    ContentDialog logDialog = new ContentDialog()
                    {
                        Title = "Buy property",
-                       Content = $"Do you want to buy this property for ${propiedad.precio}?",
+                       Content = $"Do you want to buy {propiedad.nombre} for ${propiedad.precio}?",
                        PrimaryButtonText = "For sure!",
                        CloseButtonText = "Meh, maybe next time"
 
