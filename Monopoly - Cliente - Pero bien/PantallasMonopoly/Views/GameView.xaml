@@ -5,11 +5,17 @@
     xmlns:local="using:PantallasMonopoly.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:cv="using:PantallasMonopoly.Models">
 
     <Page.Background>
         <ImageBrush ImageSource="../CustomAssets/dbk.png" Stretch="None"></ImageBrush>
     </Page.Background>
+
+    <Page.Resources>
+        <cv:DadoConverter x:Key="dadoConverter"></cv:DadoConverter>
+        <cv:BarraConverter x:Key="barraConverter"></cv:BarraConverter>
+    </Page.Resources>
 
     <RelativePanel>
 
@@ -776,7 +782,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox"
                         RelativePanel.AlignRightWith="rct_money"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -893,7 +899,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox2"
                         RelativePanel.AlignRightWith="rct_money2"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -1011,7 +1017,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox3"
                         RelativePanel.AlignRightWith="rct_money3"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -1129,7 +1135,7 @@
                     <Grid
                         RelativePanel.AlignBottomWith="rct_playerBox4"
                         RelativePanel.AlignRightWith="rct_money4"
-                        Margin="0,0,7,60">
+                        Margin="0,0,7,65">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
                             <ColumnDefinition Width="12" />
@@ -1202,7 +1208,7 @@
             RelativePanel.AlignRightWithPanel="True"
             Height="80"
             Width="Auto"
-            Fill="{Binding colores.TABLERO}"/>
+            Fill="{Binding Path=lobby.partida.turnoActual, Converter={StaticResource barraConverter}}"/>
 
         <Image
             Name="dado1"
@@ -1210,20 +1216,20 @@
             RelativePanel.AlignBottomWithPanel="True"
             RelativePanel.AlignTopWith="rct_downStackPanel"
             VerticalAlignment="Center"
-            Margin="4"
-            Source="{Binding lobby.partida.dado1}"
-            Width="50"
-            Height="50"/>
+            Margin="8"
+            Source="{Binding Path=lobby.partida.arrayDados[0], Converter={StaticResource dadoConverter}}"
+            Width="60"
+            Height="60"/>
 
         <Image
             RelativePanel.RightOf="dado1"
             RelativePanel.AlignBottomWithPanel="True"
             RelativePanel.AlignTopWith="rct_downStackPanel"
             VerticalAlignment="Center"
-            Margin="4"
-            Source="{Binding lobby.partida.dado2}"
-            Width="50"
-            Height="50"/>
+            Margin="8"
+            Source="{Binding Path=lobby.partida.arrayDados[1], Converter={StaticResource dadoConverter}}"
+            Width="60"
+            Height="60"/>
         
         <Button
             RelativePanel.AlignTopWith="rct_downStackPanel"
@@ -1231,7 +1237,7 @@
             Content="Tirar dados"
             Margin="8"
             Command="{Binding tirarDadosCommand}"
-            Background="PaleVioletRed"
+            Background="{Binding Path=lobby.partida.turnoActual, Converter={StaticResource barraConverter}}"
             Foreground="White"
             MinHeight="30"
             MinWidth="40"/>

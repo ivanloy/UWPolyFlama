@@ -7,6 +7,6 @@ namespace PantallasMonopoly.Models.Enums
 {
     public enum EfectosEnum
     {
-        //TODO
+        DAR_50, DAR_100, QUITAR_50, QUITAR_100, MOVER_10, GLOBAL_50
     }
 }
