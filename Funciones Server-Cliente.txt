@@ -36,3 +36,5 @@ Funciones EN EL CLIENTE:
  - partidaPerdida() //Se llama cuando te quedas sin dinero
  - partidaGanada() //Se llama cuando ganas la partida
  - esTuTurno() //Se llama cuando es tu turno. Se llama solo a la persona la cual sea su turno.
+ - salirDePartida() //Se llama para obligar al jugador a salir del lobby al menú principal
+ - mostrarMensaje(string mensaje) //Usado para mostrar mensajes al jugador

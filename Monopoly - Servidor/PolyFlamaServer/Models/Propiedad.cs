@@ -8,6 +8,7 @@ namespace PolyFlamaServer.Models
 {
     public class Propiedad : Casilla
     {
+        public string nombre { get; set; }
         public int precio { get; set; }
         public int nCasas { get; set; }
         public bool tieneHotel { get; set; }
@@ -17,8 +18,9 @@ namespace PolyFlamaServer.Models
         public Jugador comprador { get; set; }
         public int posicionEnTablero { get; set; }
 
-        public Propiedad(int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador, int posicionEnTablero) : base()
+        public Propiedad(string nombre, int precio, int nCasas, bool tieneHotel, bool estaComprado, ColorPropiedad color, int dineroAPagar, Jugador comprador, int posicionEnTablero) : base()
         {
+            this.nombre = nombre;
             this.precio = precio;
             this.nCasas = nCasas;
             this.tieneHotel = tieneHotel;
@@ -32,8 +34,9 @@ namespace PolyFlamaServer.Models
         /*
          * Constructor para crear propiedades más fácilmente
          */ 
-        public Propiedad(int precio, ColorPropiedad color, int posicionEnTablero, int dineroAPagar) : base()
+        public Propiedad(string nombre, int precio, ColorPropiedad color, int posicionEnTablero, int dineroAPagar) : base()
         {
+            this.nombre = nombre;
             this.precio = precio;
             this.nCasas = 0;
             this.tieneHotel = false;
