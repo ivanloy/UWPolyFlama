@@ -18,14 +18,25 @@ Views\MainMenu.xbf
 Views\SearchMenu.xbf
 CustomAssets\android.png
 CustomAssets\anime.png
+CustomAssets\apple.png
+CustomAssets\asun.png
+CustomAssets\aws.png
+CustomAssets\azure.png
+CustomAssets\azureS1.png
 CustomAssets\backArrow.png
+CustomAssets\basement.png
 CustomAssets\chollometro.png
+CustomAssets\comunidad.png
+CustomAssets\comunity.png
+CustomAssets\comunity270.png
+CustomAssets\comunity90.png
 CustomAssets\conan.png
 CustomAssets\cookie.png
 CustomAssets\dbk.png
 CustomAssets\deloitte.png
 CustomAssets\discord.png
 CustomAssets\dora.png
+CustomAssets\eclipse.png
 CustomAssets\Fichas\Bread.png
 CustomAssets\Fichas\Bread_B.png
 CustomAssets\Fichas\Danboard.png
@@ -40,14 +51,69 @@ CustomAssets\Fichas\Rupee.png
 CustomAssets\Fichas\Rupee_B.png
 CustomAssets\Fichas\Thermo.png
 CustomAssets\Fichas\Thermo_B.png
+CustomAssets\geany.png
 CustomAssets\github.png
+CustomAssets\go.png
+CustomAssets\intelij.png
+CustomAssets\java.png
 CustomAssets\kingston.png
 CustomAssets\logo.png
+CustomAssets\luck.png
+CustomAssets\luck270.png
 CustomAssets\luffy.png
 CustomAssets\microsoft.png
 CustomAssets\monitors.png
+CustomAssets\netbeans.png
 CustomAssets\overwatch.png
+CustomAssets\pccomponentes.png
 CustomAssets\php.png
+CustomAssets\polvillo.png
+CustomAssets\RECTAS\android.png
+CustomAssets\RECTAS\apple.png
+CustomAssets\RECTAS\aws.png
+CustomAssets\RECTAS\chollometro.png
+CustomAssets\RECTAS\comunidad.png
+CustomAssets\RECTAS\conan.png
+CustomAssets\RECTAS\cookie.png
+CustomAssets\RECTAS\deloitte.png
+CustomAssets\RECTAS\discord.png
+CustomAssets\RECTAS\dora.png
+CustomAssets\RECTAS\dual.png
+CustomAssets\RECTAS\eclipse.png
+CustomAssets\RECTAS\github.png
+CustomAssets\RECTAS\Grupo 10.png
+CustomAssets\RECTAS\Grupo 11.png
+CustomAssets\RECTAS\Grupo 12.png
+CustomAssets\RECTAS\Grupo 13.png
+CustomAssets\RECTAS\Grupo 14.png
+CustomAssets\RECTAS\Grupo 15.png
+CustomAssets\RECTAS\Grupo 23.png
+CustomAssets\RECTAS\Grupo 24.png
+CustomAssets\RECTAS\Grupo 25.png
+CustomAssets\RECTAS\Grupo 26.png
+CustomAssets\RECTAS\Grupo 27.png
+CustomAssets\RECTAS\Grupo 7.png
+CustomAssets\RECTAS\Grupo 79.png
+CustomAssets\RECTAS\Grupo 8.png
+CustomAssets\RECTAS\Grupo 80.png
+CustomAssets\RECTAS\Grupo 81.png
+CustomAssets\RECTAS\Grupo 82.png
+CustomAssets\RECTAS\Grupo 83.png
+CustomAssets\RECTAS\Grupo 9.png
+CustomAssets\RECTAS\intelij.png
+CustomAssets\RECTAS\java.png
+CustomAssets\RECTAS\luck.png
+CustomAssets\RECTAS\myanimelist.png
+CustomAssets\RECTAS\netbeans.png
+CustomAssets\RECTAS\overwatch.png
+CustomAssets\RECTAS\pccomponentes.png
+CustomAssets\RECTAS\polvillo.png
+CustomAssets\RECTAS\twtich.png
+CustomAssets\RECTAS\ubuntu.png
+CustomAssets\RECTAS\xiaomi.png
+CustomAssets\setup.png
 CustomAssets\stackoverflow.png
+CustomAssets\twitch.png
 CustomAssets\ubuntu.png
+CustomAssets\xiaomi.png
 Properties\Default.rd.xml
