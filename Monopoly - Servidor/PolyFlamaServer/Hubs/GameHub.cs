@@ -174,17 +174,24 @@ namespace PolyFlamaServer.Hubs
                     //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
                     //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
                     //TODO Quitarlo pal release
-                    /*if (turnoNuevo == turnoActual)
+                    if (turnoNuevo == turnoActual)
                     {
-                        //TODO Se ha decidido un ganador
+                        foreach(Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)
+                        {
+                            if (jugadorGanador.dinero > 0)
+                            {
+                                Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorGanador.nombre]).partidaGanada();
+                                break;
+                            }
+                        }
                     }
                     else
-                    {*/
+                    {
                         //Avisamos al jugador de que es su turno nuevo
                         Jugador jugadorNuevo = LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores[turnoNuevo];
                         string connectionIDNuevo = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorNuevo.nombre];
                         Clients.Client(connectionIDNuevo).esTuTurno();
-                    //}
+                    }
 
                     //Avisamos a los otros jugadores de los cambios
                     foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)

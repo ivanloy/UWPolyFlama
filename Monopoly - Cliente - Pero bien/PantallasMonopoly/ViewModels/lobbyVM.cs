@@ -152,7 +152,7 @@ namespace PantallasMonopoly.ViewModels
                 sePuedeJugar = true;
             }
 
-            return true;
+            return sePuedeJugar;
         }
 
         private void jugarCommand_Executed()

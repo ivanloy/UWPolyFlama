@@ -89,6 +89,7 @@ namespace PantallasMonopoly.ViewModels
             proxy.On("conectar", conectar);
             proxy.On("todosConectados", todosConectados);
             proxy.On("partidaPerdida", partidaPerdida);
+            proxy.On("partidaGanada", partidaGanada);
             proxy.On("esTuTurno", esTuTurno);
             lobby = new Lobby();
         }
@@ -165,6 +166,17 @@ namespace PantallasMonopoly.ViewModels
                async () =>
                {
                    var messageDialog = new MessageDialog("You lost :( GL next time");
+                   await messageDialog.ShowAsync();
+               }
+            );
+        }
+
+        private async void partidaGanada()
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+               async () =>
+               {
+                   var messageDialog = new MessageDialog("You won :D Way to rekt em boi");
                    await messageDialog.ShowAsync();
                }
             );

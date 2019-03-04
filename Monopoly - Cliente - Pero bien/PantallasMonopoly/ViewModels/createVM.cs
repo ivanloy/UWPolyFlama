@@ -155,7 +155,6 @@ namespace PantallasMonopoly.ViewModels
             _lobby = new Lobby(_nombreLobby, _passwordLobby, _numeroJugadoresLobby, _creadorSala);
 
             //Aqui hay una llamada al server
-            _lobby.maxJugadores = 1;
             await proxy.Invoke("crearNuevoLobby", _lobby);
 
 
