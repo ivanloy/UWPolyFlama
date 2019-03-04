@@ -803,43 +803,43 @@
                             <RowDefinition Height="11" />
                         </Grid.RowDefinitions>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[0].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
                     </Grid>
                 </RelativePanel>
@@ -920,43 +920,43 @@
                             <RowDefinition Height="11" />
                         </Grid.RowDefinitions>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[1].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
                     </Grid>
                 </RelativePanel>
@@ -1038,43 +1038,43 @@
                             <RowDefinition Height="11" />
                         </Grid.RowDefinitions>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[2].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
                     </Grid>
                 </RelativePanel>
@@ -1156,43 +1156,43 @@
                             <RowDefinition Height="11" />
                         </Grid.RowDefinitions>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[0].brushColor}" Grid.Column="0" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[1].brushColor}" Grid.Column="0" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[2].brushColor}" Grid.Column="1" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[3].brushColor}" Grid.Column="1" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[4].brushColor}" Grid.Column="1" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[5].brushColor}" Grid.Column="2" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[6].brushColor}" Grid.Column="2" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[7].brushColor}" Grid.Column="2" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[8].brushColor}" Grid.Column="3" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[9].brushColor}" Grid.Column="3" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[10].brushColor}" Grid.Column="3" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[11].brushColor}" Grid.Column="4" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[12].brushColor}" Grid.Column="4" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[13].brushColor}" Grid.Column="4" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[14].brushColor}" Grid.Column="5" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[15].brushColor}" Grid.Column="5" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[16].brushColor}" Grid.Column="5" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[17].brushColor}" Grid.Column="6" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[18].brushColor}" Grid.Column="6" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[19].brushColor}" Grid.Column="6" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[20].brushColor}" Grid.Column="7" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[21].brushColor}" Grid.Column="7" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[22].brushColor}" Grid.Column="9" Grid.Row="0" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[23].brushColor}" Grid.Column="9" Grid.Row="1" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[24].brushColor}" Grid.Column="9" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[25].brushColor}" Grid.Column="9" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[26].brushColor}" Grid.Column="10" Grid.Row="2" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
+                        <Rectangle Width="Auto" Height="Auto" Fill="{Binding lobby.listadoJugadores[3].listadoPropiedades[27].brushColor}" Grid.Column="10" Grid.Row="3" Margin="1" PointerEntered="Rectangle_PointerEntered" PointerExited="Rectangle_PointerExited"/>
 
                     </Grid>
                 </RelativePanel>
