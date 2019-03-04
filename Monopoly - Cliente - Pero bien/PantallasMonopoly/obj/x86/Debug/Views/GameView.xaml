@@ -48,11 +48,11 @@
             </Grid.RowDefinitions>
 
             <Rectangle Fill="{Binding colores.TABLERO}" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="9"/>
-            <Image x:ConnectionId='15' Name="img_cartaHover" Grid.Row="2" Grid.Column="3" Grid.RowSpan="7" Grid.ColumnSpan="5"/>
             <Image Source="/CustomAssets/logo.png" Grid.Row="3" Grid.Column="3" Grid.RowSpan="5" Grid.ColumnSpan="5"/>
+            <Image x:ConnectionId='16' Name="img_cartaHover" Grid.Row="2" Grid.Column="3" Grid.RowSpan="7" Grid.ColumnSpan="5"/>
 
 
-            <Image x:ConnectionId='16' Source="../CustomAssets/setup.png"  Grid.Row="0" Grid.Column="0"
+            <Image x:ConnectionId='17' Source="../CustomAssets/setup.png"  Grid.Row="0" Grid.Column="0"
                    Opacity="{Binding lobby.partida.listadoCasillas[20].opacidad}" 
                                                                                             />
             <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -69,7 +69,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[20].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='17' Source="../CustomAssets/dora.png"  Grid.Row="0" Grid.Column="1" Opacity="{Binding lobby.partida.listadoCasillas[21].opacidad}"                                                                          />
+            <Image x:ConnectionId='18' Source="../CustomAssets/dora.png"  Grid.Row="0" Grid.Column="1" Opacity="{Binding lobby.partida.listadoCasillas[21].opacidad}"                                                                          />
             <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -84,7 +84,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[21].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[21].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='18' Source="../CustomAssets/luck.png"  Grid.Row="0" Grid.Column="2"
+            <Image x:ConnectionId='19' Source="../CustomAssets/luck.png"  Grid.Row="0" Grid.Column="2"
                    Opacity="{Binding lobby.partida.listadoCasillas[22].opacidad}" 
                                                                                             />
             <Grid Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -101,7 +101,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[22].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='19' Source="../CustomAssets/discord.png"  Grid.Row="0" Grid.Column="3" Opacity="{Binding lobby.partida.listadoCasillas[23].opacidad}"                                                                          />
+            <Image x:ConnectionId='20' Source="../CustomAssets/discord.png"  Grid.Row="0" Grid.Column="3" Opacity="{Binding lobby.partida.listadoCasillas[23].opacidad}"                                                                          />
             <Grid Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -116,7 +116,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[23].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='20' Source="../CustomAssets/android.png"  Grid.Row="0" Grid.Column="4" Opacity="{Binding lobby.partida.listadoCasillas[24].opacidad}"                                                                          />
+            <Image x:ConnectionId='21' Source="../CustomAssets/android.png"  Grid.Row="0" Grid.Column="4" Opacity="{Binding lobby.partida.listadoCasillas[24].opacidad}"                                                                          />
             <Grid Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -131,7 +131,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[24].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[24].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='21' Source="../CustomAssets/eclipse.png"  Grid.Row="0" Grid.Column="5"
+            <Image x:ConnectionId='22' Source="../CustomAssets/eclipse.png"  Grid.Row="0" Grid.Column="5"
                    Opacity="{Binding lobby.partida.listadoCasillas[25].opacidad}" 
                                                                                             />
             <Grid Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -148,7 +148,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[25].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='22' Source="../CustomAssets/ubuntu.png"  Grid.Row="0" Grid.Column="6" Opacity="{Binding lobby.partida.listadoCasillas[26].opacidad}"                                                                          />
+            <Image x:ConnectionId='23' Source="../CustomAssets/ubuntu.png"  Grid.Row="0" Grid.Column="6" Opacity="{Binding lobby.partida.listadoCasillas[26].opacidad}"                                                                          />
             <Grid Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -163,7 +163,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[26].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='23' Source="../CustomAssets/deloitte.png"  Grid.Row="0" Grid.Column="7" Opacity="{Binding lobby.partida.listadoCasillas[27].opacidad}"                                                                          />
+            <Image x:ConnectionId='24' Source="../CustomAssets/deloitte.png"  Grid.Row="0" Grid.Column="7" Opacity="{Binding lobby.partida.listadoCasillas[27].opacidad}"                                                                          />
             <Grid Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -178,7 +178,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[27].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='24' Source="../CustomAssets/aws.png"  Grid.Row="0" Grid.Column="8"
+            <Image x:ConnectionId='25' Source="../CustomAssets/aws.png"  Grid.Row="0" Grid.Column="8"
                    Opacity="{Binding lobby.partida.listadoCasillas[28].opacidad}" 
                                                                                             />
             <Grid Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -195,7 +195,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[28].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='25' Source="../CustomAssets/monitors.png"  Grid.Row="0" Grid.Column="9" Opacity="{Binding lobby.partida.listadoCasillas[29].opacidad}"                                                                          />
+            <Image x:ConnectionId='26' Source="../CustomAssets/monitors.png"  Grid.Row="0" Grid.Column="9" Opacity="{Binding lobby.partida.listadoCasillas[29].opacidad}"                                                                          />
             <Grid Grid.Row="0" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -210,7 +210,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[29].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='26' Source="../CustomAssets/asun.png"  Grid.Row="0" Grid.Column="10"
+            <Image x:ConnectionId='27' Source="../CustomAssets/asun.png"  Grid.Row="0" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[30].opacidad}" 
                                                                                             />
             <Grid Grid.Row="0" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -233,7 +233,7 @@
 
 
 
-            <Image x:ConnectionId='27' Source="../CustomAssets/basement.png"  Grid.Row="10" Grid.Column="0"
+            <Image x:ConnectionId='28' Source="../CustomAssets/basement.png"  Grid.Row="10" Grid.Column="0"
                    Opacity="{Binding lobby.partida.listadoCasillas[10].opacidad}" 
                                                                                             />
             <Grid Grid.Row="10" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -250,7 +250,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[10].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='28' Source="../CustomAssets/luffy.png"  Grid.Row="10" Grid.Column="1" Opacity="{Binding lobby.partida.listadoCasillas[9].opacidad}"                                                                          />
+            <Image x:ConnectionId='29' Source="../CustomAssets/luffy.png"  Grid.Row="10" Grid.Column="1" Opacity="{Binding lobby.partida.listadoCasillas[9].opacidad}"                                                                          />
             <Grid Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -265,7 +265,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[9].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='29' Source="../CustomAssets/stackoverflow.png"  Grid.Row="10" Grid.Column="2" Opacity="{Binding lobby.partida.listadoCasillas[8].opacidad}"                                                                          />
+            <Image x:ConnectionId='30' Source="../CustomAssets/stackoverflow.png"  Grid.Row="10" Grid.Column="2" Opacity="{Binding lobby.partida.listadoCasillas[8].opacidad}"                                                                          />
             <Grid Grid.Row="10" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -280,7 +280,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[8].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='30' Source="../CustomAssets/luck.png"  Grid.Row="10" Grid.Column="3"
+            <Image x:ConnectionId='31' Source="../CustomAssets/luck.png"  Grid.Row="10" Grid.Column="3"
                    Opacity="{Binding lobby.partida.listadoCasillas[7].opacidad}" 
                                                                                             />
             <Grid Grid.Row="10" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -297,7 +297,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[7].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='31' Source="../CustomAssets/kingston.png"  Grid.Row="10" Grid.Column="4" Opacity="{Binding lobby.partida.listadoCasillas[6].opacidad}"                                                                          />
+            <Image x:ConnectionId='32' Source="../CustomAssets/kingston.png"  Grid.Row="10" Grid.Column="4" Opacity="{Binding lobby.partida.listadoCasillas[6].opacidad}"                                                                          />
             <Grid Grid.Row="10" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -312,7 +312,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[6].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='32' Source="../CustomAssets/geany.png"  Grid.Row="10" Grid.Column="5"
+            <Image x:ConnectionId='33' Source="../CustomAssets/geany.png"  Grid.Row="10" Grid.Column="5"
                    Opacity="{Binding lobby.partida.listadoCasillas[5].opacidad}" 
                                                                                             />
             <Grid Grid.Row="10" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -329,7 +329,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[5].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='33' Source="../CustomAssets/apple.png"  Grid.Row="10" Grid.Column="6"
+            <Image x:ConnectionId='34' Source="../CustomAssets/apple.png"  Grid.Row="10" Grid.Column="6"
                    Opacity="{Binding lobby.partida.listadoCasillas[4].opacidad}" 
                                                                                             />
             <Grid Grid.Row="10" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -346,7 +346,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[4].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='34' Source="../CustomAssets/microsoft.png"  Grid.Row="10" Grid.Column="7" Opacity="{Binding lobby.partida.listadoCasillas[3].opacidad}"                                                                          />
+            <Image x:ConnectionId='35' Source="../CustomAssets/microsoft.png"  Grid.Row="10" Grid.Column="7" Opacity="{Binding lobby.partida.listadoCasillas[3].opacidad}"                                                                          />
             <Grid Grid.Row="10" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -361,7 +361,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[3].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='35' Source="../CustomAssets/comunity.png"  Grid.Row="10" Grid.Column="8"
+            <Image x:ConnectionId='36' Source="../CustomAssets/comunity.png"  Grid.Row="10" Grid.Column="8"
                    Opacity="{Binding lobby.partida.listadoCasillas[2].opacidad}" 
                                                                                             />
             <Grid Grid.Row="10" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -378,7 +378,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[2].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='36' Source="../CustomAssets/php.png"  Grid.Row="10" Grid.Column="9" Opacity="{Binding lobby.partida.listadoCasillas[1].opacidad}"                                                                          />
+            <Image x:ConnectionId='37' Source="../CustomAssets/php.png"  Grid.Row="10" Grid.Column="9" Opacity="{Binding lobby.partida.listadoCasillas[1].opacidad}"                                                                          />
             <Grid Grid.Row="10" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -393,7 +393,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[1].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[1].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='37' Source="../CustomAssets/go.png"  Grid.Row="10" Grid.Column="10"
+            <Image x:ConnectionId='38' Source="../CustomAssets/go.png"  Grid.Row="10" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[0].opacidad}" 
                                                                                             />
             <Grid Grid.Row="10" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -415,7 +415,7 @@
 
 
 
-            <Image x:ConnectionId='38' Source="../CustomAssets/conan.png"  Grid.Row="1" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[19].opacidad}"                                                                          />
+            <Image x:ConnectionId='39' Source="../CustomAssets/conan.png"  Grid.Row="1" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[19].opacidad}"                                                                          />
             <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -430,7 +430,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[19].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[19].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='39' Source="../CustomAssets/github.png"  Grid.Row="2" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[18].opacidad}"                                                                          />
+            <Image x:ConnectionId='40' Source="../CustomAssets/github.png"  Grid.Row="2" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[18].opacidad}"                                                                          />
             <Grid Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -445,7 +445,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[18].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[18].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='40' Source="../CustomAssets/comunity90.png"  Grid.Row="3" Grid.Column="0"
+            <Image x:ConnectionId='41' Source="../CustomAssets/comunity90.png"  Grid.Row="3" Grid.Column="0"
                    Opacity="{Binding lobby.partida.listadoCasillas[17].opacidad}" 
                                                                                             />
             <Grid Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -462,7 +462,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[17].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[17].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='41' Source="../CustomAssets/chollometro.png"  Grid.Row="4" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[16].opacidad}"                                                                          />
+            <Image x:ConnectionId='42' Source="../CustomAssets/chollometro.png"  Grid.Row="4" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[16].opacidad}"                                                                          />
             <Grid Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -477,7 +477,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[16].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[16].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='42' Source="../CustomAssets/netbeans.png"  Grid.Row="5" Grid.Column="0"
+            <Image x:ConnectionId='43' Source="../CustomAssets/netbeans.png"  Grid.Row="5" Grid.Column="0"
                    Opacity="{Binding lobby.partida.listadoCasillas[15].opacidad}" 
                                                                                             />
             <Grid Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -494,7 +494,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[15].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[15].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='43' Source="../CustomAssets/overwatch.png"  Grid.Row="6" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[14].opacidad}"                                                                          />
+            <Image x:ConnectionId='44' Source="../CustomAssets/overwatch.png"  Grid.Row="6" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[14].opacidad}"                                                                          />
             <Grid Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -509,7 +509,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[14].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[14].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='44' Source="../CustomAssets/anime.png"  Grid.Row="7" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[13].opacidad}"                                                                          />
+            <Image x:ConnectionId='45' Source="../CustomAssets/anime.png"  Grid.Row="7" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[13].opacidad}"                                                                          />
             <Grid Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -524,7 +524,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[13].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[13].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='45' Source="../CustomAssets/azure.png"  Grid.Row="8" Grid.Column="0"
+            <Image x:ConnectionId='46' Source="../CustomAssets/azure.png"  Grid.Row="8" Grid.Column="0"
                    Opacity="{Binding lobby.partida.listadoCasillas[12].opacidad}" 
                                                                                             />
             <Grid Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -541,7 +541,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[12].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[12].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='46' Source="../CustomAssets/cookie.png"  Grid.Row="9" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[11].opacidad}"                                                                          />
+            <Image x:ConnectionId='47' Source="../CustomAssets/cookie.png"  Grid.Row="9" Grid.Column="0" Opacity="{Binding lobby.partida.listadoCasillas[11].opacidad}"                                                                          />
             <Grid Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -561,7 +561,7 @@
 
 
 
-            <Image x:ConnectionId='47' Source="../CustomAssets/pccomponentes.png"  Grid.Row="1" Grid.Column="10"
+            <Image x:ConnectionId='48' Source="../CustomAssets/pccomponentes.png"  Grid.Row="1" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[31].opacidad}" 
                                                                                             />
             <Grid Grid.Row="1" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -578,7 +578,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[31].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[31].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='48' Source="../CustomAssets/xiaomi.png"  Grid.Row="2" Grid.Column="10"
+            <Image x:ConnectionId='49' Source="../CustomAssets/xiaomi.png"  Grid.Row="2" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[32].opacidad}" 
                                                                                             />
             <Grid Grid.Row="2" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -595,7 +595,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[32].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[32].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='49' Source="../CustomAssets/comunity270.png"  Grid.Row="3" Grid.Column="10"
+            <Image x:ConnectionId='50' Source="../CustomAssets/comunity270.png"  Grid.Row="3" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[33].opacidad}" 
                                                                                             />
             <Grid Grid.Row="3" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -612,7 +612,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[33].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[33].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='50' Source="../CustomAssets/polvillo.png"  Grid.Row="4" Grid.Column="10"
+            <Image x:ConnectionId='51' Source="../CustomAssets/polvillo.png"  Grid.Row="4" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[34].opacidad}" 
                                                                                             />
             <Grid Grid.Row="4" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -629,7 +629,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[34].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[34].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='51' Source="../CustomAssets/intelij.png"  Grid.Row="5" Grid.Column="10"
+            <Image x:ConnectionId='52' Source="../CustomAssets/intelij.png"  Grid.Row="5" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[35].opacidad}" 
                                                                                             />
             <Grid Grid.Row="5" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -646,7 +646,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[35].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[35].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='52' Source="../CustomAssets/luck270.png"  Grid.Row="6" Grid.Column="10"
+            <Image x:ConnectionId='53' Source="../CustomAssets/luck270.png"  Grid.Row="6" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[36].opacidad}" 
                                                                                             />
             <Grid Grid.Row="6" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -663,7 +663,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[36].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[36].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='53' Source="../CustomAssets/twitch.png"  Grid.Row="7" Grid.Column="10"
+            <Image x:ConnectionId='54' Source="../CustomAssets/twitch.png"  Grid.Row="7" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[37].opacidad}" 
                                                                                             />
             <Grid Grid.Row="7" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -680,7 +680,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[37].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[37].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='54' Source="../CustomAssets/azureS1.png"  Grid.Row="8" Grid.Column="10"
+            <Image x:ConnectionId='55' Source="../CustomAssets/azureS1.png"  Grid.Row="8" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[38].opacidad}" 
                                                                                             />
             <Grid Grid.Row="8" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -697,7 +697,7 @@
                 <Image Source="{Binding lobby.partida.listadoCasillas[38].listadoJugadores[2].ficha.imagenBordes}" Grid.Row="1" Grid.Column="0"/>
                 <Image Source="{Binding lobby.partida.listadoCasillas[38].listadoJugadores[3].ficha.imagenBordes}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Image x:ConnectionId='55' Source="../CustomAssets/java.png"  Grid.Row="9" Grid.Column="10"
+            <Image x:ConnectionId='56' Source="../CustomAssets/java.png"  Grid.Row="9" Grid.Column="10"
                    Opacity="{Binding lobby.partida.listadoCasillas[39].opacidad}" 
                                                                                             />
             <Grid Grid.Row="9" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -732,20 +732,20 @@
                 >
                 <RelativePanel>
 
-                    <Rectangle x:ConnectionId='12'
+                    <Rectangle x:ConnectionId='13'
                         Name="rct_playerBox"
                         Width="300"
                         Height="180"
                         Fill="{Binding colores.PLAYER_1}"/>
 
-                    <Rectangle x:ConnectionId='13'
+                    <Rectangle x:ConnectionId='14'
                         Name="rct_money"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
                         Height="120"
                         Fill="{Binding colores.PLAYER_1B}"/>
 
-                    <Image x:ConnectionId='14'
+                    <Image x:ConnectionId='15'
                         Name="img_fichaJugador"
                         Source="{Binding lobby.listadoJugadores[0].ficha.imagenBordes}"
                         Width="50"
@@ -850,20 +850,20 @@
                 >
                 <RelativePanel>
 
-                    <Rectangle x:ConnectionId='9'
+                    <Rectangle x:ConnectionId='10'
                         Name="rct_playerBox2"
                         Width="300"
                         Height="180"
                         Fill="{Binding colores.PLAYER_2}"/>
 
-                    <Rectangle x:ConnectionId='10'
+                    <Rectangle x:ConnectionId='11'
                         Name="rct_money2"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
                         Height="120"
                         Fill="{Binding colores.PLAYER_2B}"/>
 
-                    <Image x:ConnectionId='11'
+                    <Image x:ConnectionId='12'
                         Name="img_fichaJugador2"
                         Source="{Binding lobby.listadoJugadores[1].ficha.imagenBordes}"
                         Width="50"
@@ -967,20 +967,20 @@
                 >
                 <RelativePanel>
 
-                    <Rectangle x:ConnectionId='6'
+                    <Rectangle x:ConnectionId='7'
                         Name="rct_playerBox3"
                         Width="300"
                         Height="180"
                         Fill="{Binding colores.PLAYER_3}"/>
 
-                    <Rectangle x:ConnectionId='7'
+                    <Rectangle x:ConnectionId='8'
                         Name="rct_money3"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
                         Height="120"
                         Fill="{Binding colores.PLAYER_3B}"/>
 
-                    <Image x:ConnectionId='8'
+                    <Image x:ConnectionId='9'
                         Name="img_fichaJugador3"
                         Source="{Binding lobby.listadoJugadores[2].ficha.imagenBordes}"
                         Width="50"
@@ -1085,13 +1085,13 @@
                 >
                 <RelativePanel>
 
-                    <Rectangle x:ConnectionId='3'
+                    <Rectangle x:ConnectionId='4'
                         Name="rct_playerBox4"
                         Width="300"
                         Height="180"
                         Fill="{Binding colores.PLAYER_4}"/>
 
-                    <Rectangle x:ConnectionId='4'
+                    <Rectangle x:ConnectionId='5'
                         Name="rct_money4"
                         RelativePanel.AlignBottomWithPanel="True"
                         Width="300"
@@ -1099,7 +1099,7 @@
                         Fill="{Binding colores.PLAYER_4B}"/>
 
 
-                    <Image x:ConnectionId='5'
+                    <Image x:ConnectionId='6'
                         Name="img_fichaJugador4"
                         Source="{Binding lobby.listadoJugadores[3].ficha.imagenBordes}"
                         Width="50"
@@ -1202,7 +1202,28 @@
             RelativePanel.AlignRightWithPanel="True"
             Height="80"
             Width="Auto"
-            Fill="{Binding lobby.partida.colorBarra}"/>
+            Fill="{Binding colores.TABLERO}"/>
+
+        <Image x:ConnectionId='3'
+            Name="dado1"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignTopWith="rct_downStackPanel"
+            VerticalAlignment="Center"
+            Margin="4"
+            Source="{Binding lobby.partida.dado1}"
+            Width="50"
+            Height="50"/>
+
+        <Image
+            RelativePanel.RightOf="dado1"
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignTopWith="rct_downStackPanel"
+            VerticalAlignment="Center"
+            Margin="4"
+            Source="{Binding lobby.partida.dado2}"
+            Width="50"
+            Height="50"/>
         
         <Button
             RelativePanel.AlignTopWith="rct_downStackPanel"

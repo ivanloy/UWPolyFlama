@@ -742,6 +742,24 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\cinco.jpg">
+      <PackagePath>CustomAssets\Dado\cinco.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\cuatro.jpg">
+      <PackagePath>CustomAssets\Dado\cuatro.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\dos.jpg">
+      <PackagePath>CustomAssets\Dado\dos.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\seis.jpg">
+      <PackagePath>CustomAssets\Dado\seis.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\tres.jpg">
+      <PackagePath>CustomAssets\Dado\tres.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\uno.jpg">
+      <PackagePath>CustomAssets\Dado\uno.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyectos\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

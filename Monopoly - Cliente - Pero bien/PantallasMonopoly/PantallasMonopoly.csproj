@@ -194,6 +194,12 @@
     <Content Include="CustomAssets\comunity90.png" />
     <Content Include="CustomAssets\conan.png" />
     <Content Include="CustomAssets\cookie.png" />
+    <Content Include="CustomAssets\Dado\cinco.jpg" />
+    <Content Include="CustomAssets\Dado\cuatro.jpg" />
+    <Content Include="CustomAssets\Dado\dos.jpg" />
+    <Content Include="CustomAssets\Dado\seis.jpg" />
+    <Content Include="CustomAssets\Dado\tres.jpg" />
+    <Content Include="CustomAssets\Dado\uno.jpg" />
     <Content Include="CustomAssets\dbk.png" />
     <Content Include="CustomAssets\deloitte.png" />
     <Content Include="CustomAssets\discord.png" />

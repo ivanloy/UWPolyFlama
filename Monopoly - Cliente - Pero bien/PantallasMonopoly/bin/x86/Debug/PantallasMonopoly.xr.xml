@@ -7,7 +7,10 @@
     <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="lobby" />
     <RootPropertyPathName Name="partida" />
-    <RootPropertyPathName Name="colorBarra" />
+    <RootPropertyPathName Name="dado2" />
+    <RootPropertyPathName Name="dado1" />
+    <RootPropertyPathName Name="colores" />
+    <RootPropertyPathName Name="TABLERO" />
     <RootPropertyPathName Name="listadoJugadores" />
     <RootPropertyPathName Name="listadoPropiedades" />
     <RootPropertyPathName Name="brushColor" />
@@ -15,7 +18,6 @@
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="ficha" />
     <RootPropertyPathName Name="imagenBordes" />
-    <RootPropertyPathName Name="colores" />
     <RootPropertyPathName Name="PLAYER_4B" />
     <RootPropertyPathName Name="PLAYER_4" />
     <RootPropertyPathName Name="PLAYER_3B" />
@@ -27,7 +29,6 @@
     <RootPropertyPathName Name="listadoCasillas" />
     <RootPropertyPathName Name="tamanoImagenFichaJugador" />
     <RootPropertyPathName Name="opacidad" />
-    <RootPropertyPathName Name="TABLERO" />
     <RootPropertyPathName Name="jugarCommand" />
     <RootPropertyPathName Name="imagen" />
     <RootPropertyPathName Name="maxJugadores" />
@@ -179,6 +180,20 @@
       <RootProperty Name="Fill" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="MaxHeight" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="PointerEntered" />
+      <RootEvent Name="PointerExited" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
@@ -201,19 +216,6 @@
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="MaxHeight" />
-      <RootProperty Name="MaxWidth" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootEvent Name="PointerEntered" />
-      <RootEvent Name="PointerExited" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />

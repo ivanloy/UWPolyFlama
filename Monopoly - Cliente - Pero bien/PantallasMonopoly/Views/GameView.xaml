@@ -1202,7 +1202,28 @@
             RelativePanel.AlignRightWithPanel="True"
             Height="80"
             Width="Auto"
-            Fill="{Binding lobby.partida.colorBarra}"/>
+            Fill="{Binding colores.TABLERO}"/>
+
+        <Image
+            Name="dado1"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignTopWith="rct_downStackPanel"
+            VerticalAlignment="Center"
+            Margin="4"
+            Source="{Binding lobby.partida.dado1}"
+            Width="50"
+            Height="50"/>
+
+        <Image
+            RelativePanel.RightOf="dado1"
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignTopWith="rct_downStackPanel"
+            VerticalAlignment="Center"
+            Margin="4"
+            Source="{Binding lobby.partida.dado2}"
+            Width="50"
+            Height="50"/>
         
         <Button
             RelativePanel.AlignTopWith="rct_downStackPanel"

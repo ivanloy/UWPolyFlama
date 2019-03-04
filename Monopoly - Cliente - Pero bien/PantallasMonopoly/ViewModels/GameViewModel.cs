@@ -2,6 +2,7 @@
 using PantallasMonopoly.Connection;
 using PantallasMonopoly.Models;
 using PantallasMonopoly.Util;
+using PantallasMonopoly.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,6 +81,7 @@ namespace PantallasMonopoly.ViewModels
 
         public GameViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
             colores = new Colores();
             conn = new HubConnection(conexionPadre.conexionURL);
             proxy = conn.CreateHubProxy("GameHub");
@@ -190,7 +192,9 @@ namespace PantallasMonopoly.ViewModels
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                   () =>
                   {
-                      _navigationService.GoBack(); 
+                      conn.Stop();
+                      proxy = null;
+                      _navigationService.Navigate(typeof(MainMenu));
                   }
                   );
         }
