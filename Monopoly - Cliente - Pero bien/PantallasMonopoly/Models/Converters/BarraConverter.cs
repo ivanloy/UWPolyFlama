@@ -16,11 +16,11 @@ namespace PantallasMonopoly.Models
         {
             int turnoActual = (int)value;
             Colores colores = new Colores();
-            if (turnoActual == 0) return colores.PLAYER_1C;
-            if (turnoActual == 1) return colores.PLAYER_2C;
-            if (turnoActual == 2) return colores.PLAYER_3C;
-            if (turnoActual == 3) return colores.PLAYER_4C;
-            return colores.PLAYER_4C;
+            if (turnoActual == 0) return colores.PLAYER_1B;
+            if (turnoActual == 1) return colores.PLAYER_2B;
+            if (turnoActual == 2) return colores.PLAYER_3B;
+            if (turnoActual == 3) return colores.PLAYER_4B;
+            return colores.PLAYER_4B;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
