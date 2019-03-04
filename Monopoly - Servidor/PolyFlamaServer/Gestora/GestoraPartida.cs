@@ -112,9 +112,9 @@ namespace PolyFlamaServer.Gestora
             
             listado.Add(new Propiedad("Podría Hacerse Peor", -99, ColorPropiedad.MARRON, 1, 2));
             listado.Add(new Propiedad("La gran M", -99, ColorPropiedad.MARRON, 3, 4));
-            listado.Add(new Propiedad("Geany", 100, ColorPropiedad.CELESTE, 6, 6));
-            listado.Add(new Propiedad("Queenston", 100, ColorPropiedad.CELESTE, 8, 6));
-            listado.Add(new Propiedad("Copiar con flow", 120, ColorPropiedad.CELESTE, 9, 8));
+            listado.Add(new Propiedad("Queenston", 100, ColorPropiedad.CELESTE, 6, 6));
+            listado.Add(new Propiedad("Copiar con flow", 100, ColorPropiedad.CELESTE, 8, 6));
+            listado.Add(new Propiedad("Tienda D. Sombreros", 120, ColorPropiedad.CELESTE, 9, 8));
             listado.Add(new Propiedad("Cuqui Clicker", 140, ColorPropiedad.ROSA, 11, 10));
             listado.Add(new Propiedad("Gorgeanime List", 140, ColorPropiedad.ROSA, 13, 10));
             listado.Add(new Propiedad("Overjuacho", 160, ColorPropiedad.ROSA, 14, 12));

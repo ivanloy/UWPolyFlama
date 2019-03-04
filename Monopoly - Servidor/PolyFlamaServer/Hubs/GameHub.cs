@@ -28,21 +28,39 @@ namespace PolyFlamaServer.Hubs
                     int turnoNuevo;
                     Jugador jugador = lobby.listadoJugadores[turnoActual];
                     string connectionIDCreador = LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugador.nombre];
+                    Random random = new Random();
+                    
+                    //Tirar los dados
+                    int dado1 = random.Next(1, 7);
+                    int dado2 = random.Next(1, 7);
+
+                    //Avisamos a los otros jugadores de los cambios
+                    foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
+                        Clients.Client(connectionId).actualizarLobby(lobby);
+
+                    //Si el jugador está en la cárcel
+                    if (jugador.estaEnCarcel && jugador.turnosEnCarcel < 2)
+                    {
+                        //Si ha sacado dobles
+                        if(dado1 == dado2)
+                        {
+                            //Lo sacamos de la carcel
+                            jugador.estaEnCarcel = false;
+                            jugador.turnosEnCarcel = 0;
+
+                            Clients.Caller.mostrarMensaje($"You pulled out double {dado1}s! You're out of jail by the power vested in these dice");
+                        }
+                    }
 
                     //Si el jugador no está en la carcel o si está en la carcel pero ya ha hecho 2 tiradas
                     if (!jugador.estaEnCarcel || (jugador.estaEnCarcel && jugador.turnosEnCarcel == 2))
                     {
-                        Random random = new Random();
                         int posicionActual = lobby.listadoJugadores[turnoActual].posicion;
                         int posicionAnterior = posicionActual;
 
                         //Le quitamos el estado de estar en la carcel, independiente de si está o no, why not? 🤷🤷🤷🤷🤷🤷🤷🤷
                         jugador.estaEnCarcel = false;
                         jugador.turnosEnCarcel = 0;
-
-                        //Tirar los dados
-                        int dado1 = random.Next(1, 7);
-                        int dado2 = random.Next(1, 7);
 
                         //Actualizamos el lobby con los dados
                         lobby.partida.arrayDados = new int[] { dado1, dado2 };
@@ -55,10 +73,7 @@ namespace PolyFlamaServer.Hubs
 
                         //Avisamos a los otros jugadores de los cambios
                         foreach (string connectionId in LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection.Values)
-                        {
                             Clients.Client(connectionId).actualizarLobby(lobby);
-                            Clients.Client(connectionId).moverCasillas();
-                        }
 
                         //Comprobar de que tipo es la casilla actual
                         Casilla casilla = lobby.partida.listadoCasillas[posicionActual];
