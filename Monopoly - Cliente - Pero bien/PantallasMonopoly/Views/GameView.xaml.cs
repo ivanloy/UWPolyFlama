@@ -88,7 +88,7 @@ namespace PantallasMonopoly.Views
             else if (row == 5 && col == 10) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/intelij.png"));
             else if (row == 6 && col == 10) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/luck.png"));
             else if (row == 7 && col == 10) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/twitch.png"));
-           // else if (row == 8 && col == 10) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/azureS1.png"));
+            else if (row == 8 && col == 10) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/azureS1.png"));
             else if (row == 9 && col == 10) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/java.png"));
             else if (row == 1 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/conan.png"));
             else if (row == 2 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/github.png"));
@@ -97,7 +97,7 @@ namespace PantallasMonopoly.Views
             else if (row == 5 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/netbeans.png"));
             else if (row == 6 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/overwatch.png"));
             else if (row == 7 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/myanimelist.png"));
-        //    else if (row == 8 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/azure.png"));
+            else if (row == 8 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/azure.png"));
             else if (row == 9 && col == 0) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/cookie.png"));
             return null;
         }
@@ -152,7 +152,7 @@ namespace PantallasMonopoly.Views
             else if (col == 9 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/intelij.png"));
             else if (col == 9 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/eclipse.png"));
 
-           // else if (col == 10 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/dora.png"));
+            else if (col == 10 && row == 2) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/azure.png"));
             else if (col == 10 && row == 3) return new BitmapImage(new Uri("ms-appx://ExamenDI/CustomAssets/RECTAS/aws.png"));
             return null;
         }
