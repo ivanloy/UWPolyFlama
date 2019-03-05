@@ -70,6 +70,7 @@ CustomAssets\luck270.png
 CustomAssets\luffy.png
 CustomAssets\microsoft.png
 CustomAssets\monitors.png
+CustomAssets\myanimelist.png
 CustomAssets\netbeans.png
 CustomAssets\overwatch.png
 CustomAssets\pccomponentes.png
@@ -78,6 +79,8 @@ CustomAssets\polvillo.png
 CustomAssets\RECTAS\android.png
 CustomAssets\RECTAS\apple.png
 CustomAssets\RECTAS\aws.png
+CustomAssets\RECTAS\azure.png
+CustomAssets\RECTAS\azureS1.png
 CustomAssets\RECTAS\chollometro.png
 CustomAssets\RECTAS\comunidad.png
 CustomAssets\RECTAS\conan.png
@@ -88,25 +91,6 @@ CustomAssets\RECTAS\dora.png
 CustomAssets\RECTAS\dual.png
 CustomAssets\RECTAS\eclipse.png
 CustomAssets\RECTAS\github.png
-CustomAssets\RECTAS\Grupo 10.png
-CustomAssets\RECTAS\Grupo 11.png
-CustomAssets\RECTAS\Grupo 12.png
-CustomAssets\RECTAS\Grupo 13.png
-CustomAssets\RECTAS\Grupo 14.png
-CustomAssets\RECTAS\Grupo 15.png
-CustomAssets\RECTAS\Grupo 23.png
-CustomAssets\RECTAS\Grupo 24.png
-CustomAssets\RECTAS\Grupo 25.png
-CustomAssets\RECTAS\Grupo 26.png
-CustomAssets\RECTAS\Grupo 27.png
-CustomAssets\RECTAS\Grupo 7.png
-CustomAssets\RECTAS\Grupo 79.png
-CustomAssets\RECTAS\Grupo 8.png
-CustomAssets\RECTAS\Grupo 80.png
-CustomAssets\RECTAS\Grupo 81.png
-CustomAssets\RECTAS\Grupo 82.png
-CustomAssets\RECTAS\Grupo 83.png
-CustomAssets\RECTAS\Grupo 9.png
 CustomAssets\RECTAS\intelij.png
 CustomAssets\RECTAS\java.png
 CustomAssets\RECTAS\luck.png
@@ -115,7 +99,7 @@ CustomAssets\RECTAS\netbeans.png
 CustomAssets\RECTAS\overwatch.png
 CustomAssets\RECTAS\pccomponentes.png
 CustomAssets\RECTAS\polvillo.png
-CustomAssets\RECTAS\twich.png
+CustomAssets\RECTAS\twitch.png
 CustomAssets\RECTAS\ubuntu.png
 CustomAssets\RECTAS\xiaomi.png
 CustomAssets\setup.png
