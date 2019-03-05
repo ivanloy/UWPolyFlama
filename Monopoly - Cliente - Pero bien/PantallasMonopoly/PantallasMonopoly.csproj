@@ -229,6 +229,12 @@
     <Content Include="CustomAssets\java.png" />
     <Content Include="CustomAssets\kingston.png" />
     <Content Include="CustomAssets\logo.png" />
+    <Content Include="CustomAssets\Logos\24x24.png" />
+    <Content Include="CustomAssets\Logos\300x300.png" />
+    <Content Include="CustomAssets\Logos\50x50.png" />
+    <Content Include="CustomAssets\Logos\88x88.png" />
+    <Content Include="CustomAssets\Logos\SplashScreen-1240.png" />
+    <Content Include="CustomAssets\Logos\SplashScreen-620.png" />
     <Content Include="CustomAssets\luck.png" />
     <Content Include="CustomAssets\luck270.png" />
     <Content Include="CustomAssets\luffy.png" />
