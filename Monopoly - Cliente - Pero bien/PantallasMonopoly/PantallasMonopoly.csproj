@@ -180,6 +180,7 @@
     <None Include="PantallasMonopoly_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\dice.wav" />
     <Content Include="CustomAssets\android.png" />
     <Content Include="CustomAssets\anime.png" />
     <Content Include="CustomAssets\apple.png" />

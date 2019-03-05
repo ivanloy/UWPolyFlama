@@ -71,6 +71,7 @@ namespace PantallasMonopoly.ViewModels
         {
             _esMiTurno = false;
             _tirarDadosCommand.RaiseCanExecuteChanged();
+            playDiceSound();
             await proxy.Invoke("tirarDados", lobby.nombre);
             //NotifyPropertyChanged("lobby"); //Esto ya no hace falta con el nuevo notify
         }
@@ -233,6 +234,16 @@ namespace PantallasMonopoly.ViewModels
                    await proxy.Invoke("comprarPropiedad", _lobby.nombre, result == ContentDialogResult.Primary);
                }
                );
+        }
+
+        private async void playDiceSound()
+        {
+            MediaElement mysong = new MediaElement();
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("dice.wav");
+            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            mysong.SetSource(stream, file.ContentType);
+            mysong.Play();
         }
 
         #endregion
