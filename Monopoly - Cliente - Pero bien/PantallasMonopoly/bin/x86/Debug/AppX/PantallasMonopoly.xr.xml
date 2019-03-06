@@ -4,10 +4,10 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="lobby" />
     <RootPropertyPathName Name="partida" />
     <RootPropertyPathName Name="turnoActual" />
+    <RootPropertyPathName Name="tirarDadosCommand" />
     <RootPropertyPathName Name="arrayDados" />
     <RootPropertyPathName Name="listadoJugadores" />
     <RootPropertyPathName Name="listadoPropiedades" />
@@ -199,6 +199,7 @@
       <RootEvent Name="PointerExited" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Name" />
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Command" />
@@ -206,7 +207,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="MinHeight" />
       <RootProperty Name="MinWidth" />
-      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="BorderThickness" />

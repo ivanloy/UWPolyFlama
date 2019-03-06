@@ -112,8 +112,8 @@ namespace PolyFlamaServer.Hubs
                                     if (estacion4)
                                         nEstacionesCompradas++;
 
-                                    //Si tiene 1 estación, paga 25; 2, 50; 3, 100; 4, 200.
-                                    dineroAPagar = 25 * (int)Math.Pow(2, nEstacionesCompradas);
+                                    //Si tiene 1 estación, paga 50; 2, 100; 3, 200; 4, 400.
+                                    dineroAPagar = 50 * (int)Math.Pow(2, nEstacionesCompradas);
 
                                     //Mandarle mensajito al jugador
                                     Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugador.nombre} owns this station. He owns {nEstacionesCompradas} station(s), therefore, you paid him {dineroAPagar}$");
@@ -129,11 +129,11 @@ namespace PolyFlamaServer.Hubs
                                     if (servicio2)
                                         nServicios++;
 
-                                    //Si tiene los dos servicios comprados, paga 10 veces la tirada; si solo tiene un servicio, 4 veces la tirada
-                                    dineroAPagar = (dado1 + dado2) * (nServicios == 1 ? 4 : 10);
+                                    //Si tiene los dos servicios comprados, paga 20 veces la tirada; si solo tiene un servicio, 10 veces la tirada
+                                    dineroAPagar = (dado1 + dado2) * (nServicios == 1 ? 10 : 20);
 
                                     //Mandarle mensajito al jugador
-                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this service. He {(nServicios == 1 ? "only owns this service" : "owns both services")}, therefore, you paid him {(nServicios == 1 ? "4" : "10")} times the roll: {dineroAPagar}$");
+                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this service. He {(nServicios == 1 ? "only owns this service" : "owns both services")}, therefore, you paid him {(nServicios == 1 ? "10" : "20")} times the roll: {dineroAPagar}$");
                                 }
                                 else
                                 {
