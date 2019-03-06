@@ -29,7 +29,11 @@ namespace PantallasMonopoly.Models
             get {
                 Brush ret = new SolidColorBrush(Colors.Black);
                 Colores colores = new Colores();
-                if (this.estaComprado)
+                if(comprador != null)
+                {
+                    ret = new SolidColorBrush(Colors.Gray);
+                }
+                else if (this.estaComprado)
                 {
                     switch (this.color)
                     {

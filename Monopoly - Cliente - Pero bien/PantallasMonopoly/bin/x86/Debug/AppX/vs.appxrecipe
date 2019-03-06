@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-L4SDVIJ</Machine>
-    <WindowsUser>jolsensei</WindowsUser>
+    <Machine>107-17</Machine>
+    <WindowsUser>ivanloy</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f103dd62-8baa-4a76-92e3-7dbe9c4eb27c</PackageIdentityName>
     <PackageIdentityPublisher>CN=jobando</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,28 +18,27 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>2F8B6A4D229E58A6B2BAD6162A7A0ABBA99348BF8FBA87370E89341811A47DB6</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>FD84BC602D722152809970364612A1C7FBC02DC4A6955947CB4393F91834FD78</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f103dd62-8baa-4a76-92e3-7dbe9c4eb27c_1.0.0.0_x86__068yrrhfemz8a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f103dd62-8baa-4a76-92e3-7dbe9c4eb27c_068yrrhfemz8a!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f103dd62-8baa-4a76-92e3-7dbe9c4eb27c</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=jobando</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
-    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:39:32.275</Modified>
+      <Modified>2019-03-06T07:35:30.110</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.exe">
       <PackagePath>entrypoint\PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-03-05T17:39:24.168</Modified>
+      <Modified>2019-03-06T07:35:18.864</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.aspnet.signalr.client\2.4.0\lib\netstandard1.3\Microsoft.AspNet.SignalR.Client.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.aspnet.signalr.client\2.4.0\lib\netstandard1.3\Microsoft.AspNet.SignalR.Client.dll">
       <PackagePath>Microsoft.AspNet.SignalR.Client.dll</PackagePath>
       <Modified>2018-11-13T09:54:16.000</Modified>
     </AppxPackagedFile>
@@ -95,23 +94,23 @@
       <PackagePath>System.dll</PackagePath>
       <Modified>2016-07-01T16:10:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit\2.0.0\lib\netstandard1.4\Microsoft.Toolkit.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit\2.0.0\lib\netstandard1.4\Microsoft.Toolkit.dll">
       <PackagePath>Microsoft.Toolkit.dll</PackagePath>
       <Modified>2017-08-29T17:46:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.dll</PackagePath>
       <Modified>2017-08-29T17:46:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.dll</PackagePath>
       <Modified>2017-08-29T17:46:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.animations\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Animations.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.animations\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Animations.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Animations.dll</PackagePath>
       <Modified>2017-08-29T17:46:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.dll</PackagePath>
       <Modified>2017-08-29T17:46:54.000</Modified>
     </AppxPackagedFile>
@@ -119,115 +118,115 @@
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
       <Modified>2016-06-11T21:13:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
       <Modified>2016-02-22T12:59:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
       <Modified>2016-02-22T12:59:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2016-06-13T21:06:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\robmikh.compositionsurfacefactory\0.7.1\runtimes\win10-x86\native\Robmikh.CompositionSurfaceFactory.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\robmikh.compositionsurfacefactory\0.7.1\runtimes\win10-x86\native\Robmikh.CompositionSurfaceFactory.dll">
       <PackagePath>Robmikh.CompositionSurfaceFactory.dll</PackagePath>
       <Modified>2017-02-08T21:43:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.collections\4.3.0\lib\netcore50\System.Collections.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.collections\4.3.0\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
       <Modified>2016-11-05T03:55:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.diagnostics.tools\4.3.0\lib\netcore50\System.Diagnostics.Tools.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.diagnostics.tools\4.3.0\lib\netcore50\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
       <Modified>2016-11-05T03:55:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.diagnostics.tracing\4.3.0\lib\netcore50\System.Diagnostics.Tracing.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.diagnostics.tracing\4.3.0\lib\netcore50\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
       <Modified>2016-11-05T03:55:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.globalization\4.3.0\lib\netcore50\System.Globalization.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.globalization\4.3.0\lib\netcore50\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
       <Modified>2016-11-05T03:56:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.globalization.calendars\4.3.0\lib\netcore50\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.globalization.calendars\4.3.0\lib\netcore50\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
       <Modified>2016-11-05T03:55:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.io\4.3.0\lib\netcore50\System.IO.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.io\4.3.0\lib\netcore50\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
       <Modified>2016-11-05T03:56:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.reflection\4.3.0\lib\netcore50\System.Reflection.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.reflection\4.3.0\lib\netcore50\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
       <Modified>2016-11-05T03:56:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.reflection.extensions\4.3.0\lib\netcore50\System.Reflection.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.reflection.extensions\4.3.0\lib\netcore50\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
       <Modified>2016-11-05T03:56:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.reflection.primitives\4.3.0\lib\netcore50\System.Reflection.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.reflection.primitives\4.3.0\lib\netcore50\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
       <Modified>2016-11-05T03:56:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.resources.resourcemanager\4.3.0\lib\netcore50\System.Resources.ResourceManager.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.resources.resourcemanager\4.3.0\lib\netcore50\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
       <Modified>2016-11-05T03:56:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.runtime\4.3.0\lib\netcore50\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.runtime\4.3.0\lib\netcore50\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2016-11-05T03:57:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.runtime.handles\4.3.0\lib\netstandard1.3\System.Runtime.Handles.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.runtime.handles\4.3.0\lib\netstandard1.3\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
       <Modified>2016-11-05T03:56:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.runtime.interopservices\4.3.0\lib\netcore50\System.Runtime.InteropServices.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.runtime.interopservices\4.3.0\lib\netcore50\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
       <Modified>2016-11-05T03:56:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.text.encoding\4.3.0\lib\netcore50\System.Text.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.text.encoding\4.3.0\lib\netcore50\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
       <Modified>2016-11-05T03:57:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.text.encoding.extensions\4.3.0\lib\netcore50\System.Text.Encoding.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.text.encoding.extensions\4.3.0\lib\netcore50\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
       <Modified>2016-11-05T03:57:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.threading.tasks\4.3.0\lib\netcore50\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.threading.tasks\4.3.0\lib\netcore50\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
       <Modified>2016-11-05T03:57:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.any.system.threading.timer\4.3.0\lib\netcore50\System.Threading.Timer.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.any.system.threading.timer\4.3.0\lib\netcore50\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
       <Modified>2016-11-05T03:57:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.microsoft.win32.primitives\4.3.0\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.microsoft.win32.primitives\4.3.0\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
       <Modified>2016-11-05T03:55:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.system.console\4.3.0\runtimes\win\lib\netcore50\System.Console.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.system.console\4.3.0\runtimes\win\lib\netcore50\System.Console.dll">
       <PackagePath>System.Console.dll</PackagePath>
       <Modified>2016-11-05T03:55:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.system.diagnostics.debug\4.3.0\runtimes\win\lib\netcore50\System.Diagnostics.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.system.diagnostics.debug\4.3.0\runtimes\win\lib\netcore50\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
       <Modified>2016-11-05T03:55:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.system.io.filesystem\4.3.0\runtimes\win\lib\netcore50\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.system.io.filesystem\4.3.0\runtimes\win\lib\netcore50\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
       <Modified>2016-11-05T03:56:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.system.net.primitives\4.3.0\runtimes\win\lib\netcore50\System.Net.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.system.net.primitives\4.3.0\runtimes\win\lib\netcore50\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
       <Modified>2016-11-05T03:56:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.system.net.sockets\4.3.0\runtimes\win\lib\netcore50\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.system.net.sockets\4.3.0\runtimes\win\lib\netcore50\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
       <Modified>2016-11-05T03:56:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win.system.runtime.extensions\4.3.0\runtimes\win\lib\netcore50\System.Runtime.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win.system.runtime.extensions\4.3.0\runtimes\win\lib\netcore50\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
       <Modified>2016-11-05T03:56:48.000</Modified>
     </AppxPackagedFile>
@@ -235,31 +234,31 @@
       <PackagePath>clrjit.dll</PackagePath>
       <Modified>2016-06-13T16:27:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win7-x86.runtime.native.system.io.compression\4.3.0\runtimes\win7-x86\native\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win7-x86.runtime.native.system.io.compression\4.3.0\runtimes\win7-x86\native\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
       <Modified>2016-11-05T03:34:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\runtime.win7.system.private.uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\runtime.win7.system.private.uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
       <Modified>2016-11-05T03:56:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.appcontext\4.3.0\lib\netcore50\System.AppContext.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.appcontext\4.3.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
       <Modified>2016-11-05T03:55:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.buffers\4.3.0\lib\netstandard1.1\System.Buffers.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.buffers\4.3.0\lib\netstandard1.1\System.Buffers.dll">
       <PackagePath>System.Buffers.dll</PackagePath>
       <Modified>2016-11-05T03:55:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.collections.concurrent\4.3.0\lib\netcore50\System.Collections.Concurrent.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.collections.concurrent\4.3.0\lib\netcore50\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
       <Modified>2016-11-05T03:55:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.collections.immutable\1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.collections.immutable\1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
       <Modified>2016-06-11T21:13:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.collections.nongeneric\4.0.1\lib\netstandard1.3\System.Collections.NonGeneric.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.collections.nongeneric\4.0.1\lib\netstandard1.3\System.Collections.NonGeneric.dll">
       <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
       <Modified>2016-06-11T21:13:22.000</Modified>
     </AppxPackagedFile>
@@ -283,11 +282,11 @@
       <PackagePath>System.Data.Common.dll</PackagePath>
       <Modified>2016-06-11T21:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.diagnostics.contracts\4.3.0\lib\netcore50\System.Diagnostics.Contracts.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.diagnostics.contracts\4.3.0\lib\netcore50\System.Diagnostics.Contracts.dll">
       <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
       <Modified>2016-11-05T03:55:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.diagnostics.diagnosticsource\4.3.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.diagnostics.diagnosticsource\4.3.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2016-11-05T03:55:52.000</Modified>
     </AppxPackagedFile>
@@ -303,15 +302,15 @@
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
       <Modified>2016-06-11T21:13:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.io.compression\4.3.0\runtimes\win\lib\netstandard1.3\System.IO.Compression.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.io.compression\4.3.0\runtimes\win\lib\netstandard1.3\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
       <Modified>2016-11-05T03:56:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.io.compression.zipfile\4.3.0\lib\netstandard1.3\System.IO.Compression.ZipFile.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.io.compression.zipfile\4.3.0\lib\netstandard1.3\System.IO.Compression.ZipFile.dll">
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
       <Modified>2016-11-05T03:56:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.io.filesystem.primitives\4.3.0\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.io.filesystem.primitives\4.3.0\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
       <Modified>2016-11-05T03:56:08.000</Modified>
     </AppxPackagedFile>
@@ -323,15 +322,15 @@
       <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
       <Modified>2016-06-11T21:13:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.linq\4.3.0\lib\netcore50\System.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.linq\4.3.0\lib\netcore50\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
       <Modified>2016-11-05T03:56:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.linq.expressions\4.3.0\lib\netcore50\System.Linq.Expressions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.linq.expressions\4.3.0\lib\netcore50\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
       <Modified>2016-11-05T03:56:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.linq.parallel\4.0.1\lib\netcore50\System.Linq.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.linq.parallel\4.0.1\lib\netcore50\System.Linq.Parallel.dll">
       <PackagePath>System.Linq.Parallel.dll</PackagePath>
       <Modified>2016-06-11T21:13:52.000</Modified>
     </AppxPackagedFile>
@@ -339,7 +338,7 @@
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
       <Modified>2016-06-11T21:13:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.net.http\4.3.0\runtimes\win\lib\netcore50\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.net.http\4.3.0\runtimes\win\lib\netcore50\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
       <Modified>2016-11-05T03:56:30.000</Modified>
     </AppxPackagedFile>
@@ -347,7 +346,7 @@
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
       <Modified>2016-06-11T21:13:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.net.nameresolution\4.3.0\runtimes\win\lib\netcore50\System.Net.NameResolution.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.net.nameresolution\4.3.0\runtimes\win\lib\netcore50\System.Net.NameResolution.dll">
       <PackagePath>System.Net.NameResolution.dll</PackagePath>
       <Modified>2016-11-05T03:56:26.000</Modified>
     </AppxPackagedFile>
@@ -379,7 +378,7 @@
       <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
       <Modified>2016-06-11T21:14:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.objectmodel\4.3.0\lib\netcore50\System.ObjectModel.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.objectmodel\4.3.0\lib\netcore50\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
       <Modified>2016-11-05T03:56:40.000</Modified>
     </AppxPackagedFile>
@@ -389,7 +388,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.private.servicemodel\4.1.3\runtimes\win7\lib\netcore50\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2018-07-19T15:47:06.000</Modified>
+      <Modified>2018-07-19T13:45:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.reflection.context\4.0.1\lib\netcore50\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
@@ -403,23 +402,23 @@
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
       <Modified>2016-06-11T21:14:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.reflection.emit.ilgeneration\4.3.0\lib\netcore50\System.Reflection.Emit.ILGeneration.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.reflection.emit.ilgeneration\4.3.0\lib\netcore50\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
       <Modified>2016-11-05T03:56:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.reflection.emit.lightweight\4.3.0\lib\netcore50\System.Reflection.Emit.Lightweight.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.reflection.emit.lightweight\4.3.0\lib\netcore50\System.Reflection.Emit.Lightweight.dll">
       <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
       <Modified>2016-11-05T03:56:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.reflection.metadata\1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.reflection.metadata\1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
       <Modified>2016-06-11T21:14:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.reflection.typeextensions\4.3.0\lib\netcore50\System.Reflection.TypeExtensions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.reflection.typeextensions\4.3.0\lib\netcore50\System.Reflection.TypeExtensions.dll">
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
       <Modified>2016-11-05T03:56:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.3.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.3.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll">
       <PackagePath>System.Runtime.InteropServices.RuntimeInformation.dll</PackagePath>
       <Modified>2016-11-05T03:57:00.000</Modified>
     </AppxPackagedFile>
@@ -427,7 +426,7 @@
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
       <Modified>2016-06-11T21:14:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.runtime.numerics\4.3.0\lib\netcore50\System.Runtime.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.runtime.numerics\4.3.0\lib\netcore50\System.Runtime.Numerics.dll">
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
       <Modified>2016-11-05T03:57:00.000</Modified>
     </AppxPackagedFile>
@@ -443,7 +442,7 @@
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
       <Modified>2017-02-09T12:26:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.runtime.windowsruntime\4.3.0\runtimes\win8\lib\netstandard1.3\System.Runtime.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.runtime.windowsruntime\4.3.0\runtimes\win8\lib\netstandard1.3\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
       <Modified>2016-11-05T03:57:02.000</Modified>
     </AppxPackagedFile>
@@ -455,27 +454,27 @@
       <PackagePath>System.Security.Claims.dll</PackagePath>
       <Modified>2016-06-11T21:14:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.security.cryptography.algorithms\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.Algorithms.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.security.cryptography.algorithms\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.Algorithms.dll">
       <PackagePath>System.Security.Cryptography.Algorithms.dll</PackagePath>
       <Modified>2016-11-05T03:57:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.security.cryptography.cng\4.3.0\runtimes\win\lib\netstandard1.4\System.Security.Cryptography.Cng.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.security.cryptography.cng\4.3.0\runtimes\win\lib\netstandard1.4\System.Security.Cryptography.Cng.dll">
       <PackagePath>System.Security.Cryptography.Cng.dll</PackagePath>
       <Modified>2016-11-05T03:57:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.security.cryptography.encoding\4.3.0\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.security.cryptography.encoding\4.3.0\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.Encoding.dll">
       <PackagePath>System.Security.Cryptography.Encoding.dll</PackagePath>
       <Modified>2016-11-05T03:57:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.security.cryptography.primitives\4.3.0\lib\netstandard1.3\System.Security.Cryptography.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.security.cryptography.primitives\4.3.0\lib\netstandard1.3\System.Security.Cryptography.Primitives.dll">
       <PackagePath>System.Security.Cryptography.Primitives.dll</PackagePath>
       <Modified>2016-11-05T03:57:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.security.cryptography.x509certificates\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.X509Certificates.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.security.cryptography.x509certificates\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.X509Certificates.dll">
       <PackagePath>System.Security.Cryptography.X509Certificates.dll</PackagePath>
       <Modified>2016-11-05T03:57:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.security.principal\4.0.1\lib\netcore50\System.Security.Principal.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.security.principal\4.0.1\lib\netcore50\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
       <Modified>2016-06-11T21:14:46.000</Modified>
     </AppxPackagedFile>
@@ -497,29 +496,29 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.servicemodel.security\4.0.4\lib\netcore50\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2018-07-19T15:47:18.000</Modified>
+      <Modified>2018-07-19T13:45:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.text.encoding.codepages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.text.encoding.codepages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2016-06-11T21:14:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.text.regularexpressions\4.3.0\lib\netcore50\System.Text.RegularExpressions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.text.regularexpressions\4.3.0\lib\netcore50\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
       <Modified>2016-11-05T03:57:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.threading\4.3.0\lib\netcore50\System.Threading.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.threading\4.3.0\lib\netcore50\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
       <Modified>2016-11-05T03:57:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.threading.overlapped\4.3.0\runtimes\win\lib\netcore50\System.Threading.Overlapped.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.threading.overlapped\4.3.0\runtimes\win\lib\netcore50\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
       <Modified>2016-11-05T03:57:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.threading.tasks.dataflow\4.6.0\lib\netstandard1.1\System.Threading.Tasks.Dataflow.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.threading.tasks.dataflow\4.6.0\lib\netstandard1.1\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
       <Modified>2016-06-11T21:14:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.threading.tasks.extensions\4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.threading.tasks.extensions\4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll">
       <PackagePath>System.Threading.Tasks.Extensions.dll</PackagePath>
       <Modified>2016-11-05T03:57:24.000</Modified>
     </AppxPackagedFile>
@@ -527,11 +526,11 @@
       <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
       <Modified>2016-06-11T21:14:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.xml.readerwriter\4.3.0\lib\netcore50\System.Xml.ReaderWriter.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.xml.readerwriter\4.3.0\lib\netcore50\System.Xml.ReaderWriter.dll">
       <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
       <Modified>2016-11-05T03:57:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\system.xml.xdocument\4.3.0\lib\netcore50\System.Xml.XDocument.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\system.xml.xdocument\4.3.0\lib\netcore50\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
       <Modified>2016-11-05T03:57:34.000</Modified>
     </AppxPackagedFile>
@@ -543,669 +542,677 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\win2d.uwp\1.19.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\win2d.uwp\1.19.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-08-09T06:14:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\robmikh.compositionsurfacefactory\0.7.1\lib\uap10.0\Robmikh.CompositionSurfaceFactory.winmd">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\robmikh.compositionsurfacefactory\0.7.1\lib\uap10.0\Robmikh.CompositionSurfaceFactory.winmd">
       <PackagePath>Robmikh.CompositionSurfaceFactory.winmd</PackagePath>
       <Modified>2017-02-08T21:43:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\win2d.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\win2d.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2016-08-09T06:14:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\dice.wav">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\dice.wav">
       <PackagePath>Assets\dice.wav</PackagePath>
-      <Modified>2019-03-05T16:19:47.282</Modified>
+      <Modified>2019-03-05T07:44:53.584</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\android.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\android.png">
       <PackagePath>CustomAssets\android.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.206</Modified>
+      <Modified>2019-03-04T09:10:35.208</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\anime.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\anime.png">
       <PackagePath>CustomAssets\anime.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.206</Modified>
+      <Modified>2019-03-04T09:10:35.213</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\apple.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\apple.png">
       <PackagePath>CustomAssets\apple.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.533</Modified>
+      <Modified>2019-03-05T07:45:05.291</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\asun.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\asun.png">
       <PackagePath>CustomAssets\asun.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.592</Modified>
+      <Modified>2019-03-04T12:00:35.941</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\aws.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\aws.png">
       <PackagePath>CustomAssets\aws.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.596</Modified>
+      <Modified>2019-03-04T13:26:31.934</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\azure.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\azure.png">
       <PackagePath>CustomAssets\azure.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.597</Modified>
+      <Modified>2019-03-04T13:26:46.027</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\azureS1.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\azureS1.png">
       <PackagePath>CustomAssets\azureS1.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.597</Modified>
+      <Modified>2019-03-04T13:26:41.195</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\backArrow.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\backArrow.png">
       <PackagePath>CustomAssets\backArrow.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.631</Modified>
+      <Modified>2019-02-21T13:36:48.163</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\basement.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\basement.png">
       <PackagePath>CustomAssets\basement.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.618</Modified>
+      <Modified>2019-03-04T12:00:35.979</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\chollometro.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\chollometro.png">
       <PackagePath>CustomAssets\chollometro.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.210</Modified>
+      <Modified>2019-03-04T09:10:35.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunidad.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunidad.png">
       <PackagePath>CustomAssets\comunidad.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.619</Modified>
+      <Modified>2019-03-04T12:38:48.307</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunity.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunity.png">
       <PackagePath>CustomAssets\comunity.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.621</Modified>
+      <Modified>2019-03-04T13:08:59.354</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunity270.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunity270.png">
       <PackagePath>CustomAssets\comunity270.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.619</Modified>
+      <Modified>2019-03-04T13:08:59.371</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunity90.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\comunity90.png">
       <PackagePath>CustomAssets\comunity90.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.627</Modified>
+      <Modified>2019-03-04T13:08:59.343</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\conan.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\conan.png">
       <PackagePath>CustomAssets\conan.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.212</Modified>
+      <Modified>2019-03-04T09:10:35.220</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\cookie.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\cookie.png">
       <PackagePath>CustomAssets\cookie.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.213</Modified>
+      <Modified>2019-03-04T09:10:35.225</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dbk.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dbk.png">
       <PackagePath>CustomAssets\dbk.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.649</Modified>
+      <Modified>2019-02-21T13:36:48.159</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\deloitte.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\deloitte.png">
       <PackagePath>CustomAssets\deloitte.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.212</Modified>
+      <Modified>2019-03-04T09:10:35.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\discord.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\discord.png">
       <PackagePath>CustomAssets\discord.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.219</Modified>
+      <Modified>2019-03-04T09:10:35.236</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dora.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\dora.png">
       <PackagePath>CustomAssets\dora.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.222</Modified>
+      <Modified>2019-03-04T09:10:35.242</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\eclipse.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\eclipse.png">
       <PackagePath>CustomAssets\eclipse.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.625</Modified>
+      <Modified>2019-03-04T12:38:51.247</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread.png">
       <PackagePath>CustomAssets\Fichas\Bread.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.637</Modified>
+      <Modified>2019-02-25T12:21:59.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Bread_B.png">
       <PackagePath>CustomAssets\Fichas\Bread_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.625</Modified>
+      <Modified>2019-03-04T09:10:35.249</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Danboard.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Danboard.png">
       <PackagePath>CustomAssets\Fichas\Danboard.png</PackagePath>
-      <Modified>2019-02-24T19:09:30.784</Modified>
+      <Modified>2019-03-04T09:10:35.250</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Danboard_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Danboard_B.png">
       <PackagePath>CustomAssets\Fichas\Danboard_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.629</Modified>
+      <Modified>2019-03-04T09:10:35.258</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat.png">
       <PackagePath>CustomAssets\Fichas\Hat.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.648</Modified>
+      <Modified>2019-02-21T13:36:48.172</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Hat_B.png">
       <PackagePath>CustomAssets\Fichas\Hat_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.629</Modified>
+      <Modified>2019-03-04T09:10:35.257</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Nacho.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Nacho.png">
       <PackagePath>CustomAssets\Fichas\Nacho.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.673</Modified>
+      <Modified>2019-02-21T13:36:48.173</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Nacho_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Nacho_B.png">
       <PackagePath>CustomAssets\Fichas\Nacho_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.632</Modified>
+      <Modified>2019-03-04T09:10:35.263</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Penny.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Penny.png">
       <PackagePath>CustomAssets\Fichas\Penny.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.671</Modified>
+      <Modified>2019-02-21T13:36:48.174</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Penny_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Penny_B.png">
       <PackagePath>CustomAssets\Fichas\Penny_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.632</Modified>
+      <Modified>2019-03-04T09:10:35.268</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Rupee.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Rupee.png">
       <PackagePath>CustomAssets\Fichas\Rupee.png</PackagePath>
-      <Modified>2019-02-24T19:09:30.787</Modified>
+      <Modified>2019-03-04T09:10:35.270</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Rupee_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Rupee_B.png">
       <PackagePath>CustomAssets\Fichas\Rupee_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.635</Modified>
+      <Modified>2019-03-04T09:10:35.274</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo.png">
       <PackagePath>CustomAssets\Fichas\Thermo.png</PackagePath>
-      <Modified>2019-02-21T15:38:37.691</Modified>
+      <Modified>2019-02-21T13:36:48.175</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo_B.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Fichas\Thermo_B.png">
       <PackagePath>CustomAssets\Fichas\Thermo_B.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.635</Modified>
+      <Modified>2019-03-04T09:10:35.277</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\geany.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\geany.png">
       <PackagePath>CustomAssets\geany.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.638</Modified>
+      <Modified>2019-03-04T12:00:35.994</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\github.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\github.png">
       <PackagePath>CustomAssets\github.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.222</Modified>
+      <Modified>2019-03-04T09:10:35.282</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\go.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\go.png">
       <PackagePath>CustomAssets\go.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.638</Modified>
+      <Modified>2019-03-04T12:00:36.002</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\intelij.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\intelij.png">
       <PackagePath>CustomAssets\intelij.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.642</Modified>
+      <Modified>2019-03-04T12:38:49.689</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\java.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\java.png">
       <PackagePath>CustomAssets\java.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.642</Modified>
+      <Modified>2019-03-04T12:00:36.008</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\kingston.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\kingston.png">
       <PackagePath>CustomAssets\kingston.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.226</Modified>
+      <Modified>2019-03-04T09:10:35.287</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\logo.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\logo.png">
       <PackagePath>CustomAssets\logo.png</PackagePath>
-      <Modified>2019-02-26T17:44:42.176</Modified>
+      <Modified>2019-03-04T09:10:35.290</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\24x24.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\24x24.png">
       <PackagePath>CustomAssets\Logos\24x24.png</PackagePath>
-      <Modified>2019-03-05T17:36:47.424</Modified>
+      <Modified>2019-03-06T07:33:52.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\300x300.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\300x300.png">
       <PackagePath>CustomAssets\Logos\300x300.png</PackagePath>
-      <Modified>2019-03-05T17:32:48.915</Modified>
+      <Modified>2019-03-06T07:33:52.555</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\50x50.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\50x50.png">
       <PackagePath>CustomAssets\Logos\50x50.png</PackagePath>
-      <Modified>2019-03-05T17:38:36.393</Modified>
+      <Modified>2019-03-06T07:33:52.561</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\88x88.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\88x88.png">
       <PackagePath>CustomAssets\Logos\88x88.png</PackagePath>
-      <Modified>2019-03-05T17:35:45.490</Modified>
+      <Modified>2019-03-06T07:33:52.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\SplashScreen-1240.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\SplashScreen-1240.png">
       <PackagePath>CustomAssets\Logos\SplashScreen-1240.png</PackagePath>
-      <Modified>2019-03-05T17:37:19.073</Modified>
+      <Modified>2019-03-06T07:33:52.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\SplashScreen-620.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Logos\SplashScreen-620.png">
       <PackagePath>CustomAssets\Logos\SplashScreen-620.png</PackagePath>
-      <Modified>2019-03-05T17:34:07.152</Modified>
+      <Modified>2019-03-06T07:33:52.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\luck.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\luck.png">
       <PackagePath>CustomAssets\luck.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.536</Modified>
+      <Modified>2019-03-05T08:06:18.064</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\luck270.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\luck270.png">
       <PackagePath>CustomAssets\luck270.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.538</Modified>
+      <Modified>2019-03-05T08:06:23.166</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\luffy.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\luffy.png">
       <PackagePath>CustomAssets\luffy.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.226</Modified>
+      <Modified>2019-03-04T09:10:35.294</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\microsoft.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\microsoft.png">
       <PackagePath>CustomAssets\microsoft.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.230</Modified>
+      <Modified>2019-03-04T09:10:35.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\monitors.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\monitors.png">
       <PackagePath>CustomAssets\monitors.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.234</Modified>
+      <Modified>2019-03-04T09:10:35.301</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\myanimelist.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\myanimelist.png">
       <PackagePath>CustomAssets\myanimelist.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.542</Modified>
+      <Modified>2019-03-05T08:05:37.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\netbeans.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\netbeans.png">
       <PackagePath>CustomAssets\netbeans.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.647</Modified>
+      <Modified>2019-03-04T12:38:51.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\overwatch.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\overwatch.png">
       <PackagePath>CustomAssets\overwatch.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.234</Modified>
+      <Modified>2019-03-04T09:10:35.303</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\pccomponentes.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\pccomponentes.png">
       <PackagePath>CustomAssets\pccomponentes.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.649</Modified>
+      <Modified>2019-03-04T12:00:35.720</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\php.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\php.png">
       <PackagePath>CustomAssets\php.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.234</Modified>
+      <Modified>2019-03-04T09:10:35.310</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\polvillo.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\polvillo.png">
       <PackagePath>CustomAssets\polvillo.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.649</Modified>
+      <Modified>2019-03-04T12:00:35.730</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\android.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\android.png">
       <PackagePath>CustomAssets\RECTAS\android.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.651</Modified>
+      <Modified>2019-03-04T13:25:52.111</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\apple.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\apple.png">
       <PackagePath>CustomAssets\RECTAS\apple.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.651</Modified>
+      <Modified>2019-03-05T07:40:12.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\aws.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\aws.png">
       <PackagePath>CustomAssets\RECTAS\aws.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.653</Modified>
+      <Modified>2019-03-04T13:25:52.005</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\azure.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\azure.png">
       <PackagePath>CustomAssets\RECTAS\azure.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.542</Modified>
+      <Modified>2019-03-05T08:05:21.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\azureS1.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\azureS1.png">
       <PackagePath>CustomAssets\RECTAS\azureS1.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.542</Modified>
+      <Modified>2019-03-05T08:05:27.535</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\chollometro.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\chollometro.png">
       <PackagePath>CustomAssets\RECTAS\chollometro.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.654</Modified>
+      <Modified>2019-03-04T13:25:52.157</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\comunidad.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\comunidad.png">
       <PackagePath>CustomAssets\RECTAS\comunidad.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.670</Modified>
+      <Modified>2019-03-04T13:25:52.198</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\conan.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\conan.png">
       <PackagePath>CustomAssets\RECTAS\conan.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.670</Modified>
+      <Modified>2019-03-04T13:25:52.320</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\cookie.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\cookie.png">
       <PackagePath>CustomAssets\RECTAS\cookie.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.672</Modified>
+      <Modified>2019-03-04T13:25:52.326</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\deloitte.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\deloitte.png">
       <PackagePath>CustomAssets\RECTAS\deloitte.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.672</Modified>
+      <Modified>2019-03-04T13:25:52.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\discord.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\discord.png">
       <PackagePath>CustomAssets\RECTAS\discord.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.677</Modified>
+      <Modified>2019-03-04T13:25:52.336</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\dora.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\dora.png">
       <PackagePath>CustomAssets\RECTAS\dora.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.677</Modified>
+      <Modified>2019-03-04T13:25:52.341</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\dual.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\dual.png">
       <PackagePath>CustomAssets\RECTAS\dual.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.678</Modified>
+      <Modified>2019-03-04T13:25:52.345</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\eclipse.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\eclipse.png">
       <PackagePath>CustomAssets\RECTAS\eclipse.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.677</Modified>
+      <Modified>2019-03-04T13:25:52.350</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\github.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\github.png">
       <PackagePath>CustomAssets\RECTAS\github.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.683</Modified>
+      <Modified>2019-03-04T13:25:52.355</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\intelij.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\intelij.png">
       <PackagePath>CustomAssets\RECTAS\intelij.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.708</Modified>
+      <Modified>2019-03-04T13:25:52.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\java.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\java.png">
       <PackagePath>CustomAssets\RECTAS\java.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.724</Modified>
+      <Modified>2019-03-04T13:25:52.032</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\luck.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\luck.png">
       <PackagePath>CustomAssets\RECTAS\luck.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.547</Modified>
+      <Modified>2019-03-05T08:07:15.302</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\myanimelist.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\myanimelist.png">
       <PackagePath>CustomAssets\RECTAS\myanimelist.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.549</Modified>
+      <Modified>2019-03-05T08:05:07.025</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\netbeans.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\netbeans.png">
       <PackagePath>CustomAssets\RECTAS\netbeans.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.724</Modified>
+      <Modified>2019-03-04T13:25:52.067</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\overwatch.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\overwatch.png">
       <PackagePath>CustomAssets\RECTAS\overwatch.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.728</Modified>
+      <Modified>2019-03-04T13:25:52.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\pccomponentes.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\pccomponentes.png">
       <PackagePath>CustomAssets\RECTAS\pccomponentes.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.728</Modified>
+      <Modified>2019-03-04T13:25:52.073</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\polvillo.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\polvillo.png">
       <PackagePath>CustomAssets\RECTAS\polvillo.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.729</Modified>
+      <Modified>2019-03-04T13:25:52.079</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\twitch.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\twitch.png">
       <PackagePath>CustomAssets\RECTAS\twitch.png</PackagePath>
-      <Modified>2019-03-05T16:19:48.547</Modified>
+      <Modified>2019-03-05T07:38:34.996</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\ubuntu.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\ubuntu.png">
       <PackagePath>CustomAssets\RECTAS\ubuntu.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.734</Modified>
+      <Modified>2019-03-04T13:25:52.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\xiaomi.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\RECTAS\xiaomi.png">
       <PackagePath>CustomAssets\RECTAS\xiaomi.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.734</Modified>
+      <Modified>2019-03-04T13:25:52.103</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\setup.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\setup.png">
       <PackagePath>CustomAssets\setup.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.734</Modified>
+      <Modified>2019-03-04T12:00:35.736</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\stackoverflow.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\stackoverflow.png">
       <PackagePath>CustomAssets\stackoverflow.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.235</Modified>
+      <Modified>2019-03-04T09:10:35.310</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\twitch.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\twitch.png">
       <PackagePath>CustomAssets\twitch.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.734</Modified>
+      <Modified>2019-03-04T12:00:35.403</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\ubuntu.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\ubuntu.png">
       <PackagePath>CustomAssets\ubuntu.png</PackagePath>
-      <Modified>2019-03-02T18:11:52.241</Modified>
+      <Modified>2019-03-04T09:10:35.317</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\xiaomi.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\xiaomi.png">
       <PackagePath>CustomAssets\xiaomi.png</PackagePath>
-      <Modified>2019-03-04T16:15:43.737</Modified>
+      <Modified>2019-03-04T12:00:35.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-02-21T15:38:35.532</Modified>
+      <Modified>2019-02-21T13:36:46.704</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:37:19.073</Modified>
+      <Modified>2019-03-06T07:33:52.061</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:32:48.915</Modified>
+      <Modified>2019-03-06T07:33:52.066</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:35:45.490</Modified>
+      <Modified>2019-03-06T07:33:52.083</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:36:47.424</Modified>
+      <Modified>2019-03-06T07:33:52.096</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:38:36.393</Modified>
+      <Modified>2019-03-06T07:33:52.112</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:34:07.152</Modified>
+      <Modified>2019-03-06T07:33:52.119</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\cinco.jpg">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\cinco.jpg">
       <PackagePath>CustomAssets\Dado\cinco.jpg</PackagePath>
-      <Modified>2019-03-04T19:09:54.963</Modified>
+      <Modified>2019-03-05T07:38:34.973</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\cuatro.jpg">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\cuatro.jpg">
       <PackagePath>CustomAssets\Dado\cuatro.jpg</PackagePath>
-      <Modified>2019-03-04T19:09:54.970</Modified>
+      <Modified>2019-03-05T07:38:34.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\dos.jpg">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\dos.jpg">
       <PackagePath>CustomAssets\Dado\dos.jpg</PackagePath>
-      <Modified>2019-03-04T19:09:54.973</Modified>
+      <Modified>2019-03-05T07:38:34.982</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\seis.jpg">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\seis.jpg">
       <PackagePath>CustomAssets\Dado\seis.jpg</PackagePath>
-      <Modified>2019-03-04T19:09:54.972</Modified>
+      <Modified>2019-03-05T07:38:34.989</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\tres.jpg">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\tres.jpg">
       <PackagePath>CustomAssets\Dado\tres.jpg</PackagePath>
-      <Modified>2019-03-04T19:09:54.978</Modified>
+      <Modified>2019-03-05T07:38:34.989</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\uno.jpg">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\CustomAssets\Dado\uno.jpg">
       <PackagePath>CustomAssets\Dado\uno.jpg</PackagePath>
-      <Modified>2019-03-04T19:09:54.980</Modified>
+      <Modified>2019-03-05T07:38:34.993</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-02-21T15:38:38.922</Modified>
+      <Modified>2019-02-21T13:36:49.757</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.xr.xml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\PantallasMonopoly.xr.xml">
       <PackagePath>PantallasMonopoly.xr.xml</PackagePath>
-      <Modified>2019-03-05T16:19:49.740</Modified>
+      <Modified>2019-03-05T07:38:35.288</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.834</Modified>
+      <Modified>2019-03-06T07:35:18.381</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\CustomAssets\Dictionary.xbf">
       <PackagePath>CustomAssets\Dictionary.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.834</Modified>
+      <Modified>2019-03-06T07:35:18.379</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\AboutMenu.xbf">
       <PackagePath>Views\AboutMenu.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.834</Modified>
+      <Modified>2019-03-06T07:35:18.382</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\GameView.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\GameView.xbf">
       <PackagePath>Views\GameView.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.835</Modified>
+      <Modified>2019-03-06T07:35:18.383</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\LobbyMenu.xbf">
       <PackagePath>Views\LobbyMenu.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.835</Modified>
+      <Modified>2019-03-06T07:35:18.385</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreatePlayer.xbf">
       <PackagePath>Views\CreatePlayer.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.836</Modified>
+      <Modified>2019-03-06T07:35:18.387</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\MainMenu.xbf">
       <PackagePath>Views\MainMenu.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.836</Modified>
+      <Modified>2019-03-06T07:35:18.389</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\CreateMenu.xbf">
       <PackagePath>Views\CreateMenu.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.836</Modified>
+      <Modified>2019-03-06T07:35:18.390</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Views\SearchMenu.xbf">
       <PackagePath>Views\SearchMenu.xbf</PackagePath>
-      <Modified>2019-03-05T17:39:23.837</Modified>
+      <Modified>2019-03-06T07:35:18.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2018-04-19T20:01:52.000</Modified>
+      <Modified>2018-04-19T21:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenu.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenu.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenu.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\RoundImageEx.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\RoundImageEx.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\RoundImageEx.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListView.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListView.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListView.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItem.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItem.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItem.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml">
+    <AppxPackagedFile Include="C:\Users\ivanloy\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml</PackagePath>
       <Modified>2017-08-29T10:46:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-05T17:39:25.337</Modified>
+      <Modified>2019-03-06T07:35:23.263</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jolsensei\Desktop\Git\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
+    <AppxPackagedFile Include="C:\Users\ivanloy\Desktop\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x86\Debug\Core\PantallasMonopoly.exe">
       <PackagePath>PantallasMonopoly.exe</PackagePath>
-      <Modified>2019-03-05T17:39:32.267</Modified>
+      <Modified>2019-03-06T07:35:30.081</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\">
       <Name>Microsoft.NET.CoreRuntime.1.1</Name>
-      <Version>1.1.26702.0</Version>
+      <Version>1.1.27004.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.26702.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.27004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\.\AppX\ARM\Microsoft.NET.CoreRuntime.1.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\">
       <Name>Microsoft.NET.CoreRuntime.1.1</Name>
-      <Version>1.1.26702.0</Version>
+      <Version>1.1.27004.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.26702.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.27004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\.\AppX\x64\Microsoft.NET.CoreRuntime.1.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\">
       <Name>Microsoft.NET.CoreRuntime.1.1</Name>
-      <Version>1.1.26702.0</Version>
+      <Version>1.1.27004.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.26702.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.1.1, MinVersion = 1.1.27004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.CoreRuntime\1.1\.\AppX\x86\Microsoft.NET.CoreRuntime.1.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.26726.0</Version>
+      <Version>14.0.27023.1</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.26726.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27023.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.26726.0</Version>
+      <Version>14.0.27023.1</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27023.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.27023.1</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.26726.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27023.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.26726.0</Version>
+      <Version>14.0.27023.1</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.26726.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27023.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
