@@ -1,0 +1,3 @@
+MainPackage=C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x64\Release\PantallasMonopoly_1.0.1.0_x64.appx
+SymbolPackage=C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\AppPackages\PantallasMonopoly_1.0.1.0_Test\PantallasMonopoly_1.0.1.0_x64.appxsym
+ResourcePack=C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\bin\x64\Release\PantallasMonopoly_1.0.1.0_language-es.appx

@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="44997IESNervion.PolyFlama" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Language>EN-US</Language>
+			<Scale>200</Scale>
+			<TargetSize>24</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PantallasMonopoly.xr.xml" uri="ms-resource://44997IESNervion.PolyFlama/Files/PantallasMonopoly.xr.xml">
+				<Candidate type="Path">
+					<Value>PantallasMonopoly.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="dice.wav" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/dice.wav">
+					<Candidate type="Path">
+						<Value>Assets\dice.wav</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/StoreLogo.png">
+					<Candidate type="Path">
+						<Value>Assets\StoreLogo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="CustomAssets">
+				<NamedResource name="android.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/android.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\android.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="anime.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/anime.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\anime.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="apple.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/apple.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\apple.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="asun.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/asun.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\asun.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="aws.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/aws.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\aws.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="azure.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/azure.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\azure.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="azureS1.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/azureS1.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\azureS1.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="backArrow.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/backArrow.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\backArrow.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="basement.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/basement.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\basement.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="chollometro.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/chollometro.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\chollometro.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="comunidad.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/comunidad.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\comunidad.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="comunity.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/comunity.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\comunity.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="comunity270.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/comunity270.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\comunity270.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="comunity90.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/comunity90.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\comunity90.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="conan.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/conan.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\conan.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="cookie.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/cookie.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\cookie.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="dbk.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/dbk.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\dbk.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="deloitte.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/deloitte.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\deloitte.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Dictionary.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dictionary.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="discord.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/discord.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\discord.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="dora.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/dora.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\dora.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="eclipse.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/eclipse.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\eclipse.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="geany.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/geany.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\geany.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="github.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/github.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\github.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="go.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/go.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\go.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="intelij.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/intelij.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\intelij.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="java.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/java.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\java.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="kingston.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/kingston.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\kingston.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="logo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/logo.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\logo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="luck.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/luck.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\luck.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="luck270.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/luck270.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\luck270.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="luffy.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/luffy.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\luffy.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="microsoft.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/microsoft.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\microsoft.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="monitors.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/monitors.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\monitors.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="myanimelist.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/myanimelist.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\myanimelist.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="netbeans.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/netbeans.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\netbeans.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="overwatch.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/overwatch.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\overwatch.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="pccomponentes.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/pccomponentes.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\pccomponentes.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="php.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/php.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\php.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="polvillo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/polvillo.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\polvillo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="setup.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/setup.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\setup.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="stackoverflow.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/stackoverflow.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\stackoverflow.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="twitch.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/twitch.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\twitch.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ubuntu.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/ubuntu.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\ubuntu.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="xiaomi.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/xiaomi.png">
+					<Candidate type="Path">
+						<Value>CustomAssets\xiaomi.png</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Dado">
+					<NamedResource name="cinco.jpg" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dado/cinco.jpg">
+						<Candidate type="Path">
+							<Value>CustomAssets\Dado\cinco.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="cuatro.jpg" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dado/cuatro.jpg">
+						<Candidate type="Path">
+							<Value>CustomAssets\Dado\cuatro.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="dos.jpg" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dado/dos.jpg">
+						<Candidate type="Path">
+							<Value>CustomAssets\Dado\dos.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="seis.jpg" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dado/seis.jpg">
+						<Candidate type="Path">
+							<Value>CustomAssets\Dado\seis.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="tres.jpg" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dado/tres.jpg">
+						<Candidate type="Path">
+							<Value>CustomAssets\Dado\tres.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="uno.jpg" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Dado/uno.jpg">
+						<Candidate type="Path">
+							<Value>CustomAssets\Dado\uno.jpg</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Fichas">
+					<NamedResource name="Bread.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Bread.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Bread.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Bread_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Bread_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Bread_B.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Danboard.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Danboard.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Danboard.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Danboard_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Danboard_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Danboard_B.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Hat.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Hat.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Hat.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Hat_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Hat_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Hat_B.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Nacho.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Nacho.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Nacho.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Nacho_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Nacho_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Nacho_B.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Penny.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Penny.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Penny.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Penny_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Penny_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Penny_B.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Rupee.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Rupee.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Rupee.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Rupee_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Rupee_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Rupee_B.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Thermo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Thermo.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Thermo.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Thermo_B.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Fichas/Thermo_B.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Fichas\Thermo_B.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Logos">
+					<NamedResource name="24x24.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Logos/24x24.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Logos\24x24.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="300x300.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Logos/300x300.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Logos\300x300.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="50x50.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Logos/50x50.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Logos\50x50.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="88x88.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Logos/88x88.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Logos\88x88.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="SplashScreen-1240.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Logos/SplashScreen-1240.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Logos\SplashScreen-1240.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="SplashScreen-620.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/Logos/SplashScreen-620.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\Logos\SplashScreen-620.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="RECTAS">
+					<NamedResource name="android.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/android.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\android.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="apple.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/apple.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\apple.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="aws.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/aws.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\aws.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="azure.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/azure.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\azure.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="azureS1.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/azureS1.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\azureS1.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="chollometro.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/chollometro.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\chollometro.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="comunidad.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/comunidad.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\comunidad.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="conan.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/conan.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\conan.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="cookie.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/cookie.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\cookie.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="deloitte.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/deloitte.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\deloitte.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="discord.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/discord.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\discord.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="dora.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/dora.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\dora.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="dual.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/dual.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\dual.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="eclipse.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/eclipse.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\eclipse.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="github.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/github.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\github.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="intelij.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/intelij.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\intelij.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="java.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/java.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\java.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="luck.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/luck.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\luck.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="myanimelist.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/myanimelist.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\myanimelist.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="netbeans.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/netbeans.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\netbeans.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="overwatch.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/overwatch.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\overwatch.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="pccomponentes.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/pccomponentes.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\pccomponentes.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="polvillo.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/polvillo.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\polvillo.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="twitch.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/twitch.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\twitch.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ubuntu.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/ubuntu.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\ubuntu.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="xiaomi.png" uri="ms-resource://44997IESNervion.PolyFlama/Files/CustomAssets/RECTAS/xiaomi.png">
+						<Candidate type="Path">
+							<Value>CustomAssets\RECTAS\xiaomi.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Microsoft.Toolkit.Uwp.UI.Controls">
+				<NamedResource name="Microsoft.Toolkit.Uwp.UI.Controls.xr.xml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
+					<Candidate type="Path">
+						<Value>Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="BladeView">
+					<NamedResource name="BladeView.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/BladeView/BladeView.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="BladeView.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/BladeView/BladeView.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Carousel">
+					<NamedResource name="Carousel.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Carousel/Carousel.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Carousel.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Carousel/Carousel.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="DropShadowPanel">
+					<NamedResource name="DropShadowPanel.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="DropShadowPanel.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Expander">
+					<NamedResource name="Expander.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Expander/Expander.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Expander.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Expander/Expander.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="GridSplitter">
+					<NamedResource name="GridSplitter.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/GridSplitter/GridSplitter.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="GridSplitter.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/GridSplitter/GridSplitter.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="HamburgerMenu">
+					<NamedResource name="HamburgerMenu.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenu.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenu.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="HamburgerMenu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenu.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="HeaderedTextBlock">
+					<NamedResource name="HeaderedTextBlock.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedTextBlock/HeaderedTextBlock.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="HeaderedTextBlock.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedTextBlock/HeaderedTextBlock.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="ImageEx">
+					<NamedResource name="ImageEx.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/ImageEx.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ImageEx.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/ImageEx.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RoundImageEx.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/RoundImageEx.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\RoundImageEx.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RoundImageEx.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/RoundImageEx.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="InAppNotification">
+					<NamedResource name="InAppNotification.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/InAppNotification.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="InAppNotification.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/InAppNotification.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="LayoutTransformControl">
+					<NamedResource name="LayoutTransformControl.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/LayoutTransformControl/LayoutTransformControl.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="LayoutTransformControl.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/LayoutTransformControl/LayoutTransformControl.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Loading">
+					<NamedResource name="Loading.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Loading/Loading.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Loading.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Loading/Loading.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="MarkdownTextBlock">
+					<NamedResource name="MarkdownTextBlock.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/MarkdownTextBlock/MarkdownTextBlock.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="MarkdownTextBlock.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/MarkdownTextBlock/MarkdownTextBlock.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="MasterDetailsView">
+					<NamedResource name="MasterDetailsView.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/MasterDetailsView/MasterDetailsView.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="MasterDetailsView.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/MasterDetailsView/MasterDetailsView.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Menu">
+					<NamedResource name="Menu.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Menu/Menu.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Menu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Menu/Menu.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="OrbitView">
+					<NamedResource name="OrbitView.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/OrbitView/OrbitView.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="OrbitView.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/OrbitView/OrbitView.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="PullToRefreshListView">
+					<NamedResource name="PullToRefreshListView.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListView.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListView.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="PullToRefreshListView.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListView.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="RadialGauge">
+					<NamedResource name="RadialGauge.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RadialGauge/RadialGauge.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RadialGauge.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RadialGauge/RadialGauge.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="RadialProgressBar">
+					<NamedResource name="RadialProgressBar.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RadialProgressBar/RadialProgressBar.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RadialProgressBar.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RadialProgressBar/RadialProgressBar.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="RangeSelector">
+					<NamedResource name="RangeSelector.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RangeSelector/RangeSelector.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RangeSelector.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RangeSelector/RangeSelector.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="RotatorTile">
+					<NamedResource name="RotatorTile.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RotatorTile/RotatorTile.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RotatorTile.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/RotatorTile/RotatorTile.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="ScrollHeader">
+					<NamedResource name="ScrollHeader.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/ScrollHeader/ScrollHeader.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ScrollHeader.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/ScrollHeader/ScrollHeader.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="SlidableListItem">
+					<NamedResource name="SlidableListItem.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/SlidableListItem/SlidableListItem.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItem.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="SlidableListItem.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/SlidableListItem/SlidableListItem.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="TextToolbar">
+					<NamedResource name="TextToolbar.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/TextToolbar.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="TextToolbar.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/TextToolbar.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<ResourceMapSubtree name="Symbols">
+						<NamedResource name="Symbols.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/Symbols/Symbols.xaml">
+							<Candidate type="Path">
+								<Value>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xaml</Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="Symbols.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/Symbols/Symbols.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+					<ResourceMapSubtree name="ToolbarItems">
+						<NamedResource name="ToolbarButton.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarButton.xaml">
+							<Candidate type="Path">
+								<Value>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xaml</Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="ToolbarButton.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarButton.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="ToolbarSeparator.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarSeparator.xaml">
+							<Candidate type="Path">
+								<Value>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xaml</Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="ToolbarSeparator.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarSeparator.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="TileControl">
+					<NamedResource name="TileControl.xaml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TileControl/TileControl.xaml">
+						<Candidate type="Path">
+							<Value>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="TileControl.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Microsoft.Toolkit.Uwp.UI.Controls/TileControl/TileControl.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://44997IESNervion.PolyFlama/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Views">
+				<NamedResource name="AboutMenu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/AboutMenu.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="CreateMenu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/CreateMenu.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="CreatePlayer.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/CreatePlayer.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="GameView.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/GameView.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LobbyMenu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/LobbyMenu.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="MainMenu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/MainMenu.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SearchMenu.xbf" uri="ms-resource://44997IESNervion.PolyFlama/Files/Views/SearchMenu.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://44997IESNervion.PolyFlama/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.AspNet.SignalR.Client.Resources">
+			<NamedResource name="Error_AspNetCoreServerDetected" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_AspNetCoreServerDetected">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Detected a connection attempt to an ASP.NET Core SignalR Server. This client only supports connecting to an ASP.NET SignalR Server. See https://aka.ms/signalr-core-differences for details.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_CertsCanOnlyBeAddedWhenDisconnected" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_CertsCanOnlyBeAddedWhenDisconnected">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Client Certificates cannot be added after the connection has started.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ClientCallbackArgumentTypeMismatch" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ClientCallbackArgumentTypeMismatch">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>A client callback for event {0} with {1} argument(s) was found, however an error occurred because {2}</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ClientCallbackInvalidNumberOfArguments" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ClientCallbackInvalidNumberOfArguments">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>A client callback for event {0} with {1} argument(s) could not be found</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ConnectionCancelled" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ConnectionCancelled">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The connection was stopped before it could be started.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ConnectionHasNotBeenEstablished" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ConnectionHasNotBeenEstablished">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The connection has not been established.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_DataCannotBeSentConnectionDisconnected" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_DataCannotBeSentConnectionDisconnected">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Data cannot be sent because the connection is in the disconnected state. Call start before sending any data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_DataCannotBeSentDuringWebSocketReconnect" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_DataCannotBeSentDuringWebSocketReconnect">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Data cannot be sent because the WebSocket connection is reconnecting.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ErrorFromServer" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ErrorFromServer">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Error message received from the server: '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_IncompatibleProtocolVersion" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_IncompatibleProtocolVersion">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>You are using a version of the client that isn't compatible with the server. Client version {0}, server version {1}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_InvalidUriScheme" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_InvalidUriScheme">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Uri scheme '{0}' is not valid. The only valid uri schemes are 'http' and 'https'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_NegotiationLimitExceeded" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_NegotiationLimitExceeded">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Negotiate redirection limit exceeded.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_PossibleDeadlockDetected" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_PossibleDeadlockDetected">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Possible deadlock detected. A callback registered with "HubProxy.On" or "Connection.Received" has been executing for at least {0} seconds.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ProcessResponseBeforeStart" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ProcessResponseBeforeStart">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The ProcessResponse method cannot be called before the transport is started.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ProxiesCannotBeAddedConnectionStarted" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ProxiesCannotBeAddedConnectionStarted">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>A HubProxy cannot be added after the connection has been started.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ReconnectTimeout" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ReconnectTimeout">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Couldn't reconnect within the configured timeout of {0}, disconnecting.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ReconnectWindowTimeout" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ReconnectWindowTimeout">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The client has been inactive since {0} and it has exceeded the inactivity timeout of {1}. Stopping the connection.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_ServerNegotiationFailed" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_ServerNegotiationFailed">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Server negotiation failed.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_StartFailed" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_StartFailed">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Error during start request. Stopping the connection.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_TaskCancelledException" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_TaskCancelledException">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Request failed - task cancelled.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_TransportCannotBeReused" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_TransportCannotBeReused">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The transport instance passed to the Negotiate method has already been used. Use a new transport instance each time you start a new connection.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_TransportFailedToConnect" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_TransportFailedToConnect">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Transport failed trying to connect.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_TransportTimedOutTryingToConnect" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_TransportTimedOutTryingToConnect">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Transport timed out trying to connect</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_UrlCantContainQueryStringDirectly" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Error_UrlCantContainQueryStringDirectly">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Url cannot contain query string directly. Pass query string values in using available overload.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Message_ConnectionClosed" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Message_ConnectionClosed">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Connection was disconnected before invocation result was received.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Message_Reconnecting" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.AspNet.SignalR.Client.Resources/Message_Reconnecting">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Connection started reconnecting before invocation result was received.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.Xaml.Interactions">
+			<ResourceMapSubtree name="Strings">
+				<NamedResource name="CallMethodActionValidMethodNotFoundExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/CallMethodActionValidMethodNotFoundExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cannot find method named {0} on object of type {1} that matches the expected signature.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="CannotAttachBehaviorMultipleTimesExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/CannotAttachBehaviorMultipleTimesExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>An instance of a behavior cannot be attached to more than one object at a time.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="CannotFindEventNameExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/CannotFindEventNameExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cannot find an event named {0} on type {1}.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ChangePropertyActionCannotFindPropertyNameExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/ChangePropertyActionCannotFindPropertyNameExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cannot find a property named {0} on type {1}.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ChangePropertyActionCannotSetValueExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/ChangePropertyActionCannotSetValueExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cannot assign value of type {0} to property {1} of type {2}. The {1} property can be assigned only values of type {2}.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ChangePropertyActionPropertyIsReadOnlyExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/ChangePropertyActionPropertyIsReadOnlyExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Property {0} defined by type {1} does not expose a set method and therefore cannot be modified.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="EventNotSupportedExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/EventNotSupportedExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Event {0} is not supported. Consider implementing a custom IBehavior to respond to this event.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="GoToStateActionTargetHasNoStateGroups" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/GoToStateActionTargetHasNoStateGroups">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Target {0} does not define any VisualStateGroups.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="InvalidLeftOperand" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/InvalidLeftOperand">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Binding property of type {0} cannot be used with operator {1}.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="InvalidOperands" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/InvalidOperands">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Binding property of type {0} and Value property of type {1} cannot be used with operator {2}.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="InvalidRightOperand" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactions/Strings/InvalidRightOperand">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Value property of type {0} cannot be used with operator {1}.</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.Xaml.Interactivity">
+			<ResourceMapSubtree name="Strings">
+				<NamedResource name="CannotAttachBehaviorMultipleTimesExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactivity/Strings/CannotAttachBehaviorMultipleTimesExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>An instance of a behavior cannot be attached to more than one object at a time.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DuplicateBehaviorInCollectionExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactivity/Strings/DuplicateBehaviorInCollectionExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cannot add an instance of a behavior to a BehaviorCollection more than once.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="InvalidAssociatedObjectExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactivity/Strings/InvalidAssociatedObjectExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>AssociatedObject is of type {0} but should be of type {1}.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="NonActionAddedToActionCollectionExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactivity/Strings/NonActionAddedToActionCollectionExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Only IAction types are supported in an ActionCollection.</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="NonBehaviorAddedToBehaviorCollectionExceptionMessage" uri="ms-resource://44997IESNervion.PolyFlama/Microsoft.Xaml.Interactivity/Strings/NonBehaviorAddedToBehaviorCollectionExceptionMessage">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Only IBehavior types are supported in a BehaviorCollection.</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

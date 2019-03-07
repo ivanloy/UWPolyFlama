@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-it"
+"ResourceDimensions"		"language-it-it"
+
+[Files]
+"C:\Users\ofunes\Desktop\GitHub\UWPolyFlama\Monopoly - Cliente - Pero bien\PantallasMonopoly\obj\x64\Release\split.language-it.pri"			"resources.pri"

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="f103dd62-8baa-4a76-92e3-7dbe9c4eb27c" Publisher="CN=jobando" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="f103dd62-8baa-4a76-92e3-7dbe9c4eb27c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="44997IESNervion.PolyFlama" Publisher="CN=7ECAD562-C854-44A3-BB25-F09C22B1DB2B" Version="1.0.1.0" />
+  <mp:PhoneIdentity PhoneProductId="e6ba6dbf-c5d7-49ea-8835-2c65fc63a37f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>PantallasMonopoly</DisplayName>
-    <PublisherDisplayName>jobando</PublisherDisplayName>
+    <DisplayName>PolyFlama</DisplayName>
+    <PublisherDisplayName>IES Nervion</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
