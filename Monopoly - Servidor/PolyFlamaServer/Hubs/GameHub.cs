@@ -116,7 +116,10 @@ namespace PolyFlamaServer.Hubs
                                     dineroAPagar = 50 * (int)Math.Pow(2, nEstacionesCompradas);
 
                                     //Mandarle mensajito al jugador
-                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugador.nombre} owns this station. He owns {nEstacionesCompradas} station(s), therefore, you paid him {dineroAPagar}$");
+                                    Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this station. He owns {nEstacionesCompradas} station(s), therefore, you paid him {dineroAPagar}$");
+
+                                    //Mandarle mensajito al jugador dueño de la casilla
+                                    Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorDueno.nombre]).mostrarMensaje($"{jugador.nombre} just paid you {dineroAPagar}$ for landing on your property \"{propiedad.nombre}\"");
                                 }
                                 else if (propiedad.color == ColorPropiedad.SERVICIO)
                                 {
@@ -134,11 +137,18 @@ namespace PolyFlamaServer.Hubs
 
                                     //Mandarle mensajito al jugador
                                     Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this service. He {(nServicios == 1 ? "only owns this service" : "owns both services")}, therefore, you paid him {(nServicios == 1 ? "10" : "20")} times the roll: {dineroAPagar}$");
+
+                                    //Mandarle mensajito al jugador dueño de la casilla
+                                    Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorDueno.nombre]).mostrarMensaje($"{jugador.nombre} just paid you {dineroAPagar}$ for landing on your property \"{propiedad.nombre}\"");
+
                                 }
                                 else
                                 {
                                     //Mandarle mensajito al jugador
                                     Clients.Caller.mostrarMensaje($"You landed on {propiedad.nombre} and {jugadorDueno.nombre} owns this property. You paid him {dineroAPagar}$");
+
+                                    //Mandarle mensajito al jugador dueño de la casilla
+                                    Clients.Client(LobbyInfo.listadoLobbies[nombreLobby].listadoJugadoresConnection[jugadorDueno.nombre]).mostrarMensaje($"{jugador.nombre} just paid you {dineroAPagar}$ for landing on your property \"{propiedad.nombre}\"");
                                 }
 
                                 //Le quitamos el dinero al jugador
@@ -263,7 +273,6 @@ namespace PolyFlamaServer.Hubs
 
                         //Comprobamos si, al generar un nuevo turno, el turno que ha salido es el mismo que había antes
                         //En ese caso, significa que solo queda 1 persona con dinero > 0, el ganador
-                        //TODO Quitarlo pal release
                         if (turnoNuevo == turnoActual)
                         {
                             foreach (Jugador jugadorGanador in LobbyInfo.listadoLobbies[nombreLobby].lobby.listadoJugadores)

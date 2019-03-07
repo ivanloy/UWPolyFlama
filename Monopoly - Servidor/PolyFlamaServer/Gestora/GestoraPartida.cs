@@ -36,6 +36,11 @@ namespace PolyFlamaServer.Gestora
             listadoCartas.Add(new Carta("You dropped your headphones on your phone screen. It broke 😢. You spent 50$ on repairs", EfectosEnum.QUITAR_50, TipoCarta.COMUNIDAD));
             listadoCartas.Add(new Carta("Did you know you can make clean code? You go to jail", EfectosEnum.MOVER_10, TipoCarta.COMUNIDAD));
 
+            listadoCartas.Add(new Carta("We ran out of ideas, but here's 100$ to keep you running.", EfectosEnum.DAR_100, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("Your grandma decided to give you your brithday gift a little early. You love your grandma very much. You get 200$", EfectosEnum.DAR_200, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("You turned off the main power grid by mistake and screwed up everyone's SSD. You pay 100$ to everyone for compensation.", EfectosEnum.GLOBAL_100, TipoCarta.COMUNIDAD));
+            listadoCartas.Add(new Carta("You were able to push your commit without conflicts. You were so happy you invited everyone to Extra Premium Chips and a Coke. You pay everyone 50$.", EfectosEnum.GLOBAL_50, TipoCarta.COMUNIDAD));
+
             return listadoCartas;
         }
 
@@ -44,13 +49,18 @@ namespace PolyFlamaServer.Gestora
             List<Carta> listadoCartas = new List<Carta>();
 
             listadoCartas.Add(new Carta("You co-founded a big-ass company but sold it too early. You still get 50$", EfectosEnum.DAR_50, TipoCarta.SUERTE));
-            listadoCartas.Add(new Carta("You fixed your grandma's PC and she gave you some cash \" for you to spend it on something nice, young boy\". You love your grandma. You get 50$", EfectosEnum.DAR_50, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You fixed your grandma's PC and she gave you some cash \"for you to spend it on something nice, young boy\". You love your grandma. You get 50$", EfectosEnum.DAR_50, TipoCarta.SUERTE));
             listadoCartas.Add(new Carta("You found System! You also found 100$ under the couch", EfectosEnum.DAR_100, TipoCarta.SUERTE));
             listadoCartas.Add(new Carta("You opened a PC to fix it. Inside there was an HDD with some bitcoins. You get 100$", EfectosEnum.DAR_100, TipoCarta.SUERTE));
             listadoCartas.Add(new Carta("You screwed up everyone's git branches, you pay everyone 50$ to stay alive.", EfectosEnum.GLOBAL_50, TipoCarta.SUERTE));
             listadoCartas.Add(new Carta("You didn't set WHERE in the DELETE FROM, you need to pay everyone 50$ for collateral damages", EfectosEnum.GLOBAL_50, TipoCarta.SUERTE));
             listadoCartas.Add(new Carta("You spent 1 month trying to fix a simple error. You need an expensive psychologist. You lose 100$", EfectosEnum.QUITAR_100, TipoCarta.SUERTE));
             listadoCartas.Add(new Carta("You kill your tiring co-worker who always makes the same joke. You go to jail very happily :) worth it tbh", EfectosEnum.MOVER_10, TipoCarta.SUERTE));
+
+            listadoCartas.Add(new Carta("Your idea was so good you are given a grant to develop it. You get 200$", EfectosEnum.DAR_200, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You have to pay everyone's Azure subscription. You pay 100$ to each of your employees.", EfectosEnum.GLOBAL_100, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("Your laptop broke and you need a new one. You lose 500$.", EfectosEnum.QUITAR_500, TipoCarta.SUERTE));
+            listadoCartas.Add(new Carta("You waste 500$ in loot boxes, you only got depression.", EfectosEnum.QUITAR_500, TipoCarta.SUERTE));
 
             return listadoCartas;
         }
